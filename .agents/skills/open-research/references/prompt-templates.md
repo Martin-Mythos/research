@@ -3,9 +3,11 @@
 ## New Investigation
 
 ```text
-Use $open-research in /Users/martin/Code/research.
+Use $open-research in the current repository.
 
-Create a new folder called <topic-name>.
+Create a new research project called <topic-name>.
+If this is a dedicated research repo, place it at <topic-name>/.
+If this is another type of repo, place it at research/<topic-name>/ and create research/README.md if needed.
 
 Research this question:
 <research question>
@@ -15,17 +17,17 @@ Requirements:
 - list sources actually used, commands run, failed attempts, and verification evidence;
 - use executable experiments, scripts, tests, benchmarks, data extraction, diffs, or screenshots when possible;
 - write a final README.md with conclusion, methods, sources, verified findings, limitations, and reproduction steps;
-- keep all work inside the new folder;
-- do not create _summary.md;
+- keep all work inside the chosen research project folder except for a lightweight research/README.md fallback contract when needed;
+- do not create _summary.md unless the repo explicitly uses that automation;
 - do not commit full external repositories, dependency directories, secrets, private data, or large raw datasets.
 ```
 
 ## Web Research With Evidence
 
 ```text
-Use $open-research in /Users/martin/Code/research.
+Use $open-research in the current repository.
 
-Create a new folder called <topic-name>.
+Create a new research project called <topic-name>, using research/<topic-name>/ if this is not a dedicated research repo.
 
 Investigate <question> using web sources and primary documentation where possible.
 
@@ -40,9 +42,9 @@ Use current web verification for facts that may have changed. Keep unverified cl
 ## Technical Feasibility Experiment
 
 ```text
-Use $open-research in /Users/martin/Code/research.
+Use $open-research in the current repository.
 
-Create a new folder called <topic-name>.
+Create a new research project called <topic-name>, using research/<topic-name>/ if this is not a dedicated research repo.
 
 Test whether <technology/library/API> can <desired capability>.
 
@@ -57,9 +59,9 @@ Prefer a small reproducible demo over a broad prose survey.
 ## Benchmark Or Comparison
 
 ```text
-Use $open-research in /Users/martin/Code/research.
+Use $open-research in the current repository.
 
-Create a new folder called <topic-name>.
+Create a new research project called <topic-name>, using research/<topic-name>/ if this is not a dedicated research repo.
 
 Compare <options> for <use case>.
 
@@ -75,9 +77,10 @@ Make the comparison reproducible and clearly state what was not measured.
 ## Existing Research Review
 
 ```text
-Use $open-research in /Users/martin/Code/research.
+Use $open-research in the current repository.
 
 Review the existing project folder <topic-name>.
+If this is not a dedicated research repo, also check research/<topic-name>.
 
 Check:
 - whether notes.md lists sources actually used;
