@@ -7,7 +7,7 @@ dist/
 build/
 .env
 .env.*
+.obsidian/
 *.db
 *.sqlite
 *.sqlite3
-
