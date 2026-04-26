@@ -145,7 +145,7 @@ for dirname, _ in subdirs_with_dates:
 ]]]-->
 ## 1 research projects
 
-### [Simon Willison 的 AI Research Repo 方法研究](https://github.com/xwbcl123/research/tree/main/simon-willison-code-research-method#readme) (2026-04-26 07:55)
+### [Simon Willison 的 AI Research Repo 方法研究](https://github.com/Martin-Mythos/research/tree/main/simon-willison-code-research-method#readme) (2026-04-26 07:56)
 
 Simon Willison's AI research repo method transforms research questions into reproducible, reviewable code workflows using dedicated GitHub repositories. Instead of relying on chat-based AI summaries, he assigns clear, executable tasks to asynchronous coding agents (such as Claude Code or Codex Cloud), which install dependencies, collect data, run experiments, and generate reports—all documented through pull requests or commits. This approach compresses AI output into verifiable code, tests, benchmarks, and artifacts, making it easier to review, reproduce, and accumulate long-term research compared to ephemeral chat answers. The workflow is explicitly documented in his [article](https://simonwillison.net/2025/Nov/6/async-code-research/) and implemented in the [`simonw/research`](https://github.com/simonw/research) repository, emphasizing transparency and dedicated environments to reduce risk.
 
