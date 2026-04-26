@@ -1,5 +1,10 @@
 # mattpocock/skills 的 Todo App 实验研究
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## Final Conclusion
 
 `mattpocock/skills` 更像一组“工作流压缩包”，而不是可执行插件库。每个 skill 用 `SKILL.md` 把 agent 的触发条件、操作顺序、质量标准和反模式写清楚；真正的价值来自把模糊任务强制转成较稳定的工程节奏，例如先设计接口、再按行为测试推进、最后用用户视角 QA 条目收口。
