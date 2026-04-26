@@ -1,0 +1,318 @@
+{
+  "generatedAt": "2026-04-26T11:18:43.745Z",
+  "inputs": {
+    "projectEvents": [
+      {
+        "id": "e1",
+        "actor": "planner",
+        "kind": "decision",
+        "subject": "storage",
+        "text": "Use localStorage for the todo app MVP so the demo is offline-capable.",
+        "durable": true,
+        "step": 1
+      },
+      {
+        "id": "e2",
+        "actor": "engineer",
+        "kind": "observation",
+        "subject": "component-shape",
+        "text": "TodoItem should receive { id, title, done } and emit toggle/remove commands.",
+        "durable": false,
+        "step": 2
+      },
+      {
+        "id": "e3",
+        "actor": "reviewer",
+        "kind": "constraint",
+        "subject": "accessibility",
+        "text": "The Add Todo control needs an accessible name and Enter-key submit path.",
+        "durable": true,
+        "step": 3
+      },
+      {
+        "id": "e4",
+        "actor": "planner",
+        "kind": "handoff",
+        "subject": "owner",
+        "text": "Reviewer owns acceptance criteria; ask @reviewer for the freshest quality bar.",
+        "durable": true,
+        "step": 4
+      },
+      {
+        "id": "e5",
+        "actor": "engineer",
+        "kind": "decision",
+        "subject": "storage",
+        "text": "Switch storage to an in-memory array for faster tests.",
+        "durable": true,
+        "supersedes": "e1",
+        "step": 5
+      }
+    ],
+    "tasks": [
+      {
+        "id": "t1",
+        "actor": "engineer",
+        "needs": [
+          "storage",
+          "accessibility"
+        ],
+        "description": "Implement TodoForm and persistence."
+      },
+      {
+        "id": "t2",
+        "actor": "planner",
+        "needs": [
+          "owner",
+          "storage"
+        ],
+        "description": "Prepare handoff and current project state."
+      },
+      {
+        "id": "t3",
+        "actor": "reviewer",
+        "needs": [
+          "component-shape",
+          "storage"
+        ],
+        "description": "Review component contract and persistence decision."
+      }
+    ]
+  },
+  "summary": {
+    "scenario": "three agents build a todo app while decisions and constraints arrive at different times",
+    "metrics": {
+      "chatOnlyIncidentCount": 4,
+      "wuphfInspiredIncidentCount": 1,
+      "incidentReduction": 3,
+      "promotedSharedFacts": 3,
+      "serializedWrites": 4,
+      "ownerRoutingHints": 3
+    },
+    "incidentBreakdown": {
+      "chatOnly": {
+        "missing-context": 3,
+        "stale-context": 1
+      },
+      "wuphfInspired": {
+        "private-only-context": 1
+      }
+    }
+  },
+  "chatOnly": {
+    "protocol": "chat-only",
+    "notebooks": {
+      "planner": [
+        "e1",
+        "e4"
+      ],
+      "engineer": [
+        "e2",
+        "e5"
+      ],
+      "reviewer": [
+        "e3"
+      ]
+    },
+    "sharedWiki": {},
+    "auditLog": [],
+    "promotionHints": [],
+    "ownerRoutingHints": [],
+    "incidents": [
+      {
+        "task": "t1",
+        "actor": "engineer",
+        "subject": "accessibility",
+        "type": "missing-context",
+        "detail": "engineer has no local context for accessibility."
+      },
+      {
+        "task": "t2",
+        "actor": "planner",
+        "subject": "storage",
+        "type": "stale-context",
+        "detail": "planner sees e1, but e5 is newer."
+      },
+      {
+        "task": "t3",
+        "actor": "reviewer",
+        "subject": "component-shape",
+        "type": "missing-context",
+        "detail": "reviewer has no local context for component-shape."
+      },
+      {
+        "task": "t3",
+        "actor": "reviewer",
+        "subject": "storage",
+        "type": "missing-context",
+        "detail": "reviewer has no local context for storage."
+      }
+    ]
+  },
+  "wuphfInspired": {
+    "protocol": "wuphf-inspired",
+    "notebooks": {
+      "planner": [
+        "e1",
+        "e4"
+      ],
+      "engineer": [
+        "e2",
+        "e5"
+      ],
+      "reviewer": [
+        "e3"
+      ]
+    },
+    "sharedWiki": {
+      "storage": "e5",
+      "accessibility": "e3",
+      "owner": "e4"
+    },
+    "auditLog": [
+      {
+        "sequence": 1,
+        "action": "write-shared-fact",
+        "subject": "storage",
+        "sourceEvent": "e1",
+        "previousEvent": null,
+        "author": "planner",
+        "target": "team/storage.md"
+      },
+      {
+        "sequence": 2,
+        "action": "write-shared-fact",
+        "subject": "accessibility",
+        "sourceEvent": "e3",
+        "previousEvent": null,
+        "author": "reviewer",
+        "target": "team/accessibility.md"
+      },
+      {
+        "sequence": 3,
+        "action": "write-shared-fact",
+        "subject": "owner",
+        "sourceEvent": "e4",
+        "previousEvent": null,
+        "author": "planner",
+        "target": "team/owner.md"
+      },
+      {
+        "sequence": 4,
+        "action": "replace-shared-fact",
+        "subject": "storage",
+        "sourceEvent": "e5",
+        "previousEvent": "e1",
+        "author": "engineer",
+        "target": "team/storage.md"
+      }
+    ],
+    "promotionHints": [
+      {
+        "event": "e1",
+        "actor": "planner",
+        "subject": "storage",
+        "reason": "decision is durable shared context."
+      },
+      {
+        "event": "e3",
+        "actor": "reviewer",
+        "subject": "accessibility",
+        "reason": "constraint is durable shared context."
+      },
+      {
+        "event": "e4",
+        "actor": "planner",
+        "subject": "owner",
+        "reason": "handoff is durable shared context."
+      },
+      {
+        "event": "e5",
+        "actor": "engineer",
+        "subject": "storage",
+        "reason": "decision is durable shared context."
+      }
+    ],
+    "ownerRoutingHints": [
+      {
+        "subject": "storage",
+        "owner": "engineer",
+        "hint": "Shared storage came from @engineer; route follow-up there before guessing."
+      },
+      {
+        "subject": "accessibility",
+        "owner": "reviewer",
+        "hint": "Shared accessibility came from @reviewer; route follow-up there before guessing."
+      },
+      {
+        "subject": "owner",
+        "owner": "planner",
+        "hint": "Ask @planner or the named owner for fresh owner details."
+      }
+    ],
+    "taskViews": [
+      {
+        "task": "t1",
+        "actor": "engineer",
+        "facts": [
+          {
+            "subject": "storage",
+            "event": "e5",
+            "owner": "engineer",
+            "target": "team/storage.md",
+            "step": 5
+          },
+          {
+            "subject": "accessibility",
+            "event": "e3",
+            "owner": "reviewer",
+            "target": "team/accessibility.md",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "task": "t2",
+        "actor": "planner",
+        "facts": [
+          {
+            "subject": "owner",
+            "event": "e4",
+            "owner": "planner",
+            "target": "team/owner.md",
+            "step": 4
+          },
+          {
+            "subject": "storage",
+            "event": "e5",
+            "owner": "engineer",
+            "target": "team/storage.md",
+            "step": 5
+          }
+        ]
+      },
+      {
+        "task": "t3",
+        "actor": "reviewer",
+        "facts": [
+          {
+            "subject": "storage",
+            "event": "e5",
+            "owner": "engineer",
+            "target": "team/storage.md",
+            "step": 5
+          }
+        ]
+      }
+    ],
+    "incidents": [
+      {
+        "task": "t3",
+        "actor": "reviewer",
+        "subject": "component-shape",
+        "type": "private-only-context",
+        "detail": "component-shape is only in private notebooks; ask @engineer."
+      }
+    ]
+  }
+}
