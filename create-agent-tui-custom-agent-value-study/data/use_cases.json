@@ -1,0 +1,27 @@
+[
+  {
+    "id": "code_assistant_safe",
+    "name": "受控代码助手 (需要审批)",
+    "requirements": ["tool_use", "approval_flow", "session_persistence", "config_layers", "streaming_ui"]
+  },
+  {
+    "id": "one_off_qa",
+    "name": "一次性问答 / 聊天",
+    "requirements": ["basic_chat"]
+  },
+  {
+    "id": "long_running_research",
+    "name": "长周期研究代理 (多会话追踪)",
+    "requirements": ["tool_use", "session_persistence", "structured_logs", "slash_commands"]
+  },
+  {
+    "id": "ops_triage",
+    "name": "运维排障助手 (终端优先)",
+    "requirements": ["tool_use", "terminal_tui", "approval_flow", "tool_visibility_modes"]
+  },
+  {
+    "id": "embedded_backend_agent",
+    "name": "后端服务内嵌 Agent (API entrypoint)",
+    "requirements": ["server_entrypoint", "modular_architecture", "tool_use", "config_layers"]
+  }
+]
