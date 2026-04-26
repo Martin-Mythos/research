@@ -1,5 +1,10 @@
 # create-agent-tui 自定义 Agent 价值研究
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 结论（Final Conclusion）
 `create-agent-tui` 的核心价值不是“让模型更聪明”，而是把 **可控性（control）**、**可操作性（operability）**、**可持续性（persistence）** 和 **可集成性（integration）** 系统化地包装成一个可复用脚手架。对于一次性问答场景，价值有限；但在需要工具调用、审批治理、多会话追踪、终端工作流或服务化嵌入时，自定义 agent 的收益显著。
 
