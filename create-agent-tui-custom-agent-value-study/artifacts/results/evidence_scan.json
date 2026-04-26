@@ -1,0 +1,66 @@
+[
+  {
+    "label": "tool display modes",
+    "file": "artifacts/upstream/SKILL.md",
+    "needle": "four tool display modes",
+    "found": true,
+    "line": 3,
+    "excerpt": "description: Scaffolds a complete agent TUI in TypeScript using @openrouter/agent — like create-react-app for terminal agents. Generates a customizable terminal interface with three input styles, four tool display modes, ASCII banners, streaming output, session persistence, and configurable tools. Use when building an agent, creating a TUI, scaffolding an agent project, or building a coding assistant."
+  },
+  {
+    "label": "session persistence",
+    "file": "artifacts/upstream/SKILL.md",
+    "needle": "session persistence",
+    "found": true,
+    "line": 3,
+    "excerpt": "description: Scaffolds a complete agent TUI in TypeScript using @openrouter/agent — like create-react-app for terminal agents. Generates a customizable terminal interface with three input styles, four tool display modes, ASCII banners, streaming output, session persistence, and configurable tools. Use when building an agent, creating a TUI, scaffolding an agent project, or building a coding assistant."
+  },
+  {
+    "label": "approval metadata",
+    "file": "artifacts/upstream/SKILL.md",
+    "needle": "approval",
+    "found": true,
+    "line": 12,
+    "excerpt": "- **Claude Code** — tool metadata (read-only, destructive, approval), system prompt composition"
+  },
+  {
+    "label": "layered config",
+    "file": "artifacts/upstream/SKILL.md",
+    "needle": "layered config",
+    "found": true,
+    "line": 13,
+    "excerpt": "- **Codex CLI** — layered config, approval flow with session caching, structured logging"
+  },
+  {
+    "label": "three-layer architecture",
+    "file": "artifacts/upstream/references-architecture.md",
+    "needle": "three-layer",
+    "found": false,
+    "line": null,
+    "excerpt": null
+  },
+  {
+    "label": "server entry points",
+    "file": "artifacts/upstream/references-server-entry-points.md",
+    "needle": "entry point",
+    "found": true,
+    "line": 1,
+    "excerpt": "# Server Entry Points & Extension Points"
+  },
+  {
+    "label": "slash commands",
+    "file": "artifacts/upstream/sample-src/commands.ts",
+    "needle": "commands",
+    "found": true,
+    "line": 25,
+    "excerpt": "const commands: SlashCommand[] = [];"
+  },
+  {
+    "label": "session file",
+    "file": "artifacts/upstream/sample-src/session.ts",
+    "needle": "session",
+    "found": true,
+    "line": 6,
+    "excerpt": "interface SessionEntry {"
+  }
+]
