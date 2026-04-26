@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open Research"
+  short_description: "Create reproducible research repo projects"
+  default_prompt: "Use $open-research to start a reproducible open research project in the research repo."
