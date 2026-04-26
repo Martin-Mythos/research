@@ -1,5 +1,10 @@
 # garrytan/gstack 最小实验研究
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## Final Conclusion
 
 `garrytan/gstack` 不是一个单一 app，而是一个 Bun + TypeScript 写成的 AI engineering workflow stack。它把大量 slash-command skills、browser automation、host-specific skill generation、review/QA/ship 流程和安全 guardrails 组织成一套可安装到 Claude Code、Codex、OpenCode、Cursor、Factory、Kiro、OpenClaw、Hermes、GBrain 等 host 的“软件工厂”。

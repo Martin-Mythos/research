@@ -143,9 +143,21 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 2 research projects
+## 3 research projects
 
-### [mattpocock/skills 的 Todo App 实验研究](https://github.com/Martin-Mythos/research/tree/main/mattpocock-skills-todo-app-eval#readme) (2026-04-26 09:26)
+### [garrytan/gstack 最小实验研究](https://github.com/Martin-Mythos/research/tree/main/garrytan-gstack-minimal-eval#readme) (2026-04-26 10:08)
+
+The minimal experiment on `garrytan/gstack` confirms it is an AI engineering workflow stack—not a single app—built with Bun and TypeScript, integrating modular slash-command skills, browser automation, host-specific skill generation, and robust QA/security processes. Core mechanisms such as skill validation and skill documentation generation are healthy, with all tests for skill commands and doc generation passing once host-specific artifacts are generated. The project correctly supports multi-host skill projection, allowing one template system to generate consistent, safely validated skill outputs for Codex and other hosts. A minor inconsistency was discovered in health scripts regarding Claude host skill generation, and one skill file exceeded project token ceilings, highlighting potential context management challenges. For full reproduction and further experimentation, referencing the official repository and Bun install is essential: [garrytan/gstack GitHub](https://github.com/garrytan/gstack) and [Bun](https://bun.sh/).
+
+**Key Findings:**
+- All 318 skill validation tests and 371 skill doc tests (after generating Codex artifacts) passed, indicating strong template and registry integrity.
+- Skill system centers on templated Markdown artifacts; 43 skills identified, all templated.
+- Project relies on a central browser command registry with 72 commands segmented by function.
+- Codex host projection requires artifact generation for full test suite success.
+- Detected a health check/test suite inconsistency for Claude host skill documentation logic.
+- At least one skill doc file (`ship/SKILL.md`) exceeds recommended size, flagging future agent context risks.
+
+### [mattpocock/skills 的 Todo App 实验研究](https://github.com/Martin-Mythos/research/tree/main/mattpocock-skills-todo-app-eval#readme) (2026-04-26 09:29)
 
 This research evaluates the mattpocock/skills repository by applying several agent "skills" to a minimal Node.js todo app. The project focuses on workflow documentation, using `SKILL.md` files to outline agent-triggering criteria, execution steps, and quality standards. Applying skills like `design-an-interface`, `tdd`, and `qa` demonstrated that these tools guide agents into structured workflows, improving task clarity—even for small projects—by enforcing interface design comparison, behavior-driven testing, and user-perspective issue documentation. Notably, the skills promote process discipline but depend on agent compliance, as there is minimal runtime enforcement.
 
