@@ -1,0 +1,157 @@
+# Research projects carried out with AI tools
+
+This repository is a dedicated workspace for code research and web research projects carried out with AI coding agents such as Codex, Claude Code, Jules, or GitHub Copilot coding agent.
+
+Each top-level directory is one separate investigation. Reports should include enough notes, scripts, sources, and verification evidence for a reviewer to understand what was tested and how conclusions were reached.
+
+The operating model is inspired by Simon Willison's article [Code research projects with async coding agents like Claude Code and Codex](https://simonwillison.net/2025/Nov/6/async-code-research/) and his public [`simonw/research`](https://github.com/simonw/research) repository.
+
+Prompts, transcripts, and important review context should be linked from pull requests or commits whenever possible.
+
+*Times shown are in UTC.*
+
+<!--[[[cog
+import os
+import re
+import subprocess
+import pathlib
+from datetime import datetime, timezone
+
+MODEL = "github/gpt-4.1"
+
+research_dir = pathlib.Path.cwd()
+subdirs_with_dates = []
+
+for d in research_dir.iterdir():
+    if d.is_dir() and not d.name.startswith("."):
+        try:
+            result = subprocess.run(
+                ["git", "log", "-1", "--format=%aI", "--", d.name],
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                date_str = result.stdout.strip()
+                commit_date = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            else:
+                commit_date = datetime.fromtimestamp(d.stat().st_mtime, tz=timezone.utc)
+        except Exception:
+            commit_date = datetime.fromtimestamp(d.stat().st_mtime, tz=timezone.utc)
+        subdirs_with_dates.append((d.name, commit_date))
+
+print(f"## {len(subdirs_with_dates)} research projects\n")
+
+subdirs_with_dates.sort(key=lambda x: x[1], reverse=True)
+
+for dirname, commit_date in subdirs_with_dates:
+    folder_path = research_dir / dirname
+    readme_path = folder_path / "README.md"
+    summary_path = folder_path / "_summary.md"
+
+    date_formatted = commit_date.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M")
+
+    github_url = None
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            capture_output=True,
+            text=True,
+            timeout=2,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            origin = result.stdout.strip()
+            if origin.startswith("git@github.com:"):
+                origin = origin.replace("git@github.com:", "https://github.com/")
+            if origin.endswith(".git"):
+                origin = origin[:-4]
+            github_url = f"{origin}/tree/main/{dirname}"
+    except Exception:
+        pass
+
+    title = dirname
+    if readme_path.exists():
+        with open(readme_path, "r", encoding="utf-8") as f:
+            for readme_line in f:
+                if readme_line.startswith("# "):
+                    title = readme_line[2:].strip()
+                    break
+
+    if github_url:
+        print(f"### [{title}]({github_url}#readme) ({date_formatted})\n")
+    else:
+        print(f"### {title} ({date_formatted})\n")
+
+    if summary_path.exists():
+        description = summary_path.read_text(encoding="utf-8").strip()
+        print(description or "*No description available.*")
+    elif readme_path.exists():
+        prompt = """Summarize this research project concisely. Write 1 paragraph of 3-5 sentences followed by a short bullet list only if there are concrete key findings. Vary your opening. Include 1-2 links to key tools or sources when useful. Be specific, factual, and brief. No emoji."""
+        result = subprocess.run(
+            ["llm", "-m", MODEL, "-s", prompt],
+            stdin=open(readme_path, encoding="utf-8"),
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        if result.returncode != 0:
+            error_msg = f"LLM command failed for {dirname} with return code {result.returncode}"
+            if result.stderr:
+                error_msg += f"\nStderr: {result.stderr}"
+            raise RuntimeError(error_msg)
+        description = result.stdout.strip()
+        if not description:
+            raise RuntimeError(f"LLM command returned no output for {dirname}")
+        print(description)
+        summary_path.write_text(description + "\n", encoding="utf-8")
+    else:
+        print("*No description available.*")
+
+    print()
+
+AI_NOTE_START = "<!-- AI-GENERATED-NOTE --" + ">"
+AI_NOTE_END = "<!-- /AI-GENERATED-NOTE --" + ">"
+AI_NOTE_CONTENT = """> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it."""
+NOT_AI_GENERATED = "<!-- not-ai-generated --" + ">"
+
+for dirname, _ in subdirs_with_dates:
+    readme_path = research_dir / dirname / "README.md"
+    if not readme_path.exists():
+        continue
+    content = readme_path.read_text(encoding="utf-8")
+    if NOT_AI_GENERATED in content:
+        continue
+    if AI_NOTE_START in content:
+        pattern = re.escape(AI_NOTE_START) + r".*?" + re.escape(AI_NOTE_END)
+        new_note = f"{AI_NOTE_START}\n{AI_NOTE_CONTENT}\n{AI_NOTE_END}"
+        new_content = re.sub(pattern, new_note, content, flags=re.DOTALL)
+        if new_content != content:
+            readme_path.write_text(new_content, encoding="utf-8")
+    else:
+        lines = content.split("\n")
+        new_lines = []
+        note_added = False
+        for line in lines:
+            new_lines.append(line)
+            if not note_added and line.startswith("# "):
+                new_lines.append("")
+                new_lines.append(AI_NOTE_START)
+                new_lines.append(AI_NOTE_CONTENT)
+                new_lines.append(AI_NOTE_END)
+                note_added = True
+        if note_added:
+            readme_path.write_text("\n".join(new_lines), encoding="utf-8")
+]]]-->
+## 1 research project
+
+### [Simon Willison 的 AI Research Repo 方法研究](https://github.com/xwbcl123/research/tree/main/simon-willison-code-research-method#readme) (2026-04-26 00:00)
+
+这份研究总结了 Simon Willison 使用异步编码代理 (asynchronous coding agents) 和专用 GitHub repository 做 code research 的方法，并把它改造成可复用的公开研究仓库模板。报告覆盖了核心工作流、目录结构、自动 README 索引机制、隔离与联网权限的 tradeoff，以及适合 Martin 使用的 prompt 模板和 review checklist。主要依据包括 Simon 的 2025-11-06 文章、`simonw/research` 仓库、`AGENTS.md` 和 README 自动化 workflow。
+
+Key findings:
+
+- 研究单元应是一个可 review 的目录或 PR，而不是一次性聊天回答。
+- 结论应尽量由代码、测试、benchmark、JSON、图表、diff 或命令输出支撑。
+- Dedicated public/private research repo 能降低 agent full network access 的 blast radius。
+- 根 README 可以通过 `cogapp`、`llm` 和 GitHub Actions 自动维护项目索引。
