@@ -145,9 +145,13 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 4 research projects
+## 5 research projects
 
-### [WUPHF Multi-Agent Context Sync Research](https://github.com/Martin-Mythos/research/tree/main/wuphf-multi-agent-context-sync#readme) (2026-04-26 11:18)
+### [docs](https://github.com/Martin-Mythos/research/tree/main/docs#readme) (2026-04-26 14:41)
+
+*No description available.*
+
+### [WUPHF Multi-Agent Context Sync Research](https://github.com/Martin-Mythos/research/tree/main/wuphf-multi-agent-context-sync#readme) (2026-04-26 11:19)
 
 The WUPHF multi-agent context sync research demonstrates that the key to effective multi-agent collaboration is not real-time synchronization of all agent-specific contexts, but rather distinguishing, externalizing, and promoting only actionable, shared, and auditable context to a central substrate (e.g., a shared wiki with append-only logs and provenance). Each agent maintains a private notebook for drafts and raw observations, and only promotes mature decisions or facts to a team-accessible wiki following an explicit review or promotion protocol. Synchronization of all chat transcripts is discouraged—instead, only contracts, decisions, handoffs, owners, worktree paths, and evidence are surfaced to the shared layer, with ownership and provenance attached. This approach reduces context drift and improves recoverability compared to chat-based syncing, as verified in simulation experiments.
 
