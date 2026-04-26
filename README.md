@@ -143,18 +143,18 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 1 research project
+## 1 research projects
 
-### [Simon Willison 的 AI Research Repo 方法研究](https://github.com/xwbcl123/research/tree/main/simon-willison-code-research-method#readme) (2026-04-26 00:00)
+### [Simon Willison 的 AI Research Repo 方法研究](https://github.com/xwbcl123/research/tree/main/simon-willison-code-research-method#readme) (2026-04-26 07:55)
 
-这份研究总结了 Simon Willison 使用异步编码代理 (asynchronous coding agents) 和专用 GitHub repository 做 code research 的方法，并把它改造成可复用的公开研究仓库模板。报告覆盖了核心工作流、目录结构、自动 README 索引机制、隔离与联网权限的 tradeoff，以及适合 Martin 使用的 prompt 模板和 review checklist。主要依据包括 Simon 的 2025-11-06 文章、`simonw/research` 仓库、`AGENTS.md` 和 README 自动化 workflow。
+Simon Willison's AI research repo method transforms research questions into reproducible, reviewable code workflows using dedicated GitHub repositories. Instead of relying on chat-based AI summaries, he assigns clear, executable tasks to asynchronous coding agents (such as Claude Code or Codex Cloud), which install dependencies, collect data, run experiments, and generate reports—all documented through pull requests or commits. This approach compresses AI output into verifiable code, tests, benchmarks, and artifacts, making it easier to review, reproduce, and accumulate long-term research compared to ephemeral chat answers. The workflow is explicitly documented in his [article](https://simonwillison.net/2025/Nov/6/async-code-research/) and implemented in the [`simonw/research`](https://github.com/simonw/research) repository, emphasizing transparency and dedicated environments to reduce risk.
 
-Key findings:
-
-- 研究单元应是一个可 review 的目录或 PR，而不是一次性聊天回答。
-- 结论应尽量由代码、测试、benchmark、JSON、图表、diff 或命令输出支撑。
-- Dedicated public/private research repo 能降低 agent full network access 的 blast radius。
-- 根 README 可以通过 `cogapp`、`llm` 和 GitHub Actions 自动维护项目索引。
+**Key findings:**
+- Dedicated repositories allow safe network access by isolating research from production code and sensitive assets.
+- Each research project is a single directory containing scripts, notes, results, and a final README, facilitating reproducibility and review.
+- Automated GitHub Actions maintain project summaries and indexes, ensuring easy navigation and context for agents.
+- The method relies on human review prior to publication to mitigate risks of AI-generated errors, supply chain attacks, or misleading conclusions.
+- Research results should be treated as lab notebooks, not finalized publications, until manually verified.
 
 <!--[[[end]]]-->
 
