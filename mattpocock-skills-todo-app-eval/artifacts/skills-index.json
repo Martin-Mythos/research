@@ -1,0 +1,182 @@
+{
+  "sourceDir": "/tmp/mattpocock-skills",
+  "generatedAt": "2026-04-26T09:25:44.295Z",
+  "skillCount": 21,
+  "categories": {
+    "development": 4,
+    "other": 2,
+    "planning-design": 11,
+    "tooling-setup": 1,
+    "writing-knowledge": 3
+  },
+  "skills": [
+    {
+      "directory": "caveman",
+      "name": "caveman",
+      "description": ">",
+      "category": "other",
+      "lines": 50,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "design-an-interface",
+      "name": "design-an-interface",
+      "description": "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\".",
+      "category": "planning-design",
+      "lines": 95,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "domain-model",
+      "name": "domain-model",
+      "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
+      "category": "planning-design",
+      "lines": 82,
+      "hasExtraReferences": true
+    },
+    {
+      "directory": "edit-article",
+      "name": "edit-article",
+      "description": "Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.",
+      "category": "writing-knowledge",
+      "lines": 15,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "git-guardrails-claude-code",
+      "name": "git-guardrails-claude-code",
+      "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+      "category": "tooling-setup",
+      "lines": 96,
+      "hasExtraReferences": true
+    },
+    {
+      "directory": "github-triage",
+      "name": "github-triage",
+      "description": "Triage GitHub issues through a label-based state machine. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
+      "category": "planning-design",
+      "lines": 169,
+      "hasExtraReferences": true
+    },
+    {
+      "directory": "grill-me",
+      "name": "grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+      "category": "planning-design",
+      "lines": 11,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "improve-codebase-architecture",
+      "name": "improve-codebase-architecture",
+      "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
+      "category": "planning-design",
+      "lines": 77,
+      "hasExtraReferences": true
+    },
+    {
+      "directory": "migrate-to-shoehorn",
+      "name": "migrate-to-shoehorn",
+      "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+      "category": "development",
+      "lines": 119,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "obsidian-vault",
+      "name": "obsidian-vault",
+      "description": "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.",
+      "category": "writing-knowledge",
+      "lines": 60,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "qa",
+      "name": "qa",
+      "description": "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions \"QA session\".",
+      "category": "planning-design",
+      "lines": 131,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "request-refactor-plan",
+      "name": "request-refactor-plan",
+      "description": "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
+      "category": "planning-design",
+      "lines": 69,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "scaffold-exercises",
+      "name": "scaffold-exercises",
+      "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+      "category": "development",
+      "lines": 107,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "setup-pre-commit",
+      "name": "setup-pre-commit",
+      "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+      "category": "development",
+      "lines": 92,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "tdd",
+      "name": "tdd",
+      "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
+      "category": "development",
+      "lines": 108,
+      "hasExtraReferences": true
+    },
+    {
+      "directory": "to-issues",
+      "name": "to-issues",
+      "description": "Break a plan, spec, or PRD into independently-grabbable GitHub issues using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
+      "category": "planning-design",
+      "lines": 80,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "to-prd",
+      "name": "to-prd",
+      "description": "Turn the current conversation context into a PRD and submit it as a GitHub issue. Use when user wants to create a PRD from the current context.",
+      "category": "planning-design",
+      "lines": 73,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "triage-issue",
+      "name": "triage-issue",
+      "description": "Triage a bug or issue by exploring the codebase to find root cause, then create a GitHub issue with a TDD-based fix plan. Use when user reports a bug, wants to file an issue, mentions \"triage\", or wants to investigate and plan a fix for a problem.",
+      "category": "planning-design",
+      "lines": 103,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "ubiquitous-language",
+      "name": "ubiquitous-language",
+      "description": "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions \"domain model\" or \"DDD\".",
+      "category": "planning-design",
+      "lines": 94,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "write-a-skill",
+      "name": "write-a-skill",
+      "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
+      "category": "writing-knowledge",
+      "lines": 118,
+      "hasExtraReferences": false
+    },
+    {
+      "directory": "zoom-out",
+      "name": "zoom-out",
+      "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
+      "category": "other",
+      "lines": 8,
+      "hasExtraReferences": false
+    }
+  ]
+}
