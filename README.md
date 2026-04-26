@@ -155,3 +155,30 @@ Key findings:
 - 结论应尽量由代码、测试、benchmark、JSON、图表、diff 或命令输出支撑。
 - Dedicated public/private research repo 能降低 agent full network access 的 blast radius。
 - 根 README 可以通过 `cogapp`、`llm` 和 GitHub Actions 自动维护项目索引。
+
+<!--[[[end]]]-->
+
+---
+
+## Updating this README
+
+This README uses [cogapp](https://nedbatchelder.com/code/cog/) to automatically generate the project index.
+
+### Automatic updates
+
+A GitHub Action runs `cog -r -P README.md` on every push to `main` and commits changes to the root `README.md`, project `README.md` files, and generated `_summary.md` files.
+
+### Manual updates
+
+```bash
+cog -r -P README.md
+```
+
+The script:
+
+- discovers all top-level research directories;
+- sorts them by the latest commit that touched each directory;
+- extracts each project title from its first H1 heading;
+- reuses `_summary.md` when present;
+- otherwise generates a concise summary with `llm -m github/gpt-4.1`;
+- injects an AI-assisted research note into project README files unless they opt out with `<!-- not-ai-generated -->`.
