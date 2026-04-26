@@ -17,6 +17,14 @@ python3 -m venv .venv
 python -m pip install --upgrade pip wheel
 python -m pip install -r requirements.txt
 
+# Install ASPG from its GitHub repository when Node/npm is available.
+# ASPG is used to validate .agents/skills topology.
+if command -v npm >/dev/null 2>&1; then
+  npm install -g git+https://github.com/xwbcl123/aspg.git
+else
+  echo "npm not installed; skipping ASPG install"
+fi
+
 # Verify core repo files
 test -f AGENTS.md
 test -f README.md
@@ -44,7 +52,7 @@ assert Path(".agents/skills/open-research/agents/openai.yaml").exists()
 print("open-research skill contract OK")
 PY
 
-# If ASPG happens to be available in Jules, use it; otherwise skip.
+# Use ASPG when installation succeeded.
 if command -v aspg >/dev/null 2>&1; then
   aspg lint
   aspg doctor
@@ -67,6 +75,29 @@ Do not add GitHub tokens or other credentials unless a specific research task ne
 ## Network Access
 
 Keep network access enabled. This repository is intended for open research workflows where agents may need to read documentation, fetch public repositories, install packages, or inspect public web resources.
+
+## ASPG Installation
+
+ASPG comes from the public GitHub repository [`xwbcl123/aspg`](https://github.com/xwbcl123/aspg). The recommended Jules setup command is:
+
+```bash
+npm install -g git+https://github.com/xwbcl123/aspg.git
+```
+
+Requirements:
+
+- Node.js >= 18
+- npm
+- network access to GitHub
+
+After installation, verify:
+
+```bash
+aspg --help
+aspg lint
+aspg doctor
+aspg compat open-research
+```
 
 ## Why the Script Avoids `cog -r -P README.md`
 
