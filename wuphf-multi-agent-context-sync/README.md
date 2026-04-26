@@ -1,5 +1,10 @@
 # WUPHF Multi-Agent Context Sync Research
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## Final Conclusion
 
 `nex-crm/wuphf` 的关键解法不是把每个 agent 的 live context 实时同步，而是把“可依赖上下文”外置到可审计、可提升、可恢复的共享 substrate 里：每个 agent 有自己的 notebook，成熟内容再 promotion 到 team wiki；共享写入经 single-writer queue 串行化；事实用 append-only log 保留 provenance；恢复时从 runtime snapshot、active tasks、unanswered messages 和 worktree paths 重建当前状态。
