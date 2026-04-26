@@ -8,6 +8,8 @@ The operating model is inspired by Simon Willison's article [Code research proje
 
 Prompts, transcripts, and important review context should be linked from pull requests or commits whenever possible.
 
+Jules environment setup guidance is documented in [docs/jules-environment.md](docs/jules-environment.md).
+
 *Times shown are in UTC.*
 
 <!--[[[cog
