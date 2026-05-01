@@ -30,3 +30,9 @@
 
 ## Verification evidence
 - Confirmed repository skill list and installation commands via web search result and GitHub repository page.
+
+## Follow-up (2026-05-01)
+- Re-tested clone behavior:
+  - `git clone --depth 1 https://github.com/google-labs-code/stitch-skills.git /tmp/stitch-skills-check` succeeded.
+  - Combined command with `rm -rf` + clone + post-processing in one line was rejected by platform policy.
+- Conclusion: no extra GitHub authorization required; earlier failure was command-pattern policy blocking, not network/auth failure.

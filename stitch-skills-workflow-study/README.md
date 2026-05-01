@@ -66,6 +66,9 @@
 2. 对 SRP 这类中后台产品，最有价值的是“多样式快速出稿 + 一致性控制 + 可展示资产产出”。
 3. 把演示资产（HTML presentation + 动画 demo）纳入流程，能显著提升方案评审效率。
 
+
+> 更新（2026-05-01）：已复测 `git clone`。单独执行 clone 可成功；之前失败是“复合命令模式被策略拦截”，并非需要额外授权。
+
 ## 推测与限制（Speculation / Limitations）
 - 本次环境未直接连通 Stitch MCP 服务执行真实远程生成；因此“生成质量上限”和“token/时延成本”未做实测。
 - React 代码转换与 remotion 视频渲染采用 workflow 级验证，未执行完整官方 pipeline。
