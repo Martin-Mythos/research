@@ -1,5 +1,10 @@
 # 基于 ENISA SRP 复杂场景的 open-design 架构实证研究报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 `open-design` 的核心定位是“基于本地 coding agent CLI 的生成式设计工作台”，强调从 prompt/skill 出发快速生成可预览 artifact，而不是传统企业级前端中台或表单引擎。将其用于 ENISA SRP Demo（高合规、强字段约束、RBAC 细粒度控制）时，结论是：
 

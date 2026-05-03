@@ -145,9 +145,30 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 8 research projects
+## 9 research projects
 
-### [深度研究报告：`yao-tutorial-skill` 能力评估与 Harness Engineering 教程实验](https://github.com/Martin-Mythos/research/tree/main/harness-engineering-skill-review#readme) (2026-05-01 22:23)
+### [基于 ENISA SRP 复杂场景的 open-design 架构实证研究报告](https://github.com/Martin-Mythos/research/tree/main/open-design-srp-evaluation#readme) (2026-05-03 18:12)
+
+This research empirically evaluates the use of the open-design framework in complex ENISA SRP (Security Reporting Platform) scenarios. Unlike traditional enterprise form engines, open-design prioritizes agent-driven, prompt-based artifact generation for rapid prototyping and design exploration. The study finds open-design is highly effective for design acceleration—producing UI skeletons, token mockups, and demo pages—but lacks system-level features required for SRP’s stringent compliance (complex validation, RBAC, auditability). The suggested approach is to layer open-design atop a robust business core with dedicated form validation and RBAC enforcement. For more details, see [ENISA SRP overview](https://www.enisa.europa.eu/topics/csirt-cert-services/srp) and [open-design tool](https://github.com/open-design/open-design).
+
+**Key Findings:**
+- open-design excels at rapid artifact generation (tokens, UI prototypes) but cannot independently handle business logic, complex validation, or RBAC.
+- It supports maintainable i18n resource generation, but lacks enterprise-grade runtime i18n mechanisms.
+- RBAC-sensitive UI hiding is possible, but true compliance requires back-end field enforcement.
+- Production deployment requires strict "artifact admission control" and double-layer architecture (design accelerator + business core).
+
+### [Stitch Skills 研究：工作流与价值验证（SRP 案例）](https://github.com/Martin-Mythos/research/tree/main/stitch-skills-workflow-study#readme) (2026-05-03 10:07)
+
+This study evaluates the workflow and business value of Stitch Skills, a modular set of UI generation tools featured in the repository [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills). By systematically mapping skill modules—such as prompt enhancement, batch page generation, design system documentation, componentization, and videoification—into an end-to-end prototype workflow for a business portal (SRP), the research demonstrates Stitch Skills' ability to reduce collaboration costs and rapidly produce review-ready assets. Experiments verify that the toolkit enables quick style switching, interactive demo upgrades, and animation integration, supporting efficient stakeholder alignment and rapid iteration of enterprise-grade UI prototypes. Although remote generation and full pipeline tests were not performed, local HTML/CSS/JS workflows sufficed to validate feasibility and workflow coverage.
+
+**Key Findings:**
+- Stitch Skills' clear modular layering (design, prompt enhancement, code export, video asset generation) supports end-to-end workflow assembly.
+- For mid/back-office products like SRP, the primary value lies in rapid multi-style prototyping, consistency enforcement, and producing demonstrable assets.
+- Incorporating demo assets (HTML slides and animation demos) significantly increases review efficiency for proposals.
+
+For technical setup and further exploration, see the [Stitch Skills workflow repository](https://github.com/google-labs-code/stitch-skills).
+
+### [深度研究报告：`yao-tutorial-skill` 能力评估与 Harness Engineering 教程实验](https://github.com/Martin-Mythos/research/tree/main/harness-engineering-skill-review#readme) (2026-05-03 10:07)
 
 This research systematically evaluates the boundaries and delivery mechanisms of `yao-tutorial-skill`, focusing on its effectiveness in generating a structured, actionable tutorial for Harness Engineering. By replicating its workflow—from input normalization to research, outline, drafting, and validation—the study confirms that the skill is tuned for high-fidelity, process-driven tutorial production rather than rapid Q&A. The generated Harness Engineering tutorial meets comprehensive standards for accuracy, completeness, and usability, with the evaluation script confirming full compliance with skill-specific requirements. The findings highlight both the utility and limitations of `yao-tutorial-skill` for enterprise knowledge management, especially when full process features (like multi-format export and auto-verification) are actively used.
 
@@ -159,17 +180,6 @@ Key findings:
 - Risks include potential “pretty structure but weak evidence” and format/content mismatch, recommending additional fact verification and glossary linting in production.
 
 For more information, see the [skill documentation](https://github.com/yaojingang/yao-open-skills/blob/main/docs/skills/yao-tutorial-skill.md).
-
-### [Stitch Skills 研究：工作流与价值验证（SRP 案例）](https://github.com/Martin-Mythos/research/tree/main/stitch-skills-workflow-study#readme) (2026-05-01 16:22)
-
-This study evaluates the workflow and business value of Stitch Skills, a modular set of UI generation tools featured in the repository [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills). By systematically mapping skill modules—such as prompt enhancement, batch page generation, design system documentation, componentization, and videoification—into an end-to-end prototype workflow for a business portal (SRP), the research demonstrates Stitch Skills' ability to reduce collaboration costs and rapidly produce review-ready assets. Experiments verify that the toolkit enables quick style switching, interactive demo upgrades, and animation integration, supporting efficient stakeholder alignment and rapid iteration of enterprise-grade UI prototypes. Although remote generation and full pipeline tests were not performed, local HTML/CSS/JS workflows sufficed to validate feasibility and workflow coverage.
-
-**Key Findings:**
-- Stitch Skills' clear modular layering (design, prompt enhancement, code export, video asset generation) supports end-to-end workflow assembly.
-- For mid/back-office products like SRP, the primary value lies in rapid multi-style prototyping, consistency enforcement, and producing demonstrable assets.
-- Incorporating demo assets (HTML slides and animation demos) significantly increases review efficiency for proposals.
-
-For technical setup and further exploration, see the [Stitch Skills workflow repository](https://github.com/google-labs-code/stitch-skills).
 
 ### [create-agent-tui 自定义 Agent 价值研究](https://github.com/Martin-Mythos/research/tree/main/create-agent-tui-custom-agent-value-study#readme) (2026-04-26 17:56)
 
