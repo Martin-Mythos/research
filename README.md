@@ -145,9 +145,20 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 11 research projects
+## 12 research projects
 
-### [开源 AI Agent 核心项目实证探索与客观分析报告](https://github.com/Martin-Mythos/research/tree/main/agent-projects-empirical-study#readme) (2026-05-03 18:20)
+### [tw93/kami 设计系统解析与 Web 视觉重构实验报告](https://github.com/Martin-Mythos/research/tree/main/kami-design-experiments#readme) (2026-05-03 21:59)
+
+This project analyzes the design system "Kami," emphasizing its minimalist approach using a compact and stable token set to achieve a consistent and readable visual identity. Key features include a paper-like background, near-black body text, restrained use of color, serif typography, and thoughtful whitespace. Engineering practices involve variable-driven CSS, template reuse, and semi-semantic class names to keep style consistency and reduce visual fragmentation. Experiments showed that even with basic HTML and inline CSS, Kami enables rapid construction of distinct, readable web pages. While well-suited for content-centric and reading-heavy interfaces, it presently lacks built-in dark mode logic and comprehensive support for interactive or data-dense applications.
+
+Key findings:
+- The design token system fosters visual continuity and reduces user fatigue with low-saturation, high-contrast color choices.
+- Typographic rules prioritize rhythm and hierarchy over simple font size variation.
+- Kami's current strengths are in documentation, homepages, and minimalist web presentations; see [Kami on GitHub](https://github.com/tw93/kami) for source templates.
+- Limitations include incomplete support for interactive state management, advanced accessibility, dense data visualization, and dark mode.
+- Recommendations include expanding semantic tokens, improving component-level specifications, integrating visual regression tools, and implementing theme mapping for maintainability.
+
+### [开源 AI Agent 核心项目实证探索与客观分析报告](https://github.com/Martin-Mythos/research/tree/main/agent-projects-empirical-study#readme) (2026-05-03 18:21)
 
 This research systematically examines core open-source AI agent projects based on the `Arindam200/awesome-ai-apps` repository, focusing on agent categories such as information analysis, workflow automation, and security integration. The study designs reproducible benchmarks and tests for each agent, emphasizing retrievability, security boundaries, and performance risks. Verification was based on source code and documentation review, with further engineering judgments made in the absence of live API keys. Findings suggest that while the projects demonstrate clear logic separation and production-level architecture (especially for RAG and workflow agents), their stability, security, and evaluability remain significant challenges for real-world deployment.
 

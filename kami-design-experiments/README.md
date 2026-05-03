@@ -1,5 +1,10 @@
 # tw93/kami 设计系统解析与 Web 视觉重构实验报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 Kami 的设计语言并不追求“组件繁多”，而是通过少量稳定 Token 形成统一阅读气质：纸感背景、近黑正文、品牌蓝强调、衬线主字体与克制留白。工程上它通过变量先行、模板复用、轻度语义类名来保持一致性，减少了视觉噪声与样式分叉。
 
