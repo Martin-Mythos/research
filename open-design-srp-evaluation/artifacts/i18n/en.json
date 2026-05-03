@@ -1,0 +1,10 @@
+{
+  "app.title": "ENISA SRP Demo",
+  "nav.caseList": "Case List",
+  "nav.newCase": "New Case",
+  "case.groupB.title": "Vulnerability Core",
+  "case.field.exploitation_evidence": "Exploitation Evidence",
+  "sla.earlyWarning": "Early Warning (24h)",
+  "sla.notification": "Notification (72h)",
+  "sla.finalReport": "Final Report"
+}

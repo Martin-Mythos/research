@@ -1,0 +1,29 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "meta": {
+    "name": "srp-group-b",
+    "description": "ENISA SRP Group B 漏洞核心字段语义 Token",
+    "defaultLocale": "en"
+  },
+  "color": {
+    "severity": {
+      "critical": { "value": "#B42318" },
+      "high": { "value": "#D92D20" },
+      "medium": { "value": "#F79009" },
+      "low": { "value": "#12B76A" }
+    },
+    "status": {
+      "actively_exploited": { "value": "#7A271A" },
+      "severe_incident": { "value": "#B54708" },
+      "under_investigation": { "value": "#475467" }
+    }
+  },
+  "field": {
+    "vulnerability_id": { "required": true, "pattern": "^CVE-\\d{4}-\\d{4,}$" },
+    "title": { "required": true, "maxLength": 200 },
+    "event_type": { "required": true, "enum": ["actively_exploited", "severe_incident"] },
+    "severity": { "required": true, "enum": ["critical", "high", "medium", "low"] },
+    "cvss_score": { "required": true, "min": 0, "max": 10 },
+    "exploitation_evidence": { "required": false, "sensitive": true }
+  }
+}
