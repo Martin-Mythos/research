@@ -1,0 +1,60 @@
+{
+  "experiment": "工程卡片拆解",
+  "feature": "多人实时协同编辑",
+  "tickets": [
+    {
+      "id": "ENG-RT-01",
+      "title": "协同核心算法选型 Spike（CRDT vs OT）",
+      "type": "spike",
+      "acceptance": [
+        "给出 CRDT/OT 冲突模型对比",
+        "给出文档长度 10k 行下复杂度估计",
+        "输出推荐方案与放弃理由"
+      ]
+    },
+    {
+      "id": "ENG-RT-02",
+      "title": "WebSocket 会话与房间路由层",
+      "type": "implementation",
+      "acceptance": [
+        "支持 docId 级房间",
+        "支持断线重连与会话恢复 token",
+        "服务端广播延迟 P95 < 120ms"
+      ]
+    },
+    {
+      "id": "ENG-RT-03",
+      "title": "增量操作协议与冲突合并",
+      "type": "implementation",
+      "acceptance": [
+        "定义 op schema（insert/delete/format）",
+        "可重放日志恢复文档",
+        "并发写入一致性回归测试通过"
+      ]
+    },
+    {
+      "id": "ENG-RT-04",
+      "title": "协同光标与选区 Presence 同步",
+      "type": "implementation",
+      "acceptance": [
+        "显示他人光标颜色与名称",
+        "presence 心跳超时剔除",
+        "弱网抖动下不出现幽灵光标"
+      ]
+    },
+    {
+      "id": "ENG-RT-05",
+      "title": "离线缓存与重连后增量补偿",
+      "type": "implementation",
+      "acceptance": [
+        "本地 op 队列持久化",
+        "重连后按版本向量补偿",
+        "冲突回放可观测日志"
+      ]
+    }
+  ],
+  "score": {
+    "architecture_depth": 8.5,
+    "reason": "覆盖算法、传输、协议、presence 与离线恢复五层关键面"
+  }
+}
