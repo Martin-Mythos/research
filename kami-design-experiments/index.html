@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>极简主页｜Kami 风格</title>
+  <style>
+    :root {
+      --parchment:#f5f4ed;--ivory:#faf9f5;--near-black:#141413;--dark-warm:#3d3d3a;
+      --olive:#504e49;--stone:#6b6a64;--brand:#1B365D;--border:#e8e6dc;
+      --serif: Charter, "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Georgia, serif;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:var(--parchment);color:var(--near-black);font-family:var(--serif);line-height:1.45}
+    main{min-height:100%;display:grid;place-items:center;padding:7vh 7vw}
+    .card{max-width:860px;width:min(92vw,860px);border-left:2px solid var(--brand);padding-left:clamp(1.2rem,2.8vw,2.4rem)}
+    .eyebrow{font-size:.82rem;letter-spacing:.16em;color:var(--brand);text-transform:uppercase;margin:0 0 1rem}
+    h1{font-size:clamp(2.2rem,7.8vw,6.2rem);line-height:1.08;letter-spacing:-.02em;margin:.2rem 0 1.1rem}
+    .lead{max-width:36ch;font-size:clamp(1.05rem,2.1vw,1.35rem);color:var(--olive);margin:0 0 2.2rem}
+    ul{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+    a{color:var(--near-black);text-decoration:none;border-bottom:1px dotted var(--border);padding:.2rem 0;display:inline-block}
+    a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+    footer{margin-top:2.5rem;color:var(--stone);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card">
+      <p class="eyebrow">Minimal Profile</p>
+      <h1>把复杂技术，
+      变成可阅读的秩序。</h1>
+      <p class="lead">你好，我是林川。专注于 AI 产品设计与前端工程，偏爱克制的版式、稳定的节奏与可持续的视觉系统。</p>
+      <ul>
+        <li><a href="#">文章 / Essays</a></li>
+        <li><a href="#">实验 / Labs</a></li>
+        <li><a href="#">演讲 / Talks</a></li>
+        <li><a href="#">联系 / Contact</a></li>
+      </ul>
+      <footer>基于 Kami 视觉语法重构：高对比排版 + 低饱和纸感底色 + 大留白。</footer>
+    </section>
+  </main>
+</body>
+</html>
