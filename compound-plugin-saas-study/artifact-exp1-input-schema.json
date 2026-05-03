@@ -1,0 +1,21 @@
+{
+  "experiment": "需求摄取",
+  "entry_skill": "ce-plan",
+  "inferred_pipeline": [
+    "Phase0.2 检索 docs/brainstorms/*-requirements.md",
+    "无匹配时进入 Phase0.4 bootstrap",
+    "将用户输入注入 <feature_description> #$ARGUMENTS",
+    "Phase1 并行触发 repo/learnings/web research 子代理"
+  ],
+  "normalized_input": {
+    "raw": "作为写作者，我希望在 Markdown 编辑时获得 AI 幽灵补全（监听光标+防抖+流式返回），以更快完成草稿。",
+    "domain": "software",
+    "requires_clarification": false,
+    "assumptions": [
+      "前端为 Web 编辑器，具备光标事件",
+      "后端有可用 LLM 流式 API",
+      "允许新增 debounce 与取消机制"
+    ]
+  },
+  "tracker_integration_mode": "optional"
+}

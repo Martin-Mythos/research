@@ -1,0 +1,14 @@
+{
+  "experiment": "模糊需求抗压",
+  "input": "让编辑器的响应速度变得很快",
+  "expected_by_skill_design": [
+    "先做澄清提问或 planning bootstrap",
+    "若缺指标则生成调研/基线测量任务，而非直接臆造方案",
+    "将未验证项放入 Assumptions（headless 模式）"
+  ],
+  "simulated_output": [
+    "SPIKE: 建立前端输入延迟与首屏渲染基线（P50/P95）",
+    "SPIKE: flamegraph 分析主线程阻塞来源",
+    "TASK: 定义性能预算与验收门槛后再进入实现"
+  ]
+}
