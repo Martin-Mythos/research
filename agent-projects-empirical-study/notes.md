@@ -21,3 +21,7 @@
   - `advanced_rag_with_reranking/app.py`、`retriever.py` 不存在（404），后续根据 tree 结果改为 `src/boeing_rag/*` 路径。
 - 可复现实验脚本：`scripts_extract.py`，对抓取文件进行静态信号扫描，输出 `artifacts/static_signal_scan.json`。
 - 验证证据：`python agent-projects-empirical-study/scripts_extract.py` 成功写出 13 个文件的统计结果。
+- PR Review 修复：
+  - 修复 `scripts_extract.py` 路径硬编码问题：改为基于 `__file__` 推导 `artifacts/upstream` 与输出路径。
+  - 修复 `oauth_mentions` 误匹配问题：`auth` 改为单词边界与枚举模式（`oauth`, `bearer`, `authentication`, `authorization`）。
+- 验证：重新运行 `python agent-projects-empirical-study/scripts_extract.py`，输出 `written 13 -> .../static_signal_scan.json`。
