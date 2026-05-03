@@ -145,9 +145,20 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 9 research projects
+## 10 research projects
 
-### [基于 ENISA SRP 复杂场景的 open-design 架构实证研究报告](https://github.com/Martin-Mythos/research/tree/main/open-design-srp-evaluation#readme) (2026-05-03 18:12)
+### [keep-codex-fast 实验研究报告（Experimental-based）](https://github.com/Martin-Mythos/research/tree/main/keep-codex-fast-exp-study#readme) (2026-05-03 18:18)
+
+This experimental study rigorously assesses the claims of the keep-codex-fast project, which promises faster Codex performance through local state maintenance. Testing covered all documented modes and maintenance actions, utilizing official smoke tests, parameter coverage, and micro-benchmarks with simulated environments. Results demonstrate full coverage and functional correctness, confirming that “speedup” refers to reducing local I/O, scanning, and indexing overhead—rather than direct improvement in model inference speed. The project's tools, such as its main script ([keep_codex_fast.py](https://github.com/vibeforge1111/keep-codex-fast)), operate safely and effectively, especially in long-term, heavy-use environments.
+
+**Key Findings:**
+- Default operation is read-only and safe; no risk of unintended data alteration.
+- “apply” mode moves outdated sessions/worktrees out of hot paths, using backup-first strategy.
+- Successfully mitigates common local slowdowns (large logs, dead configs, old sessions, path discrepancies).
+- Script execution is fast; most slowdowns stem from file operations typical of maintenance.
+- Actual perceived speedup depends on user history/usage scale, with primary benefits for heavy Codex users.
+
+### [基于 ENISA SRP 复杂场景的 open-design 架构实证研究报告](https://github.com/Martin-Mythos/research/tree/main/open-design-srp-evaluation#readme) (2026-05-03 18:18)
 
 This research empirically evaluates the use of the open-design framework in complex ENISA SRP (Security Reporting Platform) scenarios. Unlike traditional enterprise form engines, open-design prioritizes agent-driven, prompt-based artifact generation for rapid prototyping and design exploration. The study finds open-design is highly effective for design acceleration—producing UI skeletons, token mockups, and demo pages—but lacks system-level features required for SRP’s stringent compliance (complex validation, RBAC, auditability). The suggested approach is to layer open-design atop a robust business core with dedicated form validation and RBAC enforcement. For more details, see [ENISA SRP overview](https://www.enisa.europa.eu/topics/csirt-cert-services/srp) and [open-design tool](https://github.com/open-design/open-design).
 

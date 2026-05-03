@@ -1,5 +1,10 @@
 # keep-codex-fast 实验研究报告（Experimental-based）
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 研究问题
 该项目声称可以让 Codex “更快”。本研究要验证：
 1. 它是否真的执行了文档宣称的各类维护场景；
