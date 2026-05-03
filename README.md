@@ -145,9 +145,21 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 12 research projects
+## 13 research projects
 
-### [tw93/kami 设计系统解析与 Web 视觉重构实验报告](https://github.com/Martin-Mythos/research/tree/main/kami-design-experiments#readme) (2026-05-03 21:59)
+### [敏捷 SaaS 场景下 compound-engineering-plugin 架构实证报告](https://github.com/Martin-Mythos/research/tree/main/compound-plugin-saas-study#readme) (2026-05-03 22:19)
+
+This research empirically analyzes the architecture of the `compound-engineering-plugin` within agile SaaS contexts, focusing on its method engineering approach rather than a monolithic executor. The plugin leverages a SKILL.md workflow protocol, multi-agent scheduling conventions, and cross-platform converters to turn product requirements into structured, actionable plans and task cards. Through codebase examination and simulated experiments, the study demonstrates how the plugin systematically decomposes vague or complex requirements, standardizes PM processes, and outputs artifacts such as engineering tickets and worklogs, though it depends heavily on contextual quality and host platform capabilities. The findings highlight both the strengths in modularizing engineering workflows and the current limits in deep technical guidance and organizational scalability.
+
+**Key findings:**
+- The plugin enforces a methodical transformation of product requirements into structured plans, clarifying boundaries, technical decisions, and test scenarios.
+- Experimental outputs show clear decomposition of collaborative editing features into key engineering tasks, though full technical specificity depends on further research input.
+- For ambiguous requirements, the plugin mandates clarification or baseline measurement (spike) phases before implementation, reducing ad-hoc solutions.
+- Limitations include reliance on host agent support, variable effectiveness with loosely-defined contexts, and the need for unified schemas in large organizations.
+
+Reference: [Bun JavaScript Runtime](https://bun.sh), [TypeScript](https://www.typescriptlang.org/)
+
+### [tw93/kami 设计系统解析与 Web 视觉重构实验报告](https://github.com/Martin-Mythos/research/tree/main/kami-design-experiments#readme) (2026-05-03 22:10)
 
 This project analyzes the design system "Kami," emphasizing its minimalist approach using a compact and stable token set to achieve a consistent and readable visual identity. Key features include a paper-like background, near-black body text, restrained use of color, serif typography, and thoughtful whitespace. Engineering practices involve variable-driven CSS, template reuse, and semi-semantic class names to keep style consistency and reduce visual fragmentation. Experiments showed that even with basic HTML and inline CSS, Kami enables rapid construction of distinct, readable web pages. While well-suited for content-centric and reading-heavy interfaces, it presently lacks built-in dark mode logic and comprehensive support for interactive or data-dense applications.
 
