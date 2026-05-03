@@ -1,5 +1,10 @@
 # 深度研究报告：`yao-tutorial-skill` 能力评估与 Harness Engineering 教程实验
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 研究目标
 
 本研究聚焦于以下问题：

@@ -145,9 +145,33 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 6 research projects
+## 8 research projects
 
-### [create-agent-tui 自定义 Agent 价值研究](https://github.com/Martin-Mythos/research/tree/main/create-agent-tui-custom-agent-value-study#readme) (2026-04-26 17:55)
+### [深度研究报告：`yao-tutorial-skill` 能力评估与 Harness Engineering 教程实验](https://github.com/Martin-Mythos/research/tree/main/harness-engineering-skill-review#readme) (2026-05-01 22:23)
+
+This research systematically evaluates the boundaries and delivery mechanisms of `yao-tutorial-skill`, focusing on its effectiveness in generating a structured, actionable tutorial for Harness Engineering. By replicating its workflow—from input normalization to research, outline, drafting, and validation—the study confirms that the skill is tuned for high-fidelity, process-driven tutorial production rather than rapid Q&A. The generated Harness Engineering tutorial meets comprehensive standards for accuracy, completeness, and usability, with the evaluation script confirming full compliance with skill-specific requirements. The findings highlight both the utility and limitations of `yao-tutorial-skill` for enterprise knowledge management, especially when full process features (like multi-format export and auto-verification) are actively used.
+
+Key findings:
+- `yao-tutorial-skill` operates as a "tutorial production pipeline," emphasizing end-to-end workflow and source verification.
+- Tutorials generated are structurally complete, covering definitions, architecture, implementation stages, templates, governance, anti-patterns, and checklists.
+- Quality checks (via [quality_eval.py](https://github.com/yaojingang/yao-open-skills/blob/main/examples/quality_eval.py)) confirm 100% compliance in process, delivery, usability, and enforceable engineering standards.
+- The skill is best suited for teams needing structured, auditable, reusable educational materials, and can serve as a template for enterprise L&D content production if enhanced with fact-checking and glossary consistency.
+- Risks include potential “pretty structure but weak evidence” and format/content mismatch, recommending additional fact verification and glossary linting in production.
+
+For more information, see the [skill documentation](https://github.com/yaojingang/yao-open-skills/blob/main/docs/skills/yao-tutorial-skill.md).
+
+### [Stitch Skills 研究：工作流与价值验证（SRP 案例）](https://github.com/Martin-Mythos/research/tree/main/stitch-skills-workflow-study#readme) (2026-05-01 16:22)
+
+This study evaluates the workflow and business value of Stitch Skills, a modular set of UI generation tools featured in the repository [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills). By systematically mapping skill modules—such as prompt enhancement, batch page generation, design system documentation, componentization, and videoification—into an end-to-end prototype workflow for a business portal (SRP), the research demonstrates Stitch Skills' ability to reduce collaboration costs and rapidly produce review-ready assets. Experiments verify that the toolkit enables quick style switching, interactive demo upgrades, and animation integration, supporting efficient stakeholder alignment and rapid iteration of enterprise-grade UI prototypes. Although remote generation and full pipeline tests were not performed, local HTML/CSS/JS workflows sufficed to validate feasibility and workflow coverage.
+
+**Key Findings:**
+- Stitch Skills' clear modular layering (design, prompt enhancement, code export, video asset generation) supports end-to-end workflow assembly.
+- For mid/back-office products like SRP, the primary value lies in rapid multi-style prototyping, consistency enforcement, and producing demonstrable assets.
+- Incorporating demo assets (HTML slides and animation demos) significantly increases review efficiency for proposals.
+
+For technical setup and further exploration, see the [Stitch Skills workflow repository](https://github.com/google-labs-code/stitch-skills).
+
+### [create-agent-tui 自定义 Agent 价值研究](https://github.com/Martin-Mythos/research/tree/main/create-agent-tui-custom-agent-value-study#readme) (2026-04-26 17:56)
 
 This research examines the value of the create-agent-tui tool within the OpenRouterTeam/skills repository, focusing on its ability to systematize key engineering concerns—control, operability, persistence, and integration—rather than enhance AI model intelligence. Through document analysis and reproducible experiments, the study demonstrates that while create-agent-tui provides limited benefits for simple Q&A tasks, it significantly outperforms basic chat interfaces in scenarios demanding tool invocation, approval workflows, session tracking, terminal workflow integration, or backend/service embedding. The project confirms that create-agent-tui delivers a reusable agent scaffold offering layered architecture and engineering governance capabilities, clearly exceeding baseline chat solutions in complex operational settings. For more on the tool, see [OpenRouterTeam/skills](https://github.com/OpenRouterTeam/skills).
 

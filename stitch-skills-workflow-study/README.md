@@ -1,5 +1,10 @@
 # Stitch Skills 研究：工作流与价值验证（SRP 案例）
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 结论（Final Conclusion）
 在“需求到界面到代码到展示”的链路上，Stitch Skills 的核心价值是把 UI 生成工作拆成可组合技能（prompt 增强、批量页面生成、设计系统文档化、组件化、演示视频化），从而显著降低多角色协作成本。基于本次可复现实验，我们验证了该技能集合适合用来快速搭建像 SRP（Single Reporting Platform）这类业务后台/门户原型，并能快速产出可评审资产（页面、交互演示、汇报材料）。
 
