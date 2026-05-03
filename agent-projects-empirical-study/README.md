@@ -1,5 +1,10 @@
 # 开源 AI Agent 核心项目实证探索与客观分析报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 
 本研究基于 `Arindam200/awesome-ai-apps` 的 5 个目标方向进行实证导向分析：
