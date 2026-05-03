@@ -88,3 +88,11 @@
 - `artifact-exp2-engineering-tickets.json`
 - `artifact-exp3-edgecase-log.json`
 - `verification.log`
+
+## 6. 复审修订（针对 PR 反馈的补强）
+
+- 新增 `extract_evidence.py` 与 `artifact-source-evidence.json`，把关键结论改为“可程序化验真”：
+  1) `loadClaudePlugin` 与 `.claude-plugin/plugin.json` 解析入口存在；
+  2) `ce-plan` 使用 `<feature_description> #$ARGUMENTS` 注入输入；
+  3) plan handoff 中存在 GitHub/Linear issue 创建路由命令。
+- 该补强用于降低“主观推演”占比，提高可重复审计性。

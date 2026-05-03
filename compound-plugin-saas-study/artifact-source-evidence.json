@@ -1,0 +1,32 @@
+[
+  {
+    "id": "parser-load-plugin",
+    "file": "src/parsers/claude.ts",
+    "hits": {
+      "export async function loadClaudePlugin": true,
+      "const PLUGIN_MANIFEST = path\\.join\\(\"\\.claude-plugin\", \"plugin\\.json\"\\)": true
+    },
+    "all_pass": true
+  },
+  {
+    "id": "skill-arg-injection",
+    "file": "plugins/compound-engineering/skills/ce-plan/SKILL.md",
+    "hits": {
+      "<feature_description> #\\$ARGUMENTS </feature_description>": true,
+      "Phase 0: Resume, Source, and Scope": true,
+      "Phase 1: Gather Context": true
+    },
+    "all_pass": true
+  },
+  {
+    "id": "issue-tracker-routing",
+    "file": "plugins/compound-engineering/skills/ce-plan/references/plan-handoff.md",
+    "hits": {
+      "project_tracker: github": true,
+      "project_tracker: linear": true,
+      "gh issue create": true,
+      "linear issue create": true
+    },
+    "all_pass": true
+  }
+]

@@ -28,3 +28,11 @@
 ## 验证证据
 - `python3 generate_artifacts.py > verification.log` 成功。
 - `jq` 检查结果：实验二卡片数量=5，实验三输出条目=3。
+
+## PR 复审修订记录
+- 用户要求“根据 PR review comments 修订”。当前环境未提供可直接读取 GitHub inline comments 的 API 凭据与链接上下文。
+- 采取补强动作：新增 `extract_evidence.py`，从上游仓库源码自动提取关键证据（parser、参数注入、issue tracker 路由）并输出 `artifact-source-evidence.json`。
+- 失败-恢复：首次运行因 `/tmp/compound-engineering-plugin` 不存在报错（FileNotFoundError），随后重新 clone 上游仓库并复跑成功。
+
+## 新增验证
+- `python3 extract_evidence.py`：成功生成 `artifact-source-evidence.json`。
