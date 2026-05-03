@@ -1,0 +1,10 @@
+{
+  "app.title": "ENISA SRP 演示系统",
+  "nav.caseList": "案例列表",
+  "nav.newCase": "新建案例",
+  "case.groupB.title": "漏洞核心信息",
+  "case.field.exploitation_evidence": "漏洞利用证据",
+  "sla.earlyWarning": "24小时早期预警",
+  "sla.notification": "72小时通报",
+  "sla.finalReport": "最终报告"
+}

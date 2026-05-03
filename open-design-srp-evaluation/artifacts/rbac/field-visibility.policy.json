@@ -1,0 +1,17 @@
+{
+  "roles": {
+    "project_coordinator": { "denyFields": [] },
+    "manufacturer_reporter": { "denyFields": [] },
+    "reviewer": { "denyFields": [] },
+    "demo_observer": {
+      "denyFields": [
+        "exploitation_evidence",
+        "submitted_payload_snapshot",
+        "internal_owner",
+        "customer_name",
+        "exact_quantity",
+        "attachments.raw"
+      ]
+    }
+  }
+}

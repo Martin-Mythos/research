@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SRP SLA Timeline",
+  "type": "object",
+  "required": ["awareness_datetime_t0", "event_type"],
+  "properties": {
+    "awareness_datetime_t0": { "type": "string", "format": "date-time" },
+    "event_type": { "type": "string", "enum": ["actively_exploited", "severe_incident"] },
+    "corrective_measure_available_datetime": { "type": "string", "format": "date-time" },
+    "derived_deadlines": {
+      "type": "object",
+      "properties": {
+        "early_warning_deadline": { "type": "string", "format": "date-time" },
+        "notification_deadline": { "type": "string", "format": "date-time" },
+        "final_report_deadline": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "event_type": { "const": "actively_exploited" } } },
+      "then": { "required": ["corrective_measure_available_datetime"] }
+    }
+  ]
+}
