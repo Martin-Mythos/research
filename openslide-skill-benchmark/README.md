@@ -1,5 +1,10 @@
 # OpenSlide 与主流 AI PPT 技能的工程实证与横向评测报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 OpenSlide 的核心优势是“React 即幻灯片页面”，把每页视为可版本化、可代码审查的组件，适合工程化协作与 Agent 自动改写；但它到 `.pptx` 的直接交付链路相对更长。归藏流派更偏“结构化 Markdown/HTML 设计系统”，出稿速度快、页面节奏强，但对既有办公链路（PowerPoint 深度编辑）需要额外转换。花叔 PPTX 流派（以 python-pptx 为代表）在“直接落地可编辑 PPTX”方面最短路径，但视觉表现上若无模板和额外设计步骤，容易趋于模板化。
 

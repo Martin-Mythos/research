@@ -1,0 +1,7 @@
+This research project conducts a practical engineering comparison between OpenSlide (a React-based slide framework), Marp-based "归藏流派" (structured Markdown/HTML workflow), and Python-pptx-based "花叔流派" for AI-powered PPT generation and delivery. OpenSlide excels in componentized, version-controlled slides suitable for collaborative engineering and agent-driven content iteration but has a longer path to direct .pptx exports. The Marp workflow offers rapid, structured content generation in Markdown but requires extra conversion for deep PPT editing. The Python-pptx approach provides the shortest chain to editable PowerPoint files but tends toward template-based visuals without extra design steps. Evaluation showed each method has clear trade-offs in structure, visual flexibility, and engineering usability.
+
+Key findings:
+- OpenSlide is best for maintainable, component-based engineering, especially where React and design systems are leveraged ([OpenSlide GitHub](https://github.com/openslide/openslide)).
+- Marp/归藏流派 is ideal for fast, structured draft generation, supporting high productivity ([Marp tool](https://marp.app/)).
+- Python-pptx/花叔流派 offers the most direct, low-friction way to deliver ready-to-edit PPTX files for business use.
+- Trade-off matrix confirms OpenSlide’s visual/layout strengths, Marp’s drafting speed, and Python-pptx’s file delivery efficiency; choice depends on project context and team skillset.

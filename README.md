@@ -145,9 +145,9 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 14 research projects
+## 15 research projects
 
-### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-html-benchmark#readme) (2026-05-07 05:53)
+### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-html-benchmark#readme) (2026-05-07 06:00)
 
 This research project systematically evaluates the Sense Deck Skill ("鲸格PPT") against mainstream AI-powered PPT toolchains, specifically Marp (归藏流派) and Python-pptx (花叔流派). Focusing on a template-first workflow, the study benchmarks three approaches across engineering flexibility, visual output quality, logical conveyance, toolchain dependencies, and team collaboration. Sense Deck stands out for its high front-end control and visual customization capability, suitable for browser-based, team-extensible presentations. Marp excels in speed and version control for simple structured drafts, while Python-pptx remains robust for compatibility with Office ecosystems but at higher engineering cost. Overall, Sense Deck offers the strongest platform for customizable, web-native presentations; Marp is optimal for low-friction authoring; Python-pptx is best for formal Office deliverables.
 
@@ -158,6 +158,16 @@ This research project systematically evaluates the Sense Deck Skill ("鲸格PPT"
 - Recommended workflow: use Sense Deck as the base for front-end teams, Marp for rapid drafts, and Python-pptx for bulk/final Office exports.
 
 For technical details, see [Sense Deck GitHub repository](https://github.com/xwbcl123/-PPT-sense-deck-skill-) and [Marp documentation](https://marp.app/).
+
+### [OpenSlide 与主流 AI PPT 技能的工程实证与横向评测报告](https://github.com/Martin-Mythos/research/tree/main/openslide-skill-benchmark#readme) (2026-05-03 22:30)
+
+This research project conducts a practical engineering comparison between OpenSlide (a React-based slide framework), Marp-based "归藏流派" (structured Markdown/HTML workflow), and Python-pptx-based "花叔流派" for AI-powered PPT generation and delivery. OpenSlide excels in componentized, version-controlled slides suitable for collaborative engineering and agent-driven content iteration but has a longer path to direct .pptx exports. The Marp workflow offers rapid, structured content generation in Markdown but requires extra conversion for deep PPT editing. The Python-pptx approach provides the shortest chain to editable PowerPoint files but tends toward template-based visuals without extra design steps. Evaluation showed each method has clear trade-offs in structure, visual flexibility, and engineering usability.
+
+Key findings:
+- OpenSlide is best for maintainable, component-based engineering, especially where React and design systems are leveraged ([OpenSlide GitHub](https://github.com/openslide/openslide)).
+- Marp/归藏流派 is ideal for fast, structured draft generation, supporting high productivity ([Marp tool](https://marp.app/)).
+- Python-pptx/花叔流派 offers the most direct, low-friction way to deliver ready-to-edit PPTX files for business use.
+- Trade-off matrix confirms OpenSlide’s visual/layout strengths, Marp’s drafting speed, and Python-pptx’s file delivery efficiency; choice depends on project context and team skillset.
 
 ### [敏捷 SaaS 场景下 compound-engineering-plugin 架构实证报告](https://github.com/Martin-Mythos/research/tree/main/compound-plugin-saas-study#readme) (2026-05-03 22:21)
 
