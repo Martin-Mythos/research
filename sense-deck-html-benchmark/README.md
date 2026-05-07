@@ -1,5 +1,10 @@
 # Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 本次实验聚焦 `xwbcl123/-PPT-sense-deck-skill-`（仓库内名称“鲸格PPT”）的模板优先工作流：先构建内容 IR，再从 full-deck / single-page layout / theme 中装配，最后输出可运行 HTML。实证结果显示：
 

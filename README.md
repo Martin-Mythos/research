@@ -145,9 +145,21 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 13 research projects
+## 14 research projects
 
-### [敏捷 SaaS 场景下 compound-engineering-plugin 架构实证报告](https://github.com/Martin-Mythos/research/tree/main/compound-plugin-saas-study#readme) (2026-05-03 22:19)
+### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-html-benchmark#readme) (2026-05-07 05:53)
+
+This research project systematically evaluates the Sense Deck Skill ("鲸格PPT") against mainstream AI-powered PPT toolchains, specifically Marp (归藏流派) and Python-pptx (花叔流派). Focusing on a template-first workflow, the study benchmarks three approaches across engineering flexibility, visual output quality, logical conveyance, toolchain dependencies, and team collaboration. Sense Deck stands out for its high front-end control and visual customization capability, suitable for browser-based, team-extensible presentations. Marp excels in speed and version control for simple structured drafts, while Python-pptx remains robust for compatibility with Office ecosystems but at higher engineering cost. Overall, Sense Deck offers the strongest platform for customizable, web-native presentations; Marp is optimal for low-friction authoring; Python-pptx is best for formal Office deliverables.
+
+**Key findings:**
+- Sense Deck achieves top scores for DOM flexibility (4.7/5) and visual expansion (4.6/5), supporting native HTML/CSS/JS editing.
+- Marp is fastest for content drafting and collaborative workflows (4.6/5) but limited in advanced layout options by Markdown syntax.
+- Python-pptx is well-integrated with Office but high engineering and iterative overhead (composite score 3.62/5).
+- Recommended workflow: use Sense Deck as the base for front-end teams, Marp for rapid drafts, and Python-pptx for bulk/final Office exports.
+
+For technical details, see [Sense Deck GitHub repository](https://github.com/xwbcl123/-PPT-sense-deck-skill-) and [Marp documentation](https://marp.app/).
+
+### [敏捷 SaaS 场景下 compound-engineering-plugin 架构实证报告](https://github.com/Martin-Mythos/research/tree/main/compound-plugin-saas-study#readme) (2026-05-03 22:21)
 
 This research empirically analyzes the architecture of the `compound-engineering-plugin` within agile SaaS contexts, focusing on its method engineering approach rather than a monolithic executor. The plugin leverages a SKILL.md workflow protocol, multi-agent scheduling conventions, and cross-platform converters to turn product requirements into structured, actionable plans and task cards. Through codebase examination and simulated experiments, the study demonstrates how the plugin systematically decomposes vague or complex requirements, standardizes PM processes, and outputs artifacts such as engineering tickets and worklogs, though it depends heavily on contextual quality and host platform capabilities. The findings highlight both the strengths in modularizing engineering workflows and the current limits in deep technical guidance and organizational scalability.
 
