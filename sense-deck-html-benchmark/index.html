@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企业级 AI 系统的安全逃逸边界与防御机制</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#121a30; --text:#eaf0ff; --muted:#9eb0d6; --accent:#5ad1ff; --ok:#6ee7b7; --warn:#fbbf24; --bad:#f87171; }
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% 0%,#1c2850 0%,var(--bg) 45%);color:var(--text);font-family:"Segoe UI","PingFang SC",sans-serif;overflow:hidden}
+    .deck{position:relative;width:100vw;height:100vh}
+    .slide{display:none;position:absolute;inset:0;padding:56px 72px}
+    .slide.active{display:block}
+    h1,h2{margin:0 0 14px 0;line-height:1.2} h1{font-size:48px} h2{font-size:38px}
+    p,li{font-size:24px;line-height:1.5}.muted{color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px}
+    .kpi{font-size:44px;color:var(--accent);font-weight:700}.tag{font-size:14px;padding:4px 10px;border-radius:999px;background:rgba(90,209,255,.15);color:var(--accent);display:inline-block}
+    .footer{position:absolute;bottom:20px;left:72px;right:72px;display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+    .bar{height:10px;border-radius:99px;background:#1d284a;overflow:hidden}.bar>span{display:block;height:100%;background:linear-gradient(90deg,var(--ok),var(--accent))}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+  </style>
+</head>
+<body>
+  <main class="deck" id="deck">
+    <section class="slide active" data-role="cover"><h1>企业级 AI 系统的安全逃逸边界与防御机制</h1><p class="muted">面向研发、安全、法务与运营的一体化防线设计</p><div class="tag">Sense Deck 风格：结论先行 + 信息克制</div><div class="footer"><span>01 封面</span><span>← → 翻页</span></div></section>
+    <section class="slide" data-role="agenda"><h2>议程：从逃逸链路到可执行防御</h2><ul><li>1. 安全逃逸边界：输入、上下文、工具、输出</li><li>2. 五类高危场景：提示注入、越权调用、数据外泄、模型串扰、供应链污染</li><li>3. 分层防御架构：策略、检测、隔离、审计、恢复</li><li>4. 落地路线图：90 天建设计划 + 指标闭环</li></ul><div class="footer"><span>02 议程</span><span></span></div></section>
+    <section class="slide" data-role="boundary"><h2>逃逸边界 = 可控域 与 不可控域 的动态交界</h2><div class="grid-2"><div class="card"><h3>可控域（治理对象）</h3><ul><li>系统提示与模板</li><li>RAG 检索白名单</li><li>工具调用策略</li><li>输出过滤规则</li></ul></div><div class="card"><h3>不可控域（风险来源）</h3><ul><li>用户恶意输入</li><li>第三方数据污染</li><li>隐式指令劫持</li><li>模型推理幻觉</li></ul></div></div><div class="footer"><span>03 边界定义</span><span></span></div></section>
+    <section class="slide" data-role="risk"><h2>五类高危逃逸路径与业务后果</h2><div class="grid-2"><div class="card"><strong>提示注入</strong><p>覆盖上层策略，诱导泄露系统指令。</p></div><div class="card"><strong>越权工具调用</strong><p>Agent 访问敏感 API，触发数据破坏。</p></div><div class="card"><strong>机密外泄</strong><p>上下文拼接失误导致 PII/密钥暴露。</p></div><div class="card"><strong>模型串扰</strong><p>多 Agent 信息污染，错误决策放大。</p></div></div><div class="footer"><span>04 风险图谱</span><span></span></div></section>
+    <section class="slide" data-role="defense"><h2>防御机制：五层联动，不依赖单点能力</h2><div class="steps"><div class="card"><div class="kpi">L1</div><p>输入层<br/>语义风控+注入检测</p></div><div class="card"><div class="kpi">L2</div><p>上下文层<br/>最小化检索+脱敏</p></div><div class="card"><div class="kpi">L3</div><p>执行层<br/>工具权限沙箱</p></div><div class="card"><div class="kpi">L4</div><p>输出层<br/>合规过滤+事实核验</p></div></div><div class="card" style="margin-top:12px"><div class="kpi">L5</div><p>审计层：全链路日志、异常回放、责任归因。</p></div><div class="footer"><span>05 防御架构</span><span></span></div></section>
+    <section class="slide" data-role="metrics"><h2>治理成效指标（90 天）</h2><div class="card"><p>逃逸拦截率</p><div class="bar"><span style="width:86%"></span></div><p class="muted">目标：≥85%</p></div><div class="card"><p>高危误报率</p><div class="bar"><span style="width:28%;background:linear-gradient(90deg,var(--warn),var(--bad))"></span></div><p class="muted">目标：≤30%</p></div><div class="card"><p>响应闭环时长（P1）</p><div class="bar"><span style="width:72%"></span></div><p class="muted">目标：≤4 小时</p></div><div class="footer"><span>06 指标闭环</span><span></span></div></section>
+    <section class="slide" data-role="roadmap"><h2>落地路线图：30/60/90 天</h2><div class="grid-2"><div class="card"><h3>0-30 天</h3><ul><li>梳理资产与数据分级</li><li>上线提示注入检测</li><li>建立红队脚本库</li></ul></div><div class="card"><h3>31-60 天</h3><ul><li>工具权限最小化</li><li>RAG 脱敏与白名单</li><li>审计链路贯通</li></ul></div><div class="card"><h3>61-90 天</h3><ul><li>自动化演练平台</li><li>跨部门应急机制</li><li>治理指标周报化</li></ul></div><div class="card"><h3>关键产物</h3><ul><li>安全策略库</li><li>攻防用例库</li><li>管理层看板</li></ul></div></div><div class="footer"><span>07 路线图</span><span></span></div></section>
+    <section class="slide" data-role="closing"><h2>结论：边界不是墙，而是可持续演进的系统能力</h2><p>将「逃逸防御」从模型问题升级为工程问题：<br/>策略可配置、日志可追踪、风险可量化、协同可演练。</p><div class="tag">建议：从一条关键业务链路先行试点</div><div class="footer"><span>08 收束</span><span></span></div></section>
+  </main>
+  <script>
+    const slides=[...document.querySelectorAll('.slide')];let i=0;
+    const show=n=>{slides[i].classList.remove('active');i=(n+slides.length)%slides.length;slides[i].classList.add('active')};
+    window.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='PageDown')show(i+1);if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1)});
+    window.addEventListener('click',()=>show(i+1));
+  </script>
+</body>
+</html>
