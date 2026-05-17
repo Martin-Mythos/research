@@ -1,5 +1,10 @@
 # Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 本次研究围绕 `xwbcl123/-PPT-sense-deck-skill-` 展开，重点验证其“模板优先 + 内容 IR + HTML/CSS/JS 静态交付”的工作流在企业级演示场景中的可控性。该项目在 `SKILL.md` 中明确要求优先选择模板库、先构建 content IR，再输出静态三件套（`index.html / styles.css / deck.js`），本质上是把“内容规划-版式装配-运行时增强”拆分为可组合工序。
 

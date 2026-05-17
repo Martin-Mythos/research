@@ -1,5 +1,10 @@
 # tw93/Waza 八项核心 Skill A/B 测试实证报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 实验摘要 (Executive Summary)
 Waza 的核心价值，不在“让 AI 更会写代码”，而在于把**工程决策顺序**硬编码成可执行流程：先审计上下文、再建模、再实现、再溯源、最后审查。它精准击中两类高频痛点：
 
