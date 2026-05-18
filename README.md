@@ -145,7 +145,42 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 15 research projects
+## 17 research projects
+
+### [tw93/Waza 八项核心 Skill A/B 测试实证报告](https://github.com/Martin-Mythos/research/tree/main/waza-ab-test#readme) (2026-05-17 07:30)
+
+This report evaluates the effectiveness of **Waza**, an engineering workflow tool for AI-assisted development, by running A/B tests in code and content scenarios. Unlike traditional tools that focus on improving code generation, Waza enforces a stepwise, auditable process—from context auditing to modeling, root cause analysis, and rigorous review—which addresses frequent issues of unreliable code execution and shallow deliverables. In practice, Waza demonstrably improves architectural robustness, debugging precision, and information density in both engineering and writing tasks, although final code quality still depends on model ability and strict process adherence. The tool shines particularly in debugging, context modeling, and risk control before deployment, supporting teams with repeatable, traceable workflows.
+
+**Key findings:**
+- Waza substantially reduces reckless code execution and boosts verifiability, especially in debug and review phases.
+- Information density and technical clarity are markedly higher in research tasks, thanks to structured learning and writing modules.
+- Best results are achieved when Waza’s steps (`/health`, `/think`, `/hunt`, `/check`, `/learn`) are followed rigorously and incorporated into team processes, notably CI checklists.
+
+- For more details and source material, see the [Waza GitHub repository](https://github.com/tw93/Waza).
+
+### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-skill-benchmark#readme) (2026-05-14 10:07)
+
+This research project evaluates the architectural and usability characteristics of the Sense Deck Skill — a workflow that prioritizes template selection, content IR construction, and static HTML/CSS/JS delivery for enterprise-level AI presentation scenarios. Through empirical comparison with mainstream AI PPT toolchains (Marp/归藏 and python-pptx/花叔), it finds that Sense Deck excels in front-end controllability, visual consistency, and offline deployment, especially suited for organizations emphasizing code modifiability. Marp offers rapid outline-to-page conversion and low collaboration costs but is limited in complex layouts, while python-pptx provides seamless integration into Office environments but demands scripting prowess and higher style editing costs.
+
+Key findings:
+- Sense Deck achieves the highest overall score on engineering transparency, visual expansion, and logical clarity (13.5/15).
+- Marp is optimal for quick structuring and collaborative markdown-based editing, yet limited in detailed visual customization.
+- Python-pptx fits organizations needing final `.pptx` assets but requires significant manual styling and scripting.
+- Recommended hybrid workflow: use Marp for draft structuring, Sense Deck for high-fidelity delivery, and export to PPTX as needed.
+
+Links:
+- [Sense Deck Skill GitHub](https://github.com/xwbcl123/-PPT-sense-deck-skill-)
+- [Marp Official](https://marp.app/)
+
+### [OpenSlide 与主流 AI PPT 技能的工程实证与横向评测报告](https://github.com/Martin-Mythos/research/tree/main/openslide-skill-benchmark#readme) (2026-05-07 06:01)
+
+This research project conducts a practical engineering comparison between OpenSlide (a React-based slide framework), Marp-based "归藏流派" (structured Markdown/HTML workflow), and Python-pptx-based "花叔流派" for AI-powered PPT generation and delivery. OpenSlide excels in componentized, version-controlled slides suitable for collaborative engineering and agent-driven content iteration but has a longer path to direct .pptx exports. The Marp workflow offers rapid, structured content generation in Markdown but requires extra conversion for deep PPT editing. The Python-pptx approach provides the shortest chain to editable PowerPoint files but tends toward template-based visuals without extra design steps. Evaluation showed each method has clear trade-offs in structure, visual flexibility, and engineering usability.
+
+Key findings:
+- OpenSlide is best for maintainable, component-based engineering, especially where React and design systems are leveraged ([OpenSlide GitHub](https://github.com/openslide/openslide)).
+- Marp/归藏流派 is ideal for fast, structured draft generation, supporting high productivity ([Marp tool](https://marp.app/)).
+- Python-pptx/花叔流派 offers the most direct, low-friction way to deliver ready-to-edit PPTX files for business use.
+- Trade-off matrix confirms OpenSlide’s visual/layout strengths, Marp’s drafting speed, and Python-pptx’s file delivery efficiency; choice depends on project context and team skillset.
 
 ### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-html-benchmark#readme) (2026-05-07 06:00)
 
@@ -158,16 +193,6 @@ This research project systematically evaluates the Sense Deck Skill ("鲸格PPT"
 - Recommended workflow: use Sense Deck as the base for front-end teams, Marp for rapid drafts, and Python-pptx for bulk/final Office exports.
 
 For technical details, see [Sense Deck GitHub repository](https://github.com/xwbcl123/-PPT-sense-deck-skill-) and [Marp documentation](https://marp.app/).
-
-### [OpenSlide 与主流 AI PPT 技能的工程实证与横向评测报告](https://github.com/Martin-Mythos/research/tree/main/openslide-skill-benchmark#readme) (2026-05-03 22:30)
-
-This research project conducts a practical engineering comparison between OpenSlide (a React-based slide framework), Marp-based "归藏流派" (structured Markdown/HTML workflow), and Python-pptx-based "花叔流派" for AI-powered PPT generation and delivery. OpenSlide excels in componentized, version-controlled slides suitable for collaborative engineering and agent-driven content iteration but has a longer path to direct .pptx exports. The Marp workflow offers rapid, structured content generation in Markdown but requires extra conversion for deep PPT editing. The Python-pptx approach provides the shortest chain to editable PowerPoint files but tends toward template-based visuals without extra design steps. Evaluation showed each method has clear trade-offs in structure, visual flexibility, and engineering usability.
-
-Key findings:
-- OpenSlide is best for maintainable, component-based engineering, especially where React and design systems are leveraged ([OpenSlide GitHub](https://github.com/openslide/openslide)).
-- Marp/归藏流派 is ideal for fast, structured draft generation, supporting high productivity ([Marp tool](https://marp.app/)).
-- Python-pptx/花叔流派 offers the most direct, low-friction way to deliver ready-to-edit PPTX files for business use.
-- Trade-off matrix confirms OpenSlide’s visual/layout strengths, Marp’s drafting speed, and Python-pptx’s file delivery efficiency; choice depends on project context and team skillset.
 
 ### [敏捷 SaaS 场景下 compound-engineering-plugin 架构实证报告](https://github.com/Martin-Mythos/research/tree/main/compound-plugin-saas-study#readme) (2026-05-03 22:21)
 
@@ -260,6 +285,10 @@ Key findings:
 - create-agent-tui’s architectural design supports extensibility and is grounded in lessons from real-world production agent systems.
 - For simple, non-governed question-answering tasks, its value is minimal compared to the maintenance cost.
 
+### [docs](https://github.com/Martin-Mythos/research/tree/main/docs#readme) (2026-04-26 14:43)
+
+*No description available.*
+
 ### [mattpocock/skills 的 Todo App 实验研究](https://github.com/Martin-Mythos/research/tree/main/mattpocock-skills-todo-app-eval#readme) (2026-04-26 14:43)
 
 This research evaluates the mattpocock/skills repository by applying several agent "skills" to a minimal Node.js todo app. The project focuses on workflow documentation, using `SKILL.md` files to outline agent-triggering criteria, execution steps, and quality standards. Applying skills like `design-an-interface`, `tdd`, and `qa` demonstrated that these tools guide agents into structured workflows, improving task clarity—even for small projects—by enforcing interface design comparison, behavior-driven testing, and user-perspective issue documentation. Notably, the skills promote process discipline but depend on agent compliance, as there is minimal runtime enforcement.
@@ -270,10 +299,6 @@ This research evaluates the mattpocock/skills repository by applying several age
 - The `design-an-interface` skill forced interface comparisons, resulting in clearer API choices, even for simple modules.
 - The `qa` skill is valuable for transforming test findings into persistent, user-facing issues, facilitating handoff and long-term tracking.
 - Skills shape process effectively but lack automated enforcement; the agent must consciously follow protocols.
-
-### [docs](https://github.com/Martin-Mythos/research/tree/main/docs#readme) (2026-04-26 14:43)
-
-*No description available.*
 
 ### [WUPHF Multi-Agent Context Sync Research](https://github.com/Martin-Mythos/research/tree/main/wuphf-multi-agent-context-sync#readme) (2026-04-26 11:19)
 
