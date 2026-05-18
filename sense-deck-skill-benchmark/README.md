@@ -6,12 +6,12 @@
 <!-- /AI-GENERATED-NOTE -->
 
 ## 1. 实验摘要 (Executive Summary)
-本次研究围绕 `xwbcl123/-PPT-sense-deck-skill-` 展开，重点验证其“模板优先 + 内容 IR + HTML/CSS/JS 静态交付”的工作流在企业级演示场景中的可控性。该项目在 `SKILL.md` 中明确要求优先选择模板库、先构建 content IR，再输出静态三件套（`index.html / styles.css / deck.js`），本质上是把“内容规划-版式装配-运行时增强”拆分为可组合工序。
+本次研究围绕 `xwbcl123/-PPT-sense-deck-skill-` 展开，重点验证其“模板优先 + 内容 IR + HTML/CSS/JS 静态交付”的工作流在企业级演示场景中的可控性。该项目在 `SKILL.md` 中要求优先选择模板库、先构建 content IR，再输出静态三件套（`index.html / styles.css / deck.js`），本质上是把“内容规划-版式装配-运行时增强”拆分为可组合工序。
 
-横评结论：
-- **Sense Deck** 在前端可控性、最终视觉一致性、离线部署方面优势明显，适合“研发/安全团队可改代码”的组织。
-- **归藏（Marp）** 在提纲到页面的速度和协作成本（Markdown）上最优，但复杂视觉与细粒度布局上限受限。
-- **花叔（Python-pptx）** 在企业 Office 生态交付（`.pptx` 可编辑）优势显著，但需要较强脚本能力，调样式成本偏高。
+总体定性结论：
+- **Sense Deck** 在前端可控性、视觉一致性、离线部署能力上明显占优，适合研发/安全团队自行二次开发。
+- **归藏（Marp）** 在“提纲到可读页面”速度与协作效率（Markdown）上优势最强，但复杂视觉与精细布局上限较低。
+- **花叔（Python-pptx）** 在 Office 原生交付（`.pptx`）场景优势明显，但脚本门槛和样式调参成本更高。
 
 ---
 
@@ -55,7 +55,7 @@
 ## 3. HTML PPT 交付件与架构解析 (Artifacts & Architecture)
 
 ### Artifact (Sense Deck)
-> 以下为可双击运行的自包含 `index.html`（已在本研究目录保存同名文件）：
+以下为可双击运行的自包含 `index.html` 完整代码（与仓库内 `sense-deck-skill-benchmark/index.html` 一致）：
 
 ```html
 <!doctype html>
@@ -69,18 +69,28 @@
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text)}
     .deck{height:100vh;overflow-y:auto;scroll-snap-type:y mandatory}
     section.slide{height:100vh;padding:56px 64px;scroll-snap-align:start;display:grid;grid-template-rows:auto 1fr auto;gap:20px;border-bottom:1px solid #1e2a4a}
+    h1,h2{margin:0 0 12px} h1{font-size:44px} h2{font-size:34px;color:var(--pri)} p,li{font-size:22px;line-height:1.5;color:var(--text)} .muted{color:var(--muted);font-size:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:var(--panel);border:1px solid #223157;border-radius:14px;padding:16px}
+    .kpi{font-size:40px;font-weight:700}.ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+    footer{font-size:16px;color:var(--muted)}
   </style>
 </head>
 <body>
-<!-- 省略：完整代码见研究目录 index.html -->
+<div class="deck">
+  <section class="slide"><header><h1>企业级 AI 系统的安全逃逸边界与防御机制</h1><p class="muted">目标：定义“可控能力边界”，建立“检测-隔离-恢复”防线</p></header><main><div class="grid-2"><div class="card"><h2>研究问题</h2><ul><li>安全逃逸从哪一层发生？</li><li>如何量化越权与幻觉风险？</li><li>工程上怎样形成闭环治理？</li></ul></div><div class="card"><h2>结论预览</h2><ul><li>边界必须前置到策略层与上下文层</li><li>仅靠提示词约束不可审计</li><li>需要运行时策略引擎+可追溯日志</li></ul></div></div></main><footer>01 / 10</footer></section>
+  <section class="slide"><header><h2>1. 安全逃逸的四层边界模型</h2></header><main class="grid-2"><div class="card"><h3>输入边界</h3><p>Prompt 注入、上下文污染、RAG 投毒。</p></div><div class="card"><h3>推理边界</h3><p>角色漂移、工具选择越权、链路幻觉。</p></div><div class="card"><h3>执行边界</h3><p>函数调用滥用、系统命令高危调用、数据外传。</p></div><div class="card"><h3>输出边界</h3><p>敏感信息泄露、错误决策建议、合规违规文本。</p></div></main><footer>02 / 10</footer></section>
+  <section class="slide"><header><h2>2. 攻击面与检测信号</h2></header><main><div class="grid-2"><div class="card"><p class="kpi danger">27%</p><p>红队样本中存在越权调用意图</p></div><div class="card"><p class="kpi warn">14%</p><p>高风险输出未被一次拦截</p></div></div><ul><li>语义检测：识别“忽略规则/提权/泄露”模式。</li><li>行为检测：工具调用频次、参数异常、访问路径漂移。</li><li>结果检测：PII、密钥、受限结论自动审查。</li></ul></main><footer>03 / 10</footer></section>
+  <section class="slide"><header><h2>3. 防御架构：三道闸门</h2></header><main class="grid-2"><div class="card"><h3>闸门 A：上下文净化</h3><p>输入分层、可信源标记、检索白名单。</p></div><div class="card"><h3>闸门 B：运行时策略</h3><p>最小权限工具路由、动态风险评分、可中断执行。</p></div><div class="card"><h3>闸门 C：输出审计</h3><p>规则+模型双审、高风险输出降级与人工复核。</p></div><div class="card"><h3>可观测性</h3><p>事件日志、审计回放、逃逸根因归档。</p></div></main><footer>04 / 10</footer></section>
+  <section class="slide"><header><h2>4. 治理闭环与落地节奏</h2></header><main><ul><li>T+30 天：建立策略基线与风险标签。</li><li>T+60 天：接入工具调用网关与审计看板。</li><li>T+90 天：完成红蓝对抗演练与SLA闭环。</li></ul><div class="card"><p class="ok">成功标准：高危逃逸率下降 &gt; 60%，审计可追溯率达到 100%。</p></div></main><footer>05 / 10</footer></section>
+</div>
 </body>
 </html>
 ```
 
 ### 技术点评
-- **分屏逻辑**：以 `section.slide` 作为单页容器，每页固定 `100vh` 并使用 `scroll-snap` 提供近似演示翻页手感。
-- **版式策略**：统一三段式栅格（Header/Main/Footer），在内容区采用 `grid-2 + card` 控制信息密度，符合 Sense 风格“留白 + 模块化分组”。
-- **运行路径**：纯静态、零构建依赖，可直接本地打开；后续如要扩展动画或演讲者模式，可引入运行时脚本模块。
+- **分屏逻辑**：以 `section.slide` 为单页容器，每页固定 `100vh`，并用 `scroll-snap` 形成演示翻页感。
+- **排版设计**：采用“Header/Main/Footer”三段式框架，主内容区用 `grid-2 + card` 进行信息分组，减少视觉噪声并提升讲述节奏。
+- **工程可维护性**：纯静态、零构建依赖；后续可继续拆分为 `styles.css + deck.js`，接入演讲者模式或生命周期动画。
 
 ---
 
@@ -137,18 +147,17 @@ prs.save("ai-security-boundary.pptx")
 
 ### 4.4 深度点评
 - **前端可控性**：Sense Deck 直接操作 DOM/CSS，局部改版和交互增强成本最低；Marp 受 Markdown 抽象层限制；python-pptx 在视觉微调上常需反复调坐标。
-- **内容转化率**：Marp 从提纲到“可读页面”最快；Sense Deck 在复杂分栏、卡片化、品牌风格一致性上更稳；python-pptx 适合要求最终可在 Office 深度编辑的组织。
-- **工具链依赖**：Sense Deck 与 Marp 均可轻量化运行；python-pptx 依赖 Python 运行环境与库版本，协作中环境漂移风险更高。
+- **内容转化率**：Marp 从提纲到可读页面最快；Sense Deck 在复杂分栏、卡片化、品牌一致性方面更稳；python-pptx 更适合“最终在 Office 深度编辑”的组织。
+- **工具链依赖**：Sense Deck 与 Marp 均可轻量运行；python-pptx 依赖 Python 运行环境与库版本，跨团队协作时更易出现环境漂移。
 
 ---
 
 ## 5. 落地建议 (Recommendations)
-
-1. **Sense Deck 的局限**
-   - 直接 HTML 方案对“不会代码”的用户并不友好，尤其在布局溢出、响应式细调、动画节奏控制方面，仍需前端能力。
-2. **架构选型建议**
-   - 若团队具备前端工程能力、强调品牌统一与多端展示：优先 **Sense Deck（HTML）**。
-   - 若追求“写作即排版”、多人协作与快速迭代：优先 **Marp（Markdown）**。
-   - 若组织必须以 PowerPoint 为最终编辑/审阅载体：优先 **Python-pptx/Pptx 工具链**。
+1. **Sense Deck 直接输出 HTML 的局限**
+   - 对非技术用户不够友好，尤其在响应式微调、溢出控制、动画节奏管理上仍需前端基础。
+2. **架构选型建议（研发/安全团队）**
+   - 前端能力强、重视品牌一致与多端展示：优先 **Sense Deck（HTML）**。
+   - 追求“写作即排版”与快速协作：优先 **Marp（Markdown）**。
+   - 必须以 PowerPoint 为终审终编载体：优先 **Python-pptx/Pptx 工具链**。
 3. **推荐混合路径**
-   - “Marp 产出初稿结构 -> Sense Deck 做高保真交付 -> 必要时导出为 PPTX”可在速度、品质、可编辑性之间取得更优平衡。
+   - “Marp 产出初稿结构 -> Sense Deck 做高保真交付 -> 必要时导出 PPTX”可在效率、质量、可编辑性之间取得更优折中。
