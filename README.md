@@ -147,18 +147,7 @@ for dirname, _ in subdirs_with_dates:
 ]]]-->
 ## 17 research projects
 
-### [tw93/Waza 八项核心 Skill A/B 测试实证报告](https://github.com/Martin-Mythos/research/tree/main/waza-ab-test#readme) (2026-05-17 07:30)
-
-This report evaluates the effectiveness of **Waza**, an engineering workflow tool for AI-assisted development, by running A/B tests in code and content scenarios. Unlike traditional tools that focus on improving code generation, Waza enforces a stepwise, auditable process—from context auditing to modeling, root cause analysis, and rigorous review—which addresses frequent issues of unreliable code execution and shallow deliverables. In practice, Waza demonstrably improves architectural robustness, debugging precision, and information density in both engineering and writing tasks, although final code quality still depends on model ability and strict process adherence. The tool shines particularly in debugging, context modeling, and risk control before deployment, supporting teams with repeatable, traceable workflows.
-
-**Key findings:**
-- Waza substantially reduces reckless code execution and boosts verifiability, especially in debug and review phases.
-- Information density and technical clarity are markedly higher in research tasks, thanks to structured learning and writing modules.
-- Best results are achieved when Waza’s steps (`/health`, `/think`, `/hunt`, `/check`, `/learn`) are followed rigorously and incorporated into team processes, notably CI checklists.
-
-- For more details and source material, see the [Waza GitHub repository](https://github.com/tw93/Waza).
-
-### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-skill-benchmark#readme) (2026-05-14 10:07)
+### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-skill-benchmark#readme) (2026-05-18 21:34)
 
 This research project evaluates the architectural and usability characteristics of the Sense Deck Skill — a workflow that prioritizes template selection, content IR construction, and static HTML/CSS/JS delivery for enterprise-level AI presentation scenarios. Through empirical comparison with mainstream AI PPT toolchains (Marp/归藏 and python-pptx/花叔), it finds that Sense Deck excels in front-end controllability, visual consistency, and offline deployment, especially suited for organizations emphasizing code modifiability. Marp offers rapid outline-to-page conversion and low collaboration costs but is limited in complex layouts, while python-pptx provides seamless integration into Office environments but demands scripting prowess and higher style editing costs.
 
@@ -171,6 +160,17 @@ Key findings:
 Links:
 - [Sense Deck Skill GitHub](https://github.com/xwbcl123/-PPT-sense-deck-skill-)
 - [Marp Official](https://marp.app/)
+
+### [tw93/Waza 八项核心 Skill A/B 测试实证报告](https://github.com/Martin-Mythos/research/tree/main/waza-ab-test#readme) (2026-05-17 07:32)
+
+This report evaluates the effectiveness of **Waza**, an engineering workflow tool for AI-assisted development, by running A/B tests in code and content scenarios. Unlike traditional tools that focus on improving code generation, Waza enforces a stepwise, auditable process—from context auditing to modeling, root cause analysis, and rigorous review—which addresses frequent issues of unreliable code execution and shallow deliverables. In practice, Waza demonstrably improves architectural robustness, debugging precision, and information density in both engineering and writing tasks, although final code quality still depends on model ability and strict process adherence. The tool shines particularly in debugging, context modeling, and risk control before deployment, supporting teams with repeatable, traceable workflows.
+
+**Key findings:**
+- Waza substantially reduces reckless code execution and boosts verifiability, especially in debug and review phases.
+- Information density and technical clarity are markedly higher in research tasks, thanks to structured learning and writing modules.
+- Best results are achieved when Waza’s steps (`/health`, `/think`, `/hunt`, `/check`, `/learn`) are followed rigorously and incorporated into team processes, notably CI checklists.
+
+- For more details and source material, see the [Waza GitHub repository](https://github.com/tw93/Waza).
 
 ### [OpenSlide 与主流 AI PPT 技能的工程实证与横向评测报告](https://github.com/Martin-Mythos/research/tree/main/openslide-skill-benchmark#readme) (2026-05-07 06:01)
 
