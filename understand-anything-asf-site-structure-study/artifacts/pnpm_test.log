@@ -1,0 +1,141 @@
+
+> understand-anything@ test /workspace/research/artifacts/Understand-Anything
+> vitest run
+
+
+ RUN  v3.2.4 /workspace/research/artifacts/Understand-Anything
+
+ ✓ tests/skill/understand/test_scan_project.test.mjs (32 tests) 38163ms
+   ✓ scan-project.mjs — language detection > maps TypeScript/JavaScript extensions to typescript/javascript  1080ms
+   ✓ scan-project.mjs — language detection > maps Python, Go, Rust, Java, Kotlin, C# to their language ids  1157ms
+   ✓ scan-project.mjs — language detection > maps Ruby, PHP, C, C++ to their language ids  1052ms
+   ✓ scan-project.mjs — language detection > maps web markup (HTML, CSS) to their language ids  1055ms
+   ✓ scan-project.mjs — language detection > maps configuration formats (YAML, JSON, JSONC, TOML, XML, Markdown) to their language ids  1123ms
+   ✓ scan-project.mjs — language detection > maps shell + batch + Dockerfile (no extension) to their language ids  1186ms
+   ✓ scan-project.mjs — language detection > falls back to "unknown" for files with no extension and no filename match  1087ms
+   ✓ scan-project.mjs — language detection > falls back to bare extension (without dot) for unknown extensions  1090ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns code to TypeScript, JavaScript, Python, Go, Rust source files  1081ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns config to JSON/YAML/TOML/INI/XML  1271ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns docs to .md / .rst / .txt (but NOT to LICENSE)  2261ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns infra to Dockerfile, docker-compose, .gitlab-ci.yml, .tf, .github/workflows/, Makefile, Jenkinsfile, k8s paths  1220ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns data to SQL, GraphQL, Proto, Prisma, CSV  1174ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns script to shell + batch files (.sh, .bash, .ps1, .bat)  1152ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > assigns markup to HTML + CSS variants  1252ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > priority: docker-compose.yml maps to infra, not config  1035ms
+   ✓ scan-project.mjs — category assignment (project-scanner.md Step 4) > dotfile configs (.env, .env.local, .env.production) map to config + env language  1173ms
+   ✓ scan-project.mjs — .understandignore handling > respects .understandignore patterns and increments filteredByIgnore  1161ms
+   ✓ scan-project.mjs — .understandignore handling > supports `!pattern` negation to re-include defaults-excluded files  1133ms
+   ✓ scan-project.mjs — special-file recognition > Dockerfile (no extension) is language=dockerfile, category=infra  1195ms
+   ✓ scan-project.mjs — determinism > produces byte-identical output across runs for the same input tree  2359ms
+   ✓ scan-project.mjs — empty repo > handles a project with zero files without crashing  1142ms
+   ✓ scan-project.mjs — estimatedComplexity thresholds > 30 files -> small (upper boundary of small)  1117ms
+   ✓ scan-project.mjs — estimatedComplexity thresholds > 31 files -> moderate (lower boundary of moderate)  1125ms
+   ✓ scan-project.mjs — estimatedComplexity thresholds > 150 files -> moderate (upper boundary of moderate)  1290ms
+   ✓ scan-project.mjs — estimatedComplexity thresholds > 151 files -> large (lower boundary of large)  1251ms
+   ✓ scan-project.mjs — estimatedComplexity thresholds > 501 files -> very-large (lower boundary of very-large)  1454ms
+   ✓ scan-project.mjs — CLI entry guard + invocation > invokes successfully via subprocess and produces a parseable output file  1229ms
+   ✓ scan-project.mjs — CLI entry guard + invocation > fails fast with usage message when projectRoot is missing  843ms
+   ✓ scan-project.mjs — output schema invariants > emits the documented top-level fields with correct shapes  1247ms
+   ✓ scan-project.mjs — output schema invariants > files[] is sorted by path.localeCompare  1157ms
+ ✓ tests/skill/understand/test_compute_batches.test.mjs (19 tests) 34240ms
+   ✓ compute-batches.mjs — Louvain basic > produces 3 batches for 3 disjoint cliques  1743ms
+   ✓ compute-batches.mjs — Louvain basic > produces deterministic output across runs  3108ms
+   ✓ compute-batches.mjs — size enforcement > splits a 40-node clique into batches ≤ 35  1548ms
+   ✓ compute-batches.mjs — exports extraction > populates exports for code files via tree-sitter  1908ms
+   ✓ compute-batches.mjs — exports extraction > emits warning when file is missing from disk (read error path)  1622ms
+   ✓ compute-batches.mjs — non-code grouping > Group A: bundles Dockerfile cluster per directory  1618ms
+   ✓ compute-batches.mjs — non-code grouping > Group B: .github/workflows/* all in one batch  1573ms
+   ✓ compute-batches.mjs — non-code grouping > Group C: .gitlab-ci.yml + .circleci/* in one batch  1598ms
+   ✓ compute-batches.mjs — non-code grouping > Group D: SQL migrations under migrations/ in one batch  1616ms
+   ✓ compute-batches.mjs — non-code grouping > non-code batch indices follow code batches  1518ms
+   ✓ compute-batches.mjs — Group E MAX_E split > splits 25 .md files under docs/ into [20, 5]  1475ms
+   ✓ compute-batches.mjs — neighborMap + batchImportData > batchImportData mirrors scan importMap per batch  1625ms
+   ✓ compute-batches.mjs — neighborMap + batchImportData > neighborMap excludes same-batch files  1477ms
+   ✓ compute-batches.mjs — neighborMap + batchImportData > neighborMap entries carry symbols when target has exports  3756ms
+   ✓ compute-batches.mjs — neighborMap truncation > truncates and warns when neighbors > 50  1618ms
+   ✓ compute-batches.mjs — fallback > falls back to count-based when Louvain throws (env-injected mock)  1621ms
+   ✓ compute-batches.mjs — merge-small > merges 100 isolated singletons into a small number of misc batches  1626ms
+   ✓ compute-batches.mjs — merge-small > preserves non-mergeable batches: Dockerfile cluster not pooled into misc  1576ms
+   ✓ compute-batches.mjs — --changed-files > emits only batches containing changed files  1607ms
+ ✓ tests/skill/understand/test_extract_import_map.test.mjs (40 tests) 76235ms
+   ✓ extract-import-map.mjs — TypeScript / JavaScript resolver > resolves typescript relative imports with extension probes  1828ms
+   ✓ extract-import-map.mjs — TypeScript / JavaScript resolver > resolves tsconfig paths aliases  2016ms
+   ✓ extract-import-map.mjs — TypeScript / JavaScript resolver > resolves /index.ts barrel imports  1640ms
+   ✓ extract-import-map.mjs — TypeScript / JavaScript resolver > drops external package imports  1833ms
+   ✓ extract-import-map.mjs — TypeScript / JavaScript resolver > resolves javascript require() calls  1874ms
+   ✓ extract-import-map.mjs — TypeScript / JavaScript resolver > resolves per-package tsconfig paths in a monorepo without cross-package leakage  1889ms
+   ✓ extract-import-map.mjs — Python resolver > resolves python relative imports  1779ms
+   ✓ extract-import-map.mjs — Python resolver > resolves `from . import x` for namespace packages (no __init__.py)  1962ms
+   ✓ extract-import-map.mjs — Python resolver > resolves python absolute imports and __init__.py matching  1769ms
+   ✓ extract-import-map.mjs — Python resolver > drops python external package imports  1777ms
+   ✓ extract-import-map.mjs — Python resolver > resolves absolute imports against the importers per-service root in multi-service repos  1765ms
+   ✓ extract-import-map.mjs — Go resolver > resolves go imports by stripping the go.mod module prefix  1886ms
+   ✓ extract-import-map.mjs — Go resolver > resolves per-service imports in a multi-go.mod monorepo  1903ms
+   ✓ extract-import-map.mjs — Go resolver > emits a one-time Warning: when a .go file has no ancestor go.mod  1901ms
+   ✓ extract-import-map.mjs — Java resolver > resolves java dotted imports via suffix probe  1870ms
+   ✓ extract-import-map.mjs — Java resolver > drops java external imports (java.util, etc.)  1734ms
+   ✓ extract-import-map.mjs — Kotlin resolver > resolves kotlin dotted imports via suffix probe  1642ms
+   ✓ extract-import-map.mjs — C# resolver > resolves c# using directives via dotted-suffix probe  2155ms
+   ✓ extract-import-map.mjs — Ruby resolver > resolves ruby require_relative + require load-path probes  1755ms
+   ✓ extract-import-map.mjs — PHP resolver > resolves php use directives via composer.json PSR-4 autoload  1868ms
+   ✓ extract-import-map.mjs — PHP resolver > resolves per-package composer.json PSR-4 without cross-package leakage  1850ms
+   ✓ extract-import-map.mjs — PHP resolver > resolves PSR-4 empty-prefix fallback ("": "src/")  2052ms
+   ✓ extract-import-map.mjs — Rust resolver > resolves rust use crate:: and mod declarations  1931ms
+   ✓ extract-import-map.mjs — Rust resolver > resolves rust super:: walking up one directory  1804ms
+   ✓ extract-import-map.mjs — C/C++ resolver > resolves c/c++ #include probes (relative + include/ + src/)  2362ms
+   ✓ extract-import-map.mjs — C/C++ resolver > resolves c #include via project-level include/ fallback  2471ms
+   ✓ extract-import-map.mjs — per-file failure resilience > continues processing when a file is missing from disk  1878ms
+   ✓ extract-import-map.mjs — per-file failure resilience > emits a stats summary on stderr  1555ms
+   ✓ extract-import-map.mjs — output schema invariants > every input file appears in importMap (even with zero imports)  1727ms
+   ✓ extract-import-map.mjs — output schema invariants > produces deterministic output across runs  3791ms
+   ✓ extract-import-map.mjs — regex comment-strip resilience > JS require() inside a // line comment is NOT picked up  1815ms
+   ✓ extract-import-map.mjs — regex comment-strip resilience > Ruby require inside a # line comment is NOT picked up  1498ms
+   ✓ extract-import-map.mjs — regex comment-strip resilience > Rust mod declarations inside // and /* */ comments are NOT picked up  1900ms
+   ✓ extract-import-map.mjs — Kotlin import grammar > does NOT phantom-resolve `import ...` or `import .foo`  1629ms
+   ✓ extract-import-map.mjs — multi-source-root dotted FQN (Gradle/Maven) > returns BOTH matches when a Java FQN suffix exists in two source roots  2096ms
+   ✓ extract-import-map.mjs — composer.json malformed > emits a Warning: and PHP imports fall back to empty when composer.json is broken  1873ms
+   ✓ extract-import-map.mjs — tsconfig parse resilience > emits a Warning: when tsconfig.json is malformed and falls back to no aliases  1866ms
+   ✓ extract-import-map.mjs — tsconfig parse resilience > falls back to raw-text parse when a paths value contains "//" that the stripper would damage  1630ms
+   ✓ extract-import-map.mjs — Rust crate root missing > emits a one-time Warning: per file when use crate:: has no crate root  2034ms
+   ✓ extract-import-map.mjs — tree-sitter init graceful failure > emits a Warning: and produces empty importMap entries when tree-sitter init throws  1609ms
+ ✓ understand-anything-plugin/packages/dashboard/src/utils/__tests__/filters.test.ts (11 tests) 113ms
+ ✓ understand-anything-plugin/src/__tests__/context-builder.test.ts (14 tests) 118ms
+ ✓ understand-anything-plugin/src/__tests__/diff-analyzer.test.ts (11 tests) 43ms
+ ✓ understand-anything-plugin/packages/dashboard/src/utils/__tests__/containers.test.ts (8 tests) 83ms
+ ✓ understand-anything-plugin/src/__tests__/extract-structure.test.mjs (10 tests) 13ms
+ ✓ understand-anything-plugin/packages/dashboard/src/utils/__tests__/layerStats.test.ts (7 tests) 77ms
+ ✓ understand-anything-plugin/packages/dashboard/src/utils/__tests__/elk-layout.test.ts (7 tests) 287ms
+ ✓ understand-anything-plugin/src/__tests__/merge-recover-imports.test.mjs (6 tests) 9737ms
+   ✓ merge-batch-graphs.py imports recovery > recovers imports edges that batches dropped despite importMap having them  1544ms
+   ✓ merge-batch-graphs.py imports recovery > does not duplicate edges the batch already emitted  1683ms
+   ✓ merge-batch-graphs.py imports recovery > skips importMap entries whose source file is missing from the graph  1543ms
+   ✓ merge-batch-graphs.py imports recovery > skips importMap targets that don't have a file: node  1521ms
+   ✓ merge-batch-graphs.py imports recovery > works when scan-result.json is missing (incremental update path)  1612ms
+   ✓ merge-batch-graphs.py imports recovery > never produces self-import edges  1830ms
+ ✓ understand-anything-plugin/src/__tests__/explain-builder.test.ts (8 tests) 22ms
+ ✓ understand-anything-plugin/src/__tests__/worktree-redirect.test.mjs (5 tests) 1010ms
+ ✓ understand-anything-plugin/src/__tests__/onboard-builder.test.ts (9 tests) 49ms
+ ✓ understand-anything-plugin/packages/dashboard/src/utils/__tests__/edgeAggregation.test.ts (6 tests) 18ms
+ ✓ understand-anything-plugin/packages/dashboard/src/utils/__tests__/smoke.test.ts (3 tests) 7ms
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError node_modules/.pnpm/vitest@3.2.4_@types+debug@4.1.12_@types+node@25.5.0_jiti@2.6.1_lightningcss@1.32.0_yaml@2.8.3/node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout node_modules/.pnpm/vitest@3.2.4_@types+debug@4.1.12_@types+node@25.5.0_jiti@2.6.1_lightningcss@1.32.0_yaml@2.8.3/node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:581:17
+ ❯ processTimers node:internal/timers:519:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  16 passed (16)
+      Tests  196 passed (196)
+     Errors  1 error
+   Start at  21:49:06
+   Duration  94.51s (transform 3.60s, setup 0ms, collect 9.80s, tests 160.21s, environment 10ms, prepare 5.06s)
+
+ ELIFECYCLE  Test failed. See above for more details.

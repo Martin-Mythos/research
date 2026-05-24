@@ -1,0 +1,3825 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 383,
+  "totalBatches": 25,
+  "exportsByPath": {
+    ".npmrc": [],
+    "eslint.config.mjs": [],
+    "homepage/astro.config.mjs": [],
+    "homepage/public/.gitkeep": [],
+    "homepage/public/CNAME": [],
+    "homepage/src/components/CommunityVideo.astro": [],
+    "homepage/src/components/Features.astro": [],
+    "homepage/src/components/Footer.astro": [],
+    "homepage/src/components/Hero.astro": [],
+    "homepage/src/components/Install.astro": [],
+    "homepage/src/components/Nav.astro": [],
+    "homepage/src/components/Problem.astro": [],
+    "homepage/src/components/Showcase.astro": [],
+    "homepage/src/layouts/Layout.astro": [],
+    "homepage/src/pages/index.astro": [],
+    "scripts/generate-large-graph.mjs": [],
+    "tests/skill/understand/test_compute_batches.test.mjs": [],
+    "tests/skill/understand/test_extract_import_map.test.mjs": [],
+    "tests/skill/understand/test_merge_batch_graphs.py": [
+      "_load_module",
+      "_file_node",
+      "IsTestPathTests",
+      "ProductionCandidatesTests",
+      "LinkTestsTests",
+      "MergeIntegrationTests",
+      "NormalizeDirectionTests",
+      "MergeEdgeDirectionTests",
+      "TestMultiPart",
+      "TestUnrecognizedBatchFilename"
+    ],
+    "tests/skill/understand/test_scan_project.test.mjs": [],
+    "understand-anything-plugin/packages/core/src/__tests__/change-classifier.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/domain-normalize.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/domain-persistence.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/domain-types.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/embedding-search.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/fingerprint.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/framework-registry.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/ignore-filter.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/ignore-generator.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/language-lesson.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/language-registry.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/layer-detector.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/normalize-graph.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/parsers.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/plugin-discovery.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/plugin-registry.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/schema.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/search.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/staleness.test.ts": [],
+    "understand-anything-plugin/packages/core/src/__tests__/tour-generator.test.ts": [],
+    "understand-anything-plugin/packages/core/src/analyzer/graph-builder.test.ts": [],
+    "understand-anything-plugin/packages/core/src/analyzer/graph-builder.ts": [
+      "GraphBuilder"
+    ],
+    "understand-anything-plugin/packages/core/src/analyzer/language-lesson.ts": [
+      "detectLanguageConcepts",
+      "getLanguageDisplayName",
+      "buildLanguageLessonPrompt",
+      "parseLanguageLessonResponse"
+    ],
+    "understand-anything-plugin/packages/core/src/analyzer/layer-detector.ts": [
+      "detectLayers",
+      "buildLayerDetectionPrompt",
+      "parseLayerDetectionResponse",
+      "applyLLMLayers"
+    ],
+    "understand-anything-plugin/packages/core/src/analyzer/llm-analyzer.test.ts": [],
+    "understand-anything-plugin/packages/core/src/analyzer/llm-analyzer.ts": [
+      "buildFileAnalysisPrompt",
+      "buildProjectSummaryPrompt",
+      "parseFileAnalysisResponse",
+      "parseProjectSummaryResponse"
+    ],
+    "understand-anything-plugin/packages/core/src/analyzer/normalize-graph.ts": [
+      "normalizeNodeId",
+      "normalizeComplexity",
+      "normalizeBatchOutput"
+    ],
+    "understand-anything-plugin/packages/core/src/analyzer/tour-generator.ts": [
+      "buildTourGenerationPrompt",
+      "parseTourGenerationResponse",
+      "generateHeuristicTour"
+    ],
+    "understand-anything-plugin/packages/core/src/change-classifier.ts": [
+      "classifyUpdate"
+    ],
+    "understand-anything-plugin/packages/core/src/embedding-search.ts": [
+      "cosineSimilarity",
+      "SemanticSearchEngine"
+    ],
+    "understand-anything-plugin/packages/core/src/fingerprint.ts": [
+      "contentHash",
+      "extractFileFingerprint",
+      "compareFingerprints",
+      "buildFingerprintStore",
+      "analyzeChanges"
+    ],
+    "understand-anything-plugin/packages/core/src/ignore-filter.ts": [
+      "DEFAULT_IGNORE_PATTERNS",
+      "createIgnoreFilter"
+    ],
+    "understand-anything-plugin/packages/core/src/ignore-generator.ts": [
+      "generateStarterIgnoreFile"
+    ],
+    "understand-anything-plugin/packages/core/src/index.ts": [
+      "KnowledgeGraphSchema",
+      "validateGraph",
+      "sanitizeGraph",
+      "autoFixGraph",
+      "COMPLEXITY_ALIASES",
+      "DIRECTION_ALIASES",
+      "ValidationResult",
+      "GraphIssue",
+      "TreeSitterPlugin",
+      "LanguageExtractor",
+      "builtinExtractors",
+      "GraphBuilder",
+      "buildFileAnalysisPrompt",
+      "buildProjectSummaryPrompt",
+      "parseFileAnalysisResponse",
+      "parseProjectSummaryResponse",
+      "LLMFileAnalysis",
+      "LLMProjectSummary",
+      "normalizeNodeId",
+      "normalizeComplexity",
+      "normalizeBatchOutput",
+      "DroppedEdge",
+      "NormalizationStats",
+      "NormalizeBatchResult",
+      "SearchEngine",
+      "SearchResult",
+      "SearchOptions",
+      "getChangedFiles",
+      "isStale",
+      "mergeGraphUpdate",
+      "StalenessResult",
+      "detectLayers",
+      "buildLayerDetectionPrompt",
+      "parseLayerDetectionResponse",
+      "applyLLMLayers",
+      "LLMLayerResponse",
+      "buildTourGenerationPrompt",
+      "parseTourGenerationResponse",
+      "generateHeuristicTour",
+      "buildLanguageLessonPrompt",
+      "parseLanguageLessonResponse",
+      "detectLanguageConcepts",
+      "LanguageLessonResult",
+      "PluginRegistry",
+      "LanguageRegistry",
+      "FrameworkRegistry",
+      "builtinLanguageConfigs",
+      "builtinFrameworkConfigs",
+      "LanguageConfigSchema",
+      "FrameworkConfigSchema",
+      "LanguageConfig",
+      "FrameworkConfig",
+      "TreeSitterConfig",
+      "FilePatternConfig",
+      "parsePluginConfig",
+      "serializePluginConfig",
+      "DEFAULT_PLUGIN_CONFIG",
+      "PluginConfig",
+      "PluginEntry",
+      "SemanticSearchEngine",
+      "cosineSimilarity",
+      "SemanticSearchOptions",
+      "extractFileFingerprint",
+      "compareFingerprints",
+      "analyzeChanges",
+      "buildFingerprintStore",
+      "contentHash",
+      "FunctionFingerprint",
+      "ClassFingerprint",
+      "ImportFingerprint",
+      "FileFingerprint",
+      "FingerprintStore",
+      "ChangeLevel",
+      "FileChangeResult",
+      "ChangeAnalysis",
+      "classifyUpdate",
+      "UpdateDecision",
+      "MarkdownParser",
+      "YAMLConfigParser",
+      "JSONConfigParser",
+      "TOMLParser",
+      "EnvParser",
+      "DockerfileParser",
+      "SQLParser",
+      "GraphQLParser",
+      "ProtobufParser",
+      "TerraformParser",
+      "MakefileParser",
+      "ShellParser",
+      "registerAllParsers",
+      "createIgnoreFilter",
+      "DEFAULT_IGNORE_PATTERNS",
+      "IgnoreFilter",
+      "generateStarterIgnoreFile"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/batch.ts": [
+      "batchConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/c.ts": [
+      "cConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/cpp.ts": [
+      "cppConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/csharp.ts": [
+      "csharpConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/css.ts": [
+      "cssConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/csv.ts": [
+      "csvConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/dockerfile.ts": [
+      "dockerfileConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/env.ts": [
+      "envConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/github-actions.ts": [
+      "githubActionsConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/go.ts": [
+      "goConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/graphql.ts": [
+      "graphqlConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/html.ts": [
+      "htmlConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/index.ts": [
+      "builtinLanguageConfigs",
+      "typescriptConfig",
+      "javascriptConfig",
+      "pythonConfig",
+      "goConfig",
+      "rustConfig",
+      "javaConfig",
+      "rubyConfig",
+      "phpConfig",
+      "swiftConfig",
+      "kotlinConfig",
+      "luaConfig",
+      "cConfig",
+      "cppConfig",
+      "csharpConfig",
+      "markdownConfig",
+      "yamlConfig",
+      "jsonConfigConfig",
+      "tomlConfig",
+      "envConfig",
+      "xmlConfig",
+      "dockerfileConfig",
+      "sqlConfig",
+      "graphqlConfig",
+      "protobufConfig",
+      "terraformConfig",
+      "githubActionsConfig",
+      "makefileConfig",
+      "shellConfig",
+      "htmlConfig",
+      "cssConfig",
+      "openapiConfig",
+      "kubernetesConfig",
+      "dockerComposeConfig",
+      "jsonSchemaConfig",
+      "csvConfig",
+      "restructuredtextConfig",
+      "powershellConfig",
+      "batchConfig",
+      "jenkinsfileConfig",
+      "plaintextConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/java.ts": [
+      "javaConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/javascript.ts": [
+      "javascriptConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/jenkinsfile.ts": [
+      "jenkinsfileConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/json-config.ts": [
+      "jsonConfigConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/json-schema.ts": [
+      "jsonSchemaConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/kotlin.ts": [
+      "kotlinConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/kubernetes.ts": [
+      "kubernetesConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/lua.ts": [
+      "luaConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/makefile.ts": [
+      "makefileConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/markdown.ts": [
+      "markdownConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/openapi.ts": [
+      "openapiConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/php.ts": [
+      "phpConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/plaintext.ts": [
+      "plaintextConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/powershell.ts": [
+      "powershellConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/protobuf.ts": [
+      "protobufConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/python.ts": [
+      "pythonConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/restructuredtext.ts": [
+      "restructuredtextConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/ruby.ts": [
+      "rubyConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/rust.ts": [
+      "rustConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/shell.ts": [
+      "shellConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/sql.ts": [
+      "sqlConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/swift.ts": [
+      "swiftConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/terraform.ts": [
+      "terraformConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/toml.ts": [
+      "tomlConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/typescript.ts": [
+      "typescriptConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/xml.ts": [
+      "xmlConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/configs/yaml.ts": [
+      "yamlConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/framework-registry.ts": [
+      "FrameworkRegistry"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/django.ts": [
+      "djangoConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/express.ts": [
+      "expressConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/fastapi.ts": [
+      "fastapiConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/flask.ts": [
+      "flaskConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/gin.ts": [
+      "ginConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/index.ts": [
+      "builtinFrameworkConfigs",
+      "djangoConfig",
+      "fastapiConfig",
+      "flaskConfig",
+      "reactConfig",
+      "nextjsConfig",
+      "expressConfig",
+      "vueConfig",
+      "springConfig",
+      "railsConfig",
+      "ginConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/nextjs.ts": [
+      "nextjsConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/rails.ts": [
+      "railsConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/react.ts": [
+      "reactConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/spring.ts": [
+      "springConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/frameworks/vue.ts": [
+      "vueConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/index.ts": [
+      "LanguageConfig",
+      "TreeSitterConfig",
+      "FilePatternConfig",
+      "FrameworkConfig",
+      "LanguageConfigSchema",
+      "TreeSitterConfigSchema",
+      "FilePatternConfigSchema",
+      "FrameworkConfigSchema",
+      "LanguageRegistry",
+      "FrameworkRegistry",
+      "builtinLanguageConfigs",
+      "builtinFrameworkConfigs"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/language-registry.ts": [
+      "LanguageRegistry"
+    ],
+    "understand-anything-plugin/packages/core/src/languages/types.ts": [
+      "TreeSitterConfigSchema",
+      "FilePatternConfigSchema",
+      "LanguageConfigSchema",
+      "StrictLanguageConfigSchema",
+      "FrameworkConfigSchema"
+    ],
+    "understand-anything-plugin/packages/core/src/persistence/index.ts": [
+      "saveGraph",
+      "loadGraph",
+      "saveMeta",
+      "loadMeta",
+      "saveFingerprints",
+      "loadFingerprints",
+      "saveConfig",
+      "loadConfig",
+      "saveDomainGraph",
+      "loadDomainGraph"
+    ],
+    "understand-anything-plugin/packages/core/src/persistence/persistence.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/discovery.ts": [
+      "DEFAULT_PLUGIN_CONFIG",
+      "parsePluginConfig",
+      "serializePluginConfig"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/cpp-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/csharp-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/go-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/java-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/php-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/python-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/ruby-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/rust-extractor.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/base-extractor.ts": [
+      "traverse",
+      "getStringValue",
+      "findChild",
+      "findChildren",
+      "hasChildOfType"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/cpp-extractor.ts": [
+      "CppExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/csharp-extractor.ts": [
+      "CSharpExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/go-extractor.ts": [
+      "GoExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/index.ts": [
+      "LanguageExtractor",
+      "TreeSitterNode",
+      "traverse",
+      "getStringValue",
+      "findChild",
+      "findChildren",
+      "hasChildOfType",
+      "TypeScriptExtractor",
+      "PythonExtractor",
+      "GoExtractor",
+      "RustExtractor",
+      "JavaExtractor",
+      "RubyExtractor",
+      "PhpExtractor",
+      "CppExtractor",
+      "CSharpExtractor",
+      "builtinExtractors"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/java-extractor.ts": [
+      "JavaExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/php-extractor.ts": [
+      "PhpExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/python-extractor.ts": [
+      "PythonExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/ruby-extractor.ts": [
+      "RubyExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/rust-extractor.ts": [
+      "RustExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/types.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/extractors/typescript-extractor.ts": [
+      "TypeScriptExtractor"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/dockerfile-parser.ts": [
+      "DockerfileParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/env-parser.ts": [
+      "EnvParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/graphql-parser.ts": [
+      "GraphQLParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/index.ts": [
+      "MarkdownParser",
+      "YAMLConfigParser",
+      "JSONConfigParser",
+      "TOMLParser",
+      "EnvParser",
+      "DockerfileParser",
+      "SQLParser",
+      "GraphQLParser",
+      "ProtobufParser",
+      "TerraformParser",
+      "MakefileParser",
+      "ShellParser",
+      "registerAllParsers"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/json-parser.ts": [
+      "stripJsoncSyntax",
+      "JSONConfigParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/makefile-parser.ts": [
+      "MakefileParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/markdown-parser.ts": [
+      "MarkdownParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/protobuf-parser.ts": [
+      "ProtobufParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/shell-parser.ts": [
+      "ShellParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/sql-parser.ts": [
+      "SQLParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/terraform-parser.ts": [
+      "TerraformParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/toml-parser.ts": [
+      "TOMLParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/parsers/yaml-parser.ts": [
+      "YAMLConfigParser"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/registry.ts": [
+      "PluginRegistry"
+    ],
+    "understand-anything-plugin/packages/core/src/plugins/tree-sitter-plugin.test.ts": [],
+    "understand-anything-plugin/packages/core/src/plugins/tree-sitter-plugin.ts": [
+      "TreeSitterPlugin"
+    ],
+    "understand-anything-plugin/packages/core/src/schema.ts": [
+      "EdgeTypeSchema",
+      "NODE_TYPE_ALIASES",
+      "EDGE_TYPE_ALIASES",
+      "COMPLEXITY_ALIASES",
+      "DIRECTION_ALIASES",
+      "sanitizeGraph",
+      "autoFixGraph",
+      "GraphNodeSchema",
+      "GraphEdgeSchema",
+      "LayerSchema",
+      "TourStepSchema",
+      "ProjectMetaSchema",
+      "KnowledgeGraphSchema",
+      "normalizeGraph",
+      "validateGraph"
+    ],
+    "understand-anything-plugin/packages/core/src/search.ts": [
+      "SearchEngine"
+    ],
+    "understand-anything-plugin/packages/core/src/staleness.ts": [
+      "getChangedFiles",
+      "isStale",
+      "mergeGraphUpdate"
+    ],
+    "understand-anything-plugin/packages/core/src/types.test.ts": [],
+    "understand-anything-plugin/packages/core/src/types.ts": [],
+    "understand-anything-plugin/packages/core/vitest.config.ts": [],
+    "understand-anything-plugin/packages/dashboard/scripts/benchmark-aggregations.mjs": [],
+    "understand-anything-plugin/packages/dashboard/scripts/benchmark-layout.mjs": [],
+    "understand-anything-plugin/packages/dashboard/src/App.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/Breadcrumb.tsx": [
+      "Breadcrumb"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/CodeViewer.tsx": [
+      "CodeViewer"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/ContainerNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/CustomNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/DiffToggle.tsx": [
+      "DiffToggle"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/DomainClusterNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/DomainGraphView.tsx": [
+      "DomainGraphView"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/ExportMenu.tsx": [
+      "ExportMenu"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx": [
+      "FileExplorer"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/FilterPanel.tsx": [
+      "FilterPanel"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/FlowNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx": [
+      "GraphView"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/KeyboardShortcutsHelp.tsx": [
+      "KeyboardShortcutsHelp"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/KnowledgeGraphView.tsx": [
+      "KnowledgeGraphView"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/LayerClusterNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/LayerLegend.tsx": [
+      "LAYER_PALETTE",
+      "getLayerColor",
+      "LayerLegend"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/LearnPanel.tsx": [
+      "LearnPanel"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/MobileBottomNav.tsx": [
+      "MobileBottomNav"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/MobileDrawer.tsx": [
+      "MobileDrawer"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx": [
+      "MobileLayout"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx": [
+      "NodeInfo"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/NodeTooltip.tsx": [
+      "NodeTooltip"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/OnboardingOverlay.tsx": [
+      "OnboardingOverlay"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/PathFinderModal.tsx": [
+      "PathFinderModal"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/PersonaSelector.tsx": [
+      "PersonaSelector"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/PortalNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/ProjectOverview.tsx": [
+      "ProjectOverview"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/SearchBar.tsx": [
+      "SearchBar"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/StepNode.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/components/ThemePicker.tsx": [
+      "ThemePicker"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/TokenGate.tsx": [
+      "TokenGate"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/components/WarningBanner.tsx": [
+      "WarningBanner"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/contexts/I18nContext.tsx": [
+      "useI18n",
+      "I18nProvider"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/hooks/useIsMobile.ts": [
+      "useIsMobile"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/hooks/useKeyboardShortcuts.ts": [
+      "useKeyboardShortcuts",
+      "formatShortcutKey"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/en.ts": [
+      "en"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/index.ts": [
+      "locales",
+      "getLocale",
+      "resolveLocaleKey",
+      "en",
+      "zh",
+      "\"zh-TW\"",
+      "ja",
+      "ko",
+      "ru"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/ja.ts": [
+      "ja"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/ko.ts": [
+      "ko"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/ru.ts": [
+      "ru"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/zh-TW.ts": [
+      "zhTW"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/locales/zh.ts": [
+      "zh"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/main.tsx": [],
+    "understand-anything-plugin/packages/dashboard/src/store.ts": [
+      "ALL_NODE_TYPES",
+      "ALL_COMPLEXITIES",
+      "ALL_EDGE_CATEGORIES",
+      "EDGE_CATEGORY_MAP",
+      "DOMAIN_EDGE_TYPES",
+      "useDashboardStore"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/themes/index.ts": [
+      "ThemeProvider",
+      "useTheme",
+      "PRESETS",
+      "getPreset",
+      "getAccent",
+      "applyTheme",
+      "HeadingFont",
+      "PresetId",
+      "ThemeConfig",
+      "ThemePreset",
+      "AccentSwatch",
+      "DEFAULT_THEME_CONFIG"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/themes/presets.ts": [
+      "PRESETS",
+      "getPreset",
+      "getAccent"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/themes/theme-engine.ts": [
+      "hexToRgb",
+      "applyTheme"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/themes/ThemeContext.tsx": [
+      "ThemeProvider",
+      "useTheme"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/themes/types.ts": [
+      "DEFAULT_THEME_CONFIG"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/__tests__/containers.test.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/__tests__/edgeAggregation.test.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/__tests__/elk-layout.test.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/__tests__/filters.test.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/__tests__/layerStats.test.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/__tests__/smoke.test.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/containers.ts": [
+      "deriveContainers"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/edgeAggregation.ts": [
+      "aggregateLayerEdges",
+      "computePortals",
+      "findCrossLayerFileNodes",
+      "aggregateContainerEdges"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/elk-layout.ts": [
+      "repairElkInput",
+      "applyElkLayout"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/filters.ts": [
+      "filterNodes",
+      "filterEdges"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/layerStats.ts": [
+      "computeLayerStats"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/layout.ts": [
+      "NODE_WIDTH",
+      "NODE_HEIGHT",
+      "LAYER_CLUSTER_WIDTH",
+      "LAYER_CLUSTER_HEIGHT",
+      "PORTAL_NODE_WIDTH",
+      "PORTAL_NODE_HEIGHT",
+      "applyDagreLayout",
+      "applyForceLayout",
+      "ELK_DEFAULT_LAYOUT_OPTIONS",
+      "nodesToElkInput",
+      "mergeElkPositions"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/utils/layout.worker.ts": [],
+    "understand-anything-plugin/packages/dashboard/src/utils/louvain.ts": [
+      "detectCommunities"
+    ],
+    "understand-anything-plugin/packages/dashboard/src/vite-env.d.ts": [],
+    "understand-anything-plugin/packages/dashboard/vite.config.demo.ts": [],
+    "understand-anything-plugin/packages/dashboard/vite.config.ts": [],
+    "understand-anything-plugin/skills/understand-domain/extract-domain-context.py": [
+      "parse_gitignore",
+      "is_ignored",
+      "scan_file_tree",
+      "detect_entry_points",
+      "extract_file_signatures",
+      "extract_metadata",
+      "_truncate_to_fit",
+      "main"
+    ],
+    "understand-anything-plugin/skills/understand-knowledge/merge-knowledge-graph.py": [
+      "normalize_node_type",
+      "normalize_edge_type",
+      "normalize_entity_name",
+      "merge",
+      "main"
+    ],
+    "understand-anything-plugin/skills/understand-knowledge/parse-knowledge-base.py": [
+      "detect_format",
+      "extract_frontmatter",
+      "extract_wikilinks",
+      "extract_headings",
+      "extract_code_blocks",
+      "extract_first_paragraph",
+      "extract_h1",
+      "parse_index",
+      "parse_log",
+      "build_name_to_stem_map",
+      "resolve_wikilink",
+      "parse_wiki",
+      "main"
+    ],
+    "understand-anything-plugin/skills/understand/build-fingerprints.mjs": [],
+    "understand-anything-plugin/skills/understand/compute-batches.mjs": [],
+    "understand-anything-plugin/skills/understand/extract-import-map.mjs": [
+      "resolveTsJsImport",
+      "resolvePythonImport",
+      "resolveGoImport",
+      "resolveJavaImport",
+      "resolveKotlinImport",
+      "resolveCSharpImport",
+      "resolveRubyImport",
+      "resolvePhpImport",
+      "resolveRustImport",
+      "resolveCppImport"
+    ],
+    "understand-anything-plugin/skills/understand/extract-structure.mjs": [
+      "buildResult"
+    ],
+    "understand-anything-plugin/skills/understand/merge-batch-graphs.py": [
+      "normalize_direction",
+      "_num",
+      "load_batch",
+      "classify_id_fix",
+      "normalize_node_id",
+      "normalize_complexity",
+      "_path_segments",
+      "_basename",
+      "is_test_path",
+      "_strip_test_infix",
+      "_join",
+      "_add_unique",
+      "_js_ts_sibling_candidates",
+      "production_candidates",
+      "_file_node_path",
+      "_swap_tested_by_in_place",
+      "_ensure_tested_tag",
+      "link_tests",
+      "merge_and_normalize",
+      "recover_imports_from_scan",
+      "main"
+    ],
+    "understand-anything-plugin/skills/understand/merge-subdomain-graphs.py": [
+      "_num",
+      "load_graph",
+      "merge_graphs",
+      "main"
+    ],
+    "understand-anything-plugin/skills/understand/scan-project.mjs": [
+      "detectLanguage",
+      "detectCategory",
+      "estimateComplexity"
+    ],
+    "understand-anything-plugin/src/__tests__/context-builder.test.ts": [],
+    "understand-anything-plugin/src/__tests__/diff-analyzer.test.ts": [],
+    "understand-anything-plugin/src/__tests__/explain-builder.test.ts": [],
+    "understand-anything-plugin/src/__tests__/extract-structure.test.mjs": [],
+    "understand-anything-plugin/src/__tests__/merge-recover-imports.test.mjs": [],
+    "understand-anything-plugin/src/__tests__/onboard-builder.test.ts": [],
+    "understand-anything-plugin/src/__tests__/worktree-redirect.test.mjs": [],
+    "understand-anything-plugin/src/context-builder.ts": [
+      "buildChatContext",
+      "formatContextForPrompt"
+    ],
+    "understand-anything-plugin/src/diff-analyzer.ts": [
+      "buildDiffContext",
+      "formatDiffAnalysis"
+    ],
+    "understand-anything-plugin/src/explain-builder.ts": [
+      "buildExplainContext",
+      "formatExplainPrompt"
+    ],
+    "understand-anything-plugin/src/index.ts": [
+      "buildChatContext",
+      "formatContextForPrompt",
+      "ChatContext",
+      "buildChatPrompt",
+      "buildDiffContext",
+      "formatDiffAnalysis",
+      "DiffContext",
+      "buildExplainContext",
+      "formatExplainPrompt",
+      "ExplainContext",
+      "buildOnboardingGuide"
+    ],
+    "understand-anything-plugin/src/onboard-builder.ts": [
+      "buildOnboardingGuide"
+    ],
+    "understand-anything-plugin/src/understand-chat.ts": [
+      "buildChatPrompt"
+    ],
+    "understand-anything-plugin/vitest.config.ts": [],
+    "v8-compile-cache-0/x64/11.3.244.8-node.38/zSrootzS.nvmzSversionszSnodezSv20.20.2zSlibzSnode_moduleszScorepackzSdistzSpnpm.js.BLOB": [],
+    "vitest.config.ts": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "language": "yaml",
+          "sizeLines": 36,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/deploy-homepage.yml",
+          "language": "yaml",
+          "sizeLines": 68,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        ".github/workflows/ci.yml": [],
+        ".github/workflows/deploy-homepage.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "language": "markdown",
+          "sizeLines": 98,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "language": "markdown",
+          "sizeLines": 274,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 346,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "install.ps1",
+          "language": "powershell",
+          "sizeLines": 235,
+          "fileCategory": "script"
+        },
+        {
+          "path": "install.sh",
+          "language": "shell",
+          "sizeLines": 279,
+          "fileCategory": "script"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 39,
+          "fileCategory": "config"
+        },
+        {
+          "path": "pnpm-workspace.yaml",
+          "language": "yaml",
+          "sizeLines": 4,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.json",
+          "language": "json",
+          "sizeLines": 16,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "CLAUDE.md": [],
+        "CONTRIBUTING.md": [],
+        "README.md": [],
+        "install.ps1": [],
+        "install.sh": [],
+        "package.json": [],
+        "pnpm-workspace.yaml": [],
+        "tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "READMEs/README.es-ES.md",
+          "language": "markdown",
+          "sizeLines": 342,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "READMEs/README.ja-JP.md",
+          "language": "markdown",
+          "sizeLines": 343,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "READMEs/README.ko-KR.md",
+          "language": "markdown",
+          "sizeLines": 342,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "READMEs/README.ru-RU.md",
+          "language": "markdown",
+          "sizeLines": 343,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "READMEs/README.tr-TR.md",
+          "language": "markdown",
+          "sizeLines": 343,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "READMEs/README.zh-CN.md",
+          "language": "markdown",
+          "sizeLines": 342,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "READMEs/README.zh-TW.md",
+          "language": "markdown",
+          "sizeLines": 342,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "READMEs/README.es-ES.md": [],
+        "READMEs/README.ja-JP.md": [],
+        "READMEs/README.ko-KR.md": [],
+        "READMEs/README.ru-RU.md": [],
+        "READMEs/README.tr-TR.md": [],
+        "READMEs/README.zh-CN.md": [],
+        "READMEs/README.zh-TW.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "docs/superpowers/plans/2026-03-14-phase1-implementation.md",
+          "language": "markdown",
+          "sizeLines": 2469,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-14-phase2-implementation.md",
+          "language": "markdown",
+          "sizeLines": 1847,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-14-phase3-implementation.md",
+          "language": "markdown",
+          "sizeLines": 1658,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-14-phase4-implementation.md",
+          "language": "markdown",
+          "sizeLines": 1872,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-15-homepage-implementation.md",
+          "language": "markdown",
+          "sizeLines": 1238,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-18-multi-platform-simple-implementation.md",
+          "language": "markdown",
+          "sizeLines": 560,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-21-language-agnostic-plan.md",
+          "language": "markdown",
+          "sizeLines": 1392,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-25-dashboard-robustness-impl.md",
+          "language": "markdown",
+          "sizeLines": 1277,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-25-dashboard-robustness-plan.md",
+          "language": "markdown",
+          "sizeLines": 149,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-26-theme-system-implementation.md",
+          "language": "markdown",
+          "sizeLines": 1166,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-27-token-reduction-impl.md",
+          "language": "markdown",
+          "sizeLines": 971,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md",
+          "language": "markdown",
+          "sizeLines": 1426,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-03-29-homepage-update-impl.md",
+          "language": "markdown",
+          "sizeLines": 138,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-04-01-business-domain-knowledge-impl.md",
+          "language": "markdown",
+          "sizeLines": 1784,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-04-09-understand-knowledge.md",
+          "language": "markdown",
+          "sizeLines": 1740,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-04-10-understandignore-impl.md",
+          "language": "markdown",
+          "sizeLines": 776,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-04-15-language-extractors-impl.md",
+          "language": "markdown",
+          "sizeLines": 856,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-05-03-graph-layout-scaling.md",
+          "language": "markdown",
+          "sizeLines": 2304,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-05-24-semantic-batching-and-output-chunking-impl.md",
+          "language": "markdown",
+          "sizeLines": 2353,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/superpowers/plans/2026-03-14-phase1-implementation.md": [],
+        "docs/superpowers/plans/2026-03-14-phase2-implementation.md": [],
+        "docs/superpowers/plans/2026-03-14-phase3-implementation.md": [],
+        "docs/superpowers/plans/2026-03-14-phase4-implementation.md": [],
+        "docs/superpowers/plans/2026-03-15-homepage-implementation.md": [],
+        "docs/superpowers/plans/2026-03-18-multi-platform-simple-implementation.md": [],
+        "docs/superpowers/plans/2026-03-21-language-agnostic-plan.md": [],
+        "docs/superpowers/plans/2026-03-25-dashboard-robustness-impl.md": [],
+        "docs/superpowers/plans/2026-03-25-dashboard-robustness-plan.md": [],
+        "docs/superpowers/plans/2026-03-26-theme-system-implementation.md": [],
+        "docs/superpowers/plans/2026-03-27-token-reduction-impl.md": [],
+        "docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md": [],
+        "docs/superpowers/plans/2026-03-29-homepage-update-impl.md": [],
+        "docs/superpowers/plans/2026-04-01-business-domain-knowledge-impl.md": [],
+        "docs/superpowers/plans/2026-04-09-understand-knowledge.md": [],
+        "docs/superpowers/plans/2026-04-10-understandignore-impl.md": [],
+        "docs/superpowers/plans/2026-04-15-language-extractors-impl.md": [],
+        "docs/superpowers/plans/2026-05-03-graph-layout-scaling.md": [],
+        "docs/superpowers/plans/2026-05-24-semantic-batching-and-output-chunking-impl.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "docs/superpowers/specs/2026-03-14-understand-anything-design.md",
+          "language": "markdown",
+          "sizeLines": 268,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-15-homepage-design.md",
+          "language": "markdown",
+          "sizeLines": 83,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-18-multi-platform-simple-design.md",
+          "language": "markdown",
+          "sizeLines": 121,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-21-language-agnostic-design.md",
+          "language": "markdown",
+          "sizeLines": 249,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-26-theme-system-design.md",
+          "language": "markdown",
+          "sizeLines": 415,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-27-token-reduction-design.md",
+          "language": "markdown",
+          "sizeLines": 395,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-28-understand-anything-extension-design.md",
+          "language": "markdown",
+          "sizeLines": 266,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-03-29-homepage-update-design.md",
+          "language": "markdown",
+          "sizeLines": 53,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-04-01-business-domain-knowledge-design.md",
+          "language": "markdown",
+          "sizeLines": 335,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-04-09-understand-knowledge-design.md",
+          "language": "markdown",
+          "sizeLines": 335,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-04-10-understandignore-design.md",
+          "language": "markdown",
+          "sizeLines": 258,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-05-03-graph-layout-scaling-design.md",
+          "language": "markdown",
+          "sizeLines": 488,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-05-24-semantic-batching-and-output-chunking-design.md",
+          "language": "markdown",
+          "sizeLines": 587,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/superpowers/specs/2026-03-14-understand-anything-design.md": [],
+        "docs/superpowers/specs/2026-03-15-homepage-design.md": [],
+        "docs/superpowers/specs/2026-03-18-multi-platform-simple-design.md": [],
+        "docs/superpowers/specs/2026-03-21-language-agnostic-design.md": [],
+        "docs/superpowers/specs/2026-03-26-theme-system-design.md": [],
+        "docs/superpowers/specs/2026-03-27-token-reduction-design.md": [],
+        "docs/superpowers/specs/2026-03-28-understand-anything-extension-design.md": [],
+        "docs/superpowers/specs/2026-03-29-homepage-update-design.md": [],
+        "docs/superpowers/specs/2026-04-01-business-domain-knowledge-design.md": [],
+        "docs/superpowers/specs/2026-04-09-understand-knowledge-design.md": [],
+        "docs/superpowers/specs/2026-04-10-understandignore-design.md": [],
+        "docs/superpowers/specs/2026-05-03-graph-layout-scaling-design.md": [],
+        "docs/superpowers/specs/2026-05-24-semantic-batching-and-output-chunking-design.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "homepage/README.md",
+          "language": "markdown",
+          "sizeLines": 43,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "homepage/package.json",
+          "language": "json",
+          "sizeLines": 16,
+          "fileCategory": "config"
+        },
+        {
+          "path": "homepage/tsconfig.json",
+          "language": "json",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "homepage/README.md": [],
+        "homepage/package.json": [],
+        "homepage/tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "tests/skill/understand/fixtures/scan-result-3-cliques.json",
+          "language": "json",
+          "sizeLines": 31,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tests/skill/understand/fixtures/scan-result-large-community.json",
+          "language": "json",
+          "sizeLines": 1895,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tests/skill/understand/fixtures/scan-result-merge-respects-non-mergeable.json",
+          "language": "json",
+          "sizeLines": 232,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tests/skill/understand/fixtures/scan-result-non-code.json",
+          "language": "json",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tests/skill/understand/fixtures/scan-result-singletons.json",
+          "language": "json",
+          "sizeLines": 715,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "tests/skill/understand/fixtures/scan-result-3-cliques.json": [],
+        "tests/skill/understand/fixtures/scan-result-large-community.json": [],
+        "tests/skill/understand/fixtures/scan-result-merge-respects-non-mergeable.json": [],
+        "tests/skill/understand/fixtures/scan-result-non-code.json": [],
+        "tests/skill/understand/fixtures/scan-result-singletons.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "understand-anything-plugin/agents/architecture-analyzer.md",
+          "language": "markdown",
+          "sizeLines": 480,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/article-analyzer.md",
+          "language": "markdown",
+          "sizeLines": 92,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/assemble-reviewer.md",
+          "language": "markdown",
+          "sizeLines": 96,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/domain-analyzer.md",
+          "language": "markdown",
+          "sizeLines": 124,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/file-analyzer.md",
+          "language": "markdown",
+          "sizeLines": 520,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/graph-reviewer.md",
+          "language": "markdown",
+          "sizeLines": 239,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/knowledge-graph-guide.md",
+          "language": "markdown",
+          "sizeLines": 98,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/project-scanner.md",
+          "language": "markdown",
+          "sizeLines": 233,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/agents/tour-builder.md",
+          "language": "markdown",
+          "sizeLines": 378,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/agents/architecture-analyzer.md": [],
+        "understand-anything-plugin/agents/article-analyzer.md": [],
+        "understand-anything-plugin/agents/assemble-reviewer.md": [],
+        "understand-anything-plugin/agents/domain-analyzer.md": [],
+        "understand-anything-plugin/agents/file-analyzer.md": [],
+        "understand-anything-plugin/agents/graph-reviewer.md": [],
+        "understand-anything-plugin/agents/knowledge-graph-guide.md": [],
+        "understand-anything-plugin/agents/project-scanner.md": [],
+        "understand-anything-plugin/agents/tour-builder.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "understand-anything-plugin/package.json",
+          "language": "json",
+          "sizeLines": 21,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/pnpm-workspace.yaml",
+          "language": "yaml",
+          "sizeLines": 2,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/tsconfig.json",
+          "language": "json",
+          "sizeLines": 19,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/package.json": [],
+        "understand-anything-plugin/pnpm-workspace.yaml": [],
+        "understand-anything-plugin/tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/dashboard/index.html",
+          "language": "html",
+          "sizeLines": 19,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/package.json",
+          "language": "json",
+          "sizeLines": 43,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/tsconfig.app.json",
+          "language": "json",
+          "sizeLines": 24,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/tsconfig.json",
+          "language": "json",
+          "sizeLines": 4,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/dashboard/index.html": [],
+        "understand-anything-plugin/packages/dashboard/package.json": [],
+        "understand-anything-plugin/packages/dashboard/tsconfig.app.json": [],
+        "understand-anything-plugin/packages/dashboard/tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/django.md",
+          "language": "markdown",
+          "sizeLines": 67,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/express.md",
+          "language": "markdown",
+          "sizeLines": 57,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/fastapi.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/flask.md",
+          "language": "markdown",
+          "sizeLines": 53,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/gin.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/nextjs.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/rails.md",
+          "language": "markdown",
+          "sizeLines": 65,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/react.md",
+          "language": "markdown",
+          "sizeLines": 55,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/spring.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/frameworks/vue.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/skills/understand/frameworks/django.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/express.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/fastapi.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/flask.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/gin.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/nextjs.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/rails.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/react.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/spring.md": [],
+        "understand-anything-plugin/skills/understand/frameworks/vue.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/cpp.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/csharp.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/css.md",
+          "language": "markdown",
+          "sizeLines": 37,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/dockerfile.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/go.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/graphql.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/html.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/java.md",
+          "language": "markdown",
+          "sizeLines": 45,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/javascript.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/json.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/kotlin.md",
+          "language": "markdown",
+          "sizeLines": 45,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/markdown.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/php.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/protobuf.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/python.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/ruby.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/rust.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/shell.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/sql.md",
+          "language": "markdown",
+          "sizeLines": 36,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/swift.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/skills/understand/languages/cpp.md": [],
+        "understand-anything-plugin/skills/understand/languages/csharp.md": [],
+        "understand-anything-plugin/skills/understand/languages/css.md": [],
+        "understand-anything-plugin/skills/understand/languages/dockerfile.md": [],
+        "understand-anything-plugin/skills/understand/languages/go.md": [],
+        "understand-anything-plugin/skills/understand/languages/graphql.md": [],
+        "understand-anything-plugin/skills/understand/languages/html.md": [],
+        "understand-anything-plugin/skills/understand/languages/java.md": [],
+        "understand-anything-plugin/skills/understand/languages/javascript.md": [],
+        "understand-anything-plugin/skills/understand/languages/json.md": [],
+        "understand-anything-plugin/skills/understand/languages/kotlin.md": [],
+        "understand-anything-plugin/skills/understand/languages/markdown.md": [],
+        "understand-anything-plugin/skills/understand/languages/php.md": [],
+        "understand-anything-plugin/skills/understand/languages/protobuf.md": [],
+        "understand-anything-plugin/skills/understand/languages/python.md": [],
+        "understand-anything-plugin/skills/understand/languages/ruby.md": [],
+        "understand-anything-plugin/skills/understand/languages/rust.md": [],
+        "understand-anything-plugin/skills/understand/languages/shell.md": [],
+        "understand-anything-plugin/skills/understand/languages/sql.md": [],
+        "understand-anything-plugin/skills/understand/languages/swift.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/terraform.md",
+          "language": "markdown",
+          "sizeLines": 38,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/typescript.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/languages/yaml.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/skills/understand/languages/terraform.md": [],
+        "understand-anything-plugin/skills/understand/languages/typescript.md": [],
+        "understand-anything-plugin/skills/understand/languages/yaml.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "understand-anything-plugin/skills/understand/locales/en.md",
+          "language": "markdown",
+          "sizeLines": 43,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/locales/ja.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/locales/ko.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/locales/ru.md",
+          "language": "markdown",
+          "sizeLines": 49,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/locales/zh-TW.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/locales/zh.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/skills/understand/locales/en.md": [],
+        "understand-anything-plugin/skills/understand/locales/ja.md": [],
+        "understand-anything-plugin/skills/understand/locales/ko.md": [],
+        "understand-anything-plugin/skills/understand/locales/ru.md": [],
+        "understand-anything-plugin/skills/understand/locales/zh-TW.md": [],
+        "understand-anything-plugin/skills/understand/locales/zh.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": ".claude-plugin/marketplace.json",
+          "language": "json",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".claude-plugin/plugin.json",
+          "language": "json",
+          "sizeLines": 18,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".copilot-plugin/plugin.json",
+          "language": "json",
+          "sizeLines": 14,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".cursor-plugin/plugin.json",
+          "language": "json",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".github/FUNDING.yml",
+          "language": "yaml",
+          "sizeLines": 1,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".npmrc",
+          "language": "unknown",
+          "sizeLines": 2,
+          "fileCategory": "code"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "language": "javascript",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/astro.config.mjs",
+          "language": "javascript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/public/.gitkeep",
+          "language": "unknown",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/public/CNAME",
+          "language": "unknown",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/CommunityVideo.astro",
+          "language": "astro",
+          "sizeLines": 143,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Features.astro",
+          "language": "astro",
+          "sizeLines": 109,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Footer.astro",
+          "language": "astro",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Hero.astro",
+          "language": "astro",
+          "sizeLines": 584,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Install.astro",
+          "language": "astro",
+          "sizeLines": 144,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Nav.astro",
+          "language": "astro",
+          "sizeLines": 107,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Problem.astro",
+          "language": "astro",
+          "sizeLines": 220,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/components/Showcase.astro",
+          "language": "astro",
+          "sizeLines": 204,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/layouts/Layout.astro",
+          "language": "astro",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/pages/index.astro",
+          "language": "astro",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "homepage/src/styles/global.css",
+          "language": "css",
+          "sizeLines": 126,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "scripts/generate-large-graph.mjs",
+          "language": "javascript",
+          "sizeLines": 297,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/skill/understand/test_compute_batches.test.mjs",
+          "language": "javascript",
+          "sizeLines": 602,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/skill/understand/test_extract_import_map.test.mjs",
+          "language": "javascript",
+          "sizeLines": 1494,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/skill/understand/test_merge_batch_graphs.py",
+          "language": "python",
+          "sizeLines": 1187,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".claude-plugin/marketplace.json": [],
+        ".claude-plugin/plugin.json": [],
+        ".copilot-plugin/plugin.json": [],
+        ".cursor-plugin/plugin.json": [],
+        ".github/FUNDING.yml": [],
+        ".npmrc": [],
+        "eslint.config.mjs": [],
+        "homepage/astro.config.mjs": [],
+        "homepage/public/.gitkeep": [],
+        "homepage/public/CNAME": [],
+        "homepage/src/components/CommunityVideo.astro": [],
+        "homepage/src/components/Features.astro": [],
+        "homepage/src/components/Footer.astro": [],
+        "homepage/src/components/Hero.astro": [],
+        "homepage/src/components/Install.astro": [],
+        "homepage/src/components/Nav.astro": [],
+        "homepage/src/components/Problem.astro": [],
+        "homepage/src/components/Showcase.astro": [],
+        "homepage/src/layouts/Layout.astro": [],
+        "homepage/src/pages/index.astro": [],
+        "homepage/src/styles/global.css": [],
+        "scripts/generate-large-graph.mjs": [],
+        "tests/skill/understand/test_compute_batches.test.mjs": [],
+        "tests/skill/understand/test_extract_import_map.test.mjs": [],
+        "tests/skill/understand/test_merge_batch_graphs.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "tests/skill/understand/test_scan_project.test.mjs",
+          "language": "javascript",
+          "sizeLines": 738,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/.claude-plugin/plugin.json",
+          "language": "json",
+          "sizeLines": 18,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/hooks/auto-update-prompt.md",
+          "language": "markdown",
+          "sizeLines": 320,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/hooks/hooks.json",
+          "language": "json",
+          "sizeLines": 25,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/package.json",
+          "language": "json",
+          "sizeLines": 56,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/change-classifier.test.ts",
+          "language": "typescript",
+          "sizeLines": 183,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/domain-normalize.test.ts",
+          "language": "typescript",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/domain-persistence.test.ts",
+          "language": "typescript",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/domain-types.test.ts",
+          "language": "typescript",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/embedding-search.test.ts",
+          "language": "typescript",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/fingerprint.test.ts",
+          "language": "typescript",
+          "sizeLines": 427,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/framework-registry.test.ts",
+          "language": "typescript",
+          "sizeLines": 123,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/ignore-filter.test.ts",
+          "language": "typescript",
+          "sizeLines": 155,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/ignore-generator.test.ts",
+          "language": "typescript",
+          "sizeLines": 162,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/language-lesson.test.ts",
+          "language": "typescript",
+          "sizeLines": 157,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/language-registry.test.ts",
+          "language": "typescript",
+          "sizeLines": 198,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/layer-detector.test.ts",
+          "language": "typescript",
+          "sizeLines": 188,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/normalize-graph.test.ts",
+          "language": "typescript",
+          "sizeLines": 498,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/parsers.test.ts",
+          "language": "typescript",
+          "sizeLines": 629,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/plugin-discovery.test.ts",
+          "language": "typescript",
+          "sizeLines": 115,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/plugin-registry.test.ts",
+          "language": "typescript",
+          "sizeLines": 228,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/schema.test.ts",
+          "language": "typescript",
+          "sizeLines": 729,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/search.test.ts",
+          "language": "typescript",
+          "sizeLines": 158,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/staleness.test.ts",
+          "language": "typescript",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/__tests__/tour-generator.test.ts",
+          "language": "typescript",
+          "sizeLines": 269,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "tests/skill/understand/test_scan_project.test.mjs": [],
+        "understand-anything-plugin/.claude-plugin/plugin.json": [],
+        "understand-anything-plugin/hooks/auto-update-prompt.md": [],
+        "understand-anything-plugin/hooks/hooks.json": [],
+        "understand-anything-plugin/packages/core/package.json": [],
+        "understand-anything-plugin/packages/core/src/__tests__/change-classifier.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/domain-normalize.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/domain-persistence.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/domain-types.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/embedding-search.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/fingerprint.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/framework-registry.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/ignore-filter.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/ignore-generator.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/language-lesson.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/language-registry.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/layer-detector.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/normalize-graph.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/parsers.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/plugin-discovery.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/plugin-registry.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/schema.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/search.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/staleness.test.ts": [],
+        "understand-anything-plugin/packages/core/src/__tests__/tour-generator.test.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 17,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/graph-builder.test.ts",
+          "language": "typescript",
+          "sizeLines": 404,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/graph-builder.ts",
+          "language": "typescript",
+          "sizeLines": 337,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/language-lesson.ts",
+          "language": "typescript",
+          "sizeLines": 210,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/layer-detector.ts",
+          "language": "typescript",
+          "sizeLines": 284,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/llm-analyzer.test.ts",
+          "language": "typescript",
+          "sizeLines": 248,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/llm-analyzer.ts",
+          "language": "typescript",
+          "sizeLines": 186,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/normalize-graph.ts",
+          "language": "typescript",
+          "sizeLines": 329,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/analyzer/tour-generator.ts",
+          "language": "typescript",
+          "sizeLines": 293,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/change-classifier.ts",
+          "language": "typescript",
+          "sizeLines": 143,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/embedding-search.ts",
+          "language": "typescript",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/fingerprint.ts",
+          "language": "typescript",
+          "sizeLines": 385,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/ignore-filter.ts",
+          "language": "typescript",
+          "sizeLines": 111,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/ignore-generator.ts",
+          "language": "typescript",
+          "sizeLines": 102,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/index.ts",
+          "language": "typescript",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/batch.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/c.ts",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/cpp.ts",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/csharp.ts",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/css.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/csv.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/docker-compose.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/dockerfile.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/env.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/github-actions.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/go.ts",
+          "language": "typescript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/core/src/analyzer/graph-builder.test.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/graph-builder.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/language-lesson.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/layer-detector.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/llm-analyzer.test.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/llm-analyzer.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/normalize-graph.ts": [],
+        "understand-anything-plugin/packages/core/src/analyzer/tour-generator.ts": [],
+        "understand-anything-plugin/packages/core/src/change-classifier.ts": [],
+        "understand-anything-plugin/packages/core/src/embedding-search.ts": [],
+        "understand-anything-plugin/packages/core/src/fingerprint.ts": [],
+        "understand-anything-plugin/packages/core/src/ignore-filter.ts": [],
+        "understand-anything-plugin/packages/core/src/ignore-generator.ts": [],
+        "understand-anything-plugin/packages/core/src/index.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/batch.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/c.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/cpp.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/csharp.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/css.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/csv.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/docker-compose.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/dockerfile.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/env.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/github-actions.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/go.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 18,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/graphql.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/html.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/index.ts",
+          "language": "typescript",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/java.ts",
+          "language": "typescript",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/javascript.ts",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/jenkinsfile.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/json-config.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/json-schema.ts",
+          "language": "typescript",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/kotlin.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/kubernetes.ts",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/lua.ts",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/makefile.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/markdown.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/openapi.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/php.ts",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/plaintext.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/powershell.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/protobuf.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/python.ts",
+          "language": "typescript",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/restructuredtext.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/ruby.ts",
+          "language": "typescript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/rust.ts",
+          "language": "typescript",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/shell.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/sql.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/swift.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/core/src/languages/configs/graphql.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/html.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/index.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/java.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/javascript.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/jenkinsfile.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/json-config.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/json-schema.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/kotlin.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/kubernetes.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/lua.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/makefile.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/markdown.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/openapi.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/php.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/plaintext.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/powershell.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/protobuf.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/python.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/restructuredtext.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/ruby.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/rust.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/shell.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/sql.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/swift.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 19,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/terraform.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/toml.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/typescript.ts",
+          "language": "typescript",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/xml.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/configs/yaml.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/framework-registry.ts",
+          "language": "typescript",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/django.ts",
+          "language": "typescript",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/express.ts",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/fastapi.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/flask.ts",
+          "language": "typescript",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/gin.ts",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/index.ts",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/nextjs.ts",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/rails.ts",
+          "language": "typescript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/react.ts",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/spring.ts",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/frameworks/vue.ts",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/index.ts",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/language-registry.ts",
+          "language": "typescript",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/languages/types.ts",
+          "language": "typescript",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/persistence/index.ts",
+          "language": "typescript",
+          "sizeLines": 182,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/persistence/persistence.test.ts",
+          "language": "typescript",
+          "sizeLines": 204,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/discovery.ts",
+          "language": "typescript",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/cpp-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 696,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/csharp-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 665,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/core/src/languages/configs/terraform.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/toml.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/typescript.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/xml.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/configs/yaml.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/framework-registry.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/django.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/express.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/fastapi.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/flask.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/gin.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/index.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/nextjs.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/rails.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/react.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/spring.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/frameworks/vue.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/index.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/language-registry.ts": [],
+        "understand-anything-plugin/packages/core/src/languages/types.ts": [],
+        "understand-anything-plugin/packages/core/src/persistence/index.ts": [],
+        "understand-anything-plugin/packages/core/src/persistence/persistence.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/discovery.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/cpp-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/csharp-extractor.test.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 20,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/go-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 599,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/java-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 568,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/php-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 676,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/python-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 659,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/ruby-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 688,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/rust-extractor.test.ts",
+          "language": "typescript",
+          "sizeLines": 755,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/base-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/cpp-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 501,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/csharp-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 524,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/go-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 402,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/index.ts",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/java-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 449,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/php-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 461,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/python-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 353,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/ruby-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 420,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/rust-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 509,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/types.ts",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/extractors/typescript-extractor.ts",
+          "language": "typescript",
+          "sizeLines": 494,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/dockerfile-parser.ts",
+          "language": "typescript",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/env-parser.ts",
+          "language": "typescript",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/graphql-parser.ts",
+          "language": "typescript",
+          "sizeLines": 122,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/index.ts",
+          "language": "typescript",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/json-parser.ts",
+          "language": "typescript",
+          "sizeLines": 136,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/makefile-parser.ts",
+          "language": "typescript",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/markdown-parser.ts",
+          "language": "typescript",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/go-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/java-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/php-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/python-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/ruby-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/__tests__/rust-extractor.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/base-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/cpp-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/csharp-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/go-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/index.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/java-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/php-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/python-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/ruby-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/rust-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/types.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/extractors/typescript-extractor.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/dockerfile-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/env-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/graphql-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/index.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/json-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/makefile-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/markdown-parser.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 21,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/protobuf-parser.ts",
+          "language": "typescript",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/shell-parser.ts",
+          "language": "typescript",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/sql-parser.ts",
+          "language": "typescript",
+          "sizeLines": 102,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/terraform-parser.ts",
+          "language": "typescript",
+          "sizeLines": 130,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/toml-parser.ts",
+          "language": "typescript",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/parsers/yaml-parser.ts",
+          "language": "typescript",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/registry.ts",
+          "language": "typescript",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/tree-sitter-plugin.test.ts",
+          "language": "typescript",
+          "sizeLines": 307,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/plugins/tree-sitter-plugin.ts",
+          "language": "typescript",
+          "sizeLines": 299,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/schema.ts",
+          "language": "typescript",
+          "sizeLines": 663,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/search.ts",
+          "language": "typescript",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/staleness.ts",
+          "language": "typescript",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/types.test.ts",
+          "language": "typescript",
+          "sizeLines": 203,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/src/types.ts",
+          "language": "typescript",
+          "sizeLines": 202,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/tsconfig.json",
+          "language": "json",
+          "sizeLines": 19,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/packages/core/vitest.config.ts",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/public/knowledge-graph.json",
+          "language": "json",
+          "sizeLines": 3087,
+          "fileCategory": "config"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/scripts/benchmark-aggregations.mjs",
+          "language": "javascript",
+          "sizeLines": 99,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/scripts/benchmark-layout.mjs",
+          "language": "javascript",
+          "sizeLines": 80,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/App.tsx",
+          "language": "typescript",
+          "sizeLines": 713,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/Breadcrumb.tsx",
+          "language": "typescript",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/CodeViewer.tsx",
+          "language": "typescript",
+          "sizeLines": 259,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/ContainerNode.tsx",
+          "language": "typescript",
+          "sizeLines": 101,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/CustomNode.tsx",
+          "language": "typescript",
+          "sizeLines": 190,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/DiffToggle.tsx",
+          "language": "typescript",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/core/src/plugins/parsers/protobuf-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/shell-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/sql-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/terraform-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/toml-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/parsers/yaml-parser.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/registry.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/tree-sitter-plugin.test.ts": [],
+        "understand-anything-plugin/packages/core/src/plugins/tree-sitter-plugin.ts": [],
+        "understand-anything-plugin/packages/core/src/schema.ts": [],
+        "understand-anything-plugin/packages/core/src/search.ts": [],
+        "understand-anything-plugin/packages/core/src/staleness.ts": [],
+        "understand-anything-plugin/packages/core/src/types.test.ts": [],
+        "understand-anything-plugin/packages/core/src/types.ts": [],
+        "understand-anything-plugin/packages/core/tsconfig.json": [],
+        "understand-anything-plugin/packages/core/vitest.config.ts": [],
+        "understand-anything-plugin/packages/dashboard/public/knowledge-graph.json": [],
+        "understand-anything-plugin/packages/dashboard/scripts/benchmark-aggregations.mjs": [],
+        "understand-anything-plugin/packages/dashboard/scripts/benchmark-layout.mjs": [],
+        "understand-anything-plugin/packages/dashboard/src/App.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/Breadcrumb.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/CodeViewer.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/ContainerNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/CustomNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/DiffToggle.tsx": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 22,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/DomainClusterNode.tsx",
+          "language": "typescript",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/DomainGraphView.tsx",
+          "language": "typescript",
+          "sizeLines": 279,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/ExportMenu.tsx",
+          "language": "typescript",
+          "sizeLines": 279,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx",
+          "language": "typescript",
+          "sizeLines": 214,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/FilterPanel.tsx",
+          "language": "typescript",
+          "sizeLines": 219,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/FlowNode.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx",
+          "language": "typescript",
+          "sizeLines": 1581,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/KeyboardShortcutsHelp.tsx",
+          "language": "typescript",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/KnowledgeGraphView.tsx",
+          "language": "typescript",
+          "sizeLines": 292,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/LayerClusterNode.tsx",
+          "language": "typescript",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/LayerLegend.tsx",
+          "language": "typescript",
+          "sizeLines": 72,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/LearnPanel.tsx",
+          "language": "typescript",
+          "sizeLines": 230,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/MobileBottomNav.tsx",
+          "language": "typescript",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/MobileDrawer.tsx",
+          "language": "typescript",
+          "sizeLines": 266,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx",
+          "language": "typescript",
+          "sizeLines": 233,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx",
+          "language": "typescript",
+          "sizeLines": 539,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/NodeTooltip.tsx",
+          "language": "typescript",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/OnboardingOverlay.tsx",
+          "language": "typescript",
+          "sizeLines": 256,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/PathFinderModal.tsx",
+          "language": "typescript",
+          "sizeLines": 311,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/PersonaSelector.tsx",
+          "language": "typescript",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/PortalNode.tsx",
+          "language": "typescript",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/ProjectOverview.tsx",
+          "language": "typescript",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/SearchBar.tsx",
+          "language": "typescript",
+          "sizeLines": 191,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/StepNode.tsx",
+          "language": "typescript",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/ThemePicker.tsx",
+          "language": "typescript",
+          "sizeLines": 180,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/dashboard/src/components/DomainClusterNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/DomainGraphView.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/ExportMenu.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/FilterPanel.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/FlowNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/KeyboardShortcutsHelp.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/KnowledgeGraphView.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/LayerClusterNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/LayerLegend.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/LearnPanel.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/MobileBottomNav.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/MobileDrawer.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/NodeTooltip.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/OnboardingOverlay.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/PathFinderModal.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/PersonaSelector.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/PortalNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/ProjectOverview.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/SearchBar.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/StepNode.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/ThemePicker.tsx": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 23,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/TokenGate.tsx",
+          "language": "typescript",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/components/WarningBanner.tsx",
+          "language": "typescript",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/contexts/I18nContext.tsx",
+          "language": "typescript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/hooks/useIsMobile.ts",
+          "language": "typescript",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/hooks/useKeyboardShortcuts.ts",
+          "language": "typescript",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/index.css",
+          "language": "css",
+          "sizeLines": 265,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/en.ts",
+          "language": "typescript",
+          "sizeLines": 305,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/index.ts",
+          "language": "typescript",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/ja.ts",
+          "language": "typescript",
+          "sizeLines": 305,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/ko.ts",
+          "language": "typescript",
+          "sizeLines": 305,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/ru.ts",
+          "language": "typescript",
+          "sizeLines": 306,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/zh-TW.ts",
+          "language": "typescript",
+          "sizeLines": 305,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/locales/zh.ts",
+          "language": "typescript",
+          "sizeLines": 305,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/main.tsx",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/store.ts",
+          "language": "typescript",
+          "sizeLines": 784,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/themes/index.ts",
+          "language": "typescript",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/themes/presets.ts",
+          "language": "typescript",
+          "sizeLines": 183,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/themes/theme-engine.ts",
+          "language": "typescript",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/themes/ThemeContext.tsx",
+          "language": "typescript",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/themes/types.ts",
+          "language": "typescript",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/__tests__/containers.test.ts",
+          "language": "typescript",
+          "sizeLines": 131,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/__tests__/edgeAggregation.test.ts",
+          "language": "typescript",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/__tests__/elk-layout.test.ts",
+          "language": "typescript",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/__tests__/filters.test.ts",
+          "language": "typescript",
+          "sizeLines": 196,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/__tests__/layerStats.test.ts",
+          "language": "typescript",
+          "sizeLines": 118,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/dashboard/src/components/TokenGate.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/components/WarningBanner.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/contexts/I18nContext.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/hooks/useIsMobile.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/hooks/useKeyboardShortcuts.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/index.css": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/en.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/index.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/ja.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/ko.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/ru.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/zh-TW.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/locales/zh.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/main.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/store.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/themes/index.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/themes/presets.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/themes/theme-engine.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/themes/ThemeContext.tsx": [],
+        "understand-anything-plugin/packages/dashboard/src/themes/types.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/__tests__/containers.test.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/__tests__/edgeAggregation.test.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/__tests__/elk-layout.test.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/__tests__/filters.test.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/__tests__/layerStats.test.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 24,
+      "files": [
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/__tests__/smoke.test.ts",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/containers.ts",
+          "language": "typescript",
+          "sizeLines": 156,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/edgeAggregation.ts",
+          "language": "typescript",
+          "sizeLines": 208,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/elk-layout.ts",
+          "language": "typescript",
+          "sizeLines": 244,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/filters.ts",
+          "language": "typescript",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/layerStats.ts",
+          "language": "typescript",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/layout.ts",
+          "language": "typescript",
+          "sizeLines": 266,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/layout.worker.ts",
+          "language": "typescript",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/utils/louvain.ts",
+          "language": "typescript",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/src/vite-env.d.ts",
+          "language": "typescript",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/vite.config.demo.ts",
+          "language": "typescript",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/packages/dashboard/vite.config.ts",
+          "language": "typescript",
+          "sizeLines": 362,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-chat/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 55,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-dashboard/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 105,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-diff/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 72,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-domain/extract-domain-context.py",
+          "language": "python",
+          "sizeLines": 428,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-domain/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 140,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-explain/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-knowledge/merge-knowledge-graph.py",
+          "language": "python",
+          "sizeLines": 397,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-knowledge/parse-knowledge-base.py",
+          "language": "python",
+          "sizeLines": 509,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-knowledge/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 132,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand-onboard/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 55,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/build-fingerprints.mjs",
+          "language": "javascript",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/compute-batches.mjs",
+          "language": "javascript",
+          "sizeLines": 555,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/extract-import-map.mjs",
+          "language": "javascript",
+          "sizeLines": 1558,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/packages/dashboard/src/utils/__tests__/smoke.test.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/containers.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/edgeAggregation.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/elk-layout.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/filters.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/layerStats.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/layout.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/layout.worker.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/utils/louvain.ts": [],
+        "understand-anything-plugin/packages/dashboard/src/vite-env.d.ts": [],
+        "understand-anything-plugin/packages/dashboard/vite.config.demo.ts": [],
+        "understand-anything-plugin/packages/dashboard/vite.config.ts": [],
+        "understand-anything-plugin/skills/understand-chat/SKILL.md": [],
+        "understand-anything-plugin/skills/understand-dashboard/SKILL.md": [],
+        "understand-anything-plugin/skills/understand-diff/SKILL.md": [],
+        "understand-anything-plugin/skills/understand-domain/extract-domain-context.py": [],
+        "understand-anything-plugin/skills/understand-domain/SKILL.md": [],
+        "understand-anything-plugin/skills/understand-explain/SKILL.md": [],
+        "understand-anything-plugin/skills/understand-knowledge/merge-knowledge-graph.py": [],
+        "understand-anything-plugin/skills/understand-knowledge/parse-knowledge-base.py": [],
+        "understand-anything-plugin/skills/understand-knowledge/SKILL.md": [],
+        "understand-anything-plugin/skills/understand-onboard/SKILL.md": [],
+        "understand-anything-plugin/skills/understand/build-fingerprints.mjs": [],
+        "understand-anything-plugin/skills/understand/compute-batches.mjs": [],
+        "understand-anything-plugin/skills/understand/extract-import-map.mjs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 25,
+      "files": [
+        {
+          "path": "understand-anything-plugin/skills/understand/extract-structure.mjs",
+          "language": "javascript",
+          "sizeLines": 334,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/merge-batch-graphs.py",
+          "language": "python",
+          "sizeLines": 1164,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/merge-subdomain-graphs.py",
+          "language": "python",
+          "sizeLines": 308,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/scan-project.mjs",
+          "language": "javascript",
+          "sizeLines": 794,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/skills/understand/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 844,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/context-builder.test.ts",
+          "language": "typescript",
+          "sizeLines": 234,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/diff-analyzer.test.ts",
+          "language": "typescript",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/explain-builder.test.ts",
+          "language": "typescript",
+          "sizeLines": 82,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/extract-structure.test.mjs",
+          "language": "javascript",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/merge-recover-imports.test.mjs",
+          "language": "javascript",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/onboard-builder.test.ts",
+          "language": "typescript",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/__tests__/worktree-redirect.test.mjs",
+          "language": "javascript",
+          "sizeLines": 89,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/context-builder.ts",
+          "language": "typescript",
+          "sizeLines": 147,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/diff-analyzer.ts",
+          "language": "typescript",
+          "sizeLines": 198,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/explain-builder.ts",
+          "language": "typescript",
+          "sizeLines": 196,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/index.ts",
+          "language": "typescript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/onboard-builder.ts",
+          "language": "typescript",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/src/understand-chat.ts",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "understand-anything-plugin/vitest.config.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "v8-compile-cache-0/x64/11.3.244.8-node.38/zSrootzS.nvmzSversionszSnodezSv20.20.2zSlibzSnode_moduleszScorepackzSdistzSpnpm.js.BLOB",
+          "language": "blob",
+          "sizeLines": 4435,
+          "fileCategory": "code"
+        },
+        {
+          "path": "vitest.config.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "understand-anything-plugin/skills/understand/extract-structure.mjs": [],
+        "understand-anything-plugin/skills/understand/merge-batch-graphs.py": [],
+        "understand-anything-plugin/skills/understand/merge-subdomain-graphs.py": [],
+        "understand-anything-plugin/skills/understand/scan-project.mjs": [],
+        "understand-anything-plugin/skills/understand/SKILL.md": [],
+        "understand-anything-plugin/src/__tests__/context-builder.test.ts": [],
+        "understand-anything-plugin/src/__tests__/diff-analyzer.test.ts": [],
+        "understand-anything-plugin/src/__tests__/explain-builder.test.ts": [],
+        "understand-anything-plugin/src/__tests__/extract-structure.test.mjs": [],
+        "understand-anything-plugin/src/__tests__/merge-recover-imports.test.mjs": [],
+        "understand-anything-plugin/src/__tests__/onboard-builder.test.ts": [],
+        "understand-anything-plugin/src/__tests__/worktree-redirect.test.mjs": [],
+        "understand-anything-plugin/src/context-builder.ts": [],
+        "understand-anything-plugin/src/diff-analyzer.ts": [],
+        "understand-anything-plugin/src/explain-builder.ts": [],
+        "understand-anything-plugin/src/index.ts": [],
+        "understand-anything-plugin/src/onboard-builder.ts": [],
+        "understand-anything-plugin/src/understand-chat.ts": [],
+        "understand-anything-plugin/vitest.config.ts": [],
+        "v8-compile-cache-0/x64/11.3.244.8-node.38/zSrootzS.nvmzSversionszSnodezSv20.20.2zSlibzSnode_moduleszScorepackzSdistzSpnpm.js.BLOB": [],
+        "vitest.config.ts": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+homepage                                 |  WARN  Unsupported engine: wanted: {"node":">=22.12.0"} (current: {"node":"v20.20.2","pnpm":"10.6.2"})
+Scope: all 5 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +577
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+   ╭──────────────────────────────────────────────────────────────────╮
+   │                                                                  │
+   │                Update available! 10.6.2 → 11.3.0.                │
+   │   Changelog: https://github.com/pnpm/pnpm/releases/tag/v11.3.0   │
+   │            Run "corepack use pnpm@11.3.0" to update.             │
+   │                                                                  │
+   ╰──────────────────────────────────────────────────────────────────╯
+
+Progress: resolved 577, reused 0, downloaded 2, added 0
+Progress: resolved 577, reused 0, downloaded 28, added 25
+Progress: resolved 577, reused 0, downloaded 71, added 71
+Progress: resolved 577, reused 0, downloaded 116, added 116
+Progress: resolved 577, reused 0, downloaded 156, added 156
+Progress: resolved 577, reused 0, downloaded 193, added 189
+Progress: resolved 577, reused 0, downloaded 230, added 231
+Progress: resolved 577, reused 0, downloaded 248, added 241
+Progress: resolved 577, reused 0, downloaded 280, added 273
+Progress: resolved 577, reused 0, downloaded 298, added 301
+Progress: resolved 577, reused 0, downloaded 300, added 301
+Progress: resolved 577, reused 0, downloaded 314, added 304
+Progress: resolved 577, reused 0, downloaded 355, added 360
+Progress: resolved 577, reused 0, downloaded 401, added 406
+Progress: resolved 577, reused 0, downloaded 435, added 440
+Progress: resolved 577, reused 0, downloaded 479, added 484
+Progress: resolved 577, reused 0, downloaded 520, added 525
+Progress: resolved 577, reused 0, downloaded 531, added 535
+Progress: resolved 577, reused 0, downloaded 532, added 535
+Progress: resolved 577, reused 0, downloaded 571, added 577, done
+.../sharp@0.34.5/node_modules/sharp install$ node install/check.js || npm run build
+.../node_modules/tree-sitter-c-sharp install$ node-gyp-build
+.../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+.../node_modules/tree-sitter-c install$ node-gyp-build
+.../esbuild@0.27.4/node_modules/esbuild postinstall$ node install.js
+.../sharp@0.34.5/node_modules/sharp install: Done
+.../esbuild@0.27.4/node_modules/esbuild postinstall: Done
+.../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+.../node_modules/tree-sitter-c-sharp install: Done
+.../node_modules/tree-sitter-go install$ node-gyp-build
+.../node_modules/tree-sitter-c install: Done
+.../node_modules/tree-sitter-java install$ node-gyp-build
+.../node_modules/tree-sitter-javascript install$ node-gyp-build
+.../node_modules/tree-sitter-php install$ node-gyp-build
+.../node_modules/tree-sitter-java install: Done
+.../node_modules/tree-sitter-go install: Done
+.../node_modules/tree-sitter-python install$ node-gyp-build
+.../node_modules/tree-sitter-javascript install: Done
+.../node_modules/tree-sitter-ruby install$ node-gyp-build
+.../node_modules/tree-sitter-php install: Done
+.../node_modules/tree-sitter-rust install$ node-gyp-build
+.../node_modules/tree-sitter-javascript install$ node-gyp-build
+.../node_modules/tree-sitter-python install: Done
+.../node_modules/tree-sitter-ruby install: Done
+.../node_modules/tree-sitter-rust install: Done
+.../node_modules/tree-sitter-javascript install: Done
+.../node_modules/tree-sitter-cpp install$ node-gyp-build
+.../node_modules/tree-sitter-typescript install$ node-gyp-build
+.../node_modules/tree-sitter-cpp install: Done
+.../node_modules/tree-sitter-typescript install: Done
+
+devDependencies:
++ @eslint/js 9.39.4
++ eslint 9.39.4
++ globals 17.6.0
++ typescript 5.9.3
++ typescript-eslint 8.59.4
++ vitest 3.2.4
+
+. prepare$ pnpm --filter @understand-anything/core build
+. prepare: homepage                                 |  WARN  Unsupported engine: wanted: {"node":">=22.12.0"} (current: {"node":"v20.20.2","pnpm":"10.6.2"})
+. prepare: > @understand-anything/core@0.1.0 build /workspace/research/artifacts/Understand-Anything/understand-anything-plugin/packages/core
+. prepare: > tsc
+. prepare: Done
+Done in 45.4s using pnpm v10.6.2
