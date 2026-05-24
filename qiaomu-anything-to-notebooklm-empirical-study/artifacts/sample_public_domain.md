@@ -1,0 +1,6 @@
+# Public Domain Sample
+
+This is a locally generated sample for NotebookLM ingestion testing.
+
+- Item 1: reproducible text
+- Item 2: no proprietary data
