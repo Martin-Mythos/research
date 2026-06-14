@@ -1,5 +1,10 @@
 # GSAP vs Remotion Article Animation Research
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## Title
 Empirical Study on Programmatic Article Animation: GSAP vs. Remotion and Hyperframe
 
