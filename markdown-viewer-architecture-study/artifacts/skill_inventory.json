@@ -1,0 +1,174 @@
+{
+  "repo": "https://github.com/markdown-viewer/skills",
+  "commit": "a3afd455b3ad37c0e71c05fa9407c4ec377226e3",
+  "tracked_files": 252,
+  "skill_count": 15,
+  "manifests": [],
+  "skills": [
+    {
+      "skill": "archimate",
+      "path": "archimate/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create ArchiMate enterprise architecture diagrams using PlantUML stdlib macros. Best for TOGAF viewpoints, layered EA modeling (Business/Application/Technology), motivation analysis, and migration planning.",
+      "examples": 8,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "architecture",
+      "path": "architecture/SKILL.md",
+      "engine": "Direct HTML/CSS",
+      "description": "Create layered system architecture diagrams using HTML/CSS templates with color-coded tiers and grid layouts. Best for technology stacks, microservices topology, and multi-tier application design.",
+      "examples": 0,
+      "references": 0,
+      "layouts": 13,
+      "styles": 12,
+      "stencils": 0
+    },
+    {
+      "skill": "bpmn",
+      "path": "bpmn/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create business process diagrams using PlantUML syntax with BPMN, EIP, and Lean Mapping stencil icons. Best for workflow automation, approval chains, message-based integration patterns, and value stream mapping.",
+      "examples": 8,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "canvas",
+      "path": "canvas/SKILL.md",
+      "engine": "JSON Canvas",
+      "description": "Create spatial diagrams with free-positioned nodes using JSON format. Best for concept maps, knowledge graphs, and planning boards requiring precise x/y coordinate control.",
+      "examples": 0,
+      "references": 1,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "cloud",
+      "path": "cloud/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create cloud provider architecture diagrams using PlantUML syntax with official AWS, Azure, GCP, and Alibaba Cloud service icons. Best for multi-service cloud topologies and migration blueprints.",
+      "examples": 8,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "data-analytics",
+      "path": "data-analytics/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create data pipeline and analytics architecture diagrams using PlantUML syntax with database/analytics stencil icons. Best for ETL pipelines, data lakes, real-time streaming, data warehousing, and BI dashboard design.",
+      "examples": 8,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "graphviz",
+      "path": "graphviz/SKILL.md",
+      "engine": "Graphviz DOT",
+      "description": "Create directed/undirected graphs using DOT language with automatic layout. Best for dependency trees, call graphs, package hierarchies, and module relationships requiring fine-grained edge routing.",
+      "examples": 0,
+      "references": 1,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "infocard",
+      "path": "infocard/SKILL.md",
+      "engine": "Direct HTML/CSS",
+      "description": "Create editorial-style information cards using HTML/CSS in Markdown. Best for knowledge summaries, data highlights, event announcements, and single-topic content cards with magazine-quality typography.",
+      "examples": 0,
+      "references": 0,
+      "layouts": 36,
+      "styles": 29,
+      "stencils": 0
+    },
+    {
+      "skill": "infographic",
+      "path": "infographic/SKILL.md",
+      "engine": "Infographic template syntax",
+      "description": "Create template-based infographics with space-separated key-value syntax (NOT YAML). Best for KPI dashboards, timelines, roadmaps, SWOT analysis, funnels, comparisons, and org charts with quick visual impact.",
+      "examples": 0,
+      "references": 3,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "iot",
+      "path": "iot/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create IoT architecture diagrams using PlantUML syntax with device and sensor stencil icons. Best for smart home, industrial IoT (IIoT), fleet management, edge computing, and sensor network layouts.",
+      "examples": 8,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "mindmap",
+      "path": "mindmap/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create hierarchical mind maps using PlantUML @startmindmap syntax. Best for brainstorming, topic decomposition, study notes, and decision trees with automatic radial layout, left/right branches, and per-node styling.",
+      "examples": 7,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "network",
+      "path": "network/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create network topology diagrams using PlantUML syntax with mxgraph device icons (Cisco, Citrix, etc.). Best for LAN/WAN layouts, datacenter interconnects, and physical/logical network design.",
+      "examples": 9,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "security",
+      "path": "security/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create security architecture diagrams using PlantUML syntax with identity, encryption, firewall, and compliance stencil icons. Best for IAM flows, zero-trust models, encryption pipelines, and threat detection architectures.",
+      "examples": 8,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    },
+    {
+      "skill": "uml",
+      "path": "uml/SKILL.md",
+      "engine": "PlantUML",
+      "description": "Create UML diagrams using PlantUML syntax. Best for software modeling \u2014 Class, Sequence, Activity, State Machine, Component, Use Case, and Deployment diagrams with concise text-based notation and auto-layout.",
+      "examples": 15,
+      "references": 0,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 61
+    },
+    {
+      "skill": "vega",
+      "path": "vega/SKILL.md",
+      "engine": "Vega/Vega-Lite",
+      "description": "Create data-driven charts with Vega-Lite (declarative) and Vega (programmatic). Best for statistical visualization of numeric data \u2014 bar, line, scatter, heatmap, area, radar charts, and word clouds.",
+      "examples": 0,
+      "references": 1,
+      "layouts": 0,
+      "styles": 0,
+      "stencils": 0
+    }
+  ]
+}
