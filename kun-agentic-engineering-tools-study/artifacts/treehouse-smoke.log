@@ -1,0 +1,21 @@
+go: downloading go1.25.5 (linux/amd64)
+go: downloading github.com/BurntSushi/toml v1.6.0
+go: downloading github.com/fatih/color v1.18.0
+go: downloading github.com/spf13/cobra v1.10.2
+go: downloading github.com/shirou/gopsutil/v4 v4.26.2
+go: downloading github.com/mattn/go-colorable v0.1.13
+go: downloading github.com/mattn/go-isatty v0.0.20
+go: downloading github.com/spf13/pflag v1.0.9
+go: downloading github.com/tklauser/go-sysconf v0.3.16
+go: downloading golang.org/x/sys v0.41.0
+go: downloading github.com/tklauser/numcpus v0.11.0
+?   	github.com/kunchenguid/treehouse	[no test files]
+ok  	github.com/kunchenguid/treehouse/cmd	13.882s
+ok  	github.com/kunchenguid/treehouse/internal/config	2.482s
+?   	github.com/kunchenguid/treehouse/internal/git	[no test files]
+ok  	github.com/kunchenguid/treehouse/internal/hooks	0.046s
+ok  	github.com/kunchenguid/treehouse/internal/pool	10.961s
+ok  	github.com/kunchenguid/treehouse/internal/process	3.174s
+?   	github.com/kunchenguid/treehouse/internal/shell	[no test files]
+?   	github.com/kunchenguid/treehouse/internal/ui	[no test files]
+ok  	github.com/kunchenguid/treehouse/internal/updater	0.071s

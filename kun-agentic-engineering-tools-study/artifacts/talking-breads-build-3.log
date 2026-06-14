@@ -1,0 +1,6 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> build
+> tsc && vite build
+
+src/main.tsx(1,114): error TS2882: Cannot find module or type declarations for side-effect import of './styles.css'.

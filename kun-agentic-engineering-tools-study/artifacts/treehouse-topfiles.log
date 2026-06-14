@@ -1,0 +1,37 @@
+commit: 7f8e436b972af8e1de57b7859c3eade45713a2bd
+branch: main
+top-files:
+.claude/settings.json
+.git/HEAD
+.git/config
+.git/description
+.git/index
+.git/packed-refs
+.git/shallow
+.gitignore
+.release-please-manifest.json
+AGENTS.md
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+Makefile
+README.md
+cmd/destroy.go
+cmd/e2e_test.go
+cmd/get.go
+cmd/init.go
+cmd/return_cmd.go
+cmd/root.go
+cmd/status.go
+cmd/update.go
+demo.gif
+demo.tape
+docs/install.ps1
+docs/install.sh
+flake.lock
+flake.nix
+go.mod
+go.sum
+main.go
+release-please-config.json
+treehouse.toml.example

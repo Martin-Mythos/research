@@ -1,0 +1,28 @@
+Local Git proxy that validates code before pushing upstream
+
+Usage:
+  no-mistakes [flags]
+  no-mistakes [command]
+
+Available Commands:
+  attach      Attach to the active pipeline run
+  axi         Agent interface: drive no-mistakes from an autonomous agent
+  completion  Generate the autocompletion script for the specified shell
+  daemon      Manage the no-mistakes daemon
+  doctor      Check system health and dependencies
+  eject       Remove no-mistakes gate from the current repository
+  help        Help about any command
+  init        Initialize no-mistakes gate for the current repository
+  rerun       Rerun the pipeline for the current branch
+  runs        List pipeline runs for the current repository
+  stats       Show historical no-mistakes usage stats
+  status      Show status of the current repository
+  update      Update no-mistakes and reset the daemon
+
+Flags:
+  -h, --help          help for no-mistakes
+      --skip string   comma-separated pipeline steps to skip for a new run
+  -v, --version       version for no-mistakes
+  -y, --yes           run setup wizard and accept defaults automatically
+
+Use "no-mistakes [command] --help" for more information about a command.

@@ -1,0 +1,13 @@
+$ git worktree add ../tb-site-baseline -b site-baseline
+Preparing worktree (new branch 'site-baseline')
+HEAD is now at a0e634e init
+$ git worktree add ../tb-site-polish -b site-polish
+Preparing worktree (new branch 'site-polish')
+HEAD is now at a0e634e init
+$ git worktree list
+/tmp/talking-breads-worktree-subject  a0e634e [master]
+/tmp/tb-site-baseline                 a0e634e [site-baseline]
+/tmp/tb-site-polish                   a0e634e [site-polish]
+$ git worktree add ../tb-site-baseline-duplicate -b site-baseline
+Preparing worktree (new branch 'site-baseline')
+fatal: a branch named 'site-baseline' already exists
