@@ -1,0 +1,3 @@
+Loaded 383 files (249 code).
+Info: compute-batches: merged 268 small batches (271 files) into 11 misc batches — singletons and orphans consolidated
+Wrote 25 batches (sizes: max=25, min=2) to .understand-anything/intermediate/batches.json
