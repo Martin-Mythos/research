@@ -145,9 +145,9 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 19 research projects
+## 20 research projects
 
-### [GSAP vs Remotion Article Animation Research](https://github.com/Martin-Mythos/research/tree/main/gsap-vs-remotion-article-animation#readme) (2026-05-25 21:25)
+### [GSAP vs Remotion Article Animation Research](https://github.com/Martin-Mythos/research/tree/main/gsap-vs-remotion-article-animation#readme) (2026-06-14 11:09)
 
 This research project analyzes the process of animating a generated article with GSAP and compares it to video-creation toolkits Remotion and Hyperframe. GSAP demonstrated rapid setup and precise timeline management for animating web-based articles, while Remotion and Hyperframe proved more capable when exporting deterministic video formats like MP4 is essential. Partial reproduction included GSAP proof-of-concept and local running; however, screenshot automation was impeded by external browser download limitations. Further details and code are available in the [GSAP documentation](https://gsap.com/docs/) and the project artifacts.
 
@@ -166,6 +166,18 @@ Key findings:
 - Documentation and empirical evidence are published in the repository logs and artifacts.
 
 Relevant link: [Qiaomu Anything-to-NotebookLM GitHub](https://github.com/joeseesun/qiaomu-anything-to-notebooklm)
+
+### [Understand-Anything for ASF 2026 site structure research](https://github.com/Martin-Mythos/research/tree/main/understand-anything-asf-site-structure-study#readme) (2026-05-24 21:55)
+
+The project assessed the application of the Understand-Anything tool for site structure analysis within the ASF 2026 framework, focusing on end-to-end validation using a private repository. While scripts for scan, import-map, and batches ran successfully on accessible repositories, attempts to fully replicate results on the ASF private repo failed due to access restrictions. The research isolated private repo constraints as a primary blocker and documented evidence of failed access, as well as minor issues with worker timeouts during test runs.
+
+Key findings:
+
+- Understand-Anything can generate structured intermediate graph data for site structure analysis.
+- Private repository access is the main barrier to full replication.
+- Test suite revealed an unhandled worker timeout issue.
+
+Further details and the tool may be referenced at the [Understand-Anything GitHub repository](https://github.com/Lum1104/Understand-Anything).
 
 ### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-skill-benchmark#readme) (2026-05-18 21:34)
 

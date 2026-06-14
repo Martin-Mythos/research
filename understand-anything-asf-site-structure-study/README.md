@@ -1,5 +1,10 @@
 # Understand-Anything for ASF 2026 site structure research
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 - 目标工具：`Lum1104/Understand-Anything`
 - 目标语料：`xwbcl123/asf-site-v2`（私有）
 - 复现状态：**partially reproduced**
