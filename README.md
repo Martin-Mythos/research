@@ -145,7 +145,29 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 20 research projects
+## 21 research projects
+
+### [Technical Principles and Architecture Reverse Engineering of Markdown-Viewer/Skills](https://github.com/Martin-Mythos/research/tree/main/markdown-viewer-architecture-study#readme) (2026-06-14 11:24)
+
+This research examines the technical design and internal architecture of the [`markdown-viewer/skills`](https://github.com/markdown-viewer/skills) repository, revealing it as a declarative, contract-driven library rather than an executable application. The core workflow transforms user requests into well-defined, renderer-compatible Markdown artifacts, relying on strict syntax contracts and structured metadata per skill module. Rendering is intentionally outside the repository, delegated to external Markdown Viewer instances or compatible hosts, as the repository contains no runtime, build system, or app manifests. The architecture is characterized by a contract-first pattern, with each skill constraining output formats for multiple renderer families.
+
+**Key findings:**
+- The analyzed commit contains 15 distinct skill modules and 252 tracked files.
+- Output formats supported include PlantUML, Graphviz DOT, JSON Canvas, Vega/Vega-Lite, HTML/CSS, and template-based infographics.
+- No executable application entrypoint or build tool is present; repository serves only as a skill contract and template provider.
+- Architecture diagrams and inventory artifacts are generated for reproducibility and visualization ([Mermaid diagrams](https://mermaid-js.github.io/), JSON inventories).
+
+### [Understand-Anything for ASF 2026 site structure research](https://github.com/Martin-Mythos/research/tree/main/understand-anything-asf-site-structure-study#readme) (2026-06-14 11:12)
+
+The project assessed the application of the Understand-Anything tool for site structure analysis within the ASF 2026 framework, focusing on end-to-end validation using a private repository. While scripts for scan, import-map, and batches ran successfully on accessible repositories, attempts to fully replicate results on the ASF private repo failed due to access restrictions. The research isolated private repo constraints as a primary blocker and documented evidence of failed access, as well as minor issues with worker timeouts during test runs.
+
+Key findings:
+
+- Understand-Anything can generate structured intermediate graph data for site structure analysis.
+- Private repository access is the main barrier to full replication.
+- Test suite revealed an unhandled worker timeout issue.
+
+Further details and the tool may be referenced at the [Understand-Anything GitHub repository](https://github.com/Lum1104/Understand-Anything).
 
 ### [GSAP vs Remotion Article Animation Research](https://github.com/Martin-Mythos/research/tree/main/gsap-vs-remotion-article-animation#readme) (2026-06-14 11:09)
 
@@ -166,18 +188,6 @@ Key findings:
 - Documentation and empirical evidence are published in the repository logs and artifacts.
 
 Relevant link: [Qiaomu Anything-to-NotebookLM GitHub](https://github.com/joeseesun/qiaomu-anything-to-notebooklm)
-
-### [Understand-Anything for ASF 2026 site structure research](https://github.com/Martin-Mythos/research/tree/main/understand-anything-asf-site-structure-study#readme) (2026-05-24 21:55)
-
-The project assessed the application of the Understand-Anything tool for site structure analysis within the ASF 2026 framework, focusing on end-to-end validation using a private repository. While scripts for scan, import-map, and batches ran successfully on accessible repositories, attempts to fully replicate results on the ASF private repo failed due to access restrictions. The research isolated private repo constraints as a primary blocker and documented evidence of failed access, as well as minor issues with worker timeouts during test runs.
-
-Key findings:
-
-- Understand-Anything can generate structured intermediate graph data for site structure analysis.
-- Private repository access is the main barrier to full replication.
-- Test suite revealed an unhandled worker timeout issue.
-
-Further details and the tool may be referenced at the [Understand-Anything GitHub repository](https://github.com/Lum1104/Understand-Anything).
 
 ### [Sense Deck Skill 与主流 AI PPT 工具链的架构实证与横评报告](https://github.com/Martin-Mythos/research/tree/main/sense-deck-skill-benchmark#readme) (2026-05-18 21:34)
 

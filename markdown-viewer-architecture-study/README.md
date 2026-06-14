@@ -1,5 +1,10 @@
 # Technical Principles and Architecture Reverse Engineering of Markdown-Viewer/Skills
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## Final conclusion
 
 `markdown-viewer/skills` is best understood as a **declarative, contract-driven skill library** rather than a runnable application. Its architecture turns a user's natural-language visualization request into a renderer-specific Markdown artifact by combining skill-selection metadata, strict syntax rules, examples, and references. Rendering is deliberately outside the repository boundary and is handled by Markdown Viewer or a compatible host.
