@@ -34,3 +34,8 @@
 - 根据 Lavish README 的 HTML artifact 模式创建 `artifacts/lavish-plan/talking-breads-plan.html`。
 - 第三次 Talking Breads 验证加入 `@types/react` / `@types/react-dom` 后，`npm test` 与 `npm run smoke` 通过，但 build 仍因 CSS side-effect import declaration 缺失失败。
 - 第四次 Talking Breads 验证加入 `src/vite-env.d.ts` CSS module declaration 后，`npm run build`、`npm test`、`npm run smoke` 均通过；删除 `node_modules` 与 `dist`。
+
+### 2026-06-16 PR review follow-up
+- 通过 GitHub REST API 读取 PR #18 的 issue comments、review comments 和 reviews。
+- 发现 1 条 inline review comment：复现命令直接 clone upstream default branch，未 pin 到本研究记录的 commit，可能导致未来复现结果漂移。
+- 修复：更新 `README.md` 的外部工具源码测试复现命令，在 clone 后 `git fetch --depth 1 origin <recorded_sha>` 并 `git checkout <recorded_sha>`，使用 `artifacts/treehouse-topfiles.log` 与 `artifacts/no-mistakes-topfiles.log` 中记录的 SHA。

@@ -29,3 +29,8 @@
 - 尝试重复 `site-baseline` 分支，记录 collision 错误。
 - 第三次修复加入 React type packages 后：`npm test` exit 0，`npm run smoke` exit 0；`npm run build` 仍 exit 2，缺 `*.css` declaration。对应 `artifacts/talking-breads-*-3.log`。
 - 第四次修复加入 `src/vite-env.d.ts` 后：`npm run build` exit 0，`npm test` exit 0，`npm run smoke` exit 0。对应 `artifacts/talking-breads-*-4.log`。
+
+## 2026-06-16 PR review follow-up
+
+- `python3` + GitHub REST API: 读取 `issues/18/comments`、`pulls/18/comments`、`pulls/18/reviews`，确认唯一 inline comment 要求 pin external checkouts。
+- 更新 `README.md` 复现命令：Treehouse pin 到 `7f8e436b972af8e1de57b7859c3eade45713a2bd`，No Mistakes pin 到 `f9c5b7f1e8bc5ad18d74667f00e9b7354d365304`。

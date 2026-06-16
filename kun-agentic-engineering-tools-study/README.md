@@ -161,13 +161,13 @@ cd ../..
 python3 scripts/validate_talking_breads.py
 ```
 
-外部工具源码测试复现需重新 clone 到临时目录后运行对应命令：
+外部工具源码测试复现需重新 clone 到临时目录，并 checkout 本研究记录的具体 commit 后运行对应命令。这样可以避免上游 `main` 在复现时已经移动，导致测试结果与本报告的 evidence 不一致。对应 commit 也保存在 `artifacts/*-topfiles.log`。
 
 ```sh
 git clone --depth 1 https://github.com/kunchenguid/treehouse /tmp/treehouse
-(cd /tmp/treehouse && go test ./...)
+(cd /tmp/treehouse && git fetch --depth 1 origin 7f8e436b972af8e1de57b7859c3eade45713a2bd && git checkout 7f8e436b972af8e1de57b7859c3eade45713a2bd && go test ./...)
 git clone --depth 1 https://github.com/kunchenguid/no-mistakes /tmp/no-mistakes
-(cd /tmp/no-mistakes && go test ./...)
+(cd /tmp/no-mistakes && git fetch --depth 1 origin f9c5b7f1e8bc5ad18d74667f00e9b7354d365304 && git checkout f9c5b7f1e8bc5ad18d74667f00e9b7354d365304 && go test ./...)
 ```
 
 ## 12. 证据附录
