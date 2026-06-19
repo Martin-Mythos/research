@@ -1,0 +1,61 @@
+interval,track,vector,status,confidence
+1,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+1,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+2,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+2,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+3,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+3,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+4,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+4,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+5,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+5,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+6,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+6,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+7,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+7,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+8,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+8,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+9,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+9,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+10,GLM-5.2,multi-turn instruction drift / benchmark harness assumptions,designed-not-live-benchmarked,3
+10,Anthropic Mythos/Fable 5,"directive scope, affected users, first-party statement verification",verified-policy-event-tracked,4
+11,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+11,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+12,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+12,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+13,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+13,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+14,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+14,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+15,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+15,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+16,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+16,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+17,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+17,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+18,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+18,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+19,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,3
+19,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+20,GLM-5.2,"concurrency, quota, latency, KV-cache, long-context serving bottlenecks",designed-not-live-benchmarked,2
+20,Anthropic Mythos/Fable 5,"customer integration interruption, employee-access controls, compliance implementation",verified-policy-event-tracked,4
+21,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+21,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+22,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+22,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+23,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+23,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+24,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+24,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+25,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+25,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+26,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+26,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+27,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+27,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+28,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+28,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+29,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+29,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3
+30,GLM-5.2,"needle-in-haystack, reward-hacking, repo-scale context stress",designed-not-live-benchmarked,2
+30,Anthropic Mythos/Fable 5,"sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",verified-policy-event-tracked,3

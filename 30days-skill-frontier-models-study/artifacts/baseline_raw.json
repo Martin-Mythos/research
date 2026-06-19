@@ -1,0 +1,100 @@
+{
+  "generated": "2026-06-19",
+  "sources": [
+    {
+      "id": "zai-hf-glm52",
+      "topic": "GLM-5.2",
+      "url": "https://huggingface.co/blog/zai-org/glm-52-blog",
+      "type": "vendor technical blog",
+      "verified": true,
+      "claims": [
+        "1M context",
+        "Terminal-Bench 2.1 81.0",
+        "SWE-bench Pro 62.1",
+        "FrontierSWE dominance 74.4",
+        "serving bottleneck shifts to KV-cache and CPU overhead",
+        "anti-hack needed because reward hacking observed"
+      ]
+    },
+    {
+      "id": "zai-docs-glm52",
+      "topic": "GLM-5.2",
+      "url": "https://docs.z.ai/guides/llm/glm-5.2",
+      "type": "vendor docs",
+      "verified": true,
+      "claims": [
+        "developer docs for GLM-5.2",
+        "model can be selected in coding plans"
+      ]
+    },
+    {
+      "id": "benchlm-glm52",
+      "topic": "GLM-5.2",
+      "url": "https://benchlm.ai/models/glm-5-2",
+      "type": "benchmark aggregator",
+      "verified": true,
+      "claims": [
+        "partial third-party benchmark coverage at research time"
+      ]
+    },
+    {
+      "id": "friendli-glm52",
+      "topic": "GLM-5.2",
+      "url": "https://friendli.ai/blog/GLM-5.2",
+      "type": "inference provider blog",
+      "verified": true,
+      "claims": [
+        "744B MoE with about 40B active parameters",
+        "1M context provider availability"
+      ]
+    },
+    {
+      "id": "anthropic-fable-mythos",
+      "topic": "Anthropic Mythos/Fable 5",
+      "url": "https://www.anthropic.com/news/fable-mythos-access",
+      "type": "first-party policy statement",
+      "verified": true,
+      "claims": [
+        "U.S. government export-control directive suspended access to Mythos 5 and Fable 5 for any foreign national",
+        "Anthropic disabled Mythos 5 and Fable 5 for all customers to ensure compliance",
+        "other Anthropic models were stated as unaffected"
+      ]
+    },
+    {
+      "id": "gtlaw-fable-mythos",
+      "topic": "Anthropic Mythos/Fable 5",
+      "url": "https://www.gtlaw.com/en/insights/2026/6/ai-company-anthropic-suspends-access-to-claude-fable-5-claude-mythos-5-following-us-export-control-directive",
+      "type": "legal analysis",
+      "verified": true,
+      "claims": [
+        "directive affects foreign nationals inside and outside the United States",
+        "integration customers face service interruption even where U.S. personnel might not be restricted",
+        "case signals escalation of AI export-control compliance"
+      ]
+    },
+    {
+      "id": "aljazeera-fable-mythos",
+      "topic": "Anthropic Mythos/Fable 5",
+      "url": "https://www.aljazeera.com/news/2026/6/13/us-orders-anthropic-to-disable-ai-models-for-all-foreign-nationals",
+      "type": "news report",
+      "verified": true,
+      "claims": [
+        "public reporting corroborates model access suspension for foreign nationals",
+        "the action was framed around national security concerns"
+      ]
+    },
+    {
+      "id": "last30days-repo",
+      "topic": "Methodology",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "type": "methodology repo",
+      "verified": true,
+      "claims": [
+        "multi-source search across social/web/GitHub/markets",
+        "engagement-scored evidence",
+        "recency oriented last-30-days workflow",
+        "raw outputs saved to memory directory"
+      ]
+    }
+  ]
+}
