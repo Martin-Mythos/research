@@ -1,0 +1,425 @@
+{
+  "schema_version": 2,
+  "intervals": [
+    {
+      "interval": 1,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 2,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 3,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 4,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 5,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 6,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 7,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 8,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 9,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 10,
+      "glm_vector": "multi-turn instruction drift / benchmark harness assumptions",
+      "mythos_fable_vector": "directive scope, affected users, first-party statement verification",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 11,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 12,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 13,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 14,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 15,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 16,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 17,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 18,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 19,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 20,
+      "glm_vector": "concurrency, quota, latency, KV-cache, long-context serving bottlenecks",
+      "mythos_fable_vector": "customer integration interruption, employee-access controls, compliance implementation",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 21,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 22,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 23,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 24,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 25,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 26,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 27,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 28,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 29,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    },
+    {
+      "interval": 30,
+      "glm_vector": "needle-in-haystack, reward-hacking, repo-scale context stress",
+      "mythos_fable_vector": "sovereign-AI substitution, open-weight alternatives, policy durability and rollback signals",
+      "evidence_required": "source URL + claim + confidence + contradiction check",
+      "metric_slots": [
+        "latency_ms_p50",
+        "latency_ms_p95",
+        "context_tokens",
+        "source_count",
+        "affected_access_classes",
+        "compliance_confidence_1to5"
+      ]
+    }
+  ]
+}
