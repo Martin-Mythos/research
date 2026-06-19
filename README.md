@@ -145,9 +145,18 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 21 research projects
+## 22 research projects
 
-### [Technical Principles and Architecture Reverse Engineering of Markdown-Viewer/Skills](https://github.com/Martin-Mythos/research/tree/main/markdown-viewer-architecture-study#readme) (2026-06-14 11:24)
+### [Baoyu-Design PPTX Empirical Study](https://github.com/Martin-Mythos/research/tree/main/baoyu-design-pptx-empirical-study#readme) (2026-06-19 19:58)
+
+This empirical study evaluates `JimLiu/baoyu-design` as an AI-assisted design and document generation workflow, focusing on design-system structure, editable PowerPoint export, and generated-image insertion. The core `gen-pptx` chain was reproduced locally with Playwright and PptxGenJS: a three-slide HTML deck was captured and exported to an editable `.pptx` containing native text bodies, shapes, picture objects, and speaker notes. A locally generated cybersecurity server-room PNG was inserted into the deck and preserved as a native PowerPoint picture object rather than flattening the whole slide to screenshots.
+
+Key findings:
+- The editable PPTX path is technically credible and locally reproduced with no exporter warnings.
+- OOXML inspection confirms native PowerPoint objects (`p:txBody`, `p:sp`, `p:pic`) across the generated deck.
+- Baoyu's own Image Generation API integration was not exercised; the study isolates the insertion/layout pipeline using a local generated image artifact.
+
+### [Technical Principles and Architecture Reverse Engineering of Markdown-Viewer/Skills](https://github.com/Martin-Mythos/research/tree/main/markdown-viewer-architecture-study#readme) (2026-06-14 11:25)
 
 This research examines the technical design and internal architecture of the [`markdown-viewer/skills`](https://github.com/markdown-viewer/skills) repository, revealing it as a declarative, contract-driven library rather than an executable application. The core workflow transforms user requests into well-defined, renderer-compatible Markdown artifacts, relying on strict syntax contracts and structured metadata per skill module. Rendering is intentionally outside the repository, delegated to external Markdown Viewer instances or compatible hosts, as the repository contains no runtime, build system, or app manifests. The architecture is characterized by a contract-first pattern, with each skill constraining output formats for multiple renderer families.
 

@@ -1,5 +1,10 @@
 # Baoyu-Design PPTX Empirical Study
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 Status: local editable PPTX export reproduced on 2026-06-19.
 
 This folder contains an empirical local reproduction of `JimLiu/baoyu-design`, focused on:
