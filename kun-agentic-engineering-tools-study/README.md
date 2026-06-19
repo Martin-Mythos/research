@@ -1,5 +1,10 @@
 # Kun Chen Agentic Engineering Tools 经验研究报告
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 执行摘要
 
 本研究用 `Talking Breads Tervuren` V1 静态网站作为真实开发实验，评估 Lavish / Treehouse / No Mistakes 组成的 `Plan-Code-Validate` agentic engineering 工具链。结论：**这个工具链的工作流方向有价值，但目前更适合“分阶段试用”，不适合一次性全量纳入 Martin 的日常生产流。** Lavish 的 HTML planning artifact 对把模糊需求变成可审阅规格最有即时价值；Treehouse 的核心 `Git worktree` 池思想扎实，测试通过，但对单人轻量项目的收益取决于并行 agent 数量；No Mistakes 的愿景最完整，但真实价值绑定 GitHub auth、远程 PR、CI、LLM/agent CLI 与 TUI/gate 流程，本沙箱只能验证源码测试和本地替代验证，不能证明其 AI code review 质量。

@@ -1,5 +1,10 @@
 # 基于 30Days-Skill 框架的 GLM-5.2 与 Anthropic Mythos/Fable 5 实证研究
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## Final conclusion
 
 本次修订明确研究对象：第二条研究线是 **Anthropic Mythos/Fable 5**。`last30days-skill` 风格的 incremental evidence tracker 比一次性 desktop research 更适合这个问题，因为它保留 uncertainty、source lineage、contradiction checks 和 repeatable monitoring slots。

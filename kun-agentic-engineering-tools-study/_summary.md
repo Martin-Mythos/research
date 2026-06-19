@@ -1,0 +1,7 @@
+This research project evaluates the "Plan-Code-Validate" agentic engineering toolchain (Lavish, Treehouse, No Mistakes) via practical development of the Talking Breads Tervuren static website. The investigation finds that while the overall workflow is promising, the tools are currently best adopted in discrete stages rather than as a monolithic pipeline for day-to-day workflows. Lavish excels at turning vague requirements into reviewable HTML artifacts for the planning stage; Treehouse provides solid Git worktree pooling best leveraged with multiple agents; No Mistakes shows most potential for integrated validation but cannot demonstrate its full value without remote/authentication and CI capabilities. The recommended adoption path is to trial Lavish and Treehouse in controlled use-cases and restrict No Mistakes to sandbox environments pending further validation.
+
+Key findings:
+- Lavish: Immediate value in producing HTML planning artifacts for clarity and auditability ([Lavish docs](https://github.com/kunchenguid/lavish-axi)).
+- Treehouse: Worktree pooling useful for high agent concurrency, but overkill for small solo projects ([Treehouse repo](https://github.com/kunchenguid/treehouse)).
+- No Mistakes: Validation strongest with remote/PR/CI integration; local-only usage is limited.
+- Combined toolchain reduces context switching and improves artifact auditability, but still needs traditional CI, manual reviews, and clear permission boundaries.

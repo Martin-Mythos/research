@@ -145,9 +145,9 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 22 research projects
+## 24 research projects
 
-### [Baoyu-Design PPTX Empirical Study](https://github.com/Martin-Mythos/research/tree/main/baoyu-design-pptx-empirical-study#readme) (2026-06-19 19:58)
+### [Baoyu-Design PPTX Empirical Study](https://github.com/Martin-Mythos/research/tree/main/baoyu-design-pptx-empirical-study#readme) (2026-06-19 20:01)
 
 This empirical study evaluates `JimLiu/baoyu-design` as an AI-assisted design and document generation workflow, focusing on design-system structure, editable PowerPoint export, and generated-image insertion. The core `gen-pptx` chain was reproduced locally with Playwright and PptxGenJS: a three-slide HTML deck was captured and exported to an editable `.pptx` containing native text bodies, shapes, picture objects, and speaker notes. A locally generated cybersecurity server-room PNG was inserted into the deck and preserved as a native PowerPoint picture object rather than flattening the whole slide to screenshots.
 
@@ -155,6 +155,28 @@ Key findings:
 - The editable PPTX path is technically credible and locally reproduced with no exporter warnings.
 - OOXML inspection confirms native PowerPoint objects (`p:txBody`, `p:sp`, `p:pic`) across the generated deck.
 - Baoyu's own Image Generation API integration was not exercised; the study isolates the insertion/layout pipeline using a local generated image artifact.
+
+### [基于 30Days-Skill 框架的 GLM-5.2 与 Anthropic Mythos/Fable 5 实证研究](https://github.com/Martin-Mythos/research/tree/main/30days-skill-frontier-models-study#readme) (2026-06-19 19:31)
+
+This research project adapted the `mvanhorn/last30days-skill` framework into an incremental evidence tracking workflow to empirically assess GLM-5.2’s engineering boundaries and the compliance impacts of the Anthropic Mythos/Fable 5 export-control directive. By systematically cloning, testing, and monitoring, the study compared baseline and interval tracking, revealing that incremental research provides superior traceability and actionable outcomes over traditional, static approaches. Key validated findings were drawn from primary sources and artifacts, while notable limitations included lack of live API benchmarks and incomplete visibility into Mythos/Fable 5’s technical details and compliance procedures. The project’s methodology and evidence artifacts are available for reproduction and verification.
+
+**Key findings:**
+- GLM-5.2 features verified public claims, including 1M context support, robust coding benchmarks, open weights, and advanced engineering use cases.
+- Real-world engineering for GLM-5.2 requires awareness of KV-cache and context kernel limits, CPU overhead, quota, and anti-hack infrastructure.
+- Anthropic Mythos/Fable 5 access was officially suspended, per US export-control policy; other Anthropic models remain unaffected.
+- Incremental tracking improves traceability, bias reduction, actionability, and temporal robustness compared to baseline research.
+
+For methodology and tooling, see [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill).
+
+### [Kun Chen Agentic Engineering Tools 经验研究报告](https://github.com/Martin-Mythos/research/tree/main/kun-agentic-engineering-tools-study#readme) (2026-06-16 21:40)
+
+This research project evaluates the "Plan-Code-Validate" agentic engineering toolchain (Lavish, Treehouse, No Mistakes) via practical development of the Talking Breads Tervuren static website. The investigation finds that while the overall workflow is promising, the tools are currently best adopted in discrete stages rather than as a monolithic pipeline for day-to-day workflows. Lavish excels at turning vague requirements into reviewable HTML artifacts for the planning stage; Treehouse provides solid Git worktree pooling best leveraged with multiple agents; No Mistakes shows most potential for integrated validation but cannot demonstrate its full value without remote/authentication and CI capabilities. The recommended adoption path is to trial Lavish and Treehouse in controlled use-cases and restrict No Mistakes to sandbox environments pending further validation.
+
+Key findings:
+- Lavish: Immediate value in producing HTML planning artifacts for clarity and auditability ([Lavish docs](https://github.com/kunchenguid/lavish-axi)).
+- Treehouse: Worktree pooling useful for high agent concurrency, but overkill for small solo projects ([Treehouse repo](https://github.com/kunchenguid/treehouse)).
+- No Mistakes: Validation strongest with remote/PR/CI integration; local-only usage is limited.
+- Combined toolchain reduces context switching and improves artifact auditability, but still needs traditional CI, manual reviews, and clear permission boundaries.
 
 ### [Technical Principles and Architecture Reverse Engineering of Markdown-Viewer/Skills](https://github.com/Martin-Mythos/research/tree/main/markdown-viewer-architecture-study#readme) (2026-06-14 11:25)
 
