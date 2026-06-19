@@ -1,0 +1,88 @@
+{
+  "pptx": "baoyu-design-pptx-empirical-study/artifacts/baoyu-design-local-editable.pptx",
+  "bytes": 2478623,
+  "slide_count": 3,
+  "media_count": 2,
+  "media": [
+    "ppt/media/image-1-1.png",
+    "ppt/media/image-3-1.png"
+  ],
+  "notes_count": 3,
+  "slides": [
+    {
+      "slide": "ppt/slides/slide1.xml",
+      "native_text_bodies_p_txBody": 5,
+      "native_shape_objects_p_sp": 6,
+      "native_picture_objects_p_pic": 1,
+      "text_run_count_a_t": 6,
+      "text_samples": [
+        "EXPERIMENT 1 · DESIGN SYSTEM GENERATION",
+        "Corporate Tech Branding",
+        "Ocean Blue &amp; Minimalist",
+        "Tokenized palette, restrained typography, native layout primitives, and a reusable visual language for security-focused decks.",
+        "Design System",
+        "Colors, type scale, component rhythm, spacing, and presentation rules captured as deck-ready atoms."
+      ]
+    },
+    {
+      "slide": "ppt/slides/slide2.xml",
+      "native_text_bodies_p_txBody": 16,
+      "native_shape_objects_p_sp": 27,
+      "native_picture_objects_p_pic": 0,
+      "text_run_count_a_t": 16,
+      "text_samples": [
+        "EXPERIMENT 2 · NATIVE PPTX OBJECTS",
+        "Design Tokens Captured as Editable Text and Shapes",
+        "Ocean 700",
+        "#075985 · primary",
+        "Cyan 600",
+        "#0891B2 · accent",
+        "Mint 500",
+        "#14B8A6 · success",
+        "Slate 900",
+        "#0F172A · text",
+        "8 px",
+        "Base spacing unit"
+      ]
+    },
+    {
+      "slide": "ppt/slides/slide3.xml",
+      "native_text_bodies_p_txBody": 5,
+      "native_shape_objects_p_sp": 7,
+      "native_picture_objects_p_pic": 1,
+      "text_run_count_a_t": 7,
+      "text_samples": [
+        "EXPERIMENT 3 · MOCK AI IMAGE INSERTION",
+        "Image Placeholder Workflow",
+        "The illustration below is a local mock response for an AI image prompt. The exporter must fetch, rasterize, size, and place it without flattening all surrounding text into screenshots.",
+        "Prompt: A futuristic server room icon.",
+        "Expected fit: cover, centered crop.",
+        "Expected PPTX result: native picture plus editable labels.",
+        "Mocked image generation response"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "note": "ppt/notesSlides/notesSlide1.xml",
+      "text": [
+        "Slide 1 speaker notes: design-system prompt baseline.",
+        "1"
+      ]
+    },
+    {
+      "note": "ppt/notesSlides/notesSlide2.xml",
+      "text": [
+        "Slide 2 speaker notes: token capture and editability inspection.",
+        "2"
+      ]
+    },
+    {
+      "note": "ppt/notesSlides/notesSlide3.xml",
+      "text": [
+        "Slide 3 speaker notes: mocked image generation insertion workflow.",
+        "3"
+      ]
+    }
+  ]
+}

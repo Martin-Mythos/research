@@ -1,0 +1,15 @@
+{
+  "mode": "editable",
+  "width": 1920,
+  "height": 1080,
+  "slides": [
+    { "showJs": "goToSlide(0)", "selector": ".slide.active", "delay": 300 },
+    { "showJs": "goToSlide(1)", "selector": ".slide.active", "delay": 300 },
+    { "showJs": "goToSlide(2)", "selector": ".slide.active", "delay": 300 }
+  ],
+  "hideSelectors": [],
+  "fontSwaps": [
+    { "from": "Arial", "to": "Arial" }
+  ],
+  "filename": "baoyu-design-imagegen-editable"
+}
