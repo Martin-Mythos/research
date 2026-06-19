@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baoyu Design Empirical Deck</title>
+  <style>
+    :root {
+      --ocean: #075985;
+      --cyan: #0891b2;
+      --mint: #14b8a6;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --paper: #f8fafc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #111827;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .stage {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      position: relative;
+      background: #e5e7eb;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      display: none;
+      padding: 92px 118px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .slide.active { display: block; }
+    h1 {
+      margin: 0;
+      font-size: 86px;
+      line-height: 1.02;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+    h2 {
+      margin: 0;
+      font-size: 56px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    p, li {
+      font-size: 30px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+    .kicker {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .hero {
+      background:
+        linear-gradient(105deg, rgba(7, 89, 133, 0.96) 0%, rgba(8, 145, 178, 0.76) 45%, rgba(20, 184, 166, 0.2) 100%),
+        var(--paper);
+      color: white;
+    }
+    .hero h1, .hero p { color: white; }
+    .hero p { width: 880px; opacity: 0.9; font-size: 34px; }
+    .hero-card {
+      position: absolute;
+      right: 126px;
+      bottom: 126px;
+      width: 560px;
+      height: 360px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.16);
+      border: 2px solid rgba(255,255,255,0.45);
+      box-shadow: 0 32px 80px rgba(2, 6, 23, 0.28);
+      padding: 42px;
+    }
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 52px;
+    }
+    .token {
+      min-height: 190px;
+      border-radius: 18px;
+      padding: 26px;
+      background: white;
+      border: 2px solid #e2e8f0;
+    }
+    .swatch {
+      width: 100%;
+      height: 72px;
+      border-radius: 12px;
+      margin-bottom: 22px;
+    }
+    .token strong { display: block; font-size: 28px; margin-bottom: 8px; }
+    .token span { font-size: 23px; color: var(--muted); }
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 620px;
+      gap: 74px;
+      align-items: center;
+      height: 790px;
+    }
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+    .metric {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .metric b { display: block; font-size: 48px; color: var(--ocean); margin-bottom: 8px; }
+    .metric span { font-size: 22px; color: var(--muted); }
+    .image-frame {
+      width: 620px;
+      height: 620px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: #dbeafe;
+      box-shadow: 0 28px 70px rgba(15, 23, 42, 0.2);
+      border: 3px solid white;
+    }
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      background: var(--mint);
+      padding: 12px 20px;
+      border-radius: 999px;
+      margin-top: 26px;
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <section class="slide hero active" data-slide="0">
+      <div class="kicker">Experiment 1 · Design System Generation</div>
+      <h1>Corporate Tech Branding<br>Ocean Blue & Minimalist</h1>
+      <p>Tokenized palette, restrained typography, native layout primitives, and a reusable visual language for security-focused decks.</p>
+      <div class="hero-card">
+        <h2>Design System</h2>
+        <p>Colors, type scale, component rhythm, spacing, and presentation rules captured as deck-ready atoms.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="1">
+      <div class="kicker">Experiment 2 · Native PPTX Objects</div>
+      <h2>Design Tokens Captured as Editable Text and Shapes</h2>
+      <div class="token-grid">
+        <div class="token"><div class="swatch" style="background:#075985"></div><strong>Ocean 700</strong><span>#075985 · primary</span></div>
+        <div class="token"><div class="swatch" style="background:#0891b2"></div><strong>Cyan 600</strong><span>#0891B2 · accent</span></div>
+        <div class="token"><div class="swatch" style="background:#14b8a6"></div><strong>Mint 500</strong><span>#14B8A6 · success</span></div>
+        <div class="token"><div class="swatch" style="background:#0f172a"></div><strong>Slate 900</strong><span>#0F172A · text</span></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric"><b>8 px</b><span>Base spacing unit</span></div>
+        <div class="metric"><b>1.35</b><span>Body line-height</span></div>
+        <div class="metric"><b>18-34</b><span>Corner radius range</span></div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="2">
+      <div class="kicker">Experiment 3 · Image Generation Insertion</div>
+      <div class="layout">
+        <div>
+          <h2>Image Placeholder Workflow</h2>
+          <p>The illustration below is generated by the local image generation tool for an AI image prompt. The exporter must fetch, rasterize, size, and place it without flattening all surrounding text into screenshots.</p>
+          <ul>
+            <li>Prompt: A futuristic server room icon.</li>
+            <li>Expected fit: cover, centered crop.</li>
+            <li>Expected PPTX result: generated picture plus editable labels.</li>
+          </ul>
+          <div class="badge">Generated image response</div>
+        </div>
+        <div class="image-frame">
+          <img src="./imagegen-server-room.png" alt="Generated futuristic server room image">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function goToSlide(n) {
+      document.querySelectorAll('.slide').forEach((slide, index) => {
+        slide.classList.toggle('active', index === n);
+      });
+    }
+    window.goToSlide = goToSlide;
+  </script>
+  <script type="application/json" id="speaker-notes">
+    [
+      "Slide 1 speaker notes: design-system prompt baseline.",
+      "Slide 2 speaker notes: token capture and editability inspection.",
+      "Slide 3 speaker notes: local image generation insertion workflow."
+    ]
+  </script>
+</body>
+</html>
