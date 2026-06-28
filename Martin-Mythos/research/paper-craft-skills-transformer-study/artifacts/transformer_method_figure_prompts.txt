@@ -1,0 +1,34 @@
+Evidence chain: arXiv 1706.03762 -> paper-comic Step 4 structured prompt -> paper-figure / sketchnote visual prompts.
+
+[paper-figure] /paper-figure Transformer Architecture (implemented in this repo as /paper-comic --style paper-figure)
+类型: publication-grade method figure, 16:9
+主题: Transformer Architecture from Attention Is All You Need
+事实锚点: Figure 1 encoder-decoder stack; Section 3.1 encoder/decoder; Section 3.2 scaled dot-product and multi-head attention; Section 3.5 positional encoding.
+视觉结构:
+- 左侧: Inputs + Input Embedding + Positional Encoding, arrow into N× Encoder stack.
+- Encoder block: Multi-Head Self-Attention -> Add & Norm -> Feed Forward -> Add & Norm. Mark N=6, d_model=512.
+- 右侧: Outputs shifted right + Output Embedding + Positional Encoding, arrow into N× Decoder stack.
+- Decoder block: Masked Multi-Head Self-Attention -> Add & Norm -> Encoder-Decoder Multi-Head Attention -> Add & Norm -> Feed Forward -> Add & Norm.
+- 顶部/右侧: Linear + Softmax -> Output Probabilities.
+- 中央放大框: Scaled Dot-Product Attention = softmax(QK^T / sqrt(d_k))V; Multi-Head = concat(head_1...head_h)W^O, h=8.
+颜色: white/light gray background; black/charcoal lines; restrained blue for attention pathways; muted orange for positional encoding.
+禁止: 不要把 decoder cross-attention 画成普通 self-attention；不要遗漏 causal mask；不要用虚构数值或假 benchmark；不要生成 logo/watermark。
+
+[sketchnote] /sketchnote Attention Mechanism --style=warm-notes (implemented as /paper-comic --style sketchnote)
+类型: warm research notebook explanatory page, 16:9
+主题: Attention Mechanism: Q/K/V decides what each token should listen to
+事实锚点: Section 3.2.1; Figure 2; formula Attention(Q,K,V)=softmax(QK^T/sqrt(d_k))V.
+视觉结构:
+- 左侧: sentence tokens as small cards; each token emits Q, K, V arrows.
+- 中央: Q dot K^T matrix with warmer/darker cells for higher compatibility.
+- Below matrix: divide by sqrt(d_k) thermometer/icon to explain scale prevents softmax saturation.
+- Next: softmax attention weights as highlighter bars.
+- Right: weighted sum over V produces context vector.
+- Bottom strip: multi-head panel, 8 small heads see different relations, concatenate -> projection.
+文字限制: short labels only: Query asks, Key matches, Value carries content, Scale, Softmax, Weighted sum, 8 heads.
+风格: clean cream paper, hand-drawn but precise, soft blue/coral/olive/yellow highlighter, readable labels.
+风险标记: 如果只写“token attends to token”而不显示 QK^T/sqrt(d_k) 和 V weighted sum，则为 technical fidelity loss.
+
+Reference image paths in cloned repo (not committed):
+- examples/paper-illustrated/attention-is-all-you-need/transformer-overview-paper-figure.png
+- examples/paper-illustrated/attention-is-all-you-need/self-attention-sketchnote.png
