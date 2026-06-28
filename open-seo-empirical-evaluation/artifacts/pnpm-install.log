@@ -1,0 +1,112 @@
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +781
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+   ╭──────────────────────────────────────────────╮
+   │                                              │
+   │     Update available! 10.30.1 → 11.9.0.      │
+   │     Changelog: https://pnpm.io/v/11.9.0      │
+   │   To update, run: corepack use pnpm@11.9.0   │
+   │                                              │
+   ╰──────────────────────────────────────────────╯
+
+Progress: resolved 781, reused 0, downloaded 17, added 3
+Progress: resolved 781, reused 0, downloaded 81, added 80
+Progress: resolved 781, reused 0, downloaded 150, added 149
+Progress: resolved 781, reused 0, downloaded 173, added 166
+Progress: resolved 781, reused 0, downloaded 221, added 189
+Progress: resolved 781, reused 0, downloaded 281, added 272
+Progress: resolved 781, reused 0, downloaded 347, added 346
+Progress: resolved 781, reused 0, downloaded 399, added 384
+Progress: resolved 781, reused 0, downloaded 471, added 471
+Progress: resolved 781, reused 0, downloaded 491, added 487
+Progress: resolved 781, reused 0, downloaded 492, added 487
+Progress: resolved 781, reused 0, downloaded 506, added 491
+Progress: resolved 781, reused 0, downloaded 564, added 564
+Progress: resolved 781, reused 0, downloaded 638, added 638
+Progress: resolved 781, reused 0, downloaded 674, added 671
+Progress: resolved 781, reused 0, downloaded 726, added 720
+Progress: resolved 781, reused 0, downloaded 734, added 727
+Progress: resolved 781, reused 0, downloaded 767, added 743
+Progress: resolved 781, reused 0, downloaded 780, added 780
+Progress: resolved 781, reused 0, downloaded 781, added 781, done
+
+dependencies:
++ @ai-sdk/react 3.0.201
++ @cloudflare/ai-chat 0.8.4
++ @cloudflare/workers-oauth-provider 0.4.0
++ @every-app/sdk 0.1.14
++ @modelcontextprotocol/sdk 1.29.0
++ @openrouter/ai-sdk-provider 2.9.0
++ @tanstack/query-core 5.90.20
++ @tanstack/react-form 1.28.3
++ @tanstack/react-query 5.90.21
++ @tanstack/react-router 1.168.10
++ @tanstack/react-router-devtools 1.166.11
++ @tanstack/react-start 1.167.16
++ @tanstack/react-table 8.21.3
++ agents 0.15.0
++ ai 6.0.199
++ autumn-js 1.1.7
++ better-auth 1.5.5
++ cheerio 1.2.0
++ cloudflare 5.2.0
++ daisyui 5.5.19
++ dataforseo-client 2.0.19
++ drizzle-orm 0.44.7
++ fast-xml-parser 5.8.0
++ jose 6.1.3
++ lucide-react 0.542.0
++ papaparse 5.5.3
++ posthog-js 1.363.6
++ posthog-node 5.28.6
++ react 19.2.4
++ react-dom 19.2.4
++ react-markdown 10.1.0
++ recharts 3.7.0
++ remark-gfm 4.0.1
++ remeda 2.33.6
++ robots-parser 3.0.1
++ sonner 2.0.7
++ tailwindcss 4.2.1
++ tldts 7.0.25
++ zod 4.3.6
+
+devDependencies:
++ @cloudflare/vite-plugin 1.40.2
++ @cloudflare/workers-types 4.20260611.1
++ @libsql/client 0.15.15
++ @playwright/test 1.59.1
++ @tailwindcss/vite 4.2.1
++ @tanstack/devtools-vite 0.6.0
++ @tanstack/react-devtools 0.10.1
++ @types/node 22.19.11
++ @types/papaparse 5.5.2
++ @types/react 19.2.14
++ @types/react-dom 19.2.3
++ @vitejs/plugin-react 4.7.0
++ drizzle-kit 0.31.9
++ knip 5.85.0
++ oxlint 1.50.0
++ oxlint-tsgolint 0.15.0
++ portless 0.5.2
++ prettier 3.8.1
++ tsx 4.21.0
++ typescript 5.9.3
++ vite 7.3.1
++ vite-tsconfig-paths 5.1.4
++ vitest 3.2.4
++ wrangler 4.100.0
+
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @mongodb-js/zstd@7.0.0, core-js-pure@3.49.0,        │
+│   core-js@3.49.0, esbuild@0.18.20, esbuild@0.25.12, esbuild@0.27.3,          │
+│   esbuild@0.28.0, node-liblzma@2.2.0, protobufjs@7.5.4, sharp@0.34.5,        │
+│   workerd@1.20260611.1.                                                      │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Done in 21.8s using pnpm v10.30.1

@@ -1,0 +1,8 @@
+
+> open-seo@0.0.21 db:migrate:local /tmp/open-seo-target
+> wrangler d1 migrations apply DB --local
+
+Wrangler requires at least Node.js v22.0.0. You are using v20.20.2. Please update your version of Node.js.
+
+Consider using a Node.js version manager such as https://volta.sh/ or https://github.com/nvm-sh/nvm.
+ ELIFECYCLE  Command failed with exit code 1.
