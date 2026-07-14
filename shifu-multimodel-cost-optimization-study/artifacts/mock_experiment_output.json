@@ -1,0 +1,70 @@
+{
+  "routing_logs": [
+    {
+      "task_id": "plan",
+      "model": "GPT5.6 Lula",
+      "input_tokens_est": 40,
+      "output_tokens_est": 64,
+      "cost_est": 0.00504,
+      "latency_est_s": 2.0,
+      "input_context_hash": "b218dc1e0e46c162",
+      "output_context_hash": "3349813b8c123eb0",
+      "schema_version": "mock-v1"
+    },
+    {
+      "task_id": "logic-data",
+      "model": "GPT5.4 Mini",
+      "input_tokens_est": 64,
+      "output_tokens_est": 90,
+      "cost_est": 0.001464,
+      "latency_est_s": 0.8,
+      "input_context_hash": "3349813b8c123eb0",
+      "output_context_hash": "e2a9f22b0c304af1",
+      "schema_version": "mock-v1"
+    },
+    {
+      "task_id": "code-bad",
+      "model": "GPT5.3 Codex Spark",
+      "input_tokens_est": 90,
+      "output_tokens_est": 9,
+      "cost_est": 0.000432,
+      "latency_est_s": 0.7,
+      "input_context_hash": "e2a9f22b0c304af1",
+      "output_context_hash": "ec695ae4182b4653",
+      "schema_version": "mock-v1"
+    },
+    {
+      "task_id": "failure-review",
+      "model": "GPT5.6 Lula",
+      "input_tokens_est": 10,
+      "output_tokens_est": 34,
+      "cost_est": 0.00234,
+      "latency_est_s": 2.0,
+      "input_context_hash": "6e26e2a8fe59986f",
+      "output_context_hash": "8ae2dff32d8f7fb6",
+      "schema_version": "mock-v1"
+    },
+    {
+      "task_id": "code-fixed",
+      "model": "GPT5.3 Codex Spark",
+      "input_tokens_est": 34,
+      "output_tokens_est": 402,
+      "cost_est": 0.003352,
+      "latency_est_s": 0.7,
+      "input_context_hash": "8ae2dff32d8f7fb6",
+      "output_context_hash": "a1cd17e0d78d628b",
+      "schema_version": "mock-v1"
+    }
+  ],
+  "multi_model": {
+    "cost_est": 0.012628,
+    "latency_est_s": 6.2
+  },
+  "single_flagship_baseline": {
+    "cost_est": 0.04308,
+    "latency_est_s": 10.0
+  },
+  "savings_vs_baseline_pct": 70.69,
+  "syntax_error_detected": true,
+  "fixed_py_compile_expected": true
+}
