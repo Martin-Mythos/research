@@ -1,0 +1,56 @@
+[
+  {
+    "文件": "artifacts/bento/brief.bento.html",
+    "字节": 603788,
+    "标签数": 24,
+    "最大DOM深度": 5,
+    "相对依赖": [],
+    "硬约束通过": true,
+    "Bento页数": 3
+  },
+  {
+    "文件": "artifacts/bento/dashboard.bento.html",
+    "字节": 603746,
+    "标签数": 24,
+    "最大DOM深度": 5,
+    "相对依赖": [],
+    "硬约束通过": true,
+    "Bento页数": 3
+  },
+  {
+    "文件": "artifacts/bento/slides.bento.html",
+    "字节": 603724,
+    "标签数": 24,
+    "最大DOM深度": 5,
+    "相对依赖": [],
+    "硬约束通过": true,
+    "Bento页数": 3
+  },
+  {
+    "文件": "artifacts/html_anything/brief.html",
+    "字节": 2581,
+    "标签数": 32,
+    "最大DOM深度": 8,
+    "相对依赖": [],
+    "硬约束通过": true,
+    "Bento页数": null
+  },
+  {
+    "文件": "artifacts/html_anything/dashboard.html",
+    "字节": 2459,
+    "标签数": 32,
+    "最大DOM深度": 8,
+    "相对依赖": [],
+    "硬约束通过": true,
+    "Bento页数": null
+  },
+  {
+    "文件": "artifacts/html_anything/slides.html",
+    "字节": 2461,
+    "标签数": 32,
+    "最大DOM深度": 8,
+    "相对依赖": [],
+    "硬约束通过": true,
+    "Bento页数": null
+  }
+]

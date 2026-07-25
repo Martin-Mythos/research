@@ -5,7 +5,6 @@
 - 目标仓库：<https://github.com/vikingmute/shifu>
 - 本地克隆路径：`/tmp/shifu-target`
 - 检查文件：`README.md`、`skills/shifu/SKILL.md`
-- 2026-07-25 复查的远端 `HEAD`：`4f044621ce2827cfbbc474a8237240523a7b3d81`（命令：`git ls-remote https://github.com/vikingmute/shifu HEAD`）。
 
 ## 已验证事实
 

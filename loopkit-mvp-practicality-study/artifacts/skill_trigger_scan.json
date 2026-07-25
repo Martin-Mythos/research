@@ -1,0 +1,205 @@
+{
+  "method": "explicit high-fidelity simulation; not runtime observation",
+  "total_skills": 33,
+  "simulated_activated_skills": 10,
+  "rows": [
+    {
+      "skill": "a11y-pass",
+      "when_to_use": "forms, buttons, modals, images, color choices, keyboard interaction",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "adversarial-verify",
+      "when_to_use": "a code change is \"done\", before flipping a task to complete, before commit",
+      "simulated_activation": true,
+      "selection_reason": "代码完成后、提交前执行敌对审查"
+    },
+    {
+      "skill": "authz-check",
+      "when_to_use": "new/changed endpoint, \"get user X's data\", a mutation, an admin action",
+      "simulated_activation": true,
+      "selection_reason": "新增读取和修改用户任务的端点，需要验证资源所有权"
+    },
+    {
+      "skill": "bisect-regression",
+      "when_to_use": "\"it worked last week\", a regression, unclear which commit broke it",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "changelog-from-diff",
+      "when_to_use": "cutting a release, writing release notes, summarizing a branch",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "clean-commits",
+      "when_to_use": "before a PR, messy history, \"squash this\", commit message help",
+      "simulated_activation": true,
+      "selection_reason": "实验流程要求在测试通过后提交"
+    },
+    {
+      "skill": "context-budget",
+      "when_to_use": "long session, huge file dump, agent forgetting earlier steps, accuracy dropping",
+      "simulated_activation": true,
+      "selection_reason": "跨路由、业务、数据与测试层，需要把状态保存在磁盘"
+    },
+    {
+      "skill": "contract-test",
+      "when_to_use": "an API endpoint, a service integration, a webhook, a shared schema",
+      "simulated_activation": true,
+      "selection_reason": "新增 API 的 401、404 与响应结构属于边界契约"
+    },
+    {
+      "skill": "coverage-gaps",
+      "when_to_use": "\"improve coverage\", after writing tests, pre-merge quality check",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "decision-record",
+      "when_to_use": "picked a library/pattern/schema, a tradeoff was made, a hard-to-reverse choice",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "dependency-audit",
+      "when_to_use": "adding a package, a bloated lockfile, a CVE alert, \"do we need this dep\"",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "design-system",
+      "when_to_use": "building UI, a component, a page, \"make this look good\"",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "flaky-hunter",
+      "when_to_use": "intermittent CI failure, \"passes locally fails in CI\", a flaky test",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "input-validation",
+      "when_to_use": "request bodies, query params, file uploads, webhook payloads, form data",
+      "simulated_activation": true,
+      "selection_reason": "注册、登录和任务端点接收不可信请求体"
+    },
+    {
+      "skill": "kill-dead-code",
+      "when_to_use": "cleanup, \"remove unused\", before refactoring, dead branches",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "loading-empty-error-states",
+      "when_to_use": "a list, a fetch, a dashboard, anything async in the UI",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "migration-writer",
+      "when_to_use": "add/alter a table, column, index, or constraint",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "owasp-review",
+      "when_to_use": "new endpoint, auth/session change, user input, raw query, file upload, deserialization",
+      "simulated_activation": true,
+      "selection_reason": "变更涉及认证、授权、token 与外部输入"
+    },
+    {
+      "skill": "pr-from-diff",
+      "when_to_use": "opening a PR, \"write the PR body\", review prep",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "read-the-trace",
+      "when_to_use": "a stack trace, an exception, \"TypeError/NullPointer/undefined\", a crash log",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "readme-audit",
+      "when_to_use": "publishing a repo, onboarding docs, \"is the README good\"",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "rebase-safely",
+      "when_to_use": "rebase, squash, \"update my branch\", interactive rebase, force-push",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "reduce-nesting",
+      "when_to_use": "arrow-shaped code, 3+ nested ifs, a function that's hard to follow",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "revert-surgical",
+      "when_to_use": "\"revert this\", a bad deploy, one commit broke prod, undo without losing other work",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "schema-diff",
+      "when_to_use": "reviewing a migration, \"what changed in the schema\", pre-deploy check",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "secret-scan",
+      "when_to_use": "before commit, files with API keys, .env handling, config, connection strings",
+      "simulated_activation": true,
+      "selection_reason": "提交前必须检查 token 密钥及密码字样"
+    },
+    {
+      "skill": "simplify",
+      "when_to_use": "over-abstraction, a 200-line diff for a small ask, premature generality",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "spec-first",
+      "when_to_use": "a task with more than 2 steps, a long-running job, \"build X\", agent drifting",
+      "simulated_activation": true,
+      "selection_reason": "跨多个文件的多步骤功能必须先写目标规格"
+    },
+    {
+      "skill": "sql-review",
+      "when_to_use": "new query, a migration, an N+1 suspicion, a slow endpoint",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "subagent-fanout",
+      "when_to_use": "analyze N items, fix M files, search K sources, anything embarrassingly parallel",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "systematic-debugging",
+      "when_to_use": "a test fails, a crash, wrong output, \"it worked yesterday\", a flaky failure",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "tool-restraint",
+      "when_to_use": "adding MCP servers, an agent with many tools, \"give it access to everything\"",
+      "simulated_activation": false,
+      "selection_reason": "与本次纯后端认证功能无直接关系"
+    },
+    {
+      "skill": "write-failing-test-first",
+      "when_to_use": "fixing a bug, \"make X work\", a reported defect",
+      "simulated_activation": true,
+      "selection_reason": "认证功能应先以失败测试固定预期行为"
+    }
+  ]
+}

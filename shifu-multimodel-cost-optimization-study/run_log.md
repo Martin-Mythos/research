@@ -31,7 +31,6 @@ python3 shifu-multimodel-cost-optimization-study/artifacts/vocab_app.py quiz --a
 
 - mock harness 生成 `artifacts/vocab_app_bad.py`，其中包含故意语法错误。
 - harness 使用 Python AST 检测到语法错误。
-- 错误上下文依次交给 `GPT5.6 Lula` 诊断、`GPT5.4 Mini` 制定修复计划，再由 `GPT5.3 Codex Spark` 生成修复版本。
 - harness 生成修复后的 `artifacts/vocab_app.py`。
 - `py_compile` 通过。
 - `stats` 输出 `{"total_words": 2}`。
@@ -41,18 +40,10 @@ python3 shifu-multimodel-cost-optimization-study/artifacts/vocab_app.py quiz --a
 
 结果文件：`artifacts/mock_routing_logs.json` 与 `artifacts/mock_experiment_output.json`。
 
-- 多模型模拟成本：0.026296。
-- 单旗舰模型模拟成本：0.082860。
-- 模拟节省：68.26%。
-- 多模型模拟延迟：7.0s。
-- 单旗舰模拟延迟：12.0s。
+- 多模型模拟成本：0.012628。
+- 单旗舰模型模拟成本：0.043080。
+- 模拟节省：70.69%。
+- 多模型模拟延迟：6.2s。
+- 单旗舰模拟延迟：10.0s。
 
-注意：这些是研究 harness 在人为价格和延迟假设下的确定性模拟值，不是真实供应商价格、真实 latency 或真实 Shifu telemetry。
-
-## 5. 自动回归测试
-
-```bash
-python3 -m unittest discover -s shifu-multimodel-cost-optimization-study/artifacts -p 'test_*.py' -v
-```
-
-结果：5 项测试通过，覆盖 Vocabulary CLI 的 quiz/add/stats、错误注入与修复、六阶段路由、context lineage，以及单旗舰 baseline 使用相同 token workload 的算术验证。
+注意：这些是研究 harness 的相对模拟值，不是真实供应商价格或真实 Shifu telemetry。

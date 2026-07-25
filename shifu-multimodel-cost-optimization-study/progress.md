@@ -9,7 +9,3 @@
 - [x] 生成 Vocabulary CLI artifact。
 - [x] 编写评估矩阵。
 - [x] 编写研究报告与 README。
-- [x] 评审修订：增加真实的 handoff lineage/schema 断言。
-- [x] 评审修订：补齐 Lula → Mini → Spark 错误恢复链。
-- [x] 评审修订：增加 5 项自动回归测试。
-- [x] 评审修订：弱化并重新标注假设驱动的成本/延迟结果。

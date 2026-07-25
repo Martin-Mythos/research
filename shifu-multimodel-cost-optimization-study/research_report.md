@@ -6,7 +6,7 @@
 
 核心结论：Shifu 当前可验证为一个 Agent Skill，而不是完整的多模型 API 调度框架。它的主要产物是自包含 Markdown spec，用来帮助强模型规划、弱/便宜模型执行。研究未发现可执行的 API router、真实模型成本采集、自动 token 计量或自动错误恢复控制流。
 
-在本研究自建 mock harness 中，多模型策略相对单旗舰模型基线显示 68.26% 的**假设驱动模拟差异**，并成功检测/修复一次故意注入的 Python 语法错误。但价格、延迟和模型输出均不是实测值；该结果只能验证 harness 的算术和协议，不是 Shifu 的成本优化证据。
+在本研究自建 mock harness 中，多模型策略相对单旗舰模型基线显示 70.69% 的模拟成本节省，并成功检测/修复一次故意注入的 Python 语法错误。但这属于“策略可行性模拟”，不能归因于 Shifu 仓库已有的可执行能力。
 
 ## 2. Subagent Routing Architecture
 
@@ -47,7 +47,6 @@ Shifu 的 routing architecture 是 instruction-level orchestration：它通过�
 - `artifacts/vocab_app.py`：修复后的背单词 CLI。
 - `artifacts/vocab_data.json`：小型词库。
 - `artifacts/mock_routing_logs.json`：mock routing、token、cost、latency 记录。
-- `artifacts/test_experiment.py`：自动验证应用行为、错误边界、路由顺序、context lineage 与 baseline 算术。
 
 验证命令：
 
@@ -66,19 +65,11 @@ python3 shifu-multimodel-cost-optimization-study/artifacts/vocab_app.py quiz --a
 
 | 路径 | 成本估计 | 延迟估计 |
 |---|---:|---:|
-| 多模型 mock run | 0.026296 | 7.0s |
-| 单旗舰 baseline | 0.082860 | 12.0s |
-| 差异 | 节省 68.26% | 节省 41.67% |
+| 多模型 mock run | 0.012628 | 6.2s |
+| 单旗舰 baseline | 0.043080 | 10.0s |
+| 差异 | 节省 70.69% | 节省 38.0% |
 
-这些数字来自本地脚本中的人为价格/延迟假设与 `ceil(chars/4)` token 近似，并非真实供应商账单或真实 latency。单旗舰 baseline 对同一组 event 的相同 token 数量重新计价，避免上一版测试中未显式验证 workload 等价的问题。
-
-### 协议与应用回归测试
-
-```bash
-python3 -m unittest discover -s shifu-multimodel-cost-optimization-study/artifacts -p 'test_*.py' -v
-```
-
-5 项测试覆盖：默认词库与 quiz、add 持久化、预期六阶段模型路由、每阶段 context hash lineage、故意语法错误与修复结果，以及 baseline 是否使用相同 token workload。全部测试通过。这里验证的是研究 harness，不是目标仓库的真实 subagent runtime。
+这些数字来自本地脚本中的相对价格表和 token 近似算法，并非真实供应商账单。
 
 ## 4. Findings（Verified vs. Failed）
 
@@ -88,7 +79,7 @@ python3 -m unittest discover -s shifu-multimodel-cost-optimization-study/artifac
 2. Shifu 可以通过 `npx skills add vikingmute/shifu` 安装为 Agent Skill。
 3. Shifu 文档明确主张“强模型规划、便宜模型执行”的成本优化模式。
 4. Shifu 的 skill 文本包含自包含 spec、验证门、边界、STOP 条件、prompt injection 防护提醒等工程约束。
-5. 本研究 mock harness 可模拟三模型 handoff、检测语法错误并生成可运行 CLI；自动测试验证了 Lula → Mini → Spark → Lula → Mini → Spark 的预定路由及连续 context hash。
+5. 本研究 mock harness 可模拟三模型 handoff、检测语法错误并生成可运行 CLI。
 
 ### 失败或无法验证
 
