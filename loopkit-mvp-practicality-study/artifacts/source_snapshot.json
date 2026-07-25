@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/Archive228/loopkit",
+  "evaluated_commit": "22101ff114cbf80bf3d14d41c8c662f507b1b971",
+  "commit_time": "2026-07-05T00:37:56+03:00",
+  "commit_subject": "docs: add Effective Harnesses v0.3 write-up (MD + PDF)",
+  "skill_directories": 33,
+  "note": "The external repository was inspected from a temporary checkout and is not vendored in this research artifact."
+}
