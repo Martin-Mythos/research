@@ -1,0 +1,93 @@
+{
+  "method": "确定性模拟；价格与延迟均为实验假设，不是供应商实测值",
+  "routing_logs": [
+    {
+      "task_id": "plan",
+      "model": "GPT5.6 Lula",
+      "input_tokens_est": 40,
+      "output_tokens_est": 64,
+      "cost_est": 0.00504,
+      "latency_est_s": 2.0,
+      "input_context_hash": "b218dc1e0e46c162",
+      "output_context_hash": "3349813b8c123eb0",
+      "parent_output_hash": null,
+      "schema_version": "mock-v2"
+    },
+    {
+      "task_id": "logic-data",
+      "model": "GPT5.4 Mini",
+      "input_tokens_est": 64,
+      "output_tokens_est": 90,
+      "cost_est": 0.001464,
+      "latency_est_s": 0.8,
+      "input_context_hash": "3349813b8c123eb0",
+      "output_context_hash": "e2a9f22b0c304af1",
+      "parent_output_hash": "3349813b8c123eb0",
+      "schema_version": "mock-v2"
+    },
+    {
+      "task_id": "code-bad",
+      "model": "GPT5.3 Codex Spark",
+      "input_tokens_est": 90,
+      "output_tokens_est": 106,
+      "cost_est": 0.001208,
+      "latency_est_s": 0.7,
+      "input_context_hash": "e2a9f22b0c304af1",
+      "output_context_hash": "1351fa16db7c1c29",
+      "parent_output_hash": "e2a9f22b0c304af1",
+      "schema_version": "mock-v2"
+    },
+    {
+      "task_id": "failure-review",
+      "model": "GPT5.6 Lula",
+      "input_tokens_est": 106,
+      "output_tokens_est": 130,
+      "cost_est": 0.01098,
+      "latency_est_s": 2.0,
+      "input_context_hash": "1351fa16db7c1c29",
+      "output_context_hash": "6227d07767788321",
+      "parent_output_hash": "1351fa16db7c1c29",
+      "schema_version": "mock-v2"
+    },
+    {
+      "task_id": "repair-plan",
+      "model": "GPT5.4 Mini",
+      "input_tokens_est": 130,
+      "output_tokens_est": 154,
+      "cost_est": 0.002628,
+      "latency_est_s": 0.8,
+      "input_context_hash": "6227d07767788321",
+      "output_context_hash": "1e005d9ad117b4ae",
+      "parent_output_hash": "6227d07767788321",
+      "schema_version": "mock-v2"
+    },
+    {
+      "task_id": "code-fixed",
+      "model": "GPT5.3 Codex Spark",
+      "input_tokens_est": 154,
+      "output_tokens_est": 545,
+      "cost_est": 0.004976,
+      "latency_est_s": 0.7,
+      "input_context_hash": "1e005d9ad117b4ae",
+      "output_context_hash": "dc1d5e770131957a",
+      "parent_output_hash": "1e005d9ad117b4ae",
+      "schema_version": "mock-v2"
+    }
+  ],
+  "protocol_verification": {
+    "lineage_ok": true,
+    "routing_ok": true,
+    "required_context_ok": true
+  },
+  "multi_model": {
+    "cost_est": 0.026296,
+    "latency_est_s": 7.0
+  },
+  "single_flagship_baseline": {
+    "cost_est": 0.08286,
+    "latency_est_s": 12.0
+  },
+  "savings_vs_baseline_pct": 68.26,
+  "syntax_error_detected": true,
+  "fixed_py_compile_expected": true
+}
