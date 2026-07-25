@@ -1,0 +1,5 @@
+queued_depth50_per_keyword_check_usd=0.00240
+rank_tracking_100_keywords_weekly_approx_month_usd=0.96
+user_requested_semrush_baseline_usd=129
+current_observed_semrush_pro_monthly_usd=139.95
+rank_tracking_vs_129_ratio=0.74%
