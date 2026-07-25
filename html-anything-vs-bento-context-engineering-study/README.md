@@ -1,5 +1,10 @@
 # HTML-Anything vs Bento：Context Engineering 实证研究
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 本目录是可独立复核的研究项目。**最终结论**：HTML-Anything 的自由语义 DOM 更适合 dashboard/长文和源码二次编辑；Bento 的单文件 runtime 与强 slide schema 更适合演示、GUI 编辑和对象化分发。两者均可形成 R2-friendly 单文件，但 HTML-Anything 的某些 style assets 仍需额外检查。
 
 重要边界：本次没有 Opus 5 / GPT-5.6-Sol API key，模型比较未被实测；产物使用本地 deterministic mock，模型维度只给出实验设计与 workflow proxy，不伪造模型成绩。

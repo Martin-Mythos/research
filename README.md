@@ -145,18 +145,28 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 24 research projects
+## 25 research projects
 
-### [Baoyu-Design PPTX Empirical Study](https://github.com/Martin-Mythos/research/tree/main/baoyu-design-pptx-empirical-study#readme) (2026-06-19 20:01)
+### [HTML-Anything vs Bento：Context Engineering 实证研究](https://github.com/Martin-Mythos/research/tree/main/html-anything-vs-bento-context-engineering-study#readme) (2026-07-25 16:57)
 
-This empirical study evaluates `JimLiu/baoyu-design` as an AI-assisted design and document generation workflow, focusing on design-system structure, editable PowerPoint export, and generated-image insertion. The core `gen-pptx` chain was reproduced locally with Playwright and PptxGenJS: a three-slide HTML deck was captured and exported to an editable `.pptx` containing native text bodies, shapes, picture objects, and speaker notes. A locally generated cybersecurity server-room PNG was inserted into the deck and preserved as a native PowerPoint picture object rather than flattening the whole slide to screenshots.
+This empirical study compares HTML-Anything and Bento frameworks in the context of "context engineering," with an emphasis on their suitability for different use cases and technical boundaries. The research finds that HTML-Anything's freeform semantic DOM excels in dashboards, longform content, and source code re-editing, whereas Bento's unified runtime and strict slide schema are optimal for presentations, GUI editing, and object distribution. Both frameworks can generate R2-friendly single-file artifacts, but HTML-Anything may require manual validation of certain style assets. The study relies on local deterministic mocks rather than direct model comparisons and includes robust, reproducible methodologies. For full details, see the [research report](research_report.md).
+
+**Key findings:**
+- HTML-Anything is preferable for dashboard/longform editing and scenarios needing flexible semantic structure.
+- Bento is superior for presentation/slide-based workflows, where single-file encapsulation and GUI editing are priorities.
+- Both systems can produce single-file outputs suitable for R2 staging, but HTML-Anything's styles need extra checks.
+
+### [Kun Chen Agentic Engineering Tools 经验研究报告](https://github.com/Martin-Mythos/research/tree/main/kun-agentic-engineering-tools-study#readme) (2026-06-19 20:02)
+
+This research project evaluates the "Plan-Code-Validate" agentic engineering toolchain (Lavish, Treehouse, No Mistakes) via practical development of the Talking Breads Tervuren static website. The investigation finds that while the overall workflow is promising, the tools are currently best adopted in discrete stages rather than as a monolithic pipeline for day-to-day workflows. Lavish excels at turning vague requirements into reviewable HTML artifacts for the planning stage; Treehouse provides solid Git worktree pooling best leveraged with multiple agents; No Mistakes shows most potential for integrated validation but cannot demonstrate its full value without remote/authentication and CI capabilities. The recommended adoption path is to trial Lavish and Treehouse in controlled use-cases and restrict No Mistakes to sandbox environments pending further validation.
 
 Key findings:
-- The editable PPTX path is technically credible and locally reproduced with no exporter warnings.
-- OOXML inspection confirms native PowerPoint objects (`p:txBody`, `p:sp`, `p:pic`) across the generated deck.
-- Baoyu's own Image Generation API integration was not exercised; the study isolates the insertion/layout pipeline using a local generated image artifact.
+- Lavish: Immediate value in producing HTML planning artifacts for clarity and auditability ([Lavish docs](https://github.com/kunchenguid/lavish-axi)).
+- Treehouse: Worktree pooling useful for high agent concurrency, but overkill for small solo projects ([Treehouse repo](https://github.com/kunchenguid/treehouse)).
+- No Mistakes: Validation strongest with remote/PR/CI integration; local-only usage is limited.
+- Combined toolchain reduces context switching and improves artifact auditability, but still needs traditional CI, manual reviews, and clear permission boundaries.
 
-### [基于 30Days-Skill 框架的 GLM-5.2 与 Anthropic Mythos/Fable 5 实证研究](https://github.com/Martin-Mythos/research/tree/main/30days-skill-frontier-models-study#readme) (2026-06-19 19:31)
+### [基于 30Days-Skill 框架的 GLM-5.2 与 Anthropic Mythos/Fable 5 实证研究](https://github.com/Martin-Mythos/research/tree/main/30days-skill-frontier-models-study#readme) (2026-06-19 20:02)
 
 This research project adapted the `mvanhorn/last30days-skill` framework into an incremental evidence tracking workflow to empirically assess GLM-5.2’s engineering boundaries and the compliance impacts of the Anthropic Mythos/Fable 5 export-control directive. By systematically cloning, testing, and monitoring, the study compared baseline and interval tracking, revealing that incremental research provides superior traceability and actionable outcomes over traditional, static approaches. Key validated findings were drawn from primary sources and artifacts, while notable limitations included lack of live API benchmarks and incomplete visibility into Mythos/Fable 5’s technical details and compliance procedures. The project’s methodology and evidence artifacts are available for reproduction and verification.
 
@@ -168,15 +178,14 @@ This research project adapted the `mvanhorn/last30days-skill` framework into an 
 
 For methodology and tooling, see [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill).
 
-### [Kun Chen Agentic Engineering Tools 经验研究报告](https://github.com/Martin-Mythos/research/tree/main/kun-agentic-engineering-tools-study#readme) (2026-06-16 21:40)
+### [Baoyu-Design PPTX Empirical Study](https://github.com/Martin-Mythos/research/tree/main/baoyu-design-pptx-empirical-study#readme) (2026-06-19 20:01)
 
-This research project evaluates the "Plan-Code-Validate" agentic engineering toolchain (Lavish, Treehouse, No Mistakes) via practical development of the Talking Breads Tervuren static website. The investigation finds that while the overall workflow is promising, the tools are currently best adopted in discrete stages rather than as a monolithic pipeline for day-to-day workflows. Lavish excels at turning vague requirements into reviewable HTML artifacts for the planning stage; Treehouse provides solid Git worktree pooling best leveraged with multiple agents; No Mistakes shows most potential for integrated validation but cannot demonstrate its full value without remote/authentication and CI capabilities. The recommended adoption path is to trial Lavish and Treehouse in controlled use-cases and restrict No Mistakes to sandbox environments pending further validation.
+This empirical study evaluates `JimLiu/baoyu-design` as an AI-assisted design and document generation workflow, focusing on design-system structure, editable PowerPoint export, and generated-image insertion. The core `gen-pptx` chain was reproduced locally with Playwright and PptxGenJS: a three-slide HTML deck was captured and exported to an editable `.pptx` containing native text bodies, shapes, picture objects, and speaker notes. A locally generated cybersecurity server-room PNG was inserted into the deck and preserved as a native PowerPoint picture object rather than flattening the whole slide to screenshots.
 
 Key findings:
-- Lavish: Immediate value in producing HTML planning artifacts for clarity and auditability ([Lavish docs](https://github.com/kunchenguid/lavish-axi)).
-- Treehouse: Worktree pooling useful for high agent concurrency, but overkill for small solo projects ([Treehouse repo](https://github.com/kunchenguid/treehouse)).
-- No Mistakes: Validation strongest with remote/PR/CI integration; local-only usage is limited.
-- Combined toolchain reduces context switching and improves artifact auditability, but still needs traditional CI, manual reviews, and clear permission boundaries.
+- The editable PPTX path is technically credible and locally reproduced with no exporter warnings.
+- OOXML inspection confirms native PowerPoint objects (`p:txBody`, `p:sp`, `p:pic`) across the generated deck.
+- Baoyu's own Image Generation API integration was not exercised; the study isolates the insertion/layout pipeline using a local generated image artifact.
 
 ### [Technical Principles and Architecture Reverse Engineering of Markdown-Viewer/Skills](https://github.com/Martin-Mythos/research/tree/main/markdown-viewer-architecture-study#readme) (2026-06-14 11:25)
 
@@ -358,10 +367,6 @@ Key findings:
 - create-agent-tui’s architectural design supports extensibility and is grounded in lessons from real-world production agent systems.
 - For simple, non-governed question-answering tasks, its value is minimal compared to the maintenance cost.
 
-### [docs](https://github.com/Martin-Mythos/research/tree/main/docs#readme) (2026-04-26 14:43)
-
-*No description available.*
-
 ### [mattpocock/skills 的 Todo App 实验研究](https://github.com/Martin-Mythos/research/tree/main/mattpocock-skills-todo-app-eval#readme) (2026-04-26 14:43)
 
 This research evaluates the mattpocock/skills repository by applying several agent "skills" to a minimal Node.js todo app. The project focuses on workflow documentation, using `SKILL.md` files to outline agent-triggering criteria, execution steps, and quality standards. Applying skills like `design-an-interface`, `tdd`, and `qa` demonstrated that these tools guide agents into structured workflows, improving task clarity—even for small projects—by enforcing interface design comparison, behavior-driven testing, and user-perspective issue documentation. Notably, the skills promote process discipline but depend on agent compliance, as there is minimal runtime enforcement.
@@ -372,6 +377,10 @@ This research evaluates the mattpocock/skills repository by applying several age
 - The `design-an-interface` skill forced interface comparisons, resulting in clearer API choices, even for simple modules.
 - The `qa` skill is valuable for transforming test findings into persistent, user-facing issues, facilitating handoff and long-term tracking.
 - Skills shape process effectively but lack automated enforcement; the agent must consciously follow protocols.
+
+### [docs](https://github.com/Martin-Mythos/research/tree/main/docs#readme) (2026-04-26 14:43)
+
+*No description available.*
 
 ### [WUPHF Multi-Agent Context Sync Research](https://github.com/Martin-Mythos/research/tree/main/wuphf-multi-agent-context-sync#readme) (2026-04-26 11:19)
 
