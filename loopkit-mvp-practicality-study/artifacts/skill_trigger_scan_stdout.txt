@@ -1,0 +1,296 @@
+[
+  {
+    "skill": "a11y-pass",
+    "trigger": "forms, buttons, modals, images, color choices, keyboard interaction",
+    "likely_for_mvp_auth": false,
+    "evidence_terms": []
+  },
+  {
+    "skill": "adversarial-verify",
+    "trigger": "a code change is \"done\", before flipping a task to complete, before commit",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a",
+      "to",
+      "commit"
+    ]
+  },
+  {
+    "skill": "authz-check",
+    "trigger": "new/changed endpoint, \"get user X's data\", a mutation, an admin action",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "endpoint",
+      "a"
+    ]
+  },
+  {
+    "skill": "bisect-regression",
+    "trigger": "\"it worked last week\", a regression, unclear which commit broke it",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "commit",
+      "it"
+    ]
+  },
+  {
+    "skill": "changelog-from-diff",
+    "trigger": "cutting a release, writing release notes, summarizing a branch",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "clean-commits",
+    "trigger": "before a PR, messy history, \"squash this\", commit message help",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "pr",
+      "commit"
+    ]
+  },
+  {
+    "skill": "context-budget",
+    "trigger": "long session, huge file dump, agent forgetting earlier steps, accuracy dropping",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": []
+  },
+  {
+    "skill": "contract-test",
+    "trigger": "an API endpoint, a service integration, a webhook, a shared schema",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "endpoint",
+      "a",
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "coverage-gaps",
+    "trigger": "\"improve coverage\", after writing tests, pre-merge quality check",
+    "likely_for_mvp_auth": false,
+    "evidence_terms": []
+  },
+  {
+    "skill": "decision-record",
+    "trigger": "picked a library/pattern/schema, a tradeoff was made, a hard-to-reverse choice",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "dependency-audit",
+    "trigger": "adding a package, a bloated lockfile, a CVE alert, \"do we need this dep\"",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "design-system",
+    "trigger": "building UI, a component, a page, \"make this look good\"",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "flaky-hunter",
+    "trigger": "intermittent CI failure, \"passes locally fails in CI\", a flaky test",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "in",
+      "a",
+      "test"
+    ]
+  },
+  {
+    "skill": "input-validation",
+    "trigger": "request bodies, query params, file uploads, webhook payloads, form data",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": []
+  },
+  {
+    "skill": "kill-dead-code",
+    "trigger": "cleanup, \"remove unused\", before refactoring, dead branches",
+    "likely_for_mvp_auth": false,
+    "evidence_terms": []
+  },
+  {
+    "skill": "loading-empty-error-states",
+    "trigger": "a list, a fetch, a dashboard, anything async in the UI",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a",
+      "a",
+      "in"
+    ]
+  },
+  {
+    "skill": "migration-writer",
+    "trigger": "add/alter a table, column, index, or constraint",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "or"
+    ]
+  },
+  {
+    "skill": "owasp-review",
+    "trigger": "new endpoint, auth/session change, user input, raw query, file upload, deserialization",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "endpoint",
+      "auth",
+      "input"
+    ]
+  },
+  {
+    "skill": "pr-from-diff",
+    "trigger": "opening a PR, \"write the PR body\", review prep",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "pr",
+      "pr"
+    ]
+  },
+  {
+    "skill": "read-the-trace",
+    "trigger": "a stack trace, an exception, \"TypeError/NullPointer/undefined\", a crash log",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "readme-audit",
+    "trigger": "publishing a repo, onboarding docs, \"is the README good\"",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a"
+    ]
+  },
+  {
+    "skill": "rebase-safely",
+    "trigger": "rebase, squash, \"update my branch\", interactive rebase, force-push",
+    "likely_for_mvp_auth": false,
+    "evidence_terms": []
+  },
+  {
+    "skill": "reduce-nesting",
+    "trigger": "arrow-shaped code, 3+ nested ifs, a function that's hard to follow",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "to"
+    ]
+  },
+  {
+    "skill": "revert-surgical",
+    "trigger": "\"revert this\", a bad deploy, one commit broke prod, undo without losing other work",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "commit"
+    ]
+  },
+  {
+    "skill": "schema-diff",
+    "trigger": "reviewing a migration, \"what changed in the schema\", pre-deploy check",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "in"
+    ]
+  },
+  {
+    "skill": "secret-scan",
+    "trigger": "before commit, files with API keys, .env handling, config, connection strings",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "commit"
+    ]
+  },
+  {
+    "skill": "simplify",
+    "trigger": "over-abstraction, a 200-line diff for a small ask, premature generality",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "spec-first",
+    "trigger": "a task with more than 2 steps, a long-running job, \"build X\", agent drifting",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "sql-review",
+    "trigger": "new query, a migration, an N+1 suspicion, a slow endpoint",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a",
+      "endpoint"
+    ]
+  },
+  {
+    "skill": "subagent-fanout",
+    "trigger": "analyze N items, fix M files, search K sources, anything embarrassingly parallel",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "n",
+      "m",
+      "k"
+    ]
+  },
+  {
+    "skill": "systematic-debugging",
+    "trigger": "a test fails, a crash, wrong output, \"it worked yesterday\", a flaky failure",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "test",
+      "a",
+      "a"
+    ]
+  },
+  {
+    "skill": "tool-restraint",
+    "trigger": "adding MCP servers, an agent with many tools, \"give it access to everything\"",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "it",
+      "to"
+    ]
+  },
+  {
+    "skill": "write-failing-test-first",
+    "trigger": "fixing a bug, \"make X work\", a reported defect",
+    "likely_for_mvp_auth": true,
+    "evidence_terms": [
+      "a",
+      "a"
+    ]
+  }
+]
