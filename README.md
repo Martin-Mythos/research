@@ -145,9 +145,9 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 25 research projects
+## 26 research projects
 
-### [HTML-Anything vs Bento：Context Engineering 实证研究](https://github.com/Martin-Mythos/research/tree/main/html-anything-vs-bento-context-engineering-study#readme) (2026-07-25 16:57)
+### [HTML-Anything vs Bento：Context Engineering 实证研究](https://github.com/Martin-Mythos/research/tree/main/html-anything-vs-bento-context-engineering-study#readme) (2026-07-25 17:00)
 
 This empirical study compares HTML-Anything and Bento frameworks in the context of "context engineering," with an emphasis on their suitability for different use cases and technical boundaries. The research finds that HTML-Anything's freeform semantic DOM excels in dashboards, longform content, and source code re-editing, whereas Bento's unified runtime and strict slide schema are optimal for presentations, GUI editing, and object distribution. Both frameworks can generate R2-friendly single-file artifacts, but HTML-Anything may require manual validation of certain style assets. The study relies on local deterministic mocks rather than direct model comparisons and includes robust, reproducible methodologies. For full details, see the [research report](research_report.md).
 
@@ -155,6 +155,20 @@ This empirical study compares HTML-Anything and Bento frameworks in the context 
 - HTML-Anything is preferable for dashboard/longform editing and scenarios needing flexible semantic structure.
 - Bento is superior for presentation/slide-based workflows, where single-file encapsulation and GUI editing are priorities.
 - Both systems can produce single-file outputs suitable for R2 staging, but HTML-Anything's styles need extra checks.
+
+### [Empirical Study of Shifu Framework on Multi-Model Dispatching and Cost Optimization](https://github.com/Martin-Mythos/research/tree/main/shifu-multimodel-cost-optimization-study#readme) (2026-07-14 22:48)
+
+The research assesses the `vikingmute/shifu` framework, focusing on its purported multi-model dispatching and cost optimization capabilities. Through local mock testing and static code review, Shifu is verified as an Agent Skill centered on markdown-based instruction orchestration, rather than a fully automated multi-model API router. The framework facilitates strong (expensive) model planning and weaker (cheaper) model execution via readable `SKILL.md` specifications, but lacks built-in endpoint configuration, real model cost tracking, token accounting, and error recovery control flows. Significant simulated cost savings (over 70%) are observed in mock harness tests, but these results depend on manual orchestration and cannot be attributed to Shifu's out-of-the-box abilities.
+
+Key findings:
+- Shifu installs as an Agent Skill via `npx skills add vikingmute/shifu`, but does not provide a runnable dispatch runtime.
+- The core features are clear planning specs, execution gates, and prompt injection warnings in markdown.
+- No built-in model API clients, cost telemetry, or automatic error loop exist; orchestration must be handled by the agent, not Shifu itself.
+- Cost optimization relies on external agent logic and proper task decomposition, not Shifu’s intrinsic codebase.
+
+Relevant links:
+- [Shifu GitHub Repository](https://github.com/vikingmute/shifu)
+- [SKILL.md Example](https://github.com/vikingmute/shifu/blob/main/skills/shifu/SKILL.md)
 
 ### [Kun Chen Agentic Engineering Tools 经验研究报告](https://github.com/Martin-Mythos/research/tree/main/kun-agentic-engineering-tools-study#readme) (2026-06-19 20:02)
 

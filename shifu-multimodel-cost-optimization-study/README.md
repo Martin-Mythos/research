@@ -1,5 +1,10 @@
 # Empirical Study of Shifu Framework on Multi-Model Dispatching and Cost Optimization
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 执行摘要
 
 本研究对 `vikingmute/shifu` 进行了克隆、静态审查、官方安装命令验证，并构建了一个本地 mock harness 来模拟 `GPT5.6 Lula`、`GPT5.4 Mini`、`GPT5.3 Codex Spark` 三模型协作生成“背单词 CLI 应用”。
