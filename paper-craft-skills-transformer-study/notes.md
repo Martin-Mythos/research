@@ -1,7 +1,7 @@
 # Notes: paper-craft-skills Transformer study
 
 ## Original prompt / research question
-Investigate https://github.com/zsyggg/paper-craft-skills using Attention Is All You Need (arXiv:1706.03762), focusing on skill robustness, visual fidelity, artifact quality, and logic transparency. Produce Chinese reports and artifacts under `Martin-Mythos/research/paper-craft-skills-transformer-study/`.
+Investigate https://github.com/zsyggg/paper-craft-skills using Attention Is All You Need (arXiv:1706.03762), focusing on skill robustness, visual fidelity, artifact quality, and logic transparency. Produce Chinese reports and artifacts under `paper-craft-skills-transformer-study/`.
 
 ## Commands, sources, and URLs actually used
 - `cat /workspace/research/.agents/skills/open-research/SKILL.md && pwd && find .. -name AGENTS.md -print`
@@ -24,3 +24,8 @@ Investigate https://github.com/zsyggg/paper-craft-skills using Attention Is All 
 - ArXiv direct `curl` failed with HTTP 403; browser tool successfully opened abs/html pages and confirmed metadata and section structure.
 - Created artifacts: `analyzer_transformer.html`, `analyzer_demo.html`, `transformer_method_figure_prompts.txt`, `transformer_deck_outline.md`, `notes/deck_structure.md`, `evaluation_matrix.md`, `research_report.md`, `README.md`.
 - Experiment outcome: repo source supports simulation; no actual raster image generation backend was invoked for paper-deck, so PPTX/PDF production-readiness remains unverified.
+
+## Review fix: repository-root placement
+- PR review discussion `discussion_r3487916579` noted that the research repo automation expects each investigation as an immediate child directory of the repository root.
+- Moved the study from `Martin-Mythos/research/paper-craft-skills-transformer-study/` to top-level `paper-craft-skills-transformer-study/` so automation can discover `paper-craft-skills-transformer-study/README.md`.
+- Checked README for hidden bidi / NBSP characters with a Python Unicode scan; no flagged characters were found.
