@@ -1,5 +1,10 @@
 # 基于真实开发项目 MVP 的 AI 编码智能体 LoopKit 脚手架实用性实证研究
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 研究问题
 在真实的多文件业务项目（MVP）开发场景下，LoopKit 的自动化 Loop 与技能库能否有效提升 AI 智能体的一次性交付成功率并防止上下文断层？
 

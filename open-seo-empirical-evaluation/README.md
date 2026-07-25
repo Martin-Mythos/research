@@ -1,5 +1,10 @@
 # OpenSEO 核心能力实证验证与商业平替性分析
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-assisted research report. Treat it as a working artifact: review sources, code, and verification evidence before relying on it.
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. 执行摘要 (Executive Summary)
 
 本研究对 `every-app/open-seo` 进行了可复现实证检查：克隆仓库、安装依赖、运行测试、构建项目、审查 DataForSEO 与 MCP 相关代码，并在无 `DATAFORSEO_API_KEY` 的环境下用静态与单元测试证据替代真实 API 调用。

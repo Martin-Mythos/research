@@ -145,18 +145,35 @@ for dirname, _ in subdirs_with_dates:
         if note_added:
             readme_path.write_text("\n".join(new_lines), encoding="utf-8")
 ]]]-->
-## 26 research projects
+## 28 research projects
 
-### [HTML-Anything vs Bento：Context Engineering 实证研究](https://github.com/Martin-Mythos/research/tree/main/html-anything-vs-bento-context-engineering-study#readme) (2026-07-25 17:00)
+### [OpenSEO 核心能力实证验证与商业平替性分析](https://github.com/Martin-Mythos/research/tree/main/open-seo-empirical-evaluation#readme) (2026-07-25 17:06)
 
-This empirical study compares HTML-Anything and Bento frameworks in the context of "context engineering," with an emphasis on their suitability for different use cases and technical boundaries. The research finds that HTML-Anything's freeform semantic DOM excels in dashboards, longform content, and source code re-editing, whereas Bento's unified runtime and strict slide schema are optimal for presentations, GUI editing, and object distribution. Both frameworks can generate R2-friendly single-file artifacts, but HTML-Anything may require manual validation of certain style assets. The study relies on local deterministic mocks rather than direct model comparisons and includes robust, reproducible methodologies. For full details, see the [research report](research_report.md).
+This research empirically validated the core capabilities and commercial substitution potential of the open-source project [OpenSEO](https://github.com/every-app/open-seo), which positions itself as an affordable, self-hosted alternative to Semrush/Ahrefs by leveraging DataForSEO's pay-as-you-go APIs, private deployments, and AI agent workflows. Through code review, static/unit testing, and build checks, the study confirmed that OpenSEO provides functional modules for keyword research, rank tracking, backlinks, domain analysis, site audits, Google Search Console integration, and AI visibility—even without a DataForSEO API key. The main commercial advantage lies in transparent, low-frequency usage costs and agent-centric architecture, though actual SEO data quality and historical indexing are inherently tied to DataForSEO rather than proprietary datasets. Practical deployment is feasible for technical users but limited by requirements for Node.js 22+, Docker, and a DataForSEO API key.
+
+**Key validated findings:**
+- Installation, testing (392 test cases), and build are reproducible in most environments; MCP agent skills and tools are actively integrated.
+- Running core SEO workflows (excluding real API calls) is possible; static and unit tests cover keyword research, ranking, backlinks, audits, and AI agent tools.
+- Typical rank tracking cost for 100 keywords is estimated under $1/month, substantially lower than SaaS subscriptions.
+- Limitations include inability to test actual SEO data without an API key, local migration issues due to Node.js requirements, and reliance on DataForSEO for data quality.
+
+For reproducibility instructions or detailed deployment steps, refer to the [OpenSEO repository](https://github.com/every-app/open-seo) and the provided bash scripts in the research report.
+
+### [基于真实开发项目 MVP 的 AI 编码智能体 LoopKit 脚手架实用性实证研究](https://github.com/Martin-Mythos/research/tree/main/loopkit-mvp-practicality-study#readme) (2026-07-25 17:06)
+
+This research project investigates whether the LoopKit AI coding agent scaffold improves delivery success and prevents context gaps in a real multi-file MVP development scenario. By statically analyzing the fixed commit `22101ff` of Archive228/loopkit—including its README, installer, runner, governance, and 33 skill files—the study simulates integration with a Python task management API MVP featuring advanced authentication/authorization requirements. The process involved selecting relevant skills and mapping their theoretical utility, but did not observe agent runtime nor include a randomized control (no LoopKit) group. The findings are based on static inspection and realistic simulation, with reproducible code and artifacts, but the actual LoopKit agent and Claude CLI runner were not executed.
 
 **Key findings:**
-- HTML-Anything is preferable for dashboard/longform editing and scenarios needing flexible semantic structure.
-- Bento is superior for presentation/slide-based workflows, where single-file encapsulation and GUI editing are priorities.
-- Both systems can produce single-file outputs suitable for R2 staging, but HTML-Anything's styles need extra checks.
+- Fixed commit contains 33 skills and installer writes key governance and memory files.
+- MVP simulation added multi-file features: authorization, isolation, token integrity, and salted password hashing—all tested and reproducible.
+- Skill triggering was analyzed via static matching to task requirements; real agent runtime was not observed.
+- No evidence on LoopKit's impact on delivery success due to lack of control group or live agent execution.
 
-### [Empirical Study of Shifu Framework on Multi-Model Dispatching and Cost Optimization](https://github.com/Martin-Mythos/research/tree/main/shifu-multimodel-cost-optimization-study#readme) (2026-07-14 22:48)
+Useful sources:
+- [LoopKit repository](https://github.com/Archive228/loopkit)
+- [MVP target codebase sample](https://github.com/Archive228/loopkit-mvp-practicality-study)
+
+### [Empirical Study of Shifu Framework on Multi-Model Dispatching and Cost Optimization](https://github.com/Martin-Mythos/research/tree/main/shifu-multimodel-cost-optimization-study#readme) (2026-07-25 17:06)
 
 The research assesses the `vikingmute/shifu` framework, focusing on its purported multi-model dispatching and cost optimization capabilities. Through local mock testing and static code review, Shifu is verified as an Agent Skill centered on markdown-based instruction orchestration, rather than a fully automated multi-model API router. The framework facilitates strong (expensive) model planning and weaker (cheaper) model execution via readable `SKILL.md` specifications, but lacks built-in endpoint configuration, real model cost tracking, token accounting, and error recovery control flows. Significant simulated cost savings (over 70%) are observed in mock harness tests, but these results depend on manual orchestration and cannot be attributed to Shifu's out-of-the-box abilities.
 
@@ -169,6 +186,15 @@ Key findings:
 Relevant links:
 - [Shifu GitHub Repository](https://github.com/vikingmute/shifu)
 - [SKILL.md Example](https://github.com/vikingmute/shifu/blob/main/skills/shifu/SKILL.md)
+
+### [HTML-Anything vs Bento：Context Engineering 实证研究](https://github.com/Martin-Mythos/research/tree/main/html-anything-vs-bento-context-engineering-study#readme) (2026-07-25 17:00)
+
+This empirical study compares HTML-Anything and Bento frameworks in the context of "context engineering," with an emphasis on their suitability for different use cases and technical boundaries. The research finds that HTML-Anything's freeform semantic DOM excels in dashboards, longform content, and source code re-editing, whereas Bento's unified runtime and strict slide schema are optimal for presentations, GUI editing, and object distribution. Both frameworks can generate R2-friendly single-file artifacts, but HTML-Anything may require manual validation of certain style assets. The study relies on local deterministic mocks rather than direct model comparisons and includes robust, reproducible methodologies. For full details, see the [research report](research_report.md).
+
+**Key findings:**
+- HTML-Anything is preferable for dashboard/longform editing and scenarios needing flexible semantic structure.
+- Bento is superior for presentation/slide-based workflows, where single-file encapsulation and GUI editing are priorities.
+- Both systems can produce single-file outputs suitable for R2 staging, but HTML-Anything's styles need extra checks.
 
 ### [Kun Chen Agentic Engineering Tools 经验研究报告](https://github.com/Martin-Mythos/research/tree/main/kun-agentic-engineering-tools-study#readme) (2026-06-19 20:02)
 

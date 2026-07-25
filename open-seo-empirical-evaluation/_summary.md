@@ -1,0 +1,9 @@
+This research empirically validated the core capabilities and commercial substitution potential of the open-source project [OpenSEO](https://github.com/every-app/open-seo), which positions itself as an affordable, self-hosted alternative to Semrush/Ahrefs by leveraging DataForSEO's pay-as-you-go APIs, private deployments, and AI agent workflows. Through code review, static/unit testing, and build checks, the study confirmed that OpenSEO provides functional modules for keyword research, rank tracking, backlinks, domain analysis, site audits, Google Search Console integration, and AI visibility—even without a DataForSEO API key. The main commercial advantage lies in transparent, low-frequency usage costs and agent-centric architecture, though actual SEO data quality and historical indexing are inherently tied to DataForSEO rather than proprietary datasets. Practical deployment is feasible for technical users but limited by requirements for Node.js 22+, Docker, and a DataForSEO API key.
+
+**Key validated findings:**
+- Installation, testing (392 test cases), and build are reproducible in most environments; MCP agent skills and tools are actively integrated.
+- Running core SEO workflows (excluding real API calls) is possible; static and unit tests cover keyword research, ranking, backlinks, audits, and AI agent tools.
+- Typical rank tracking cost for 100 keywords is estimated under $1/month, substantially lower than SaaS subscriptions.
+- Limitations include inability to test actual SEO data without an API key, local migration issues due to Node.js requirements, and reliance on DataForSEO for data quality.
+
+For reproducibility instructions or detailed deployment steps, refer to the [OpenSEO repository](https://github.com/every-app/open-seo) and the provided bash scripts in the research report.
