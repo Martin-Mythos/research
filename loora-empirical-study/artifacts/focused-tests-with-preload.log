@@ -1,0 +1,223 @@
+$ bun test --preload ./apps/web/src/test/setup.ts ...
+bun test v1.3.14 (0d9b296a)
+
+apps/ws/src/config.test.ts:
+(pass) ws config > reads the shared secrets and the bus [1.96ms]
+(pass) ws config > falls back to the auth origin, and to a single process without Redis [1.01ms]
+(pass) ws config > accepts the secret being retired during a rotation [0.19ms]
+(pass) ws config > refuses to start without credentials it can trust [2.28ms]
+
+apps/mcp/src/auth.test.ts:
+(pass) createMcpSessionVerifier > does not call the auth server without a bearer token [3.13ms]
+(pass) createMcpSessionVerifier > verifies tokens through the remote Better Auth server [4.64ms]
+(pass) createMcpSessionVerifier > treats an unavailable auth server as unauthenticated [1.93ms]
+(pass) createMcpSessionVerifier > stops waiting when the auth server exceeds its timeout [11.94ms]
+(pass) createMcpSessionVerifier > caches verified sessions per token instead of re-verifying every call [1.89ms]
+(pass) createMcpSessionVerifier > never caches failed verification [2.22ms]
+(pass) createMcpSessionVerifier > does not serve a cached session past the token expiry [45.92ms]
+(pass) createMcpSessionVerifier > bypasses the cache when the TTL is zero [1.19ms]
+
+packages/canvas/src/merge.test.ts:
+(pass) semantic Canvas merge > merges independent fields on the same node [8.50ms]
+(pass) semantic Canvas merge > surfaces only the exact field changed in both [2.37ms]
+
+packages/canvas/src/react.test.tsx:
+(pass) Canvas React surface > routes text-edit signals only to the requested node [0.60ms]
+(pass) Canvas React surface > does not subscribe ordinary nodes to an empty instance id [224.01ms]
+(pass) Canvas React surface > releases the camera compositing hint when movement becomes idle [208.07ms]
+(pass) Canvas React surface > uses host theme tokens for the workspace and grid [42.41ms]
+(pass) Canvas React surface > recovers a collapsed page and keeps repeated resizes aligned [901.18ms]
+(pass) Canvas React surface > selects top-level layers, drills into frames, and deep-selects descendants [175.50ms]
+(pass) Canvas React surface > renders nested real DOM and nudges the selected node transactionally [56.89ms]
+(pass) Canvas React surface > draws where a reorder would land, and refuses the slot it came from [118.66ms]
+(pass) Canvas React surface > detaches a flow child from its arranging parent when the drop is modified [34.11ms]
+(pass) Canvas React surface > reorders a flow child inside an arranging parent instead of ejecting it [36.34ms]
+(pass) Canvas React surface > places a flow child dropped in a free parent at the box it was rendered in [41.67ms]
+(pass) Canvas React surface > keeps an absolute child inside a clipped parent and guides it to the walls [48.94ms]
+(pass) Canvas React surface > still moves a child that is larger than its clipped parent [23.81ms]
+(pass) Canvas React surface > resolves where an outside drop lands, in flow and in free space [63.90ms]
+(pass) Canvas React surface > commits plaintext editing once on blur and keeps undo available [76.31ms]
+(pass) Canvas React surface > renames a layer from its selection label [119.75ms]
+(pass) Canvas React surface > edits text when pointer capture retargets the double click to the surface [35.18ms]
+(pass) Canvas React surface > owns ctrl-wheel so browser zoom cannot take over [59.56ms]
+(pass) Canvas React surface > clears stale selection when undo removes the selected node [241.92ms]
+(pass) Canvas React surface > resolves a named component variant inside an instance [70.24ms]
+(pass) Canvas React surface > repositions the selection overlay when the camera moves [48.86ms]
+
+packages/canvas/src/html-import-css.test.ts:
+(pass) HTML import sandbox CSS > embeds official Tailwind Preflight for Paper snapshot measurement [0.25ms]
+
+packages/canvas/src/engine.test.ts:
+(pass) Canvas transactions > applies operations atomically and returns a working inverse [10.59ms]
+(pass) Canvas transactions > keeps state declarations on the existing node transaction path [2.89ms]
+(pass) Canvas transactions > restores node metadata exactly when a merging patch is undone [1.66ms]
+(pass) Canvas transactions > validates a whole-object replace without a full document pass [3.75ms]
+(pass) Canvas transactions > deletes a subtree that the same transaction just added to [3.83ms]
+(pass) Canvas transactions > rejects a fast-path patch whose interaction names an undeclared state [2.36ms]
+(pass) Canvas transactions > updates named themes and their token modes atomically [2.01ms]
+(pass) Canvas transactions > activates a named theme as the persisted default [3.03ms]
+(pass) Canvas transactions > refuses to activate a theme that does not exist [2.40ms]
+(pass) Canvas transactions > leaves the source untouched when final validation fails [1.56ms]
+(pass) Canvas transactions > makes transaction retries idempotent [1.49ms]
+(pass) Canvas transactions > coalesces adjacent edits with the same history key [2.22ms]
+(pass) Canvas transactions > checks touched fields and rebases independent edits [1.92ms]
+(pass) Canvas transactions > keeps direct fast-path application safe for an invalid document timestamp [1.66ms]
+(pass) Canvas transactions > does not alias the source animation dictionary [1.69ms]
+(pass) Canvas transactions > transfers an isolated validated snapshot into exactly one engine [2.53ms]
+(pass) Canvas transactions > bounds undo history by entry count [3.15ms]
+(pass) Canvas transactions > does not re-sort siblings for a non-structural patch [1.82ms]
+(pass) Canvas transactions > only bumps document-wide domains that affect their derived styles [3.20ms]
+(pass) Canvas transactions > uses midpoint ordering and signals unsafe gaps [0.17ms]
+(pass) Canvas transactions > rejects malformed, non-serializable transactions [0.33ms]
+(pass) Canvas transactions > rejects unknown operation fields and malformed preconditions [1.21ms]
+582 |       patch: { name: `Changed ${index}` },
+583 |     }))
+584 |     const started = performance.now()
+585 |     engine.apply({ id: 'bulk', label: 'Bulk edit', operations })
+586 |     const duration = performance.now() - started
+587 |     expect(duration).toBeLessThan(8)
+                           ^
+error: expect(received).toBeLessThan(expected)
+
+Expected: < 8
+Received: 8.392807000000175
+
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/engine.test.ts:587:22)
+(fail) Canvas transactions > keeps a 100-node transaction on a 5,000-node document within the engine gate [689.35ms]
+
+packages/canvas/src/motion.test.ts:
+(pass) motion values > rejects the shapes a canvas must not store [0.96ms]
+(pass) motion values > writes the CSS a browser runs [1.14ms]
+(pass) motion values > no preset holds the properties a hover needs [0.30ms]
+(pass) motion on a document > a node may only play animations the document defines [2.58ms]
+(pass) motion on a document > reads a document written before motion existed [0.87ms]
+(pass) motion on a document > an engine transaction defines motion and inverts cleanly [3.57ms]
+(pass) motion on a document > setting one visual state leaves the others alone [1.59ms]
+(pass) motion stylesheet > pointer states become real rules, and self-starting motion rides the node [1.19ms]
+(pass) motion stylesheet > a hover-triggered animation waits for the pointer [0.22ms]
+(pass) exported motion > the download carries the same rules the canvas showed [7.02ms]
+(pass) exported motion > a document with no motion exports no motion [0.97ms]
+
+packages/canvas/src/export.test.ts:
+(pass) Canvas exports > generates deterministic, escaped standalone HTML [3.34ms]
+(pass) Canvas exports > exports a directly addressed node for expiring legacy links [2.85ms]
+(pass) Canvas exports > prepares one immutable snapshot and reuses its compiled result [2.76ms]
+(pass) Canvas exports > keeps overlapping rich-text runs in source-order precedence [2.36ms]
+(pass) Canvas exports > includes referenced nested components but excludes unused definitions [16.06ms]
+(pass) Canvas exports > generates one-way React and versioned JSON outputs [3.63ms]
+(pass) Canvas exports > generates copyable JSX and Tailwind components for a selection [5.96ms]
+(pass) Canvas exports > exports zero-width overrides in the base rule and orders media queries by width [3.18ms]
+(pass) Canvas exports > shows a text node again at a breakpoint that unhides it [2.03ms]
+(pass) Canvas exports > hides a node at one breakpoint only [2.50ms]
+(pass) Canvas exports > exports a font stack as separate families [1.33ms]
+(pass) Canvas exports > exports declarative actions and active theme token values [5.89ms]
+(pass) Canvas exports > switches generic named themes from local state in every code export [49.46ms]
+(pass) Canvas exports > exports typed state, event conditions, and a bounded local runtime [38.37ms]
+(pass) Canvas exports > renders component variant overrides and exports switching rules [8.40ms]
+(pass) Canvas exports > keeps component state local to each rendered instance [28.49ms]
+(pass) Canvas exports > keeps hidden flex frames hidden in CSS and when shown at runtime [15.29ms]
+(pass) inlineBrowserImages > blanks an image it cannot read rather than tainting the capture [13.24ms]
+(pass) inlineBrowserImages > leaves an image that is already inline alone [3.15ms]
+(pass) inlineBrowserImages > fetches a repeated image once before reusing its data URL [3.49ms]
+(pass) inlineBrowserImages > bounds simultaneous image reads during a capture [67.12ms]
+(pass) inlineBrowserImages > refuses a PNG allocation large enough to exhaust browser memory [1.81ms]
+
+packages/canvas/src/model.test.ts:
+(pass) CanvasDocument > accepts a normalized editable page tree [1.51ms]
+(pass) CanvasDocument > validates typed local state and declarative event transitions [1.72ms]
+(pass) CanvasDocument > rejects content roots and hierarchy cycles [0.97ms]
+(pass) CanvasDocument > marks every descendant whose hierarchy reaches a cycle [0.68ms]
+(pass) CanvasDocument > validates state lookup on a deep hierarchy in linear time [255.68ms]
+(pass) CanvasDocument > reports every component that can reach an instance cycle [2.01ms]
+(pass) CanvasDocument > rejects unsafe image and SVG payloads [1.40ms]
+(pass) CanvasDocument > validates instance paths without duplicating component descendants [2.68ms]
+(pass) CanvasDocument > resolves responsive overrides from the largest matching minimum width [0.75ms]
+(pass) CanvasDocument > accepts a partial typography override while still requiring a complete node style [1.00ms]
+(pass) CanvasDocument > rejects CSS and interaction injection at the model boundary [1.03ms]
+(pass) CanvasDocument > validates theme modes, dictionary ids, and exact root fields [1.47ms]
+(pass) CanvasDocument > validates generic theme actions against named document themes [0.94ms]
+(pass) CanvasDocument > rejects values that cannot survive a JSON round trip [0.19ms]
+(pass) CanvasDocument > validates comment pins against exact node references [0.89ms]
+
+packages/canvas/src/import.test.ts:
+(pass) HTML snapshot import > converts computed layout and styles into a valid editable Canvas tree [29.40ms]
+(pass) HTML snapshot import > drops executable and relative URLs instead of persisting invalid nodes [0.81ms]
+(pass) HTML snapshot import > preserves a CSS background image as an image layer for later asset upload [2.04ms]
+(pass) HTML snapshot import > omits the Paper Snapshot wrapper while preserving button geometry and text [1.96ms]
+(pass) HTML snapshot import > places a whole container absolutely when one child cannot be arranged [2.47ms]
+(pass) HTML snapshot import > keeps the box a styled label is painted in [1.36ms]
+(pass) HTML snapshot import > preserves no-wrap text used by inline Paper Snapshot buttons [1.02ms]
+(pass) HTML snapshot import > does not turn an invisible CSS border into a solid Canvas stroke [0.82ms]
+(pass) HTML snapshot import > inherits presentation attributes for editable SVG paths [3.17ms]
+(pass) HTML snapshot import > normalizes color(srgb) fills and oklab shadows from Paper pastes [2.46ms]
+(pass) HTML snapshot import > maps radial and linear CSS gradients onto Canvas paints [3.39ms]
+(pass) HTML snapshot import > promotes SVG circle and rect shapes to editable paths [1.35ms]
+(pass) HTML snapshot import > keeps flex when children only have fixed margins, not auto [1.75ms]
+(pass) HTML snapshot import > respects background-size when placing a CSS background image layer [1.07ms]
+(pass) HTML snapshot import > imports a rasterized subtree as an image node [1.18ms]
+(pass) HTML snapshot import > unwraps light-dark() and drops unresolvable live colors instead of failing [2.43ms]
+
+packages/agent/src/repair-layout.test.ts:
+(pass) repairStackedLayout > flows children that an arranging parent had stacked on its origin [1.52ms]
+(pass) repairStackedLayout > drops the 320x200 placeholder box off repaired text [0.25ms]
+(pass) repairStackedLayout > keeps deliberate overlays that carry real coordinates [0.26ms]
+(pass) repairStackedLayout > leaves a lone absolute child of a plain frame alone [0.23ms]
+(pass) repairStackedLayout > still unstacks a pile inside a plain frame [0.19ms]
+(pass) repairStackedLayout > is a no-op on a healthy document [0.28ms]
+(pass) repairStackedLayout > never moves canvas roots [0.23ms]
+
+packages/agent/src/motion-tools.test.ts:
+(pass) setAnimations > takes a preset name and defines the whole thing [8.54ms]
+(pass) setAnimations > an explicit definition wins over a preset of the same id [13.65ms]
+(pass) setAnimations > refuses a call that would do nothing [1.21ms]
+(pass) animateNodes > a hover preset brings its own transition [4.42ms]
+(pass) animateNodes > a stagger spaces a list out in the order it was given [3.01ms]
+(pass) animateNodes > clearing takes every kind of motion off at once [2.20ms]
+(pass) animateNodes > refuses a call that would do nothing [0.37ms]
+
+packages/agent/src/canvas-tools.test.ts:
+(pass) Canvas agent NodeRefs > creates readable Page state and event rules without source code [16.03ms]
+(pass) Canvas agent NodeRefs > creates named themes before tokens that use their modes [2.50ms]
+(pass) Canvas agent NodeRefs > activates a persisted default theme in the same call [0.35ms]
+(pass) Canvas agent NodeRefs > setTokens requires at least one change [0.57ms]
+(pass) Canvas agent NodeRefs > reads source and effective instance state [0.83ms]
+(pass) Canvas agent NodeRefs > rejects a NodeRef whose source is outside the instance component [0.36ms]
+(pass) Canvas agent NodeRefs > semantic trees return usable refs for instance descendants [0.23ms]
+(pass) Canvas agent NodeRefs > keeps structural insertion out of instance overrides [0.28ms]
+(pass) Canvas agent NodeRefs > builds visual instance patches and rejects structural overrides [0.52ms]
+(pass) Canvas agent NodeRefs > collapses descendant deletes into their requested ancestor [0.30ms]
+(pass) descriptor layout defaults > nested content flows instead of stacking on the parent origin [0.69ms]
+(pass) descriptor layout defaults > text never inherits the 320x200 placeholder box [0.20ms]
+(pass) descriptor layout defaults > coordinates and an explicit position still mean absolute [0.21ms]
+(pass) descriptor layout defaults > images keep a real box so they do not hug to nothing [0.29ms]
+(pass) MCP input leniency and documentation > accepts JSON-serialized structured arguments [3.77ms]
+(pass) MCP input leniency and documentation > accepts JSON-serialized layout, style, and children on createPage [1.75ms]
+(pass) MCP input leniency and documentation > rejects plain strings where structures belong [3.32ms]
+(pass) MCP input leniency and documentation > typography defaults letterSpacing and align [1.34ms]
+
+apps/web/src/lib/sanitize.test.ts:
+(pass) sanitizeHtml > strips script tags [10.28ms]
+(pass) sanitizeHtml > strips iframes, objects, forms [11.02ms]
+(pass) sanitizeHtml > strips event handler attributes [5.25ms]
+(pass) sanitizeHtml > strips javascript: urls [4.59ms]
+(pass) sanitizeHtml > strips scheme obfuscation and non-image data urls [24.07ms]
+(pass) sanitizeHtml > keeps http, relative, fragment, and data:image urls [4.05ms]
+(pass) sanitizeHtml > keeps styles, classes, and safe urls [9.13ms]
+(pass) toXhtml > closes void elements for XML embedding [6.82ms]
+
+packages/editor/src/lib/canvas-html-import.test.ts:
+(pass) HTML import sandbox > removes executable markup and blocks outbound resources [14.88ms]
+(pass) HTML import sandbox > does not let CSS close the sandbox style element [8.61ms]
+(pass) HTML import sandbox > gives the Paper Snapshot transport wrapper a shrink-to-fit layout [52.35ms]
+(pass) HTML import sandbox > embeds Tailwind Preflight so Paper pastes do not invent strokes [47.74ms]
+(pass) HTML import sandbox > accepts Paper-sized HTML pastes under the source budget [596.86ms]
+(pass) HTML import sandbox > rejects HTML pastes above the source budget [110.87ms]
+
+1 tests failed:
+(fail) Canvas transactions > keeps a 100-node transaction on a 5,000-node document within the engine gate [689.35ms]
+
+ 168 pass
+ 1 fail
+ 493 expect() calls
+Ran 169 tests across 15 files. [7.65s]
+EXIT_CODE=1

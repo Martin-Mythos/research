@@ -1,0 +1,758 @@
+## test
+Sat Aug  1 16:02:17 UTC 2026
+$ bun run test
+$ bun test --preload ./apps/web/src/test/setup.ts
+bun test v1.3.14 (0d9b296a)
+
+apps/ws/src/server.test.ts:
+(pass) realtime service > reports health without a ticket [25.12ms]
+(pass) realtime service > reports readiness from the bus, not from being alive [4.04ms]
+(pass) realtime service > refuses a socket without a valid ticket [5.31ms]
+(pass) realtime service > sends the room state on connect [14.64ms]
+(pass) realtime service > fans a published canvas change out to the room [20.63ms]
+(pass) realtime service > carries agent activity from an MCP tool call [14.41ms]
+(pass) realtime service > stamps presence from the ticket, not from the client [5.57ms]
+(pass) realtime service > does not echo a peer its own presence [4.09ms]
+(pass) realtime service > answers a heartbeat [2.84ms]
+(pass) realtime service > keeps rooms apart [10.47ms]
+(pass) realtime service > still accepts a ticket in the query string [2.18ms]
+(pass) realtime service > spends a ticket once: a replay is refused [2.32ms]
+(pass) realtime service > caps how many sockets one account can hold open [29.51ms]
+(pass) realtime service > counts what it turned away [4.93ms]
+(pass) realtime service > refuses an ingest body far larger than any event [4.58ms]
+(pass) realtime service > refuses ingest without the internal token [1.19ms]
+(pass) realtime service > serves room state to another service [3.24ms]
+(fail) (unnamed) [5000.01ms]
+  ^ a beforeEach/afterEach hook timed out for this test.
+
+apps/ws/src/hub.test.ts:
+(pass) RealtimeHub > subscribes a room once and drops it when the last socket leaves [0.88ms]
+(pass) RealtimeHub > stamps and fans out a canvas change [0.56ms]
+(pass) RealtimeHub > refuses an event that does not match the wire protocol [0.57ms]
+(pass) RealtimeHub > records presence and tells the room [1.41ms]
+(pass) RealtimeHub > rejects a presence payload that is not a peer [0.36ms]
+(pass) RealtimeHub > forgets a peer whose tab stopped reporting [0.44ms]
+(pass) RealtimeHub > holds agent activity until it expires [0.85ms]
+
+apps/ws/src/redis-bus.test.ts:
+(skip) two instances on one Redis > carries a published event from one instance to a socket on the other
+(skip) two instances on one Redis > is one room: presence crosses, and either instance can describe it
+(skip) two instances on one Redis > spends a ticket across the whole deployment, not once per instance
+(skip) two instances on one Redis > clears a peer everywhere when its socket goes
+
+apps/ws/src/protocol.test.ts:
+(pass) client messages > accepts a heartbeat [0.10ms]
+(pass) client messages > rounds a cursor and caps a selection [0.68ms]
+(pass) client messages > drops a cursor that is not a real position [0.20ms]
+(pass) client messages > refuses anything else a socket might send [1.30ms]
+(pass) ingest messages > accepts each kind a Loora service publishes [0.25ms]
+(pass) ingest messages > normalizes a branch target [0.06ms]
+(pass) ingest messages > refuses a body it cannot trust [0.20ms]
+(pass) state requests > reads the room being asked about [0.08ms]
+(pass) rate limiter > allows a burst and then holds the line until the window rolls [0.10ms]
+
+apps/ws/src/config.test.ts:
+(pass) ws config > reads the shared secrets and the bus [1.57ms]
+(pass) ws config > falls back to the auth origin, and to a single process without Redis [0.15ms]
+(pass) ws config > accepts the secret being retired during a rotation [0.12ms]
+(pass) ws config > refuses to start without credentials it can trust [0.44ms]
+
+apps/mcp/src/concurrency.test.ts:
+(pass) BoundedConcurrencyGate > runs only the configured number of tasks at once [1.29ms]
+(pass) BoundedConcurrencyGate > rejects work once the bounded queue is full [0.58ms]
+
+apps/mcp/src/agent-activity.test.ts:
+(pass) Agent activity > rings the nodes a call names, edited ones first [0.69ms]
+(pass) Agent activity > reads the target and skips calls without a design [0.20ms]
+(pass) Agent activity > tracks nothing for tools without a design or a label [0.59ms]
+(pass) Agent activity > shares one run across overlapping calls on the same document [0.91ms]
+
+apps/mcp/src/server.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+3 | import * as schema from './schema'
+4 |
+5 | const databaseUrl = process.env.DATABASE_URL
+6 |
+7 | if (!databaseUrl) {
+8 |   throw new Error('DATABASE_URL is required')
+                ^
+error: DATABASE_URL is required
+      at /tmp/loora-target/packages/db/src/index.ts:8:13
+-------------------------------
+
+
+apps/mcp/src/auth.test.ts:
+(pass) createMcpSessionVerifier > does not call the auth server without a bearer token [3.93ms]
+(pass) createMcpSessionVerifier > verifies tokens through the remote Better Auth server [3.62ms]
+(pass) createMcpSessionVerifier > treats an unavailable auth server as unauthenticated [1.55ms]
+(pass) createMcpSessionVerifier > stops waiting when the auth server exceeds its timeout [21.56ms]
+(pass) createMcpSessionVerifier > caches verified sessions per token instead of re-verifying every call [1.14ms]
+(pass) createMcpSessionVerifier > never caches failed verification [0.87ms]
+(pass) createMcpSessionVerifier > does not serve a cached session past the token expiry [33.39ms]
+(pass) createMcpSessionVerifier > bypasses the cache when the TTL is zero [1.12ms]
+
+apps/mcp/src/idle-resource.test.ts:
+(pass) IdleResource > shares one launch and relaunches after an idle close [1.67ms]
+(pass) IdleResource > does not close a resource while work is active [1.20ms]
+
+packages/realtime/src/events.test.ts:
+(pass) presence keys > scopes a room key to the account that holds it [0.11ms]
+(pass) presence keys > stays inside the length the wire protocol accepts [0.11ms]
+(pass) presence input > rounds a cursor and drops one that is not a position [0.21ms]
+(pass) presence input > caps a selection [0.43ms]
+(pass) parseCanvasRealtimeEvent > accepts a branch.changed event [0.98ms]
+(pass) parseCanvasRealtimeEvent > accepts a branch.changed event with null draftId [0.16ms]
+(pass) parseCanvasRealtimeEvent > rejects a branch.changed event without sentAt [0.08ms]
+
+packages/realtime/src/ticket.test.ts:
+(pass) realtime tickets > round trips the claims the socket service needs [4.64ms]
+(pass) realtime tickets > rejects a ticket signed with another secret [0.99ms]
+(pass) realtime tickets > rejects tampered claims [1.28ms]
+(pass) realtime tickets > rejects an expired ticket [0.81ms]
+(pass) realtime tickets > rejects an expiry too far out to be one of ours [0.85ms]
+(pass) realtime tickets > rejects a ticket with no id to spend [0.85ms]
+(pass) realtime tickets > rejects malformed input instead of throwing [0.43ms]
+
+packages/db/src/canvas.test.ts:
+(pass) legacyArray > passes a real jsonb array through [0.27ms]
+(pass) legacyArray > parses the double-encoded string production mostly holds [0.14ms]
+(pass) legacyArray > yields an empty list instead of characters for junk [0.21ms]
+
+packages/db/src/canvas-transactions.test.ts:
+(pass) Canvas transaction retention > prunes only when a retained-history window is crossed [0.24ms]
+
+packages/db/src/design-access.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+12 |   name: string,
+13 |   fallback: number,
+14 |   minimum: number,
+15 |   maximum: number,
+16 | ) {
+17 |   const value = Number(process.env[name] ?? fallback)
+             ^
+error: DATABASE_URL is required
+      at /tmp/loora-target/packages/db/src/index.ts:17:9
+-------------------------------
+
+
+packages/db/src/drafts.test.ts:
+(pass) canvas drafts > summarizes additions, removals, and changes [0.53ms]
+(pass) canvas drafts > merges independent element changes [2.02ms]
+(pass) canvas drafts > merges one-sided additions and deletions [0.29ms]
+(pass) canvas drafts > accepts identical edits on both sides [0.29ms]
+(pass) canvas drafts > requires a choice for divergent edits [0.51ms]
+(pass) canvas drafts > treats edit versus delete as a conflict [0.49ms]
+(pass) canvas drafts > detects incompatible layer reordering [0.64ms]
+(pass) canvas drafts > applies a one-sided layer reorder without conflict [0.43ms]
+(pass) canvas drafts > merges independent Page changes with element changes [0.84ms]
+(pass) canvas drafts > requires a choice for divergent Page edits and ordering [0.59ms]
+
+packages/db/src/canvas-realtime.test.ts:
+(pass) Canvas realtime events > isolates channels by user, design, and branch target [1.33ms]
+(pass) Canvas realtime events > accepts bounded change and activity payloads [0.29ms]
+(pass) Canvas realtime events > rejects malformed or oversized payloads [1.10ms]
+
+packages/rpc/src/request-timing.test.ts:
+(pass) request timing > keeps safe upstream request ids and replaces unsafe ones [0.27ms]
+(pass) request timing > serializes bounded timing values into response headers [1.90ms]
+(pass) request timing > skips console request logs unless LOG_REQUEST_TIMING is enabled [0.80ms]
+
+packages/rpc/src/rate-limit.test.ts:
+(pass) rateLimit > serves a caller up to the limit and refuses the next request [1.33ms]
+(pass) rateLimit > counts each caller on its own [0.31ms]
+(pass) rateLimit > keeps buckets apart so one endpoint cannot spend the budget of another [0.35ms]
+[rate-limit] counting in memory; Redis is unavailable: 85 | function withTimeout<T>(work: Promise<T>, ms: number, label: string) {
+86 |   let timer: ReturnType<typeof setTimeout> | null = null
+87 |   return Promise.race([
+88 |     work,
+89 |     new Promise<never>((_, reject) => {
+90 |       timer = setTimeout(() => reject(new Error(`Redis ${label} timed out`)), ms)
+                                               ^
+error: Redis connection timed out
+      at <anonymous> (/tmp/loora-target/packages/rpc/src/rate-limit.ts:90:43)
+
+(pass) rateLimit > keeps counting when Redis cannot be reached [1506.51ms]
+(pass) rateLimit > serves the caller again once the window has rolled [16.25ms]
+(pass) clientAddress > counts the address Cloudflare stamped, not the forwarded chain [0.48ms]
+[rate-limit] no trustworthy client address on this request; anonymous callers will share one bucket. Expected cf-connecting-ip.
+(pass) clientAddress > refuses a forwarded chain a caller could have contributed to [0.50ms]
+(pass) clientAddress > takes a single-entry forwarded header, which no client added to [0.18ms]
+(pass) clientAddress > does not let a caller name themselves through cf-connecting-ip alone [0.09ms]
+(pass) callerIdentity > counts a signed-in caller as themselves, not as their address [0.30ms]
+(pass) callerIdentity > keeps two addresses in separate buckets [0.65ms]
+(pass) tooManyRequestsResponse > answers 429 with the headers a client needs to back off [1.53ms]
+(pass) tooManyRequestsResponse > reports the same numbers through the header helper [0.10ms]
+(pass) rateLimits > leaves room for what the editor actually sends [0.28ms]
+
+packages/rpc/src/asset-url.test.ts:
+(pass) assetIdFromSrc > reads the id back from the API route [2.30ms]
+(pass) assetIdFromSrc > reads the id back from a public bucket URL [0.18ms]
+(pass) assetIdFromSrc > ignores images that are not ours [0.31ms]
+
+packages/rpc/src/readiness.test.ts:
+(pass) service readiness > reports a ready database without exposing internals [0.66ms]
+(pass) service readiness > returns a retryable failure without exposing the database error [0.50ms]
+
+packages/rpc/src/history.test.ts:
+(pass) history summaries and ordering > uses timestamp and id as a deterministic ordering key [1.66ms]
+(pass) history summaries and ordering > builds a bounded metadata-only page and cursor [0.70ms]
+
+packages/rpc/src/handoff-token.test.ts:
+(pass) handoff tokens > round-trips signed design and user claims [2.31ms]
+(pass) handoff tokens > binds a handoff to its draft when requested [0.98ms]
+(pass) handoff tokens > rejects tampered and expired tokens [2.02ms]
+
+packages/rpc/src/mcp-sessions.test.ts:
+(pass) summarizeMcpSessions > collapses rotated tokens into one client session [1.95ms]
+
+packages/auth/src/preview-access.test.ts:
+(pass) preview access > is required by default and disabled explicitly [1.19ms]
+(pass) preview access > allows approved users, admins, or everyone when disabled [0.16ms]
+(pass) preview access > puts preview approval in front of checkout and customer billing routes [0.19ms]
+
+packages/auth/src/github.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+12 |   name: string,
+13 |   fallback: number,
+14 |   minimum: number,
+15 |   maximum: number,
+16 | ) {
+17 |   const value = Number(process.env[name] ?? fallback)
+             ^
+error: DATABASE_URL is required
+      at /tmp/loora-target/packages/db/src/index.ts:17:9
+-------------------------------
+
+
+packages/auth/src/legal-consent.test.ts:
+(pass) legal consent > requires both current documents and recorded acceptance times [2.60ms]
+(pass) legal consent > blocks authenticated product auth routes without blocking sign in or sessions [0.25ms]
+
+packages/auth/src/mcp-consent.test.ts:
+(pass) withConsentPrompt > adds consent to an empty or missing prompt [2.91ms]
+(pass) withConsentPrompt > keeps other prompt values [0.30ms]
+(pass) withConsentPrompt > overrides none, which asks for no interaction at all [0.05ms]
+(pass) withOfflineAccessScope > keeps requested scopes and appends offline_access once [0.32ms]
+(pass) withOfflineAccessScope > falls back to openid when the client sends no scope [0.14ms]
+(pass) requireMcpConsent > forces consent when the client omits it [0.90ms]
+(pass) requireMcpConsent > forces consent when the client asks for silent authorization [0.22ms]
+(pass) requireMcpConsent > preserves a login prompt so the sign-in step still runs [0.23ms]
+(pass) requireMcpConsent > passes a fully-formed request through untouched [0.23ms]
+(pass) requireMcpConsent > adds offline_access so the client can refresh instead of expiring [0.44ms]
+(pass) requireMcpConsent > leaves every other auth route alone [0.09ms]
+
+packages/canvas/src/merge.test.ts:
+(pass) semantic Canvas merge > merges independent fields on the same node [14.22ms]
+(pass) semantic Canvas merge > surfaces only the exact field changed in both [3.14ms]
+
+packages/canvas/src/react.test.tsx:
+(pass) Canvas React surface > routes text-edit signals only to the requested node [1.80ms]
+(pass) Canvas React surface > does not subscribe ordinary nodes to an empty instance id [307.61ms]
+(pass) Canvas React surface > releases the camera compositing hint when movement becomes idle [210.28ms]
+(pass) Canvas React surface > uses host theme tokens for the workspace and grid [32.06ms]
+(pass) Canvas React surface > recovers a collapsed page and keeps repeated resizes aligned [1158.07ms]
+(pass) Canvas React surface > selects top-level layers, drills into frames, and deep-selects descendants [164.14ms]
+(pass) Canvas React surface > renders nested real DOM and nudges the selected node transactionally [68.94ms]
+(pass) Canvas React surface > draws where a reorder would land, and refuses the slot it came from [136.04ms]
+(pass) Canvas React surface > detaches a flow child from its arranging parent when the drop is modified [44.13ms]
+(pass) Canvas React surface > reorders a flow child inside an arranging parent instead of ejecting it [52.20ms]
+(pass) Canvas React surface > places a flow child dropped in a free parent at the box it was rendered in [27.98ms]
+(pass) Canvas React surface > keeps an absolute child inside a clipped parent and guides it to the walls [153.70ms]
+(pass) Canvas React surface > still moves a child that is larger than its clipped parent [38.73ms]
+(pass) Canvas React surface > resolves where an outside drop lands, in flow and in free space [18.34ms]
+(pass) Canvas React surface > commits plaintext editing once on blur and keeps undo available [54.08ms]
+(pass) Canvas React surface > renames a layer from its selection label [112.06ms]
+(pass) Canvas React surface > edits text when pointer capture retargets the double click to the surface [27.18ms]
+(pass) Canvas React surface > owns ctrl-wheel so browser zoom cannot take over [42.62ms]
+(pass) Canvas React surface > clears stale selection when undo removes the selected node [276.02ms]
+(pass) Canvas React surface > resolves a named component variant inside an instance [88.23ms]
+(pass) Canvas React surface > repositions the selection overlay when the camera moves [39.20ms]
+
+packages/canvas/src/html-import-css.test.ts:
+(pass) HTML import sandbox CSS > embeds official Tailwind Preflight for Paper snapshot measurement [4.57ms]
+
+packages/canvas/src/engine.test.ts:
+(pass) Canvas transactions > applies operations atomically and returns a working inverse [10.37ms]
+(pass) Canvas transactions > keeps state declarations on the existing node transaction path [2.71ms]
+(pass) Canvas transactions > restores node metadata exactly when a merging patch is undone [1.50ms]
+(pass) Canvas transactions > validates a whole-object replace without a full document pass [3.86ms]
+(pass) Canvas transactions > deletes a subtree that the same transaction just added to [2.82ms]
+(pass) Canvas transactions > rejects a fast-path patch whose interaction names an undeclared state [1.99ms]
+(pass) Canvas transactions > updates named themes and their token modes atomically [2.37ms]
+(pass) Canvas transactions > activates a named theme as the persisted default [2.53ms]
+(pass) Canvas transactions > refuses to activate a theme that does not exist [1.98ms]
+(pass) Canvas transactions > leaves the source untouched when final validation fails [1.42ms]
+(pass) Canvas transactions > makes transaction retries idempotent [1.03ms]
+(pass) Canvas transactions > coalesces adjacent edits with the same history key [2.12ms]
+(pass) Canvas transactions > checks touched fields and rebases independent edits [2.01ms]
+(pass) Canvas transactions > keeps direct fast-path application safe for an invalid document timestamp [1.25ms]
+(pass) Canvas transactions > does not alias the source animation dictionary [1.61ms]
+(pass) Canvas transactions > transfers an isolated validated snapshot into exactly one engine [1.39ms]
+(pass) Canvas transactions > bounds undo history by entry count [2.65ms]
+(pass) Canvas transactions > does not re-sort siblings for a non-structural patch [1.51ms]
+(pass) Canvas transactions > only bumps document-wide domains that affect their derived styles [3.23ms]
+(pass) Canvas transactions > uses midpoint ordering and signals unsafe gaps [0.15ms]
+(pass) Canvas transactions > rejects malformed, non-serializable transactions [0.29ms]
+(pass) Canvas transactions > rejects unknown operation fields and malformed preconditions [0.82ms]
+582 |       patch: { name: `Changed ${index}` },
+583 |     }))
+584 |     const started = performance.now()
+585 |     engine.apply({ id: 'bulk', label: 'Bulk edit', operations })
+586 |     const duration = performance.now() - started
+587 |     expect(duration).toBeLessThan(8)
+                           ^
+error: expect(received).toBeLessThan(expected)
+
+Expected: < 8
+Received: 11.082210000000487
+
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/engine.test.ts:587:22)
+(fail) Canvas transactions > keeps a 100-node transaction on a 5,000-node document within the engine gate [965.24ms]
+
+packages/canvas/src/motion.test.ts:
+(pass) motion values > rejects the shapes a canvas must not store [5.18ms]
+(pass) motion values > writes the CSS a browser runs [1.50ms]
+(pass) motion values > no preset holds the properties a hover needs [0.11ms]
+(pass) motion on a document > a node may only play animations the document defines [2.79ms]
+(pass) motion on a document > reads a document written before motion existed [0.99ms]
+(pass) motion on a document > an engine transaction defines motion and inverts cleanly [5.36ms]
+(pass) motion on a document > setting one visual state leaves the others alone [1.72ms]
+(pass) motion stylesheet > pointer states become real rules, and self-starting motion rides the node [1.41ms]
+(pass) motion stylesheet > a hover-triggered animation waits for the pointer [0.35ms]
+(pass) exported motion > the download carries the same rules the canvas showed [6.68ms]
+(pass) exported motion > a document with no motion exports no motion [0.95ms]
+
+packages/canvas/src/export.test.ts:
+(pass) Canvas exports > generates deterministic, escaped standalone HTML [3.41ms]
+(pass) Canvas exports > exports a directly addressed node for expiring legacy links [1.36ms]
+(pass) Canvas exports > prepares one immutable snapshot and reuses its compiled result [2.17ms]
+(pass) Canvas exports > keeps overlapping rich-text runs in source-order precedence [1.57ms]
+(pass) Canvas exports > includes referenced nested components but excludes unused definitions [4.56ms]
+(pass) Canvas exports > generates one-way React and versioned JSON outputs [2.38ms]
+(pass) Canvas exports > generates copyable JSX and Tailwind components for a selection [10.10ms]
+(pass) Canvas exports > exports zero-width overrides in the base rule and orders media queries by width [2.20ms]
+(pass) Canvas exports > shows a text node again at a breakpoint that unhides it [1.31ms]
+(pass) Canvas exports > hides a node at one breakpoint only [1.43ms]
+(pass) Canvas exports > exports a font stack as separate families [1.00ms]
+(pass) Canvas exports > exports declarative actions and active theme token values [3.44ms]
+(pass) Canvas exports > switches generic named themes from local state in every code export [38.27ms]
+(pass) Canvas exports > exports typed state, event conditions, and a bounded local runtime [30.11ms]
+(pass) Canvas exports > renders component variant overrides and exports switching rules [4.70ms]
+(pass) Canvas exports > keeps component state local to each rendered instance [30.44ms]
+(pass) Canvas exports > keeps hidden flex frames hidden in CSS and when shown at runtime [13.26ms]
+(pass) inlineBrowserImages > blanks an image it cannot read rather than tainting the capture [10.94ms]
+(pass) inlineBrowserImages > leaves an image that is already inline alone [3.03ms]
+(pass) inlineBrowserImages > fetches a repeated image once before reusing its data URL [3.50ms]
+(pass) inlineBrowserImages > bounds simultaneous image reads during a capture [34.10ms]
+(pass) inlineBrowserImages > refuses a PNG allocation large enough to exhaust browser memory [2.30ms]
+
+packages/canvas/src/model.test.ts:
+(pass) CanvasDocument > accepts a normalized editable page tree [1.20ms]
+(pass) CanvasDocument > validates typed local state and declarative event transitions [1.42ms]
+(pass) CanvasDocument > rejects content roots and hierarchy cycles [0.93ms]
+(pass) CanvasDocument > marks every descendant whose hierarchy reaches a cycle [0.87ms]
+(pass) CanvasDocument > validates state lookup on a deep hierarchy in linear time [231.97ms]
+(pass) CanvasDocument > reports every component that can reach an instance cycle [2.16ms]
+(pass) CanvasDocument > rejects unsafe image and SVG payloads [1.55ms]
+(pass) CanvasDocument > validates instance paths without duplicating component descendants [2.24ms]
+(pass) CanvasDocument > resolves responsive overrides from the largest matching minimum width [1.11ms]
+(pass) CanvasDocument > accepts a partial typography override while still requiring a complete node style [1.28ms]
+(pass) CanvasDocument > rejects CSS and interaction injection at the model boundary [1.42ms]
+(pass) CanvasDocument > validates theme modes, dictionary ids, and exact root fields [1.72ms]
+(pass) CanvasDocument > validates generic theme actions against named document themes [1.25ms]
+(pass) CanvasDocument > rejects values that cannot survive a JSON round trip [0.54ms]
+(pass) CanvasDocument > validates comment pins against exact node references [0.76ms]
+
+packages/canvas/src/import.test.ts:
+(pass) HTML snapshot import > converts computed layout and styles into a valid editable Canvas tree [21.56ms]
+(pass) HTML snapshot import > drops executable and relative URLs instead of persisting invalid nodes [0.85ms]
+(pass) HTML snapshot import > preserves a CSS background image as an image layer for later asset upload [2.19ms]
+(pass) HTML snapshot import > omits the Paper Snapshot wrapper while preserving button geometry and text [1.70ms]
+(pass) HTML snapshot import > places a whole container absolutely when one child cannot be arranged [2.17ms]
+(pass) HTML snapshot import > keeps the box a styled label is painted in [1.18ms]
+(pass) HTML snapshot import > preserves no-wrap text used by inline Paper Snapshot buttons [1.36ms]
+(pass) HTML snapshot import > does not turn an invisible CSS border into a solid Canvas stroke [0.87ms]
+(pass) HTML snapshot import > inherits presentation attributes for editable SVG paths [2.37ms]
+(pass) HTML snapshot import > normalizes color(srgb) fills and oklab shadows from Paper pastes [2.60ms]
+(pass) HTML snapshot import > maps radial and linear CSS gradients onto Canvas paints [3.50ms]
+(pass) HTML snapshot import > promotes SVG circle and rect shapes to editable paths [1.10ms]
+(pass) HTML snapshot import > keeps flex when children only have fixed margins, not auto [1.99ms]
+(pass) HTML snapshot import > respects background-size when placing a CSS background image layer [1.13ms]
+(pass) HTML snapshot import > imports a rasterized subtree as an image node [0.93ms]
+(pass) HTML snapshot import > unwraps light-dark() and drops unresolvable live colors instead of failing [2.25ms]
+
+packages/billing/src/billing.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+12 |   name: string,
+13 |   fallback: number,
+14 |   minimum: number,
+15 |   maximum: number,
+16 | ) {
+17 |   const value = Number(process.env[name] ?? fallback)
+             ^
+error: DATABASE_URL is required
+      at /tmp/loora-target/packages/db/src/index.ts:17:9
+-------------------------------
+
+
+packages/billing/src/plan-limits.test.ts:
+(pass) plan limits > Free and Pro capacity match the published product [0.31ms]
+(pass) plan limits > maps billing sources to a limits plan [0.19ms]
+(pass) plan limits > wouldExceedLimit treats null as unlimited [0.07ms]
+(pass) plan limits > storage capacity includes the incoming upload size [0.24ms]
+(pass) plan limits > history retention is a rolling day window [0.50ms]
+(pass) plan limits > assert helpers throw PlanLimitError at the cap [5.71ms]
+(pass) plan limits > formats storage sizes for error messages [0.13ms]
+(pass) plan limits > hard history prune only runs for explicit Free/Pro/Studio plans [0.18ms]
+
+packages/billing/src/polar.test.ts:
+(pass) Polar configuration > billing is required by default and only explicit false disables it [0.24ms]
+(pass) Polar configuration > missing configuration is fatal when billing is required [0.87ms]
+(pass) Polar configuration > disabled billing allows missing Polar configuration [0.28ms]
+(pass) Polar configuration > validates and normalizes the configured origin [0.12ms]
+(pass) Polar configuration > keeps the legacy Studio product optional [0.15ms]
+
+packages/billing/src/billing-policy.test.ts:
+(pass) billing policy > requires a recognized active product and the access benefit [11.90ms]
+(pass) billing policy > recognizes Free and both Pro billing cycles [0.18ms]
+(pass) billing policy > legacy Studio takes precedence and cancellation retains access through period end [0.28ms]
+(pass) billing policy > expired periods are denied even when listed by Polar [0.07ms]
+(pass) billing policy > grants app access during a Pro trial [0.29ms]
+(pass) billing policy > does not recognize expired or Studio trials [0.18ms]
+(pass) billing policy > accepts duplicate timestamps and rejects older webhook events [0.22ms]
+
+packages/billing/src/mcp-usage.test.ts:
+(pass) MCP included usage > matches the published Free and Pro weekly limits [0.19ms]
+(pass) MCP included usage > uses Monday-to-Monday UTC calendar weeks [0.38ms]
+(pass) MCP included usage > reads Polar totals and records one event for an admitted call [2.32ms]
+(pass) MCP included usage > rejects at the included limit without recording another event [0.59ms]
+(pass) MCP included usage > caches Free meter reads between calls instead of reading every time [0.74ms]
+(pass) MCP included usage > does not block Pro calls on Polar at all [1.91ms]
+[mcp-usage] deferred usage event failed 153 |
+154 |   test('a failing Polar ingest does not fail a Pro call', async () => {
+155 |     const service = createMcpUsageService(() => ({
+156 |       readTotal: async () => 0,
+157 |       record: async () => {
+158 |         throw new Error('polar down')
+                        ^
+error: polar down
+      at record (/tmp/loora-target/packages/billing/src/mcp-usage.test.ts:158:19)
+      at <anonymous> (/tmp/loora-target/packages/billing/src/mcp-usage.ts:271:25)
+      at reserve (/tmp/loora-target/packages/billing/src/mcp-usage.ts:278:73)
+      at <anonymous> (/tmp/loora-target/packages/billing/src/mcp-usage.test.ts:162:33)
+
+(pass) MCP included usage > a failing Polar ingest does not fail a Pro call [8.52ms]
+(pass) MCP included usage > does not contact Polar when billing is disabled or bypassed for admins [1.13ms]
+(pass) MCP included usage > resolveMcpUsagePlan matches MCP access gates [0.43ms]
+
+packages/email/src/service.test.ts:
+(pass) Cloudflare email service > maps a verification email to the Cloudflare adapter [485.59ms]
+(pass) Cloudflare email service > fails before sending when required configuration is missing [0.19ms]
+
+packages/platform/src/runtime.test.ts:
+(pass) platform runtime > defaults to the document origin, which is what the web app wants [0.58ms]
+(pass) platform runtime > a desktop client keeps calling its own host but links to the public app [0.13ms]
+(pass) platform runtime > a link out of the app goes wherever the platform sends it [0.12ms]
+(pass) platform runtime > an explicit API origin wins over the document [0.06ms]
+
+packages/agent/src/repair-layout.test.ts:
+(pass) repairStackedLayout > flows children that an arranging parent had stacked on its origin [5.24ms]
+(pass) repairStackedLayout > drops the 320x200 placeholder box off repaired text [0.21ms]
+(pass) repairStackedLayout > keeps deliberate overlays that carry real coordinates [0.25ms]
+(pass) repairStackedLayout > leaves a lone absolute child of a plain frame alone [0.24ms]
+(pass) repairStackedLayout > still unstacks a pile inside a plain frame [0.32ms]
+(pass) repairStackedLayout > is a no-op on a healthy document [0.19ms]
+(pass) repairStackedLayout > never moves canvas roots [0.23ms]
+
+packages/agent/src/motion-tools.test.ts:
+(pass) setAnimations > takes a preset name and defines the whole thing [4.89ms]
+(pass) setAnimations > an explicit definition wins over a preset of the same id [3.67ms]
+(pass) setAnimations > refuses a call that would do nothing [1.20ms]
+(pass) animateNodes > a hover preset brings its own transition [42.12ms]
+(pass) animateNodes > a stagger spaces a list out in the order it was given [22.57ms]
+(pass) animateNodes > clearing takes every kind of motion off at once [3.50ms]
+(pass) animateNodes > refuses a call that would do nothing [0.82ms]
+
+packages/agent/src/canvas-tools.test.ts:
+(pass) Canvas agent NodeRefs > creates readable Page state and event rules without source code [18.76ms]
+(pass) Canvas agent NodeRefs > creates named themes before tokens that use their modes [3.43ms]
+(pass) Canvas agent NodeRefs > activates a persisted default theme in the same call [0.40ms]
+(pass) Canvas agent NodeRefs > setTokens requires at least one change [0.61ms]
+(pass) Canvas agent NodeRefs > reads source and effective instance state [0.87ms]
+(pass) Canvas agent NodeRefs > rejects a NodeRef whose source is outside the instance component [0.33ms]
+(pass) Canvas agent NodeRefs > semantic trees return usable refs for instance descendants [0.34ms]
+(pass) Canvas agent NodeRefs > keeps structural insertion out of instance overrides [0.30ms]
+(pass) Canvas agent NodeRefs > builds visual instance patches and rejects structural overrides [0.97ms]
+(pass) Canvas agent NodeRefs > collapses descendant deletes into their requested ancestor [0.52ms]
+(pass) descriptor layout defaults > nested content flows instead of stacking on the parent origin [0.73ms]
+(pass) descriptor layout defaults > text never inherits the 320x200 placeholder box [0.30ms]
+(pass) descriptor layout defaults > coordinates and an explicit position still mean absolute [0.33ms]
+(pass) descriptor layout defaults > images keep a real box so they do not hug to nothing [0.15ms]
+(pass) MCP input leniency and documentation > accepts JSON-serialized structured arguments [5.93ms]
+(pass) MCP input leniency and documentation > accepts JSON-serialized layout, style, and children on createPage [1.90ms]
+(pass) MCP input leniency and documentation > rejects plain strings where structures belong [2.79ms]
+(pass) MCP input leniency and documentation > typography defaults letterSpacing and align [1.98ms]
+
+apps/web/src/components/legal-document-page.test.tsx:
+(pass) LegalDocumentPage > renders markdown headings, lists, links, and tables as HTML [1312.11ms]
+
+apps/web/src/lib/sanitize.test.ts:
+(pass) sanitizeHtml > strips script tags [27.89ms]
+(pass) sanitizeHtml > strips iframes, objects, forms [10.86ms]
+(pass) sanitizeHtml > strips event handler attributes [4.12ms]
+(pass) sanitizeHtml > strips javascript: urls [4.35ms]
+(pass) sanitizeHtml > strips scheme obfuscation and non-image data urls [23.99ms]
+(pass) sanitizeHtml > keeps http, relative, fragment, and data:image urls [7.62ms]
+(pass) sanitizeHtml > keeps styles, classes, and safe urls [15.18ms]
+(pass) toXhtml > closes void elements for XML embedding [8.06ms]
+
+apps/web/src/lib/theme-hydration.test.tsx:
+(pass) theme hydration > restores dark mode before hydration without a warning [46.11ms]
+
+apps/web/src/lib/desktop-handoff.test.ts:
+(pass) desktop hand-off > takes the ports a desktop app can actually listen on [1.32ms]
+(pass) desktop hand-off > takes only a state string shaped like the one the host generates [1.73ms]
+(pass) desktop hand-off > reads both out of a search object [1.61ms]
+(pass) desktop hand-off > sends the code to loopback, whatever else was in the query [0.82ms]
+
+apps/web/src/lib/legacy-landing-redirect.test.ts:
+(pass) resolveLegacyLandingRedirect > renders the landing page when there is nothing legacy to resolve [0.34ms]
+(pass) resolveLegacyLandingRedirect > sends ?design= and ?d= to the canonical editor route [0.89ms]
+(pass) resolveLegacyLandingRedirect > maps ?draft= onto the branch route [0.17ms]
+(pass) resolveLegacyLandingRedirect > prefers the document over legacy settings params [0.08ms]
+(pass) resolveLegacyLandingRedirect > resolves the legacy settings screens [2.01ms]
+(pass) resolveLegacyLandingRedirect > drops an unknown integration tab instead of forwarding it [0.61ms]
+
+apps/web/src/routes/-api.realtime-ticket.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+12 |   name: string,
+13 |   fallback: number,
+14 |   minimum: number,
+15 |   maximum: number,
+16 | ) {
+17 |   const value = Number(process.env[name] ?? fallback)
+             ^
+error: DATABASE_URL is required
+      at /tmp/loora-target/packages/db/src/index.ts:17:9
+-------------------------------
+
+
+apps/web/src/routes/-api.canvas-events.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+12 |   name: string,
+13 |   fallback: number,
+14 |   minimum: number,
+15 |   maximum: number,
+16 | ) {
+17 |   const value = Number(process.env[name] ?? fallback)
+             ^
+error: DATABASE_URL is required
+      at /tmp/loora-target/packages/db/src/index.ts:17:9
+-------------------------------
+
+
+packages/email/src/templates/templates.test.tsx:
+(pass) transactional email templates > renders account verification as HTML and plain text [73.35ms]
+(pass) transactional email templates > renders password reset without requiring a display name [80.21ms]
+
+packages/editor/src/components/motion-section.test.tsx:
+(pass) Motion section > a hover preset brings its own transition [2119.49ms]
+An update to MotionSection inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to CanvasPropertiesPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+(pass) Motion section > picking a preset animation defines it on the document as it starts it [854.89ms]
+(pass) Motion section > a trigger and a delay ride the animation already chosen [805.68ms]
+(pass) Motion section > applies to everything selected at once [520.28ms]
+(pass) Motion section > removing motion takes every part of it off [652.57ms]
+
+packages/editor/src/components/share-dialog.test.tsx:
+(pass) ShareDialog > invites a collaborator at the chosen access level [221.94ms]
+(pass) ShareDialog > shows who already has access and how they got it [124.95ms]
+(pass) ShareDialog > opens the link up to anyone when the owner says so [110.12ms]
+(pass) ShareDialog > offers a guest a way out instead of controls they cannot use [91.10ms]
+
+packages/editor/src/components/presence.test.tsx:
+(pass) CanvasCollaboratorPresence > coalesces pointer movement before reading scene geometry [30.17ms]
+
+packages/editor/src/components/agent-presence.test.tsx:
+(pass) CanvasAgentOverlay > draws once per event instead of keeping an idle animation loop alive [16.85ms]
+
+packages/editor/src/components/editor-agent-activity.test.tsx:
+(pass) Canvas agent activity > names the agent in the collaborator cluster and marks its target [273.85ms]
+(pass) Canvas agent activity > shows nothing while no agent is working [563.04ms]
+
+packages/editor/src/components/upgrade-to-pro.test.tsx:
+(pass) UpgradeToProButton > is hidden for Pro plans [1894.19ms]
+(pass) UpgradeToProButton > lets free users pick yearly or monthly Pro checkout [628.99ms]
+(pass) UpgradeToProButton > starts monthly Pro checkout when selected [612.68ms]
+
+packages/editor/src/components/properties-panel.test.tsx:
+(pass) CanvasPropertiesPanel > rounds the numbers it shows instead of dumping raw floats [193.67ms]
+(pass) CanvasPropertiesPanel > shows the intact Page viewport when an old resize collapsed its layout [167.28ms]
+(pass) CanvasPropertiesPanel > keeps hug and fill sizing reachable [198.82ms]
+(pass) CanvasPropertiesPanel > edits every selected layer at once and marks the values that differ [83.78ms]
+(pass) CanvasPropertiesPanel > shows a shared value rather than Mixed when the selection agrees [67.10ms]
+(pass) CanvasPropertiesPanel > writes padding to every side while the sides are linked [122.93ms]
+(pass) CanvasPropertiesPanel > exposes auto-layout alignment for a flex parent [165.38ms]
+(pass) CanvasPropertiesPanel > converts opacity between the percent shown and the value stored [96.20ms]
+(pass) CanvasPropertiesPanel > adds and removes a stroke [2071.37ms]
+(pass) CanvasPropertiesPanel > offers type controls only where there is type to edit [169.23ms]
+
+packages/editor/src/components/export-panel.test.tsx:
+(pass) CanvasExport > previews the file it would write, not the editor [854.29ms]
+(pass) CanvasExport > opens on the selection and exports only that subtree [691.38ms]
+(pass) CanvasExport > widens back to the whole canvas on demand [1568.94ms]
+(pass) CanvasExport > renders the preview at the chosen breakpoint width [924.88ms]
+(pass) CanvasExport > names the download after what is being exported [996.45ms]
+(pass) CanvasExport > copies the generated code [1227.03ms]
+(pass) CanvasExport > shows the actual capture before saving a PNG [1432.24ms]
+(pass) CanvasExport > says which images the capture had to leave blank [451.72ms]
+(pass) CanvasExport > reports a capture that failed instead of saving nothing [932.74ms]
+(pass) CanvasExport > says the JSON document is always whole [1324.25ms]
+(pass) CanvasExport > creates a handoff link and shows the prompt it hands over [1598.74ms]
+
+packages/editor/src/components/assets-panel.test.tsx:
+(pass) AssetsPanel > lists assets with their size and places one on click [73.09ms]
+(pass) AssetsPanel > filters by name and sorts on demand [92.12ms]
+(pass) AssetsPanel > uploads files dropped onto the panel [103.20ms]
+(pass) AssetsPanel > refuses oversized files and non-images before uploading them [61.47ms]
+(pass) AssetsPanel > warns how many nodes a delete would break [160.82ms]
+(pass) AssetsPanel > keeps the asset until the delete is confirmed [321.20ms]
+[assets] Failed to delete asset: 132 |     await waitFor(() => expect(remove).toHaveBeenCalledWith({ id: 'a1' }))
+133 |     expect(view.queryByTitle('Place hero.png')).toBeNull()
+134 |   })
+135 |
+136 |   test('puts a failed delete back in the list', async () => {
+137 |     remove.mockRejectedValue(new Error('offline'))
+                                       ^
+error: offline
+      at <anonymous> (/tmp/loora-target/packages/editor/src/components/assets-panel.test.tsx:137:34)
+
+(pass) AssetsPanel > puts a failed delete back in the list [851.21ms]
+
+packages/editor/src/components/history.test.tsx:
+(pass) CanvasHistory > lists checkpoints and selects the newest one [369.74ms]
+(pass) CanvasHistory > names a checkpoint instead of saving them all as "Manual checkpoint" [817.44ms]
+(pass) CanvasHistory > reports what restoring would change against the document on screen [397.94ms]
+(pass) CanvasHistory > checkpoints the current state before replacing it [616.44ms]
+(pass) CanvasHistory > pages older checkpoints in [995.18ms]
+(pass) CanvasHistory > marks a legacy checkpoint as unsupported [625.66ms]
+
+packages/editor/src/components/layers-panel.test.ts:
+(pass) dropPositionFor > gives containers a middle band that means inside [11.22ms]
+(pass) dropPositionFor > leaves only reorder [0.16ms]
+(pass) resolveDrop > reorders between siblings with an order in the gap [1.97ms]
+(pass) resolveDrop > drops into a container after its last child [0.17ms]
+(pass) resolveDrop > refuses a move into the dragged node or its own subtree [0.18ms]
+(pass) resolveDrop > refuses a drop inside something that cannot hold children [0.15ms]
+(pass) resolveDrop > keeps pages at the document root and everything else off it [0.30ms]
+(pass) resolveDrop > ignores a drag that lands back where it started [0.42ms]
+(pass) resolveDrop > refuses to move a locked layer [0.19ms]
+(pass) multi-layer drops > drops only the roots of a selection, never a child twice [0.15ms]
+(pass) multi-layer drops > spreads the group through the gap in document order [0.39ms]
+(pass) multi-layer drops > moves a whole group into a container [0.45ms]
+(pass) multi-layer drops > refuses a group that would land inside one of its own members [0.16ms]
+(pass) multi-layer drops > refuses a group that mixes roots with nested layers [0.11ms]
+(pass) multi-layer drops > drops a selected parent without its selected child [0.23ms]
+(pass) multi-layer drops > ignores a contiguous group dropped back on itself [0.25ms]
+
+packages/editor/src/components/branches.test.tsx:
+(pass) CanvasBranches > keeps discarded branches reachable instead of losing them [1154.09ms]
+(pass) CanvasBranches > asks before discarding a branch [1497.86ms]
+(pass) CanvasBranches > renames a branch in place [1561.30ms]
+(pass) CanvasBranches > reviews a branch that is not the one currently open [1290.10ms]
+(pass) CanvasBranches > names the layer a conflict is on and blocks Apply until it is settled [2599.29ms]
+(pass) CanvasBranches > resolves every conflict at once [3066.77ms]
+(pass) CanvasBranches > carries the description into a new branch [783.54ms]
+
+packages/editor/src/components/layers-panel-ui.test.tsx:
+(pass) CanvasLayersPanel controls > walks indexed children through expanded nested layers [210.74ms]
+(pass) CanvasLayersPanel controls > creates pages and moves between dock positions [506.92ms]
+
+packages/editor/src/lib/canvas-html-paste.test.ts:
+(pass) HTML clipboard paste > places imported page contents into the current page [2.21ms]
+(pass) HTML clipboard paste > only treats selections within a page as an active page [0.32ms]
+
+packages/editor/src/lib/canvas-clipboard.test.ts:
+(pass) canvas clipboard > copies a whole subtree and skips ids already inside it [16.79ms]
+(pass) canvas clipboard > round-trips through the clipboard text [0.96ms]
+(pass) canvas clipboard > rejects text that is not a canvas payload [0.68ms]
+(pass) canvas clipboard > pastes with fresh ids, a nudge, and the target parent [3.37ms]
+(pass) canvas clipboard > refuses a paste that would break the document [6.17ms]
+(pass) canvas clipboard > keeps flow roots in flow rather than nudging them [0.49ms]
+
+packages/editor/src/lib/canvas-presence-transport.test.ts:
+(pass) presence transport > posts nothing over HTTP while the socket is still being ticketed [168.54ms]
+(pass) presence transport > falls back to posting presence when realtime is not configured [159.45ms]
+
+packages/editor/src/lib/canvas-html-import.test.ts:
+(pass) HTML import sandbox > removes executable markup and blocks outbound resources [19.35ms]
+(pass) HTML import sandbox > does not let CSS close the sandbox style element [13.25ms]
+(pass) HTML import sandbox > gives the Paper Snapshot transport wrapper a shrink-to-fit layout [49.50ms]
+(pass) HTML import sandbox > embeds Tailwind Preflight so Paper pastes do not invent strokes [60.62ms]
+(pass) HTML import sandbox > accepts Paper-sized HTML pastes under the source budget [581.82ms]
+(pass) HTML import sandbox > rejects HTML pastes above the source budget [118.70ms]
+
+packages/editor/src/lib/shortcuts.test.ts:
+(pass) matchChord > matches meta-or-ctrl for meta chords [1.83ms]
+(pass) matchChord > requires shift when specified [33.97ms]
+(pass) matchChord > uses code when present [0.41ms]
+(pass) resolveBuiltIn / matchShortcut > uses defaults when no overrides [0.90ms]
+(pass) resolveBuiltIn / matchShortcut > honors null unbind and remaps [0.69ms]
+(pass) detectConflicts > flags overlapping chords [2.39ms]
+(pass) format / serialize / eventToChord > serializes stably [0.09ms]
+(pass) format / serialize / eventToChord > formats chords [0.34ms]
+(pass) format / serialize / eventToChord > eventToChord captures digit codes [0.34ms]
+(pass) format / serialize / eventToChord > normalizeConfig fills gaps [0.19ms]
+
+packages/editor/src/lib/canvas-code-copy.test.ts:
+(pass) Canvas code copy > compiles the selected node as HTML, JSX, or Tailwind [109.22ms]
+
+packages/editor/src/lib/designs.test.ts:
+(pass) relativeTime > reads as "just now" under a minute [69.57ms]
+(pass) relativeTime > picks the largest unit that fits [2.97ms]
+(pass) newDesignId > is prefixed and free of separators so it stays URL-safe [5.77ms]
+
+packages/editor/src/lib/canvas-client.test.ts:
+(pass) remoteRevealNodeIds > reveals inserted groups once and keeps separately edited details [108.12ms]
+(pass) remoteRevealNodeIds > deduplicates large repeated edit batches without changing order [8.41ms]
+(pass) applyAcknowledgedTransactions > advances the confirmed base without applying transactions still pending [25.26ms]
+(pass) Canvas realtime messages > accepts revision invalidations and expiring agent activity [8.60ms]
+(pass) Canvas realtime messages > accepts the socket service opening frame [5.89ms]
+(pass) Canvas realtime messages > drops malformed events [1.69ms]
+
+packages/shell/src/components/mcp-sessions.test.tsx:
+(pass) McpSessions > lists connected clients and removes one after revocation [1176.74ms]
+
+packages/shell/src/components/settings-panel.test.tsx:
+(pass) SettingsPanel > keeps billing and integrations out of the dialog [241.62ms]
+(pass) SettingsPanel > offers no agent tab [106.38ms]
