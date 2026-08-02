@@ -1,0 +1,646 @@
+{
+  "smoke": {
+    "output": "Hello World",
+    "task": {
+      "id": "hello",
+      "sessionId": "smoke",
+      "originRunId": "smoke-run",
+      "title": "Hello World",
+      "status": "completed",
+      "createdAt": 1785600489799,
+      "updatedAt": 1785600489799
+    }
+  },
+  "success": {
+    "implementation": "QM MemoryTaskStore + experiment dispatcher",
+    "injectFailure": false,
+    "workerConfig": {
+      "model": "mock-low-tier-terra-lula",
+      "thinking_effort": "max",
+      "thinking_budget": "high",
+      "timeout_ms": 120,
+      "max_attempts": 2
+    },
+    "elapsed_ms": 81.67137400000001,
+    "start_spread_ms": 0.5698840000000018,
+    "starts": [
+      {
+        "id": "task-1",
+        "offset_ms": 0.26609599999997613
+      },
+      {
+        "id": "task-2",
+        "offset_ms": 0.7509699999999953
+      },
+      {
+        "id": "task-3",
+        "offset_ms": 0.7891959999999756
+      },
+      {
+        "id": "task-4",
+        "offset_ms": 0.8063099999999963
+      },
+      {
+        "id": "task-5",
+        "offset_ms": 0.835979999999978
+      }
+    ],
+    "results": [
+      {
+        "id": "task-1",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Check security event logging configuration",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-2",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Verify encryption at rest",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-3",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Review incident notification workflow",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-4",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Validate access-control and least-privilege evidence",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-5",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Assess cybersecurity risk-management documentation",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "id": "task-1",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Check security event logging configuration",
+        "status": "completed",
+        "createdAt": 1785600489799,
+        "updatedAt": 1785600489881
+      },
+      {
+        "id": "task-2",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Verify encryption at rest",
+        "status": "completed",
+        "createdAt": 1785600489799,
+        "updatedAt": 1785600489860
+      },
+      {
+        "id": "task-3",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Review incident notification workflow",
+        "status": "completed",
+        "createdAt": 1785600489799,
+        "updatedAt": 1785600489840
+      },
+      {
+        "id": "task-4",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Validate access-control and least-privilege evidence",
+        "status": "completed",
+        "createdAt": 1785600489799,
+        "updatedAt": 1785600489870
+      },
+      {
+        "id": "task-5",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Assess cybersecurity risk-management documentation",
+        "status": "completed",
+        "createdAt": 1785600489799,
+        "updatedAt": 1785600489851
+      }
+    ],
+    "events": {
+      "task-1": [
+        {
+          "id": "1",
+          "taskId": "task-1",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "6",
+          "taskId": "task-1",
+          "runId": "worker-1",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "15",
+          "taskId": "task-1",
+          "runId": "worker-1",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489881
+        }
+      ],
+      "task-2": [
+        {
+          "id": "2",
+          "taskId": "task-2",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "7",
+          "taskId": "task-2",
+          "runId": "worker-2",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "13",
+          "taskId": "task-2",
+          "runId": "worker-2",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489860
+        }
+      ],
+      "task-3": [
+        {
+          "id": "3",
+          "taskId": "task-3",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "8",
+          "taskId": "task-3",
+          "runId": "worker-3",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "11",
+          "taskId": "task-3",
+          "runId": "worker-3",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489840
+        }
+      ],
+      "task-4": [
+        {
+          "id": "4",
+          "taskId": "task-4",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "9",
+          "taskId": "task-4",
+          "runId": "worker-4",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "14",
+          "taskId": "task-4",
+          "runId": "worker-4",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489870
+        }
+      ],
+      "task-5": [
+        {
+          "id": "5",
+          "taskId": "task-5",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "10",
+          "taskId": "task-5",
+          "runId": "worker-5",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489799
+        },
+        {
+          "id": "12",
+          "taskId": "task-5",
+          "runId": "worker-5",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489851
+        }
+      ]
+    }
+  },
+  "boundary": {
+    "implementation": "QM MemoryTaskStore + experiment dispatcher",
+    "injectFailure": true,
+    "workerConfig": {
+      "model": "mock-low-tier-terra-lula",
+      "thinking_effort": "max",
+      "thinking_budget": "high",
+      "timeout_ms": 120,
+      "max_attempts": 2
+    },
+    "elapsed_ms": 170.94880799999999,
+    "start_spread_ms": 0.30584399999997913,
+    "starts": [
+      {
+        "id": "task-1",
+        "offset_ms": 0.1443100000000186
+      },
+      {
+        "id": "task-2",
+        "offset_ms": 0.23770900000005213
+      },
+      {
+        "id": "task-3",
+        "offset_ms": 0.25472500000000764
+      },
+      {
+        "id": "task-4",
+        "offset_ms": 0.40608200000002626
+      },
+      {
+        "id": "task-5",
+        "offset_ms": 0.4501539999999977
+      }
+    ],
+    "results": [
+      {
+        "id": "task-1",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Check security event logging configuration",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-2",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Verify encryption at rest",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-3",
+        "status": "completed",
+        "attempts": 2,
+        "result": {
+          "check": "Review incident notification workflow",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-4",
+        "status": "completed",
+        "attempts": 1,
+        "result": {
+          "check": "Validate access-control and least-privilege evidence",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      },
+      {
+        "id": "task-5",
+        "status": "completed",
+        "attempts": 2,
+        "result": {
+          "check": "Assess cybersecurity risk-management documentation",
+          "verdict": "mock-review-required",
+          "evidence": [],
+          "worker_config": {
+            "model": "mock-low-tier-terra-lula",
+            "thinking_effort": "max",
+            "thinking_budget": "high",
+            "timeout_ms": 120,
+            "max_attempts": 2
+          }
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "id": "task-1",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Check security event logging configuration",
+        "status": "completed",
+        "createdAt": 1785600489893,
+        "updatedAt": 1785600489973
+      },
+      {
+        "id": "task-2",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Verify encryption at rest",
+        "status": "completed",
+        "createdAt": 1785600489893,
+        "updatedAt": 1785600489954
+      },
+      {
+        "id": "task-3",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Review incident notification workflow",
+        "status": "completed",
+        "createdAt": 1785600489893,
+        "updatedAt": 1785600489935
+      },
+      {
+        "id": "task-4",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Validate access-control and least-privilege evidence",
+        "status": "completed",
+        "createdAt": 1785600489893,
+        "updatedAt": 1785600489964
+      },
+      {
+        "id": "task-5",
+        "sessionId": "csa-audit",
+        "originRunId": "planner-1",
+        "title": "Assess cybersecurity risk-management documentation",
+        "status": "completed",
+        "createdAt": 1785600489893,
+        "updatedAt": 1785600490064
+      }
+    ],
+    "events": {
+      "task-1": [
+        {
+          "id": "1",
+          "taskId": "task-1",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "6",
+          "taskId": "task-1",
+          "runId": "worker-1",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "14",
+          "taskId": "task-1",
+          "runId": "worker-1",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489973
+        }
+      ],
+      "task-2": [
+        {
+          "id": "2",
+          "taskId": "task-2",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "7",
+          "taskId": "task-2",
+          "runId": "worker-2",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "12",
+          "taskId": "task-2",
+          "runId": "worker-2",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489954
+        }
+      ],
+      "task-3": [
+        {
+          "id": "3",
+          "taskId": "task-3",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "8",
+          "taskId": "task-3",
+          "runId": "worker-3",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "11",
+          "taskId": "task-3",
+          "runId": "worker-3",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489935
+        }
+      ],
+      "task-4": [
+        {
+          "id": "4",
+          "taskId": "task-4",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "9",
+          "taskId": "task-4",
+          "runId": "worker-4",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "13",
+          "taskId": "task-4",
+          "runId": "worker-4",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600489964
+        }
+      ],
+      "task-5": [
+        {
+          "id": "5",
+          "taskId": "task-5",
+          "runId": "planner-1",
+          "type": "created",
+          "fromStatus": null,
+          "toStatus": "pending",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "10",
+          "taskId": "task-5",
+          "runId": "worker-5",
+          "type": "status_changed",
+          "fromStatus": "pending",
+          "toStatus": "in_progress",
+          "createdAt": 1785600489893
+        },
+        {
+          "id": "15",
+          "taskId": "task-5",
+          "runId": "worker-5",
+          "type": "status_changed",
+          "fromStatus": "in_progress",
+          "toStatus": "completed",
+          "createdAt": 1785600490064
+        }
+      ]
+    }
+  }
+}

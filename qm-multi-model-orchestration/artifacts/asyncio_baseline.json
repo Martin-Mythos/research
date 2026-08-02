@@ -1,0 +1,56 @@
+{
+  "implementation": "asyncio.gather",
+  "elapsed_ms": 81.30002799998692,
+  "results": [
+    {
+      "check": "Check security event logging configuration",
+      "verdict": "mock-review-required",
+      "worker_config": {
+        "model": "mock-low-tier-terra-lula",
+        "thinking_effort": "max",
+        "thinking_budget": "high",
+        "timeout_ms": 120
+      }
+    },
+    {
+      "check": "Verify encryption at rest",
+      "verdict": "mock-review-required",
+      "worker_config": {
+        "model": "mock-low-tier-terra-lula",
+        "thinking_effort": "max",
+        "thinking_budget": "high",
+        "timeout_ms": 120
+      }
+    },
+    {
+      "check": "Review incident notification workflow",
+      "verdict": "mock-review-required",
+      "worker_config": {
+        "model": "mock-low-tier-terra-lula",
+        "thinking_effort": "max",
+        "thinking_budget": "high",
+        "timeout_ms": 120
+      }
+    },
+    {
+      "check": "Validate access-control and least-privilege evidence",
+      "verdict": "mock-review-required",
+      "worker_config": {
+        "model": "mock-low-tier-terra-lula",
+        "thinking_effort": "max",
+        "thinking_budget": "high",
+        "timeout_ms": 120
+      }
+    },
+    {
+      "check": "Assess cybersecurity risk-management documentation",
+      "verdict": "mock-review-required",
+      "worker_config": {
+        "model": "mock-low-tier-terra-lula",
+        "thinking_effort": "max",
+        "thinking_budget": "high",
+        "timeout_ms": 120
+      }
+    }
+  ]
+}
