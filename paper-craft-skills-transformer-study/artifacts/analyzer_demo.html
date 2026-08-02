@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>Attention Is All You Need 深度解析样例</title><style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:960px;margin:auto;line-height:1.75;color:#222}code,pre{background:#f6f8fa}section{border-top:1px solid #ddd;margin-top:2rem}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:.45rem}</style></head><body>
+<h1>Attention Is All You Need：从论文翻译到机制重解释</h1>
+<p><strong>状态：</strong>这是依据 paper-analyzer 工作流生成的 HTML 结构样例；未声称为真实 skill 完整输出。</p>
+<section><h2>论文元信息</h2><ul><li>arXiv:1706.03762；v7: 2023-08-02。</li><li>核心主张：Transformer 仅基于 attention，取消 recurrence 和 convolution。</li><li>关键视觉证据：Figure 1 Transformer architecture；Figure 2 attention。</li></ul></section>
+<section><h2>方法重解释</h2><p>标准 PDF-to-Markdown 会按段落转写；paper-analyzer 的提示要求把输入→处理→输出→为什么更好串成解释链。因此本样例把 Transformer 解释为：用 self-attention 建立全局 token 路由，用 multi-head 保留不同关系子空间，用 positional encoding 弥补无序集合化风险，用 decoder mask 保持自回归约束。</p></section>
+<section><h2>公式与人话解释</h2><p>$$Attention(Q,K,V)=softmax(QK^T/\sqrt{d_k})V$$</p><p>人话：Q 负责提问，K 负责被匹配，V 携带要汇聚的信息；除以 $\sqrt{d_k}$ 是为了避免点积过大导致 softmax 梯度过小。</p><p>$$MultiHead(Q,K,V)=Concat(head_1,...,head_h)W^O$$</p><p>人话：多个 head 不是重复画线，而是在不同投影子空间并行学习不同依赖关系。</p></section>
+<section><h2>代码对照应如何呈现</h2><p>paper-analyzer 要求搜索公开实现并标注论文方法与源码对应。对 Transformer 这篇早期论文，原始 Tensor2Tensor 代码历史复杂；生产输出应明确代码状态，并用替代实现时标注“非论文原始仓库”。</p><pre><code># expected alignment example (illustrative)
+MultiHeadAttention.forward -> Q/K/V projections -> scaled dot-product -> concat/output projection
+TransformerDecoderLayer -> masked self-attention + encoder-decoder attention + feed-forward
+</code></pre></section>
+<section><h2>实验证据表</h2><table><tr><th>任务</th><th>论文报告</th><th>解释</th></tr><tr><td>WMT 2014 En-De</td><td>28.4 BLEU</td><td>超过当时最佳结果含 ensemble 2 BLEU 以上。</td></tr><tr><td>WMT 2014 En-Fr</td><td>41.8 BLEU</td><td>单模型 SOTA，训练成本显著更低。</td></tr></table></section>
+<section><h2>风险标注</h2><ul><li>Verified visual logic: encoder/decoder stack, Q/K/V formula, scaling, multi-head concat, mask, positional encoding。</li><li>Potential hallucination: 若生成图凭空添加不存在的模块、编造 benchmark 或把 cross-attention 画错。</li></ul></section>
+</body></html>

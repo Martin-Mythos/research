@@ -1,0 +1,47 @@
+$ git clone --depth 1 https://github.com/zsyggg/paper-craft-skills external/paper-craft-skills
+Cloning into 'external/paper-craft-skills'...
+$ find external/paper-craft-skills -maxdepth 3 -type f | sort
+external/paper-craft-skills/.git/HEAD
+external/paper-craft-skills/.git/config
+external/paper-craft-skills/.git/description
+external/paper-craft-skills/.git/hooks/applypatch-msg.sample
+external/paper-craft-skills/.git/hooks/commit-msg.sample
+external/paper-craft-skills/.git/hooks/fsmonitor-watchman.sample
+external/paper-craft-skills/.git/hooks/post-update.sample
+external/paper-craft-skills/.git/hooks/pre-applypatch.sample
+external/paper-craft-skills/.git/hooks/pre-commit.sample
+external/paper-craft-skills/.git/hooks/pre-merge-commit.sample
+external/paper-craft-skills/.git/hooks/pre-push.sample
+external/paper-craft-skills/.git/hooks/pre-rebase.sample
+external/paper-craft-skills/.git/hooks/pre-receive.sample
+external/paper-craft-skills/.git/hooks/prepare-commit-msg.sample
+external/paper-craft-skills/.git/hooks/push-to-checkout.sample
+external/paper-craft-skills/.git/hooks/sendemail-validate.sample
+external/paper-craft-skills/.git/hooks/update.sample
+external/paper-craft-skills/.git/index
+external/paper-craft-skills/.git/info/exclude
+external/paper-craft-skills/.git/logs/HEAD
+external/paper-craft-skills/.git/packed-refs
+external/paper-craft-skills/.git/shallow
+external/paper-craft-skills/.gitignore
+external/paper-craft-skills/README.md
+external/paper-craft-skills/README.zh.md
+external/paper-craft-skills/examples/README.md
+external/paper-craft-skills/examples/style_comparison/academic.md
+external/paper-craft-skills/examples/style_comparison/concise.md
+external/paper-craft-skills/examples/style_comparison/storytelling.md
+external/paper-craft-skills/examples/with_code/academic_code.md
+external/paper-craft-skills/examples/with_formulas/academic_formulas.md
+external/paper-craft-skills/images/code_feature.png
+external/paper-craft-skills/images/formula_feature.png
+external/paper-craft-skills/images/hero_banner.png
+external/paper-craft-skills/images/paper_deck_intro.png
+external/paper-craft-skills/images/paper_deck_styles.png
+external/paper-craft-skills/images/styles_comparison.png
+external/paper-craft-skills/images/styles_minimal.png
+external/paper-craft-skills/images/styles_notion.png
+external/paper-craft-skills/skills/paper-analyzer/SKILL.md
+external/paper-craft-skills/skills/paper-analyzer/cover-prompt-simple.txt
+external/paper-craft-skills/skills/paper-analyzer/cover-prompt.md
+external/paper-craft-skills/skills/paper-comic/SKILL.md
+external/paper-craft-skills/skills/paper-deck/SKILL.md
