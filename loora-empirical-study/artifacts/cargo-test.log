@@ -1,0 +1,351 @@
+$ cargo test -p loora-ws-server
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded aho-corasick v1.1.4
+  Downloaded arc-swap v1.9.2
+  Downloaded async-trait v0.1.91
+  Downloaded axum v0.8.9
+  Downloaded bytes v1.12.1
+  Downloaded base64 v0.22.1
+  Downloaded combine v4.6.7
+  Downloaded data-encoding v2.11.0
+  Downloaded errno v0.3.14
+  Downloaded futures-core v0.3.33
+  Downloaded dotenvy v0.15.7
+  Downloaded futures-util v0.3.33
+  Downloaded futures-task v0.3.33
+  Downloaded http v1.5.0
+  Downloaded httparse v1.10.1
+  Downloaded httpdate v1.0.3
+  Downloaded icu_normalizer v2.2.0
+  Downloaded icu_properties_data v2.2.0
+  Downloaded idna_adapter v1.2.2
+  Downloaded lazy_static v1.5.0
+  Downloaded log v0.4.33
+  Downloaded memchr v2.8.3
+  Downloaded nu-ansi-term v0.50.3
+  Downloaded num-traits v0.2.19
+  Downloaded ppv-lite86 v0.2.21
+  Downloaded percent-encoding v2.3.2
+  Downloaded rand v0.9.5
+  Downloaded redis v0.32.7
+  Downloaded reqwest v0.12.28
+  Downloaded rustls-native-certs v0.8.4
+  Downloaded rustversion v1.0.23
+  Downloaded serde_core v1.0.229
+  Downloaded serde_path_to_error v0.1.20
+  Downloaded sha1_smol v1.0.1
+  Downloaded shlex v2.0.1
+  Downloaded smallvec v1.15.2
+  Downloaded subtle v2.6.1
+  Downloaded syn v2.0.119
+  Downloaded thiserror-impl v2.0.19
+  Downloaded tokio v1.53.1
+  Downloaded tower v0.5.3
+  Downloaded tokio-tungstenite v0.28.0
+  Downloaded tower-layer v0.3.3
+  Downloaded tower-http v0.6.11
+  Downloaded tungstenite v0.28.0
+  Downloaded try-lock v0.2.5
+  Downloaded utf-8 v0.7.6
+  Downloaded url v2.5.8
+  Downloaded writeable v0.6.3
+  Downloaded zerocopy v0.8.55
+  Downloaded zeroize v1.9.0
+  Downloaded zerovec-derive v0.11.3
+  Downloaded zmij v1.0.23
+  Downloaded bitflags v2.13.1
+  Downloaded cfg-if v1.0.4
+  Downloaded digest v0.10.7
+  Downloaded find-msvc-tools v0.1.9
+  Downloaded form_urlencoded v1.2.2
+  Downloaded getrandom v0.2.17
+  Downloaded http-body v1.1.0
+  Downloaded hyper-util v0.1.20
+  Downloaded icu_collections v2.2.0
+  Downloaded idna v1.1.0
+  Downloaded ipnet v2.12.0
+  Downloaded mime v0.3.17
+  Downloaded matchit v0.8.4
+  Downloaded openssl-probe v0.2.1
+  Downloaded proc-macro2 v1.0.107
+  Downloaded rand_core v0.9.5
+  Downloaded ring v0.17.14
+  Downloaded serde_derive v1.0.229
+  Downloaded rustls-webpki v0.103.13
+  Downloaded serde_urlencoded v0.7.1
+  Downloaded serde_json v1.0.151
+  Downloaded stable_deref_trait v1.2.1
+  Downloaded syn v3.0.3
+  Downloaded tokio-macros v2.7.2
+  Downloaded tinystr v0.8.3
+  Downloaded tracing-attributes v0.1.31
+  Downloaded tracing v0.1.44
+  Downloaded typenum v1.20.1
+  Downloaded utf8_iter v1.0.4
+  Downloaded webpki-roots v1.0.9
+  Downloaded yoke v0.8.3
+  Downloaded zerovec v0.11.6
+  Downloaded atomic-waker v1.1.2
+  Downloaded cc v1.4.0
+  Downloaded cpufeatures v0.2.17
+  Downloaded futures-macro v0.3.33
+  Downloaded getrandom v0.3.4
+  Downloaded hyper v1.11.0
+  Downloaded icu_properties v2.2.0
+  Downloaded libc v0.2.189
+  Downloaded once_cell v1.21.4
+  Downloaded litemap v0.8.2
+  Downloaded potential_utf v0.1.5
+  Downloaded pin-project-lite v0.2.17
+  Downloaded serde v1.0.229
+  Downloaded ryu v1.0.23
+  Downloaded slab v0.4.12
+  Downloaded socket2 v0.6.5
+  Downloaded tokio-rustls v0.26.4
+  Downloaded tokio-tungstenite v0.29.0
+  Downloaded tungstenite v0.29.0
+  Downloaded tracing-subscriber v0.3.23
+  Downloaded zerofrom v0.1.8
+  Downloaded yoke-derive v0.8.2
+  Downloaded backon v1.6.0
+  Downloaded block-buffer v0.10.4
+  Downloaded futures-sink v0.3.33
+  Downloaded generic-array v0.14.7
+  Downloaded icu_provider v2.2.0
+  Downloaded itoa v1.0.18
+  Downloaded quote v1.0.47
+  Downloaded rand_chacha v0.9.0
+  Downloaded sha1 v0.10.7
+  Downloaded signal-hook-registry v1.4.8
+  Downloaded thiserror v2.0.19
+  Downloaded thread_local v1.1.10
+  Downloaded unicode-ident v1.0.24
+  Downloaded untrusted v0.9.0
+  Downloaded autocfg v1.5.1
+  Downloaded displaydoc v0.2.7
+  Downloaded hmac v0.12.1
+  Downloaded icu_normalizer_data v2.2.0
+  Downloaded num-bigint v0.4.8
+  Downloaded regex-syntax v0.8.11
+  Downloaded sha2 v0.10.9
+  Downloaded synstructure v0.13.2
+  Downloaded tokio-util v0.7.19
+  Downloaded want v0.3.1
+  Downloaded axum-core v0.5.6
+  Downloaded futures-channel v0.3.33
+  Downloaded matchers v0.2.0
+  Downloaded regex-automata v0.4.16
+  Downloaded sharded-slab v0.1.7
+  Downloaded tracing-core v0.1.36
+  Downloaded tracing-log v0.2.0
+  Downloaded fastrand v2.5.0
+  Downloaded mio v1.2.2
+  Downloaded rustls-pki-types v1.15.1
+  Downloaded version_check v0.9.5
+  Downloaded crypto-common v0.1.7
+  Downloaded num-integer v0.1.46
+  Downloaded tower-service v0.3.3
+  Downloaded http-body-util v0.1.4
+  Downloaded sync_wrapper v1.0.2
+  Downloaded icu_locale_core v2.2.0
+  Downloaded zerotrie v0.2.4
+  Downloaded rustls v0.23.43
+  Downloaded zerofrom-derive v0.1.7
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling libc v0.2.189
+   Compiling syn v3.0.3
+   Compiling syn v2.0.119
+   Compiling bytes v1.12.1
+   Compiling synstructure v0.13.2
+   Compiling pin-project-lite v0.2.17
+   Compiling itoa v1.0.18
+   Compiling stable_deref_trait v1.2.1
+   Compiling futures-core v0.3.33
+   Compiling errno v0.3.14
+   Compiling zerofrom-derive v0.1.7
+   Compiling yoke-derive v0.8.2
+   Compiling zerovec-derive v0.11.3
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling version_check v0.9.5
+   Compiling cfg-if v1.0.4
+   Compiling generic-array v0.14.7
+   Compiling signal-hook-registry v1.4.8
+   Compiling displaydoc v0.2.7
+   Compiling zerovec v0.11.6
+   Compiling tokio-macros v2.7.2
+   Compiling mio v1.2.2
+   Compiling socket2 v0.6.5
+   Compiling once_cell v1.21.4
+   Compiling log v0.4.33
+   Compiling tokio v1.53.1
+   Compiling http v1.5.0
+   Compiling subtle v2.6.1
+   Compiling typenum v1.20.1
+   Compiling smallvec v1.15.2
+   Compiling futures-sink v0.3.33
+   Compiling tinystr v0.8.3
+   Compiling zerocopy v0.8.55
+   Compiling litemap v0.8.2
+   Compiling httparse v1.10.1
+   Compiling getrandom v0.3.4
+   Compiling writeable v0.6.3
+   Compiling icu_locale_core v2.2.0
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling tracing-core v0.1.36
+   Compiling zerotrie v0.2.4
+   Compiling potential_utf v0.1.5
+   Compiling futures-macro v0.3.33
+   Compiling icu_normalizer_data v2.2.0
+   Compiling futures-task v0.3.33
+   Compiling utf8_iter v1.0.4
+   Compiling slab v0.4.12
+   Compiling icu_properties_data v2.2.0
+   Compiling futures-util v0.3.33
+   Compiling icu_collections v2.2.0
+   Compiling icu_provider v2.2.0
+   Compiling digest v0.10.7
+   Compiling tracing-attributes v0.1.31
+   Compiling percent-encoding v2.3.2
+   Compiling serde_core v1.0.229
+   Compiling tracing v0.1.44
+   Compiling ppv-lite86 v0.2.21
+   Compiling rand_core v0.9.5
+   Compiling http-body v1.1.0
+   Compiling cpufeatures v0.2.17
+   Compiling thiserror v2.0.19
+   Compiling zeroize v1.9.0
+   Compiling rustls-pki-types v1.15.1
+   Compiling icu_properties v2.2.0
+   Compiling icu_normalizer v2.2.0
+   Compiling rand_chacha v0.9.0
+   Compiling form_urlencoded v1.2.2
+   Compiling thiserror-impl v2.0.19
+   Compiling tower-service v0.3.3
+   Compiling autocfg v1.5.1
+   Compiling rand v0.9.5
+   Compiling num-traits v0.2.19
+   Compiling idna_adapter v1.2.2
+   Compiling sha1 v0.10.7
+   Compiling futures-channel v0.3.33
+   Compiling sync_wrapper v1.0.2
+   Compiling tower-layer v0.3.3
+   Compiling serde v1.0.229
+   Compiling try-lock v0.2.5
+   Compiling data-encoding v2.11.0
+   Compiling zmij v1.0.23
+   Compiling memchr v2.8.3
+   Compiling want v0.3.1
+   Compiling idna v1.1.0
+   Compiling serde_derive v1.0.229
+   Compiling httpdate v1.0.3
+   Compiling rustls v0.23.43
+   Compiling ryu v1.0.23
+   Compiling untrusted v0.9.0
+   Compiling rustversion v1.0.23
+   Compiling atomic-waker v1.1.2
+   Compiling serde_json v1.0.151
+   Compiling hyper v1.11.0
+   Compiling rustls-webpki v0.103.13
+   Compiling url v2.5.8
+   Compiling tower v0.5.3
+   Compiling http-body-util v0.1.4
+   Compiling base64 v0.22.1
+   Compiling regex-syntax v0.8.11
+   Compiling ipnet v2.12.0
+   Compiling hyper-util v0.1.20
+   Compiling regex-automata v0.4.16
+   Compiling num-integer v0.1.46
+   Compiling serde_urlencoded v0.7.1
+   Compiling tungstenite v0.29.0
+   Compiling tokio-util v0.7.19
+   Compiling openssl-probe v0.2.1
+   Compiling lazy_static v1.5.0
+   Compiling fastrand v2.5.0
+   Compiling mime v0.3.17
+   Compiling axum-core v0.5.6
+   Compiling backon v1.6.0
+   Compiling sharded-slab v0.1.7
+   Compiling rustls-native-certs v0.8.4
+   Compiling combine v4.6.7
+   Compiling tokio-tungstenite v0.29.0
+   Compiling tokio-rustls v0.26.4
+   Compiling arc-swap v1.9.2
+   Compiling matchers v0.2.0
+   Compiling num-bigint v0.4.8
+   Compiling serde_path_to_error v0.1.20
+   Compiling webpki-roots v1.0.9
+   Compiling tracing-log v0.2.0
+   Compiling thread_local v1.1.10
+   Compiling sha1_smol v1.0.1
+   Compiling matchit v0.8.4
+   Compiling nu-ansi-term v0.50.3
+   Compiling axum v0.8.9
+   Compiling tracing-subscriber v0.3.23
+   Compiling redis v0.32.7
+   Compiling sha2 v0.10.9
+   Compiling hmac v0.12.1
+   Compiling async-trait v0.1.91
+   Compiling dotenvy v0.15.7
+   Compiling bitflags v2.13.1
+   Compiling utf-8 v0.7.6
+   Compiling tungstenite v0.28.0
+   Compiling tower-http v0.6.11
+   Compiling reqwest v0.12.28
+   Compiling loora-ws-server v0.1.0 (/tmp/loora-target/crates/ws-server)
+   Compiling tokio-tungstenite v0.28.0
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3m 47s
+     Running unittests src/lib.rs (target/debug/deps/loora_ws_server-b4b540298d4420da)
+
+running 4 tests
+test protocol::tests::channel_matches_typescript_encoding ... ok
+test config::tests::reads_rotation_and_origins ... ok
+test protocol::tests::normalizes_presence_like_javascript ... ok
+test protocol::tests::verifies_a_ticket_signed_by_the_typescript_package ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/main.rs (target/debug/deps/loora_ws_server-4e169a0bb01805ad)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/service.rs (target/debug/deps/service-3c34a8025fa82794)
+
+running 4 tests
+test redis_shares_events_and_ticket_claims_between_instances ... ok
+test tickets_are_single_use ... FAILED
+test websocket_and_ingest_match_the_existing_contract ... FAILED
+test presence_is_stamped_not_echoed_and_cleared ... ok
+
+failures:
+
+---- tickets_are_single_use stdout ----
+
+thread 'tickets_are_single_use' panicked at crates/ws-server/tests/service.rs:195:5:
+assertion `left == right` failed
+  left: 403
+ right: 401
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- websocket_and_ingest_match_the_existing_contract stdout ----
+
+thread 'websocket_and_ingest_match_the_existing_contract' panicked at crates/ws-server/tests/service.rs:177:5:
+assertion `left == right` failed
+  left: 403
+ right: 200
+
+
+failures:
+    tickets_are_single_use
+    websocket_and_ingest_match_the_existing_contract
+
+test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+error: test failed, to rerun pass `-p loora-ws-server --test service`
+EXIT_CODE=101

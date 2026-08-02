@@ -1,0 +1,90 @@
+$ bun representative-scenario.ts
+2368 | }
+2369 |
+2370 | export function assertDocument(document: unknown): CanvasDocument {
+2371 |   const result = validateDocument(document)
+2372 |   if (!result.ok) {
+2373 |     throw new Error(result.issues.map((issue) => `${issue.path}: ${issue.message}`).join('\n'))
+                     ^
+error: schemaVersion: Expected Canvas schema 2
+      at assertDocument (/tmp/loora-target/packages/canvas/src/model.ts:2373:15)
+      at createPreparedCanvasExportState (/tmp/loora-target/packages/canvas/src/export.ts:785:3)
+      at compileStandaloneHtml (/tmp/loora-target/packages/canvas/src/export.ts:1049:20)
+      at /tmp/loora-target/representative-scenario.ts:19:32
+
+Bun v1.3.14 (Linux x64)
+EXIT_CODE=1
+$ bun representative-scenario.ts (corrected API use)
+{
+  "nodeCount": 3,
+  "fragmentBytes": 7565,
+  "tree": {
+    "id": "page_11ca7ed7b3f44dc09f3306c4191faadf",
+    "ref": {
+      "nodeId": "page_11ca7ed7b3f44dc09f3306c4191faadf",
+      "instancePath": []
+    },
+    "type": "page",
+    "name": "Deployment approval",
+    "layout": {
+      "mode": "absolute",
+      "position": "absolute",
+      "width": {
+        "unit": "px",
+        "value": 1440
+      },
+      "height": {
+        "unit": "px",
+        "value": 900
+      }
+    },
+    "states": {},
+    "children": [
+      {
+        "id": "frame_58ab6df9e3e6497b9a4306959086e401",
+        "ref": {
+          "nodeId": "frame_58ab6df9e3e6497b9a4306959086e401",
+          "instancePath": []
+        },
+        "type": "frame",
+        "name": "Approve deployment",
+        "layout": {
+          "mode": "absolute",
+          "position": "flow",
+          "width": {
+            "unit": "fill"
+          },
+          "height": {
+            "unit": "hug"
+          }
+        },
+        "children": [
+          {
+            "id": "text_f296bb427b4d42869ae5ee020e642568",
+            "ref": {
+              "nodeId": "text_f296bb427b4d42869ae5ee020e642568",
+              "instancePath": []
+            },
+            "type": "text",
+            "name": "Label",
+            "layout": {
+              "mode": "absolute",
+              "position": "flow",
+              "width": {
+                "unit": "hug"
+              },
+              "height": {
+                "unit": "hug"
+              }
+            },
+            "text": "Approve deployment",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "htmlBytes": 8034,
+  "reactBytes": 10134
+}
+EXIT_CODE=0

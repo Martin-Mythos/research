@@ -1,0 +1,4 @@
+## typecheck
+apps/web/scripts/benchmark-api.ts(1,34): error TS2307: Cannot find module '@orpc/client' or its corresponding type declarations.
+apps/web/scripts/benchmark-api.ts(2,25): error TS2307: Cannot find module '@orpc/client/fetch' or its corresponding type declarations.
+EXIT_CODE=2

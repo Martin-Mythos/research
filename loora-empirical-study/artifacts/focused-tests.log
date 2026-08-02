@@ -1,0 +1,679 @@
+$ bun test packages/canvas/src packages/agent/src apps/mcp/src/auth.test.ts apps/ws/src/config.test.ts apps/web/src/lib/sanitize.test.ts packages/editor/src/lib/canvas-html-import.test.ts
+bun test v1.3.14 (0d9b296a)
+
+apps/ws/src/config.test.ts:
+(pass) ws config > reads the shared secrets and the bus [2.98ms]
+(pass) ws config > falls back to the auth origin, and to a single process without Redis [0.58ms]
+(pass) ws config > accepts the secret being retired during a rotation [0.27ms]
+(pass) ws config > refuses to start without credentials it can trust [1.03ms]
+
+apps/mcp/src/auth.test.ts:
+(pass) createMcpSessionVerifier > does not call the auth server without a bearer token [4.29ms]
+(pass) createMcpSessionVerifier > verifies tokens through the remote Better Auth server [6.03ms]
+(pass) createMcpSessionVerifier > treats an unavailable auth server as unauthenticated [1.07ms]
+(pass) createMcpSessionVerifier > stops waiting when the auth server exceeds its timeout [11.00ms]
+(pass) createMcpSessionVerifier > caches verified sessions per token instead of re-verifying every call [1.35ms]
+(pass) createMcpSessionVerifier > never caches failed verification [1.02ms]
+(pass) createMcpSessionVerifier > does not serve a cached session past the token expiry [32.51ms]
+(pass) createMcpSessionVerifier > bypasses the cache when the TTL is zero [0.97ms]
+
+packages/canvas/src/merge.test.ts:
+(pass) semantic Canvas merge > merges independent fields on the same node [15.10ms]
+(pass) semantic Canvas merge > surfaces only the exact field changed in both [3.28ms]
+
+packages/canvas/src/react.test.tsx:
+(pass) Canvas React surface > routes text-edit signals only to the requested node [1.11ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:170:5)
+(fail) Canvas React surface > does not subscribe ordinary nodes to an empty instance id [6.03ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:180:18)
+(fail) Canvas React surface > releases the camera compositing hint when movement becomes idle [2.66ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:195:18)
+(fail) Canvas React surface > uses host theme tokens for the workspace and grid [2.38ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:220:18)
+(fail) Canvas React surface > recovers a collapsed page and keeps repeated resizes aligned [2.12ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:274:18)
+(fail) Canvas React surface > selects top-level layers, drills into frames, and deep-selects descendants [2.67ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:368:18)
+(fail) Canvas React surface > renders nested real DOM and nudges the selected node transactionally [2.13ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:398:18)
+(fail) Canvas React surface > draws where a reorder would land, and refuses the slot it came from [4.50ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:453:18)
+(fail) Canvas React surface > detaches a flow child from its arranging parent when the drop is modified [2.27ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:511:18)
+(fail) Canvas React surface > reorders a flow child inside an arranging parent instead of ejecting it [3.47ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:548:18)
+(fail) Canvas React surface > places a flow child dropped in a free parent at the box it was rendered in [3.44ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:596:18)
+(fail) Canvas React surface > keeps an absolute child inside a clipped parent and guides it to the walls [3.40ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:680:18)
+(fail) Canvas React surface > still moves a child that is larger than its clipped parent [1.86ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:744:18)
+(fail) Canvas React surface > resolves where an outside drop lands, in flow and in free space [2.62ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:798:18)
+(fail) Canvas React surface > commits plaintext editing once on blur and keeps undo available [2.76ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:824:18)
+(fail) Canvas React surface > renames a layer from its selection label [2.50ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:856:18)
+(fail) Canvas React surface > edits text when pointer capture retargets the double click to the surface [2.95ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:878:18)
+(fail) Canvas React surface > owns ctrl-wheel so browser zoom cannot take over [7.67ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:909:18)
+(fail) Canvas React surface > clears stale selection when undo removes the selected node [2.37ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:954:18)
+(fail) Canvas React surface > resolves a named component variant inside an instance [5.52ms]
+251 |     throw error;
+252 |   }
+253 |   if (!baseElement) {
+254 |     // default to document.body instead of documentElement to avoid output of potentially-large
+255 |     // head elements (such as JSS style blocks) in debug output
+256 |     baseElement = document.body;
+                        ^
+ReferenceError: document is not defined
+      at render (/tmp/loora-target/node_modules/.bun/@testing-library+react@16.3.2+826600641c42c876/node_modules/@testing-library/react/dist/pure.js:256:19)
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/react.test.tsx:971:18)
+(fail) Canvas React surface > repositions the selection overlay when the camera moves [3.34ms]
+
+packages/canvas/src/html-import-css.test.ts:
+(pass) HTML import sandbox CSS > embeds official Tailwind Preflight for Paper snapshot measurement [0.70ms]
+
+packages/canvas/src/engine.test.ts:
+(pass) Canvas transactions > applies operations atomically and returns a working inverse [11.15ms]
+(pass) Canvas transactions > keeps state declarations on the existing node transaction path [2.67ms]
+(pass) Canvas transactions > restores node metadata exactly when a merging patch is undone [1.97ms]
+(pass) Canvas transactions > validates a whole-object replace without a full document pass [3.97ms]
+(pass) Canvas transactions > deletes a subtree that the same transaction just added to [4.87ms]
+(pass) Canvas transactions > rejects a fast-path patch whose interaction names an undeclared state [2.37ms]
+(pass) Canvas transactions > updates named themes and their token modes atomically [2.99ms]
+(pass) Canvas transactions > activates a named theme as the persisted default [3.15ms]
+(pass) Canvas transactions > refuses to activate a theme that does not exist [2.70ms]
+(pass) Canvas transactions > leaves the source untouched when final validation fails [2.15ms]
+(pass) Canvas transactions > makes transaction retries idempotent [2.09ms]
+(pass) Canvas transactions > coalesces adjacent edits with the same history key [2.85ms]
+(pass) Canvas transactions > checks touched fields and rebases independent edits [2.66ms]
+(pass) Canvas transactions > keeps direct fast-path application safe for an invalid document timestamp [1.95ms]
+(pass) Canvas transactions > does not alias the source animation dictionary [3.06ms]
+(pass) Canvas transactions > transfers an isolated validated snapshot into exactly one engine [2.99ms]
+(pass) Canvas transactions > bounds undo history by entry count [4.09ms]
+(pass) Canvas transactions > does not re-sort siblings for a non-structural patch [9.71ms]
+(pass) Canvas transactions > only bumps document-wide domains that affect their derived styles [4.96ms]
+(pass) Canvas transactions > uses midpoint ordering and signals unsafe gaps [0.28ms]
+(pass) Canvas transactions > rejects malformed, non-serializable transactions [0.45ms]
+(pass) Canvas transactions > rejects unknown operation fields and malformed preconditions [1.13ms]
+582 |       patch: { name: `Changed ${index}` },
+583 |     }))
+584 |     const started = performance.now()
+585 |     engine.apply({ id: 'bulk', label: 'Bulk edit', operations })
+586 |     const duration = performance.now() - started
+587 |     expect(duration).toBeLessThan(8)
+                           ^
+error: expect(received).toBeLessThan(expected)
+
+Expected: < 8
+Received: 8.703326999999945
+
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/engine.test.ts:587:22)
+(fail) Canvas transactions > keeps a 100-node transaction on a 5,000-node document within the engine gate [716.35ms]
+
+packages/canvas/src/motion.test.ts:
+(pass) motion values > rejects the shapes a canvas must not store [0.78ms]
+(pass) motion values > writes the CSS a browser runs [2.10ms]
+(pass) motion values > no preset holds the properties a hover needs [0.06ms]
+(pass) motion on a document > a node may only play animations the document defines [1.97ms]
+(pass) motion on a document > reads a document written before motion existed [0.81ms]
+(pass) motion on a document > an engine transaction defines motion and inverts cleanly [3.85ms]
+(pass) motion on a document > setting one visual state leaves the others alone [1.79ms]
+(pass) motion stylesheet > pointer states become real rules, and self-starting motion rides the node [2.32ms]
+(pass) motion stylesheet > a hover-triggered animation waits for the pointer [0.38ms]
+(pass) exported motion > the download carries the same rules the canvas showed [6.35ms]
+(pass) exported motion > a document with no motion exports no motion [0.92ms]
+
+packages/canvas/src/export.test.ts:
+(pass) Canvas exports > generates deterministic, escaped standalone HTML [2.80ms]
+(pass) Canvas exports > exports a directly addressed node for expiring legacy links [1.14ms]
+(pass) Canvas exports > prepares one immutable snapshot and reuses its compiled result [1.63ms]
+(pass) Canvas exports > keeps overlapping rich-text runs in source-order precedence [1.36ms]
+(pass) Canvas exports > includes referenced nested components but excludes unused definitions [3.69ms]
+(pass) Canvas exports > generates one-way React and versioned JSON outputs [1.78ms]
+(pass) Canvas exports > generates copyable JSX and Tailwind components for a selection [3.49ms]
+(pass) Canvas exports > exports zero-width overrides in the base rule and orders media queries by width [2.89ms]
+(pass) Canvas exports > shows a text node again at a breakpoint that unhides it [1.40ms]
+(pass) Canvas exports > hides a node at one breakpoint only [1.44ms]
+(pass) Canvas exports > exports a font stack as separate families [0.72ms]
+(pass) Canvas exports > exports declarative actions and active theme token values [2.92ms]
+353 |     expect(react).toContain("action.type === 'set-theme'")
+354 |     expect(jsx).toContain('data-loora-theme-values=')
+355 |     expect(tailwind).toContain('data-loora-theme-values=')
+356 |
+357 |     const sandbox =
+358 |       globalThis.document.implementation.createHTMLDocument('theme-runtime')
+                       ^
+TypeError: undefined is not an object (evaluating 'globalThis.document.implementation')
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:358:18)
+(fail) Canvas exports > switches generic named themes from local state in every code export [4.40ms]
+445 |     expect(() => transpiler.transformSync(react)).not.toThrow()
+446 |     expect(() => transpiler.transformSync(jsx)).not.toThrow()
+447 |     expect(() => transpiler.transformSync(tailwind)).not.toThrow()
+448 |
+449 |     const sandbox =
+450 |       globalThis.document.implementation.createHTMLDocument('runtime')
+                       ^
+TypeError: undefined is not an object (evaluating 'globalThis.document.implementation')
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:450:18)
+(fail) Canvas exports > exports typed state, event conditions, and a bounded local runtime [10.42ms]
+(pass) Canvas exports > renders component variant overrides and exports switching rules [6.25ms]
+585 |       order: 2_048,
+586 |     })
+587 |
+588 |     const compiled = compileCanvas(document)
+589 |     const sandbox =
+590 |       globalThis.document.implementation.createHTMLDocument('instances')
+                       ^
+TypeError: undefined is not an object (evaluating 'globalThis.document.implementation')
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:590:18)
+(fail) Canvas exports > keeps component state local to each rendered instance [3.36ms]
+645 |     expect(rule.lastIndexOf('display:none')).toBeGreaterThan(
+646 |       rule.indexOf('display:flex'),
+647 |     )
+648 |
+649 |     const sandbox =
+650 |       globalThis.document.implementation.createHTMLDocument('visibility')
+                       ^
+TypeError: undefined is not an object (evaluating 'globalThis.document.implementation')
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:650:18)
+(fail) Canvas exports > keeps hidden flex frames hidden in CSS and when shown at runtime [2.01ms]
+678 |       return new Response(new Uint8Array([137, 80, 78, 71]), {
+679 |         headers: { 'Content-Type': 'image/png' },
+680 |       })
+681 |     }) as typeof fetch
+682 |
+683 |     const host = document.createElement('div')
+                       ^
+ReferenceError: document is not defined
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:683:18)
+(fail) inlineBrowserImages > blanks an image it cannot read rather than tainting the capture [0.68ms]
+697 |
+698 |   it('leaves an image that is already inline alone', async () => {
+699 |     globalThis.fetch = (async () => {
+700 |       throw new Error('should not be called')
+701 |     }) as unknown as typeof fetch
+702 |     const host = document.createElement('div')
+                       ^
+ReferenceError: document is not defined
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:702:18)
+(fail) inlineBrowserImages > leaves an image that is already inline alone [0.44ms]
+713 |       fetches += 1
+714 |       return new Response(new Uint8Array([137, 80, 78, 71]), {
+715 |         headers: { 'Content-Type': 'image/png' },
+716 |       })
+717 |     }) as unknown as typeof fetch
+718 |     const host = document.createElement('div')
+                       ^
+ReferenceError: document is not defined
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:718:18)
+(fail) inlineBrowserImages > fetches a repeated image once before reusing its data URL [0.45ms]
+737 |       active -= 1
+738 |       return new Response(new Uint8Array([137, 80, 78, 71]), {
+739 |         headers: { 'Content-Type': 'image/png' },
+740 |       })
+741 |     }) as unknown as typeof fetch
+742 |     const host = document.createElement('div')
+                       ^
+ReferenceError: document is not defined
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:742:18)
+(fail) inlineBrowserImages > bounds simultaneous image reads during a capture [0.43ms]
+748 |     expect(await inlineBrowserImages(host)).toEqual([])
+749 |     expect(maximum).toBe(4)
+750 |   })
+751 |
+752 |   it('refuses a PNG allocation large enough to exhaust browser memory', async () => {
+753 |     const host = document.createElement('div')
+                       ^
+ReferenceError: document is not defined
+      at <anonymous> (/tmp/loora-target/packages/canvas/src/export.test.ts:753:18)
+(fail) inlineBrowserImages > refuses a PNG allocation large enough to exhaust browser memory [0.68ms]
+
+packages/canvas/src/model.test.ts:
+(pass) CanvasDocument > accepts a normalized editable page tree [1.08ms]
+(pass) CanvasDocument > validates typed local state and declarative event transitions [1.28ms]
+(pass) CanvasDocument > rejects content roots and hierarchy cycles [0.93ms]
+(pass) CanvasDocument > marks every descendant whose hierarchy reaches a cycle [1.01ms]
+(pass) CanvasDocument > validates state lookup on a deep hierarchy in linear time [260.99ms]
+(pass) CanvasDocument > reports every component that can reach an instance cycle [2.64ms]
+(pass) CanvasDocument > rejects unsafe image and SVG payloads [2.96ms]
+(pass) CanvasDocument > validates instance paths without duplicating component descendants [4.32ms]
+(pass) CanvasDocument > resolves responsive overrides from the largest matching minimum width [0.84ms]
+(pass) CanvasDocument > accepts a partial typography override while still requiring a complete node style [1.43ms]
+(pass) CanvasDocument > rejects CSS and interaction injection at the model boundary [1.15ms]
+(pass) CanvasDocument > validates theme modes, dictionary ids, and exact root fields [2.09ms]
+(pass) CanvasDocument > validates generic theme actions against named document themes [1.54ms]
+(pass) CanvasDocument > rejects values that cannot survive a JSON round trip [0.24ms]
+(pass) CanvasDocument > validates comment pins against exact node references [1.67ms]
+
+packages/canvas/src/import.test.ts:
+(pass) HTML snapshot import > converts computed layout and styles into a valid editable Canvas tree [7.85ms]
+(pass) HTML snapshot import > drops executable and relative URLs instead of persisting invalid nodes [0.64ms]
+(pass) HTML snapshot import > preserves a CSS background image as an image layer for later asset upload [2.26ms]
+(pass) HTML snapshot import > omits the Paper Snapshot wrapper while preserving button geometry and text [2.70ms]
+(pass) HTML snapshot import > places a whole container absolutely when one child cannot be arranged [2.25ms]
+(pass) HTML snapshot import > keeps the box a styled label is painted in [1.35ms]
+(pass) HTML snapshot import > preserves no-wrap text used by inline Paper Snapshot buttons [1.45ms]
+(pass) HTML snapshot import > does not turn an invisible CSS border into a solid Canvas stroke [0.92ms]
+(pass) HTML snapshot import > inherits presentation attributes for editable SVG paths [1.72ms]
+(pass) HTML snapshot import > normalizes color(srgb) fills and oklab shadows from Paper pastes [2.95ms]
+(pass) HTML snapshot import > maps radial and linear CSS gradients onto Canvas paints [3.10ms]
+(pass) HTML snapshot import > promotes SVG circle and rect shapes to editable paths [1.09ms]
+(pass) HTML snapshot import > keeps flex when children only have fixed margins, not auto [1.33ms]
+(pass) HTML snapshot import > respects background-size when placing a CSS background image layer [1.11ms]
+(pass) HTML snapshot import > imports a rasterized subtree as an image node [0.56ms]
+(pass) HTML snapshot import > unwraps light-dark() and drops unresolvable live colors instead of failing [1.68ms]
+
+packages/agent/src/repair-layout.test.ts:
+(pass) repairStackedLayout > flows children that an arranging parent had stacked on its origin [2.05ms]
+(pass) repairStackedLayout > drops the 320x200 placeholder box off repaired text [0.23ms]
+(pass) repairStackedLayout > keeps deliberate overlays that carry real coordinates [0.31ms]
+(pass) repairStackedLayout > leaves a lone absolute child of a plain frame alone [0.14ms]
+(pass) repairStackedLayout > still unstacks a pile inside a plain frame [0.47ms]
+(pass) repairStackedLayout > is a no-op on a healthy document [0.32ms]
+(pass) repairStackedLayout > never moves canvas roots [0.19ms]
+
+packages/agent/src/motion-tools.test.ts:
+(pass) setAnimations > takes a preset name and defines the whole thing [5.01ms]
+(pass) setAnimations > an explicit definition wins over a preset of the same id [4.13ms]
+(pass) setAnimations > refuses a call that would do nothing [1.27ms]
+(pass) animateNodes > a hover preset brings its own transition [4.81ms]
+(pass) animateNodes > a stagger spaces a list out in the order it was given [2.90ms]
+(pass) animateNodes > clearing takes every kind of motion off at once [2.42ms]
+(pass) animateNodes > refuses a call that would do nothing [0.45ms]
+
+packages/agent/src/canvas-tools.test.ts:
+(pass) Canvas agent NodeRefs > creates readable Page state and event rules without source code [22.28ms]
+(pass) Canvas agent NodeRefs > creates named themes before tokens that use their modes [3.21ms]
+(pass) Canvas agent NodeRefs > activates a persisted default theme in the same call [0.62ms]
+(pass) Canvas agent NodeRefs > setTokens requires at least one change [0.64ms]
+(pass) Canvas agent NodeRefs > reads source and effective instance state [0.75ms]
+(pass) Canvas agent NodeRefs > rejects a NodeRef whose source is outside the instance component [0.36ms]
+(pass) Canvas agent NodeRefs > semantic trees return usable refs for instance descendants [0.25ms]
+(pass) Canvas agent NodeRefs > keeps structural insertion out of instance overrides [0.39ms]
+(pass) Canvas agent NodeRefs > builds visual instance patches and rejects structural overrides [0.66ms]
+(pass) Canvas agent NodeRefs > collapses descendant deletes into their requested ancestor [4.71ms]
+(pass) descriptor layout defaults > nested content flows instead of stacking on the parent origin [0.78ms]
+(pass) descriptor layout defaults > text never inherits the 320x200 placeholder box [0.18ms]
+(pass) descriptor layout defaults > coordinates and an explicit position still mean absolute [0.18ms]
+(pass) descriptor layout defaults > images keep a real box so they do not hug to nothing [0.13ms]
+(pass) MCP input leniency and documentation > accepts JSON-serialized structured arguments [9.13ms]
+(pass) MCP input leniency and documentation > accepts JSON-serialized layout, style, and children on createPage [1.99ms]
+(pass) MCP input leniency and documentation > rejects plain strings where structures belong [2.89ms]
+(pass) MCP input leniency and documentation > typography defaults letterSpacing and align [1.88ms]
+
+apps/web/src/lib/sanitize.test.ts:
+1 | import { describe, expect, it } from 'bun:test'
+2 | import { sanitizeHtml, toXhtml } from './sanitize'
+3 |
+4 | describe('sanitizeHtml', () => {
+5 |   it('strips script tags', () => {
+6 |     expect(sanitizeHtml('<div>hi</div><script>alert(1)</script>')).toBe('<div>hi</div>')
+                                                                       ^
+error: expect(received).toBe(expected)
+
+Expected: "<div>hi</div>"
+Received: "<div>hi</div><script>alert(1)</script>"
+
+      at <anonymous> (/tmp/loora-target/apps/web/src/lib/sanitize.test.ts:6:68)
+(fail) sanitizeHtml > strips script tags [0.59ms]
+ 5 |   it('strips script tags', () => {
+ 6 |     expect(sanitizeHtml('<div>hi</div><script>alert(1)</script>')).toBe('<div>hi</div>')
+ 7 |   })
+ 8 |
+ 9 |   it('strips iframes, objects, forms', () => {
+10 |     expect(sanitizeHtml('<iframe src="x"></iframe><object></object><form><input/></form>')).toBe(
+                                                                                                 ^
+error: expect(received).toBe(expected)
+
+Expected: ""
+Received: "<iframe src="x"></iframe><object></object><form><input/></form>"
+
+      at <anonymous> (/tmp/loora-target/apps/web/src/lib/sanitize.test.ts:10:93)
+(fail) sanitizeHtml > strips iframes, objects, forms [0.08ms]
+11 |       '',
+12 |     )
+13 |   })
+14 |
+15 |   it('strips event handler attributes', () => {
+16 |     expect(sanitizeHtml('<button onclick="alert(1)">go</button>')).toBe('<button>go</button>')
+                                                                        ^
+error: expect(received).toBe(expected)
+
+Expected: "<button>go</button>"
+Received: "<button onclick="alert(1)">go</button>"
+
+      at <anonymous> (/tmp/loora-target/apps/web/src/lib/sanitize.test.ts:16:68)
+(fail) sanitizeHtml > strips event handler attributes [0.12ms]
+15 |   it('strips event handler attributes', () => {
+16 |     expect(sanitizeHtml('<button onclick="alert(1)">go</button>')).toBe('<button>go</button>')
+17 |   })
+18 |
+19 |   it('strips javascript: urls', () => {
+20 |     expect(sanitizeHtml('<a href="javascript:alert(1)">x</a>')).toBe('<a>x</a>')
+                                                                     ^
+error: expect(received).toBe(expected)
+
+Expected: "<a>x</a>"
+Received: "<a href="javascript:alert(1)">x</a>"
+
+      at <anonymous> (/tmp/loora-target/apps/web/src/lib/sanitize.test.ts:20:65)
+(fail) sanitizeHtml > strips javascript: urls [0.06ms]
+19 |   it('strips javascript: urls', () => {
+20 |     expect(sanitizeHtml('<a href="javascript:alert(1)">x</a>')).toBe('<a>x</a>')
+21 |   })
+22 |
+23 |   it('strips scheme obfuscation and non-image data urls', () => {
+24 |     expect(sanitizeHtml('<a href="java\nscript:alert(1)">x</a>')).toBe('<a>x</a>')
+                                                                       ^
+error: expect(received).toBe(expected)
+
+- "<a>x</a>"
++ "<a href="java
++ script:alert(1)">x</a>"
+
+- Expected  - 1
++ Received  + 2
+
+      at <anonymous> (/tmp/loora-target/apps/web/src/lib/sanitize.test.ts:24:67)
+(fail) sanitizeHtml > strips scheme obfuscation and non-image data urls [0.24ms]
+(pass) sanitizeHtml > keeps http, relative, fragment, and data:image urls [0.05ms]
+(pass) sanitizeHtml > keeps styles, classes, and safe urls [0.20ms]
+42 |   })
+43 | })
+44 |
+45 | describe('toXhtml', () => {
+46 |   it('closes void elements for XML embedding', () => {
+47 |     expect(toXhtml('<img src="/x"><br>')).toContain('<img src="/x" />')
+                                               ^
+error: expect(received).toContain(expected)
+
+Expected to contain: "<img src=\"/x\" />"
+Received: "<img src=\"/x\"><br>"
+
+      at <anonymous> (/tmp/loora-target/apps/web/src/lib/sanitize.test.ts:47:43)
+(fail) toXhtml > closes void elements for XML embedding [0.30ms]
+
+packages/editor/src/lib/canvas-html-import.test.ts:
+203 |   if (byteLength(css) > MAX_CSS_IMPORT_SOURCE_BYTES) {
+204 |     throw new Error(
+205 |       `CSS import is larger than ${formatByteLimit(MAX_CSS_IMPORT_SOURCE_BYTES)}`,
+206 |     )
+207 |   }
+208 |   const parsed = new DOMParser().parseFromString(html, 'text/html')
+                           ^
+ReferenceError: DOMParser is not defined
+      at buildHtmlImportDocument (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.ts:208:22)
+      at <anonymous> (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.test.ts:10:20)
+(fail) HTML import sandbox > removes executable markup and blocks outbound resources [0.96ms]
+203 |   if (byteLength(css) > MAX_CSS_IMPORT_SOURCE_BYTES) {
+204 |     throw new Error(
+205 |       `CSS import is larger than ${formatByteLimit(MAX_CSS_IMPORT_SOURCE_BYTES)}`,
+206 |     )
+207 |   }
+208 |   const parsed = new DOMParser().parseFromString(html, 'text/html')
+                           ^
+ReferenceError: DOMParser is not defined
+      at buildHtmlImportDocument (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.ts:208:22)
+      at <anonymous> (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.test.ts:26:20)
+(fail) HTML import sandbox > does not let CSS close the sandbox style element [0.15ms]
+203 |   if (byteLength(css) > MAX_CSS_IMPORT_SOURCE_BYTES) {
+204 |     throw new Error(
+205 |       `CSS import is larger than ${formatByteLimit(MAX_CSS_IMPORT_SOURCE_BYTES)}`,
+206 |     )
+207 |   }
+208 |   const parsed = new DOMParser().parseFromString(html, 'text/html')
+                           ^
+ReferenceError: DOMParser is not defined
+      at buildHtmlImportDocument (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.ts:208:22)
+      at <anonymous> (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.test.ts:37:20)
+(fail) HTML import sandbox > gives the Paper Snapshot transport wrapper a shrink-to-fit layout [0.38ms]
+203 |   if (byteLength(css) > MAX_CSS_IMPORT_SOURCE_BYTES) {
+204 |     throw new Error(
+205 |       `CSS import is larger than ${formatByteLimit(MAX_CSS_IMPORT_SOURCE_BYTES)}`,
+206 |     )
+207 |   }
+208 |   const parsed = new DOMParser().parseFromString(html, 'text/html')
+                           ^
+ReferenceError: DOMParser is not defined
+      at buildHtmlImportDocument (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.ts:208:22)
+      at <anonymous> (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.test.ts:51:20)
+(fail) HTML import sandbox > embeds Tailwind Preflight so Paper pastes do not invent strokes [0.18ms]
+65 |     // A couple of embedded images used to blow past the old 1 MB cap.
+66 |     const chunk = 'a'.repeat(1_500_000)
+67 |     const html = `<x-paper-html><div data-chunk="${chunk}">Card</div></x-paper-html>`
+68 |     expect(html.length).toBeGreaterThan(1_000_000)
+69 |     expect(html.length).toBeLessThan(MAX_HTML_IMPORT_SOURCE_BYTES)
+70 |     expect(() => buildHtmlImportDocument(html)).not.toThrow()
+                                                         ^
+error: expect(received).not.toThrow()
+
+Error name: "ReferenceError"
+Error message: "DOMParser is not defined"
+
+      at <anonymous> (/tmp/loora-target/packages/editor/src/lib/canvas-html-import.test.ts:70:53)
+(fail) HTML import sandbox > accepts Paper-sized HTML pastes under the source budget [11.43ms]
+(pass) HTML import sandbox > rejects HTML pastes above the source budget [108.98ms]
+
+41 tests failed:
+(fail) Canvas React surface > does not subscribe ordinary nodes to an empty instance id [6.03ms]
+(fail) Canvas React surface > releases the camera compositing hint when movement becomes idle [2.66ms]
+(fail) Canvas React surface > uses host theme tokens for the workspace and grid [2.38ms]
+(fail) Canvas React surface > recovers a collapsed page and keeps repeated resizes aligned [2.12ms]
+(fail) Canvas React surface > selects top-level layers, drills into frames, and deep-selects descendants [2.67ms]
+(fail) Canvas React surface > renders nested real DOM and nudges the selected node transactionally [2.13ms]
+(fail) Canvas React surface > draws where a reorder would land, and refuses the slot it came from [4.50ms]
+(fail) Canvas React surface > detaches a flow child from its arranging parent when the drop is modified [2.27ms]
+(fail) Canvas React surface > reorders a flow child inside an arranging parent instead of ejecting it [3.47ms]
+(fail) Canvas React surface > places a flow child dropped in a free parent at the box it was rendered in [3.44ms]
+(fail) Canvas React surface > keeps an absolute child inside a clipped parent and guides it to the walls [3.40ms]
+(fail) Canvas React surface > still moves a child that is larger than its clipped parent [1.86ms]
+(fail) Canvas React surface > resolves where an outside drop lands, in flow and in free space [2.62ms]
+(fail) Canvas React surface > commits plaintext editing once on blur and keeps undo available [2.76ms]
+(fail) Canvas React surface > renames a layer from its selection label [2.50ms]
+(fail) Canvas React surface > edits text when pointer capture retargets the double click to the surface [2.95ms]
+(fail) Canvas React surface > owns ctrl-wheel so browser zoom cannot take over [7.67ms]
+(fail) Canvas React surface > clears stale selection when undo removes the selected node [2.37ms]
+(fail) Canvas React surface > resolves a named component variant inside an instance [5.52ms]
+(fail) Canvas React surface > repositions the selection overlay when the camera moves [3.34ms]
+(fail) Canvas transactions > keeps a 100-node transaction on a 5,000-node document within the engine gate [716.35ms]
+(fail) Canvas exports > switches generic named themes from local state in every code export [4.40ms]
+(fail) Canvas exports > exports typed state, event conditions, and a bounded local runtime [10.42ms]
+(fail) Canvas exports > keeps component state local to each rendered instance [3.36ms]
+(fail) Canvas exports > keeps hidden flex frames hidden in CSS and when shown at runtime [2.01ms]
+(fail) inlineBrowserImages > blanks an image it cannot read rather than tainting the capture [0.68ms]
+(fail) inlineBrowserImages > leaves an image that is already inline alone [0.44ms]
+(fail) inlineBrowserImages > fetches a repeated image once before reusing its data URL [0.45ms]
+(fail) inlineBrowserImages > bounds simultaneous image reads during a capture [0.43ms]
+(fail) inlineBrowserImages > refuses a PNG allocation large enough to exhaust browser memory [0.68ms]
+(fail) sanitizeHtml > strips script tags [0.59ms]
+(fail) sanitizeHtml > strips iframes, objects, forms [0.08ms]
+(fail) sanitizeHtml > strips event handler attributes [0.12ms]
+(fail) sanitizeHtml > strips javascript: urls [0.06ms]
+(fail) sanitizeHtml > strips scheme obfuscation and non-image data urls [0.24ms]
+(fail) toXhtml > closes void elements for XML embedding [0.30ms]
+(fail) HTML import sandbox > removes executable markup and blocks outbound resources [0.96ms]
+(fail) HTML import sandbox > does not let CSS close the sandbox style element [0.15ms]
+(fail) HTML import sandbox > gives the Paper Snapshot transport wrapper a shrink-to-fit layout [0.38ms]
+(fail) HTML import sandbox > embeds Tailwind Preflight so Paper pastes do not invent strokes [0.18ms]
+(fail) HTML import sandbox > accepts Paper-sized HTML pastes under the source budget [11.43ms]
+
+ 128 pass
+ 41 fail
+ 374 expect() calls
+Ran 169 tests across 15 files. [2.29s]
+EXIT_CODE=1
