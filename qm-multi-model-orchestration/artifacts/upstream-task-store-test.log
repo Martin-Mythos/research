@@ -1,0 +1,15 @@
+▶ memory task store
+  ✔ creates every supported status and records an initial event (6.251934ms)
+  ✔ lists open tasks filtered by session and origin run (0.826878ms)
+  ✔ uses compare-and-set transitions and appends only successful events (0.547316ms)
+  ✔ returns copies that cannot mutate task or event state (0.229524ms)
+✔ memory task store (9.429127ms)
+ℹ tests 4
+ℹ suites 1
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 346.382536
+exit=0

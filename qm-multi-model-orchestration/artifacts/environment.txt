@@ -1,0 +1,33 @@
+$ date -u
+Sat Aug  1 16:05:30 UTC 2026
+$ uname -a
+Linux 99f9a35f6618 6.12.13 #1 SMP Thu Jul 23 17:57:28 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+$ python3 --version
+Python 3.12.13
+$ node --version
+v20.20.2
+$ npm --version
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+11.4.2
+$ git --version
+git version 2.43.0
+$ nproc
+3
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:            17Gi       707Mi        15Gi        12Ki       1.8Gi        17Gi
+Swap:             0B          0B          0B
