@@ -24,7 +24,7 @@ The answer to the core question is **qualified yes**: Loora offers credible R&D 
 
 ## 4. Experiment Design
 
-Five experiments covered smoke/build, core capability, a deployment-approval UI scenario, invalid/missing/unauthorized boundaries, and a manual HTML baseline. We avoided accounts, keys, production services, and third-party targets. Detailed criteria and commands are in `experiment_plan.md`.
+Five experiments covered smoke/build, core capability, a deployment-approval UI scenario, invalid/missing/unauthorized boundaries, and a manual HTML baseline. We avoided accounts, keys, production services, and third-party targets. The acceptance criteria were: a zero-exit frozen install and build; a valid three-node document with nontrivial HTML and React exports; behavioral rejection of missing credentials, malformed structures, executable markup, and oversized input; and enough pinned evidence for reproduction. The chronological design notes and commands are consolidated in `notes.md`.
 
 ## 5. Setup & Execution Evidence
 
@@ -64,17 +64,15 @@ Typed tools, transaction preconditions, one-way export, import sanitation, short
 
 ## 7. Evaluation Matrix
 
-| Dimension | Score / 5 |
-|---|---:|
-| Installability | 3 |
-| Documentation Quality | 4 |
-| Core Functionality | 4 |
-| Cybersecurity Posture | 3 |
-| R&D Agility | 4 |
-| Experiment Reproducibility | 4 |
-| **Unweighted mean** | **3.7** |
-
-See `evaluation_matrix.md` for rationales.
+| Dimension | Score / 5 | Evidence-based rationale |
+|---|---:|---|
+| Installability | 3 | Frozen install and production build passed, but a useful full runtime needs DB/auth configuration. |
+| Documentation Quality | 4 | The repository guide is detailed about architecture and controls, but there is no turnkey local stack or CI workflow. |
+| Core Functionality | 4 | The custom agent-to-export path passed and 168/169 focused tests passed; live integrations remain unverified. |
+| Cybersecurity Posture | 3 | Validation, sanitization, auth failure, signed tickets, limits, and unprivileged containers have local evidence; complexity and the audit finding constrain confidence. |
+| R&D Agility | 4 | One typed operation produced structured, inspectable UI in multiple formats, though operational setup and one-way synchronization constrain adoption. |
+| Experiment Reproducibility | 4 | The commit, commands, logs, and custom script are retained; timing and infrastructure-dependent paths remain. |
+| **Unweighted mean** | **3.7** | Supports a controlled trial, not production approval. |
 
 ## 8. Comparison With Baseline
 
@@ -116,13 +114,14 @@ bun test --preload ./apps/web/src/test/setup.ts \
   packages/canvas/src packages/agent/src apps/mcp/src/auth.test.ts \
   apps/ws/src/config.test.ts apps/web/src/lib/sanitize.test.ts \
   packages/editor/src/lib/canvas-html-import.test.ts
-cargo test -p loora-ws-server
+cargo fetch
+env -i PATH="$PATH" HOME="$HOME" cargo test -p loora-ws-server --test service
 bun audit
 cp /path/to/research/loora-empirical-study/scripts/representative-scenario.ts .
 bun representative-scenario.ts
 ```
 
-Expect timing-dependent results to vary. Use `.env.example` and disposable local infrastructure—not production secrets—before attempting the full root suite/services.
+`cargo fetch` first obtains dependencies through the configured network path; the clean-environment wrapper then prevents proxy interception of localhost service requests on proxy-bearing hosts. The diagnostic run with inherited proxy variables returned two proxy-generated HTTP 403 responses. Expect timing-dependent results to vary. Use `.env.example` and disposable local infrastructure—not production secrets—before attempting the full root suite/services.
 
 ## 13. Artifacts
 
@@ -138,4 +137,4 @@ Expect timing-dependent results to vary. Use `.env.example` and disposable local
 - **Unverified:** out of scope or blocked by infrastructure/credentials.
 - **Inferred:** reasoned from architecture/tests, stated cautiously.
 
-See `notes.md` for chronological command/failure notes, `notes/repo_recon.md` for reconnaissance, `sources.md` for accessed URLs, and `setup_log.md` for the host profile.
+See `notes.md` for the consolidated chronological log, reconnaissance, experiment design, environment profile, sources, failures, and verification evidence.
