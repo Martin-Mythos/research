@@ -12,9 +12,10 @@
 ## Custom experiments
 `/tmp/node24/bin/node scripts/qm_planner_worker.mjs --qm-repo /tmp/qm-target` produced `artifacts/qm_experiment.json`:
 - smoke task reached `completed`;
-- normal 5-task run: all completed; elapsed 81.67 ms; starts were tightly grouped (see JSON);
-- injected failure/timeout: both affected tasks completed on attempt 2; total 170.95 ms; unrelated tasks completed; aggregation did not halt.
+- normal 5-task run: all completed; elapsed 80.39 ms; starts were tightly grouped (see JSON);
+- injected failure/timeout: both affected tasks completed on attempt 2; total 172.23 ms; unrelated tasks completed; aggregation did not halt;
+- the timeout aborts the first attempt and awaits its settlement before retrying; both runs recorded `active_workers_after: 0`.
 
 This behavior combines the genuine QM in-memory task/event store with experiment-owned concurrency, timeout, retry, worker mock, and aggregation. It is not evidence of native QM retry.
 
-`python3 scripts/asyncio_baseline.py` produced `artifacts/asyncio_baseline.json`: five tasks completed in 81.30 ms. One run with deterministic sleeps is a functional comparison only; ~0.37 ms difference is noise/overhead and not a meaningful speed claim.
+`python3 scripts/asyncio_baseline.py` produced `artifacts/asyncio_baseline.json`: five tasks completed in 81.30 ms. One run with deterministic sleeps is a functional comparison only; the roughly 0.91 ms difference from the regenerated QM-backed run is noise/overhead and not a meaningful speed claim.

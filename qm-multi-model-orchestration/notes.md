@@ -22,3 +22,9 @@ Empirically investigate whether https://github.com/yc-software/qm can efficientl
 
 ## Interpretation guardrails
 QM's unmodified memory task store is genuinely used. The experiment owns `Promise.all`, mock calls, timeout, retry, aggregation, and `thinking_*` config metadata. Therefore it cannot verify native QM scheduling or provider application of those settings. No actual CSA framework text was assessed.
+
+## Review follow-up (2026-08-02)
+- Retrieved the Codex review comment from `https://api.github.com/repos/Martin-Mythos/research/pulls/30/comments`.
+- The reviewer correctly observed that `Promise.race` did not cancel the losing worker, allowing a timed-out attempt to overlap its retry and making the original completion timing unsafe.
+- Replaced the worker sleep with an abort-aware operation, propagated an `AbortSignal`, aborted on timeout, awaited the attempt with `Promise.allSettled` before retrying, and recorded `active_workers_after`.
+- Regenerated `artifacts/qm_experiment.json`; normal and boundary runs both report zero active workers after aggregation. Deterministic assertions passed.

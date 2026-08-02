@@ -16,7 +16,7 @@ This self-contained research project evaluates `yc-software/qm` at commit `7f2c9
 - Sources: [`sources.md`](sources.md)
 
 ## Verified versus unknown
-Verified: focused QM task-store tests pass on Node 24; Hello World reaches completed; five custom-dispatched mocks run concurrently and are recorded; injected first-attempt failure/timeout recover under the harness policy. Unknown: full deployment, real providers, native task retry, native arbitrary array dispatch, actual heterogeneous model selection, thinking parameter transmission, Postgres behavior, and scale.
+Verified: focused QM task-store tests pass on Node 24; Hello World reaches completed; five custom-dispatched mocks run concurrently and are recorded; injected first-attempt failure/timeout recover under the harness policy; timed-out work is cancelled and settled before retry, leaving zero active workers after aggregation. Unknown: full deployment, real providers, native task retry, native arbitrary array dispatch, actual heterogeneous model selection, thinking parameter transmission, Postgres behavior, and scale.
 
 ## Quick reproduction
 Clone the pinned QM revision to `/tmp/qm-target`, use Node >=24.15, then run:

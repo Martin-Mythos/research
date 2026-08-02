@@ -7,8 +7,8 @@
       "originRunId": "smoke-run",
       "title": "Hello World",
       "status": "completed",
-      "createdAt": 1785600489799,
-      "updatedAt": 1785600489799
+      "createdAt": 1785659882602,
+      "updatedAt": 1785659882602
     }
   },
   "success": {
@@ -21,28 +21,29 @@
       "timeout_ms": 120,
       "max_attempts": 2
     },
-    "elapsed_ms": 81.67137400000001,
-    "start_spread_ms": 0.5698840000000018,
+    "elapsed_ms": 80.39251299999998,
+    "start_spread_ms": 0.8780179999999973,
+    "active_workers_after": 0,
     "starts": [
       {
         "id": "task-1",
-        "offset_ms": 0.26609599999997613
+        "offset_ms": 0.2813409999999976
       },
       {
         "id": "task-2",
-        "offset_ms": 0.7509699999999953
+        "offset_ms": 0.9806349999999782
       },
       {
         "id": "task-3",
-        "offset_ms": 0.7891959999999756
+        "offset_ms": 1.0493899999999883
       },
       {
         "id": "task-4",
-        "offset_ms": 0.8063099999999963
+        "offset_ms": 1.0992709999999875
       },
       {
         "id": "task-5",
-        "offset_ms": 0.835979999999978
+        "offset_ms": 1.159358999999995
       }
     ],
     "results": [
@@ -139,8 +140,8 @@
         "originRunId": "planner-1",
         "title": "Check security event logging configuration",
         "status": "completed",
-        "createdAt": 1785600489799,
-        "updatedAt": 1785600489881
+        "createdAt": 1785659882603,
+        "updatedAt": 1785659882683
       },
       {
         "id": "task-2",
@@ -148,8 +149,8 @@
         "originRunId": "planner-1",
         "title": "Verify encryption at rest",
         "status": "completed",
-        "createdAt": 1785600489799,
-        "updatedAt": 1785600489860
+        "createdAt": 1785659882603,
+        "updatedAt": 1785659882664
       },
       {
         "id": "task-3",
@@ -157,8 +158,8 @@
         "originRunId": "planner-1",
         "title": "Review incident notification workflow",
         "status": "completed",
-        "createdAt": 1785600489799,
-        "updatedAt": 1785600489840
+        "createdAt": 1785659882603,
+        "updatedAt": 1785659882644
       },
       {
         "id": "task-4",
@@ -166,8 +167,8 @@
         "originRunId": "planner-1",
         "title": "Validate access-control and least-privilege evidence",
         "status": "completed",
-        "createdAt": 1785600489799,
-        "updatedAt": 1785600489870
+        "createdAt": 1785659882603,
+        "updatedAt": 1785659882675
       },
       {
         "id": "task-5",
@@ -175,8 +176,8 @@
         "originRunId": "planner-1",
         "title": "Assess cybersecurity risk-management documentation",
         "status": "completed",
-        "createdAt": 1785600489799,
-        "updatedAt": 1785600489851
+        "createdAt": 1785659882603,
+        "updatedAt": 1785659882655
       }
     ],
     "events": {
@@ -188,7 +189,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "6",
@@ -197,7 +198,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "15",
@@ -206,7 +207,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489881
+          "createdAt": 1785659882683
         }
       ],
       "task-2": [
@@ -217,7 +218,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "7",
@@ -226,7 +227,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "13",
@@ -235,7 +236,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489860
+          "createdAt": 1785659882664
         }
       ],
       "task-3": [
@@ -246,7 +247,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "8",
@@ -255,7 +256,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "11",
@@ -264,7 +265,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489840
+          "createdAt": 1785659882644
         }
       ],
       "task-4": [
@@ -275,7 +276,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "9",
@@ -284,7 +285,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "14",
@@ -293,7 +294,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489870
+          "createdAt": 1785659882675
         }
       ],
       "task-5": [
@@ -304,7 +305,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "10",
@@ -313,7 +314,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489799
+          "createdAt": 1785659882603
         },
         {
           "id": "12",
@@ -322,7 +323,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489851
+          "createdAt": 1785659882655
         }
       ]
     }
@@ -337,28 +338,29 @@
       "timeout_ms": 120,
       "max_attempts": 2
     },
-    "elapsed_ms": 170.94880799999999,
-    "start_spread_ms": 0.30584399999997913,
+    "elapsed_ms": 172.22918399999998,
+    "start_spread_ms": 0.41899499999999534,
+    "active_workers_after": 0,
     "starts": [
       {
         "id": "task-1",
-        "offset_ms": 0.1443100000000186
+        "offset_ms": 0.14555500000000166
       },
       {
         "id": "task-2",
-        "offset_ms": 0.23770900000005213
+        "offset_ms": 0.2791780000000017
       },
       {
         "id": "task-3",
-        "offset_ms": 0.25472500000000764
+        "offset_ms": 0.33247199999999566
       },
       {
         "id": "task-4",
-        "offset_ms": 0.40608200000002626
+        "offset_ms": 0.4641889999999762
       },
       {
         "id": "task-5",
-        "offset_ms": 0.4501539999999977
+        "offset_ms": 0.564549999999997
       }
     ],
     "results": [
@@ -455,8 +457,8 @@
         "originRunId": "planner-1",
         "title": "Check security event logging configuration",
         "status": "completed",
-        "createdAt": 1785600489893,
-        "updatedAt": 1785600489973
+        "createdAt": 1785659882695,
+        "updatedAt": 1785659882776
       },
       {
         "id": "task-2",
@@ -464,8 +466,8 @@
         "originRunId": "planner-1",
         "title": "Verify encryption at rest",
         "status": "completed",
-        "createdAt": 1785600489893,
-        "updatedAt": 1785600489954
+        "createdAt": 1785659882695,
+        "updatedAt": 1785659882756
       },
       {
         "id": "task-3",
@@ -473,8 +475,8 @@
         "originRunId": "planner-1",
         "title": "Review incident notification workflow",
         "status": "completed",
-        "createdAt": 1785600489893,
-        "updatedAt": 1785600489935
+        "createdAt": 1785659882695,
+        "updatedAt": 1785659882736
       },
       {
         "id": "task-4",
@@ -482,8 +484,8 @@
         "originRunId": "planner-1",
         "title": "Validate access-control and least-privilege evidence",
         "status": "completed",
-        "createdAt": 1785600489893,
-        "updatedAt": 1785600489964
+        "createdAt": 1785659882695,
+        "updatedAt": 1785659882765
       },
       {
         "id": "task-5",
@@ -491,8 +493,8 @@
         "originRunId": "planner-1",
         "title": "Assess cybersecurity risk-management documentation",
         "status": "completed",
-        "createdAt": 1785600489893,
-        "updatedAt": 1785600490064
+        "createdAt": 1785659882695,
+        "updatedAt": 1785659882867
       }
     ],
     "events": {
@@ -504,7 +506,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "6",
@@ -513,7 +515,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "14",
@@ -522,7 +524,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489973
+          "createdAt": 1785659882776
         }
       ],
       "task-2": [
@@ -533,7 +535,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "7",
@@ -542,7 +544,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "12",
@@ -551,7 +553,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489954
+          "createdAt": 1785659882756
         }
       ],
       "task-3": [
@@ -562,7 +564,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "8",
@@ -571,7 +573,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "11",
@@ -580,7 +582,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489935
+          "createdAt": 1785659882736
         }
       ],
       "task-4": [
@@ -591,7 +593,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "9",
@@ -600,7 +602,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "13",
@@ -609,7 +611,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600489964
+          "createdAt": 1785659882765
         }
       ],
       "task-5": [
@@ -620,7 +622,7 @@
           "type": "created",
           "fromStatus": null,
           "toStatus": "pending",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "10",
@@ -629,7 +631,7 @@
           "type": "status_changed",
           "fromStatus": "pending",
           "toStatus": "in_progress",
-          "createdAt": 1785600489893
+          "createdAt": 1785659882695
         },
         {
           "id": "15",
@@ -638,7 +640,7 @@
           "type": "status_changed",
           "fromStatus": "in_progress",
           "toStatus": "completed",
-          "createdAt": 1785600490064
+          "createdAt": 1785659882867
         }
       ]
     }

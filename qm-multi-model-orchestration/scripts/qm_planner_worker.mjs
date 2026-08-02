@@ -14,21 +14,50 @@ const checks = [
   "Validate access-control and least-privilege evidence",
   "Assess cybersecurity risk-management documentation",
 ];
-const sleep = ms => new Promise(r => setTimeout(r, ms));
 const planner = async () => ({ model: "mock-high-tier-planner", tasks: checks });
+let activeWorkers = 0;
 
-async function worker(title, attempt, injectFailure) {
-  const delays = { [checks[0]]: 80, [checks[1]]: 60, [checks[2]]: 40, [checks[3]]: 70, [checks[4]]: 50 };
-  if (injectFailure && title === checks[2] && attempt === 1) throw new Error("injected worker failure");
-  if (injectFailure && title === checks[4] && attempt === 1) await sleep(workerConfig.timeout_ms + 80);
-  else await sleep(delays[title]);
-  return { check: title, verdict: "mock-review-required", evidence: [], worker_config: workerConfig };
+function abortableSleep(ms, signal) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(resolve, ms);
+    signal.addEventListener("abort", () => {
+      clearTimeout(timer);
+      reject(signal.reason);
+    }, { once: true });
+  });
 }
 
-async function withTimeout(promise, ms) {
+async function worker(title, attempt, injectFailure, signal) {
+  activeWorkers++;
+  try {
+    const delays = { [checks[0]]: 80, [checks[1]]: 60, [checks[2]]: 40, [checks[3]]: 70, [checks[4]]: 50 };
+    if (injectFailure && title === checks[2] && attempt === 1) throw new Error("injected worker failure");
+    if (injectFailure && title === checks[4] && attempt === 1) await abortableSleep(workerConfig.timeout_ms + 80, signal);
+    else await abortableSleep(delays[title], signal);
+    return { check: title, verdict: "mock-review-required", evidence: [], worker_config: workerConfig };
+  } finally {
+    activeWorkers--;
+  }
+}
+
+async function withTimeout(operation, ms) {
+  const controller = new AbortController();
+  const work = operation(controller.signal);
   let timer;
-  try { return await Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(new Error("worker timeout")), ms); })]); }
-  finally { clearTimeout(timer); }
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => {
+      const error = new Error("worker timeout");
+      controller.abort(error);
+      reject(error);
+    }, ms);
+  });
+  try {
+    return await Promise.race([work, timeout]);
+  } finally {
+    clearTimeout(timer);
+    controller.abort(new Error("attempt finished"));
+    await Promise.allSettled([work]);
+  }
 }
 
 async function dispatch(injectFailure = false) {
@@ -43,7 +72,7 @@ async function dispatch(injectFailure = false) {
     let lastError;
     for (let attempt = 1; attempt <= workerConfig.max_attempts; attempt++) {
       try {
-        const result = await withTimeout(worker(title, attempt, injectFailure), workerConfig.timeout_ms);
+        const result = await withTimeout(signal => worker(title, attempt, injectFailure, signal), workerConfig.timeout_ms);
         await store.transitionStatus(task.id, "in_progress", "completed", `worker-${index + 1}`);
         return { id: task.id, status: "completed", attempts: attempt, result };
       } catch (error) { lastError = error; }
@@ -52,7 +81,7 @@ async function dispatch(injectFailure = false) {
     return { id: task.id, status: "failed", attempts: workerConfig.max_attempts, error: lastError.message };
   });
   const results = await Promise.all(jobs);
-  return { implementation: "QM MemoryTaskStore + experiment dispatcher", injectFailure, workerConfig, elapsed_ms: performance.now() - started, start_spread_ms: Math.max(...starts.map(x => x.offset_ms)) - Math.min(...starts.map(x => x.offset_ms)), starts, results, tasks: await store.list(), events: Object.fromEntries(await Promise.all(results.map(async r => [r.id, await store.listEvents(r.id)]))) };
+  return { implementation: "QM MemoryTaskStore + experiment dispatcher", injectFailure, workerConfig, elapsed_ms: performance.now() - started, start_spread_ms: Math.max(...starts.map(x => x.offset_ms)) - Math.min(...starts.map(x => x.offset_ms)), active_workers_after: activeWorkers, starts, results, tasks: await store.list(), events: Object.fromEntries(await Promise.all(results.map(async r => [r.id, await store.listEvents(r.id)]))) };
 }
 
 const smokeStore = createMemoryTaskStore();
